@@ -1,0 +1,43 @@
+# Proyecto Xcode generado con XcodeGen:  cd apple && xcodegen generate
+name: GK2Guia
+options:
+  bundleIdPrefix: local.gk2guia
+  deploymentTarget:
+    iOS: "17.0"
+    macOS: "14.0"
+targets:
+  GK2Guia:
+    type: application
+    supportedDestinations: [iOS, macOS]
+    sources:
+      - path: GK2Guia
+      # Build de la web (npm run build). Se copia como carpeta "dist" dentro del bundle.
+      - path: ../dist
+        type: folder
+        buildPhase: resources
+        optional: true
+    preBuildScripts:
+      - name: Build web
+        basedOnDependencyAnalysis: false
+        script: |
+          # Xcode no carga el PATH del shell: añade nvm y Homebrew
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+          export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+          cd "$SRCROOT/.." && npm run build
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: local.gk2guia.app
+        PRODUCT_NAME: GK2Guia
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Guía GK2
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.reference
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+        CODE_SIGN_STYLE: Automatic
+        # En Mac se firma solo para ejecutar en local; en iOS elige tu equipo en Xcode.
+        "CODE_SIGN_IDENTITY[sdk=macosx*]": "-"
+        SWIFT_VERSION: "5.0"

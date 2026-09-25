@@ -1,0 +1,34 @@
+import type { Character } from './types';
+
+// DATOS DE EJEMPLO: sustituye por los personajes reales y sus días de visita.
+export const characters: Character[] = [
+  {
+    id: 'mercader', name: 'Mercader', title: 'Vendedor ambulante', location: 'Plaza de la aldea', icon: 'coin',
+    days: ['avaricia', 'gula'], sells: ['iron_ore', 'wheat', 'beeswax'], buys: ['candle', 'potion_heal'],
+    notes: 'Los precios suben si le vendes mucho del mismo objeto.',
+  },
+  {
+    id: 'obispo', name: 'Obispo', title: 'Guardián de la fe', location: 'Iglesia', icon: 'crown',
+    days: ['orgullo'], buys: ['candle', 'scroll'], notes: 'Da el sermón semanal. Lleva velas.',
+  },
+  {
+    id: 'tabernera', name: 'Tabernera', title: 'Dueña de la taberna', location: 'Taberna', icon: 'burger',
+    days: [], sells: ['water', 'bread'], buys: ['burger', 'bread'], notes: 'Abierta todos los días.',
+  },
+  {
+    id: 'herrero', name: 'Herrero', title: 'Maestro del yunque', location: 'Herrería', icon: 'anvil',
+    days: ['orgullo', 'lujuria', 'ira'], sells: ['iron_bar', 'nails'], buys: ['iron_ore'],
+  },
+  {
+    id: 'astrologa', name: 'Astróloga', title: 'Lectora de estrellas', location: 'Observatorio', icon: 'moon',
+    days: ['envidia'], sells: ['herb_blue'], buys: ['potion_heal'], notes: 'Solo aparece por la noche.',
+  },
+  {
+    id: 'inquisidor', name: 'Inquisidor', title: 'Brazo de la ley', location: 'Plaza de la aldea', icon: 'skull',
+    days: ['ira'], notes: 'Encarga misiones relacionadas con la hoguera.',
+  },
+  {
+    id: 'lenadora', name: 'Leñadora', title: 'Hacha del bosque', location: 'Campamento del bosque', icon: 'log',
+    days: ['lujuria', 'envidia', 'gula'], sells: ['log', 'plank'],
+  },
+];
