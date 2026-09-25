@@ -1,118 +1,849 @@
 [
   {
-    "id": "mercader",
-    "name": "Mercader",
-    "title": "Vendedor ambulante",
-    "location": "Plaza de la aldea",
-    "icon": "coin",
-    "days": [
-      "avaricia",
-      "gula"
-    ],
+    "id": "adam",
+    "name": "Adam",
+    "title": "Potter",
+    "location": "The Village",
+    "icon": "potion",
+    "days": [],
+    "notes": "Comercia con: pottery products.",
     "sells": [
-      "iron_ore",
-      "wheat",
-      "beeswax"
+      "ceramic_bowls",
+      "ceramic_jug",
+      "porcelain_pitcher"
     ],
-    "buys": [
-      "candle",
-      "potion_heal"
-    ],
-    "notes": "Los precios suben si le vendes mucho del mismo objeto."
+    "image": "npc_adam"
   },
   {
-    "id": "obispo",
-    "name": "Obispo",
-    "title": "Guardián de la fe",
-    "location": "Iglesia",
+    "id": "master_alaric",
+    "name": "Alaric",
+    "title": "Vampire",
+    "location": "Refugee camp",
+    "icon": "person",
+    "days": [],
+    "image": "npc_master_alaric"
+  },
+  {
+    "id": "astrologer",
+    "name": "Astrologer",
+    "title": "Astrologer",
+    "location": "Sealight Lighthouse",
+    "icon": "moon",
+    "days": [
+      "pereza"
+    ],
+    "notes": "Comercia con: Scholarly Supplies.",
+    "sells": [
+      "softcover",
+      "pen_and_ink",
+      "ink",
+      "clean_paper",
+      "feather",
+      "book",
+      "hard_cover",
+      "techbook",
+      "chapter"
+    ],
+    "buys": [
+      "book"
+    ],
+    "image": "npc_astrologer"
+  },
+  {
+    "id": "barman",
+    "name": "Barman",
+    "title": "Bartender",
+    "location": "Talking Skull",
+    "icon": "burger",
+    "days": [],
+    "notes": "Comercia con: Food.",
+    "image": "npc_barman"
+  },
+  {
+    "id": "beekeeper",
+    "name": "Beekeeper",
+    "title": "Beekeeper",
+    "location": "The Village",
+    "icon": "wax",
+    "days": [],
+    "notes": "Comercia con: Apiary products.",
+    "sells": [
+      "beeswax",
+      "honey",
+      "bee"
+    ],
+    "buys": [
+      "firewood"
+    ],
+    "image": "npc_beekeeper"
+  },
+  {
+    "id": "bishop",
+    "name": "Bishop",
+    "title": "Bishop",
+    "location": "Graveyard, Church",
     "icon": "crown",
     "days": [
       "orgullo"
     ],
-    "buys": [
+    "notes": "Comercia con: Church Supplies.",
+    "sells": [
       "candle",
-      "scroll"
+      "communion_cookie",
+      "casual_prayer",
+      "incense",
+      "incense_ii"
     ],
-    "notes": "Da el sermón semanal. Lleva velas."
+    "buys": [
+      "bread",
+      "communion_cookie",
+      "combo_prayer",
+      "prayer_for_imagination",
+      "prayer_for_protection",
+      "prayer_for_repose",
+      "prayer_for_excellence",
+      "prayer_for_retribution",
+      "casual_prayer",
+      "prayer_for_faith",
+      "prayer_for_donations",
+      "prayer_for_shoots_and_roots",
+      "prayer_for_repentance",
+      "prayer_for_prosperity",
+      "candle",
+      "incense_ii"
+    ],
+    "image": "npc_bishop"
   },
   {
-    "id": "tabernera",
-    "name": "Tabernera",
-    "title": "Dueña de la taberna",
-    "location": "Taberna",
-    "icon": "burger",
+    "id": "captain",
+    "name": "Captain",
+    "title": "Captain",
+    "location": "The Dead Horse",
+    "icon": "person",
     "days": [],
-    "sells": [
-      "water",
-      "bread"
-    ],
-    "buys": [
-      "burger",
-      "bread"
-    ],
-    "notes": "Abierta todos los días."
+    "image": "npc_captain"
   },
   {
-    "id": "herrero",
-    "name": "Herrero",
-    "title": "Maestro del yunque",
-    "location": "Herrería",
-    "icon": "anvil",
+    "id": "clotho",
+    "name": "Clotho",
+    "title": "Witch, Miss Chain's sister",
+    "location": "Hut in The Swamp",
+    "icon": "cauldron",
+    "days": [],
+    "notes": "Comercia con: Alchemical Ingredients.",
+    "sells": [
+      "golden_apple",
+      "acid",
+      "glue",
+      "alchemy_recipe",
+      "tree_apple_seedling",
+      "bush_berry_seedling",
+      "slowing_powder",
+      "acceleration_powder",
+      "health_powder",
+      "death_powder",
+      "order_powder",
+      "toxic_powder",
+      "chaos_powder",
+      "life_powder",
+      "electric_powder",
+      "alcohol",
+      "heal_potion",
+      "energy_potion",
+      "frog",
+      "oil",
+      "alkali",
+      "dark_elixir",
+      "balsamic_solution",
+      "golden_elixir",
+      "preservative",
+      "silver_elixir",
+      "tanning_agent",
+      "digestion_potion",
+      "rage_potion",
+      "speed_potion",
+      "slowing_solution",
+      "acceleration_solution",
+      "health_solution",
+      "death_solution",
+      "order_solution",
+      "toxic_solution",
+      "chaos_solution",
+      "life_solution",
+      "protection_potion",
+      "berserk_potion",
+      "restoring_potion",
+      "slowing_extract",
+      "acceleration_extract",
+      "health_extract",
+      "death_extract",
+      "order_extract",
+      "toxic_extract",
+      "chaos_extract",
+      "life_extract"
+    ],
+    "buys": [
+      "alchemy_recipe",
+      "tree_apple_seedling",
+      "bush_berry_seedling",
+      "alcohol",
+      "frog",
+      "oil",
+      "speed_potion"
+    ],
+    "image": "npc_clotho"
+  },
+  {
+    "id": "cook",
+    "name": "Cook",
+    "title": "Cook",
+    "location": "Refugee camp",
+    "icon": "bread",
+    "days": [],
+    "notes": "Comercia con: Recipe.",
+    "image": "npc_cook"
+  },
+  {
+    "id": "cory",
+    "name": "Cory",
+    "title": "Engineer",
+    "location": "The Village",
+    "icon": "stone",
+    "days": [],
+    "notes": "Comercia con: Stone and Stonework.",
+    "sells": [
+      "a_piece_of_stone",
+      "firewood",
+      "a_carved_piece_of_stone",
+      "a_polished_brick_of_stone",
+      "a_piece_of_marble",
+      "steel_chisel",
+      "a_carved_piece_of_marble",
+      "a_polished_brick_of_marble",
+      "pickaxe_ii"
+    ],
+    "buys": [
+      "a_piece_of_stone",
+      "a_carved_piece_of_marble",
+      "a_carved_piece_of_stone",
+      "a_piece_of_marble",
+      "a_polished_brick_of_marble",
+      "a_polished_brick_of_stone",
+      "firewood"
+    ],
+    "image": "npc_cory"
+  },
+  {
+    "id": "dig",
+    "name": "Dig",
+    "title": "Vagabond",
+    "location": "Village",
+    "icon": "person",
+    "days": [],
+    "notes": "Comercia con: Hemp products.",
+    "sells": [
+      "seed_oil",
+      "hemp_rope",
+      "hemp_seed",
+      "firewood",
+      "hemp"
+    ],
+    "buys": [
+      "firewood"
+    ],
+    "image": "npc_dig"
+  },
+  {
+    "id": "donkey",
+    "name": "Donkey",
+    "title": "Courier",
+    "location": "Village, Morgue",
+    "icon": "sack",
     "days": [
-      "orgullo",
       "lujuria",
-      "ira"
+      "gula",
+      "envidia",
+      "ira",
+      "pereza"
     ],
-    "sells": [
-      "iron_bar",
-      "nails"
-    ],
-    "buys": [
-      "iron_ore"
-    ]
+    "image": "npc_donkey"
   },
   {
-    "id": "astrologa",
-    "name": "Astróloga",
-    "title": "Lectora de estrellas",
-    "location": "Observatorio",
-    "icon": "moon",
-    "days": [
-      "envidia"
-    ],
-    "sells": [
-      "herb_blue"
-    ],
-    "buys": [
-      "potion_heal"
-    ],
-    "notes": "Solo aparece por la noche."
+    "id": "euric",
+    "name": "Euric",
+    "title": "Personaje",
+    "location": "Souls room, Euric's Room",
+    "icon": "person",
+    "days": [],
+    "image": "npc_euric"
   },
   {
-    "id": "inquisidor",
-    "name": "Inquisidor",
-    "title": "Brazo de la ley",
-    "location": "Plaza de la aldea",
+    "id": "farmer",
+    "name": "Farmer",
+    "title": "Farmer",
+    "location": "Wheat Farm",
+    "icon": "wheat",
+    "days": [],
+    "notes": "Comercia con: Seeds and Crops.",
+    "sells": [
+      "beet",
+      "cabbage",
+      "carrot",
+      "crop_waste",
+      "beet_seed",
+      "flour",
+      "cabbage_seed",
+      "carrot_seed",
+      "wheat_seed",
+      "firewood",
+      "lentils",
+      "pumpkin",
+      "onion",
+      "lentil_seed",
+      "onion_seed",
+      "pumpkin_seed",
+      "wheat"
+    ],
+    "buys": [
+      "beet",
+      "cabbage",
+      "carrot",
+      "flour",
+      "firewood"
+    ],
+    "image": "npc_farmer"
+  },
+  {
+    "id": "farmer_s_son",
+    "name": "Farmer's Son",
+    "title": "Farmhand",
+    "location": "Wheat Farm",
+    "icon": "person",
+    "days": [],
+    "image": "npc_farmer_s_son"
+  },
+  {
+    "id": "fresh_egg_basket",
+    "name": "Fresh Eggs",
+    "title": "Holding Eggs",
+    "location": "Village",
+    "icon": "person",
+    "days": [],
+    "notes": "Comercia con: Eggs and Feathers.",
+    "sells": [
+      "feather",
+      "chicken_egg"
+    ],
+    "buys": [
+      "feather"
+    ],
+    "image": "npc_fresh_egg_basket"
+  },
+  {
+    "id": "gerry",
+    "name": "Gerry",
+    "title": "Guide",
+    "location": "Morgue, Workyard",
+    "icon": "skull",
+    "days": [],
+    "image": "npc_gerry"
+  },
+  {
+    "id": "gunter",
+    "name": "Gunter",
+    "title": "Last \"surviving\" zombie",
+    "location": "Sacrifice Zone",
+    "icon": "person",
+    "days": [],
+    "image": "npc_gunter"
+  },
+  {
+    "id": "gypsy_baron",
+    "name": "Gypsy Baron",
+    "title": "Personaje",
+    "location": "Camp",
+    "icon": "person",
+    "days": [],
+    "image": "npc_gypsy_baron"
+  },
+  {
+    "id": "horadric",
+    "name": "Horadric",
+    "title": "Innkeeper",
+    "location": "The Dead Horse",
+    "icon": "person",
+    "days": [],
+    "notes": "Comercia con: Food and Drink.",
+    "sells": [
+      "teleportstone",
+      "package_of_meat",
+      "grape_pie",
+      "a_mug_of_beer",
+      "baked_salmon",
+      "fish_nuggets",
+      "a_bowl_of_sauerkraut",
+      "a_bowl_of_lentils",
+      "a_bowl_of_pumpkin_soup",
+      "omelette",
+      "fish_soup",
+      "beet_slices",
+      "carrot_cutlet",
+      "bread",
+      "onion_rings",
+      "firewood",
+      "red_wine",
+      "croissant",
+      "muffin",
+      "toasts_with_onions"
+    ],
+    "buys": [
+      "burial_certificate",
+      "package_of_meat",
+      "grape_pie",
+      "a_mug_of_beer",
+      "baked_salmon",
+      "fish_nuggets",
+      "a_bowl_of_sauerkraut",
+      "a_bowl_of_lentils",
+      "a_bowl_of_pumpkin_soup",
+      "omelette",
+      "fish_soup",
+      "beet_slices",
+      "carrot_cutlet",
+      "bread",
+      "onion_rings",
+      "firewood",
+      "red_wine",
+      "croissant",
+      "muffin",
+      "toasts_with_onions"
+    ],
+    "image": "npc_horadric"
+  },
+  {
+    "id": "inquisitor",
+    "name": "Inquisitor",
+    "title": "Inquisitor",
+    "location": "Witch Hill",
     "icon": "skull",
     "days": [
       "ira"
     ],
-    "notes": "Encarga misiones relacionadas con la hoguera."
+    "image": "npc_inquisitor"
   },
   {
-    "id": "lenadora",
-    "name": "Leñadora",
-    "title": "Hacha del bosque",
-    "location": "Campamento del bosque",
-    "icon": "log",
+    "id": "koukol",
+    "name": "Koukol",
+    "title": "Servant",
+    "location": "Left of Mountain fort",
+    "icon": "anvil",
+    "days": [],
+    "notes": "Comercia con: Weapons & Armor.",
+    "sells": [
+      "rusty_sword",
+      "sword",
+      "iron_armor",
+      "steel_sword",
+      "damask_sword_with_gem",
+      "steel_sword_with_gem",
+      "steel_armor"
+    ],
+    "image": "npc_koukol"
+  },
+  {
+    "id": "krezvold",
+    "name": "Krezvold",
+    "title": "Blacksmith",
+    "location": "The Village",
+    "icon": "person",
+    "days": [],
+    "notes": "Comercia con: Metal and Metalworking.",
+    "sells": [
+      "whetstone",
+      "iron_ingot",
+      "simple_iron_parts",
+      "nails",
+      "coal",
+      "iron_ore",
+      "firewood",
+      "rusty_axe",
+      "rusty_pickaxe",
+      "rusty_shovel",
+      "rusty_sword",
+      "rusty_hammer",
+      "cauldron",
+      "iron_chisel",
+      "steel_ingot",
+      "complex_iron_parts",
+      "graphite",
+      "axe_i",
+      "pickaxe_i",
+      "shovel_i",
+      "steel_sword",
+      "iron_hammer",
+      "steel_chisel",
+      "steel_parts",
+      "shovel_ii",
+      "battle_horseshoes",
+      "iron_unicorn_horns"
+    ],
+    "buys": [
+      "iron_ingot",
+      "simple_iron_parts",
+      "nails",
+      "coal",
+      "iron_ore",
+      "firewood",
+      "rusty_axe",
+      "rusty_pickaxe",
+      "rusty_shovel",
+      "rusty_sword",
+      "rusty_hammer",
+      "steel_ingot",
+      "complex_iron_parts",
+      "graphite",
+      "axe_i",
+      "pickaxe_i",
+      "shovel_i",
+      "iron_hammer",
+      "steel_parts",
+      "shovel_ii"
+    ],
+    "image": "npc_krezvold"
+  },
+  {
+    "id": "lighthouse_keeper",
+    "name": "Lighthouse Keeper",
+    "title": "fishing products",
+    "location": "Sealight Lighthouse",
+    "icon": "water",
+    "days": [],
+    "notes": "Comercia con: fishing products.",
+    "sells": [
+      "simple_fishing_rod",
+      "white_fish_fillet",
+      "quality_fish_fillet",
+      "firewood",
+      "frog",
+      "gudgeon",
+      "anchovy",
+      "tilapia",
+      "perch",
+      "eel",
+      "good_fishing_rod",
+      "steel_lure",
+      "bream",
+      "sardine",
+      "tuna",
+      "pike",
+      "silver_crucian",
+      "salmon",
+      "sturgeon",
+      "excellent_fishing_rod",
+      "lure_with_a_gem",
+      "blue_fish_fillet",
+      "carp",
+      "gold_crucian"
+    ],
+    "buys": [
+      "tuna",
+      "simple_fishing_rod",
+      "firewood",
+      "frog",
+      "gudgeon",
+      "anchovy",
+      "tilapia",
+      "perch",
+      "eel",
+      "good_fishing_rod",
+      "bream",
+      "sardine",
+      "silver_crucian",
+      "pike",
+      "salmon",
+      "sturgeon",
+      "carp",
+      "gold_crucian",
+      "goldfish"
+    ],
+    "image": "npc_lighthouse_keeper"
+  },
+  {
+    "id": "marquis_teodoro_jr",
+    "name": "Marquis Teodoro Jr.",
+    "title": "Camp leader",
+    "location": "Refugee camp",
+    "icon": "person",
+    "days": [],
+    "image": "npc_marquis_teodoro_jr"
+  },
+  {
+    "id": "merchant",
+    "name": "Merchant",
+    "title": "Merchant",
+    "location": "Trade office south of the tavern",
+    "icon": "coin",
     "days": [
-      "lujuria",
-      "envidia",
       "gula"
     ],
+    "notes": "Comercia con: Valuable items.",
     "sells": [
-      "log",
-      "plank"
-    ]
+      "gold_jewelry_details",
+      "silver_ingot",
+      "silk",
+      "grape_seed",
+      "royal_fish",
+      "red_wine",
+      "grape_pie",
+      "cake",
+      "pumpkin_soup",
+      "vegetable_soup",
+      "baked_kebab",
+      "burger",
+      "cabbage_soup",
+      "a_bowl_of_lentils",
+      "onion_rings",
+      "toasts_with_onions"
+    ],
+    "buys": [
+      "grape_seed",
+      "gold_jewelry_details",
+      "jewelry",
+      "silver_ingot"
+    ],
+    "image": "npc_merchant"
+  },
+  {
+    "id": "miller",
+    "name": "Miller",
+    "title": "Miller",
+    "location": "Wheat Farm",
+    "icon": "sack",
+    "days": [],
+    "notes": "Comercia con: grain products.",
+    "sells": [
+      "flour",
+      "hops",
+      "hops_seed",
+      "wheat"
+    ],
+    "buys": [
+      "firewood",
+      "hops",
+      "hops_seed",
+      "wheat"
+    ],
+    "image": "npc_miller"
+  },
+  {
+    "id": "miss_chain",
+    "name": "Miss Chain",
+    "title": "Horadric's wife",
+    "location": "The Dead Horse",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "recipe_fish_delicacies",
+      "recipe_tasty_and_healthy",
+      "recipe_sweet_baking",
+      "recipe_pies"
+    ],
+    "image": "npc_miss_chain"
+  },
+  {
+    "id": "moneylender",
+    "name": "Moneylender",
+    "title": "Jewelry Materials",
+    "location": "Refugee camp",
+    "icon": "person",
+    "days": [],
+    "notes": "Comercia con: Jewelry Materials.",
+    "sells": [
+      "jewelry",
+      "gold_ingot",
+      "gold_jewelry_details",
+      "gold_nugget",
+      "silver_ingot",
+      "gold_powder",
+      "silver_nugget",
+      "silver_powder"
+    ],
+    "buys": [
+      "gold_jewelry_details",
+      "gold_ingot",
+      "jewelry",
+      "silver_ingot"
+    ],
+    "image": "npc_moneylender"
+  },
+  {
+    "id": "monks",
+    "name": "Monk",
+    "title": "Church goer",
+    "location": "Church",
+    "icon": "person",
+    "days": [],
+    "image": "npc_monks"
+  },
+  {
+    "id": "guards",
+    "name": "Mountain Fort Guard",
+    "title": "Guard access to the Mountain fort",
+    "location": "Village north exit",
+    "icon": "person",
+    "days": [],
+    "image": "npc_guards"
+  },
+  {
+    "id": "ms_charm",
+    "name": "Ms. Charm",
+    "title": "Actress",
+    "location": "The Dead Horse",
+    "icon": "heart",
+    "days": [
+      "lujuria"
+    ],
+    "sells": [
+      "jewelry",
+      "perfume"
+    ],
+    "buys": [
+      "jewelry",
+      "perfume"
+    ],
+    "image": "npc_ms_charm"
+  },
+  {
+    "id": "rosa",
+    "name": "Rosa",
+    "title": "Milk Maid",
+    "location": "The Village",
+    "icon": "water",
+    "days": [],
+    "notes": "Comercia con: dairy products.",
+    "sells": [
+      "butter",
+      "cheese",
+      "bucket_of_milk",
+      "jug_of_milk"
+    ],
+    "image": "npc_rosa"
+  },
+  {
+    "id": "shepherd",
+    "name": "Shepherd",
+    "title": "Shepherd",
+    "location": "Village",
+    "icon": "person",
+    "days": [],
+    "notes": "Comercia con: Composter.",
+    "sells": [
+      "peat"
+    ],
+    "buys": [
+      "crop_waste"
+    ],
+    "image": "npc_shepherd"
+  },
+  {
+    "id": "snake",
+    "name": "Snake",
+    "title": "Cultist",
+    "location": "Alchemy Lab, Cellar, Dungeon",
+    "icon": "eye",
+    "days": [
+      "envidia"
+    ],
+    "image": "npc_snake"
+  },
+  {
+    "id": "tanner",
+    "name": "Tanner",
+    "title": "Bags and bag techs",
+    "location": "Refugee camp",
+    "icon": "person",
+    "days": [],
+    "notes": "Comercia con: Bags and bag techs.",
+    "sells": [
+      "alchemist_s_bag",
+      "farmer_s_bag",
+      "tool_bag"
+    ],
+    "image": "npc_tanner"
+  },
+  {
+    "id": "tress",
+    "name": "Tress",
+    "title": "Carpenter",
+    "location": "The Village",
+    "icon": "log",
+    "days": [],
+    "notes": "Comercia con: Wood.",
+    "sells": [
+      "wood_repair_kit",
+      "wood_billet",
+      "firewood",
+      "flitch",
+      "wood_wedge",
+      "wooden_stick",
+      "wooden_beam",
+      "wooden_plank",
+      "steel_chisel",
+      "jointing",
+      "carved_wood",
+      "axe_ii"
+    ],
+    "buys": [
+      "wood_repair_kit",
+      "wood_billet",
+      "firewood",
+      "flitch",
+      "wood_wedge",
+      "wooden_stick",
+      "wooden_beam",
+      "wooden_plank",
+      "steel_chisel",
+      "jointing",
+      "carved_wood",
+      "axe_ii"
+    ],
+    "image": "npc_tress"
+  },
+  {
+    "id": "undertaker",
+    "name": "Undertaker",
+    "title": "Graveyard items",
+    "location": "Refugee camp",
+    "icon": "person",
+    "days": [],
+    "notes": "Comercia con: Graveyard items.",
+    "image": "npc_undertaker"
+  },
+  {
+    "id": "vagner",
+    "name": "Vagner",
+    "title": "Poet",
+    "location": "The Dead Horse",
+    "icon": "person",
+    "days": [],
+    "image": "npc_vagner"
+  },
+  {
+    "id": "woodcutter",
+    "name": "Woodcutter",
+    "title": "Personaje",
+    "location": "North of Tress",
+    "icon": "person",
+    "days": [],
+    "image": "npc_woodcutter"
+  },
+  {
+    "id": "yorick",
+    "name": "Yorick",
+    "title": "Guide",
+    "location": "Morgue, Workyard",
+    "icon": "skull",
+    "days": [],
+    "image": "npc_yorick"
   }
 ]

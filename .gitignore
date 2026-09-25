@@ -5,3 +5,4 @@ DerivedData
 xcuserdata
 # El proyecto se genera con XcodeGen desde project.yml
 *.xcodeproj
+scripts/wiki/cache/

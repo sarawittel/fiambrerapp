@@ -6,15 +6,19 @@ public struct GameData: Sendable {
     public let recipes: [Recipe]
     public let days: [Day]
     public let characters: [NPC]
+    public let stationList: [Station]
 
     private let itemsById: [String: Item]
     private let recipesById: [String: Recipe]
     private let charactersById: [String: NPC]
     private let daysById: [String: Day]
     private let producers: [String: Recipe]
+    private let stationsByName: [String: Station]
 
-    public init(items: [Item], recipes: [Recipe], days: [Day], characters: [NPC]) {
+    public init(items: [Item], recipes: [Recipe], days: [Day], characters: [NPC], stations: [Station] = []) {
         self.items = items
+        stationList = stations
+        stationsByName = Dictionary(stations.map { ($0.name, $0) }, uniquingKeysWith: { first, _ in first })
         self.recipes = recipes
         self.days = days
         self.characters = characters
@@ -31,7 +35,8 @@ public struct GameData: Sendable {
         do {
             return try GameData(
                 items: load("items"), recipes: load("recipes"),
-                days: load("days"), characters: load("characters")
+                days: load("days"), characters: load("characters"),
+                stations: load("stations")
             )
         } catch {
             fatalError("No se pudieron cargar los datos del juego: \(error)")
@@ -45,6 +50,11 @@ public struct GameData: Sendable {
         return try JSONDecoder().decode(T.self, from: Data(contentsOf: url))
     }
 
+    /// URL de una imagen de `Resources/Images`.
+    public static func imageURL(_ name: String) -> URL? {
+        Bundle.module.url(forResource: name, withExtension: "png", subdirectory: "Resources/Images")
+    }
+
     // MARK: - Consultas
 
     public func item(_ id: String) -> Item? { itemsById[id] }
@@ -53,6 +63,7 @@ public struct GameData: Sendable {
     public func day(_ id: String) -> Day? { daysById[id] }
 
     public func recipe(producing itemId: String) -> Recipe? { producers[itemId] }
+    public func stationImage(_ name: String) -> String? { stationsByName[name]?.image }
 
     public func itemName(_ id: String) -> String { itemsById[id]?.name ?? id }
 

@@ -1,188 +1,5932 @@
 [
   {
-    "id": "log",
-    "name": "Tronco",
-    "category": "material",
-    "icon": "log",
+    "id": "a_bowl_of_lentils",
+    "name": "A bowl of lentils",
+    "category": "comida",
+    "icon": "bread",
     "sources": [
-      "Talar árboles en el bosque"
-    ]
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "A food item which restores energy and applies the deep sleep buff when consumed.",
+    "image": "a_bowl_of_lentils"
   },
   {
-    "id": "stone",
-    "name": "Piedra",
+    "id": "a_bowl_of_pumpkin_soup",
+    "name": "A bowl of pumpkin soup",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Oven",
+      "Horadric"
+    ],
+    "description": "On use, this consumable will apply the 'Deep Sleep' buff for a duration of 2 minutes, allowing the player to regenerate more energy points when sleeping.",
+    "image": "a_bowl_of_pumpkin_soup"
+  },
+  {
+    "id": "a_bowl_of_sauerkraut",
+    "name": "A bowl of sauerkraut",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "A food item which restores and applies the slow metabolism buff when consumed.",
+    "image": "a_bowl_of_sauerkraut"
+  },
+  {
+    "id": "a_brick_from_the_church",
+    "name": "A Brick from The Church",
     "category": "material",
     "icon": "stone",
     "sources": [
-      "Cantera al este del cementerio"
-    ]
+      "Graveyard"
+    ],
+    "description": "A Brick from The Church is found in the Graveyard in a marked spot behind the blueprint table.",
+    "image": "a_brick_from_the_church"
   },
   {
-    "id": "iron_ore",
-    "name": "Mineral de hierro",
+    "id": "a_carved_piece_of_marble",
+    "name": "A carved piece of marble",
     "category": "material",
-    "icon": "ore",
+    "icon": "stone",
     "sources": [
-      "Cantera (vetas oscuras)"
-    ]
+      "Stone cutter II"
+    ],
+    "description": "Regarding these varying qualities, carvings can be utilized within the church, or bought and sold from the vendor Cory, while the carvings are used in a variety of applications regarding the Graveyard.",
+    "image": "a_carved_piece_of_marble"
   },
   {
-    "id": "bone",
-    "name": "Hueso",
+    "id": "a_carved_piece_of_stone",
+    "name": "A carved piece of stone",
     "category": "material",
-    "icon": "bone",
+    "icon": "stone",
     "sources": [
-      "Mesa de autopsias"
-    ]
+      "Stone cutter II"
+    ],
+    "image": "a_carved_piece_of_stone"
   },
   {
-    "id": "flesh",
-    "name": "Carne dudosa",
+    "id": "a_mug_of_beer",
+    "name": "A mug of beer",
+    "category": "comida",
+    "icon": "potion",
+    "sources": [
+      "Brewing stand",
+      "Horadric"
+    ],
+    "description": "Gerry requests beer which requires you to find Horadric in the village at the tavern.",
+    "image": "a_mug_of_beer"
+  },
+  {
+    "id": "a_mug_of_mead",
+    "name": "A mug of mead",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Brewing stand"
+    ],
+    "description": "The crafting recipe can be obtained from Horadric after opening the buffet on Witch Hill.",
+    "image": "a_mug_of_mead"
+  },
+  {
+    "id": "a_piece_of_marble",
+    "name": "A piece of marble",
     "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter",
+      "Stone cutter II"
+    ],
+    "description": "A piece of marble is a crafting resource that can be processed at either stone cutter from marble blocks.",
+    "image": "a_piece_of_marble"
+  },
+  {
+    "id": "a_piece_of_stone",
+    "name": "A piece of stone",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Mining",
+      "Stone cutter",
+      "Stone cutter II"
+    ],
+    "description": "pt-br: Pedaço de pedra",
+    "image": "a_piece_of_stone"
+  },
+  {
+    "id": "a_polished_brick_of_marble",
+    "name": "A polished brick of marble",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter",
+      "Stone cutter II"
+    ],
+    "image": "a_polished_brick_of_marble"
+  },
+  {
+    "id": "a_polished_brick_of_stone",
+    "name": "A polished brick of stone",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter",
+      "Stone cutter II"
+    ],
+    "image": "a_polished_brick_of_stone"
+  },
+  {
+    "id": "acceleration_extract",
+    "name": "Acceleration extract",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Extrato de aceleração",
+    "image": "acceleration_extract"
+  },
+  {
+    "id": "acceleration_powder",
+    "name": "Acceleration powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "fr:Poudre d'Accélération",
+    "image": "acceleration_powder"
+  },
+  {
+    "id": "acceleration_solution",
+    "name": "Acceleration solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "es:Solución aceleradora",
+    "image": "acceleration_solution"
+  },
+  {
+    "id": "accepted_invitation",
+    "name": "Accepted invitation",
+    "category": "material",
+    "icon": "stone",
+    "description": "The Accepted Invitation is part of final quest for the Bishop.",
+    "image": "accepted_invitation"
+  },
+  {
+    "id": "acid",
+    "name": "Acid",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "acid"
+  },
+  {
+    "id": "acid_injection",
+    "name": "Acid injection",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "The Acid injection is used at the embalming table to remove one and one .",
+    "image": "acid_injection"
+  },
+  {
+    "id": "active_key",
+    "name": "Active key",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Study table"
+    ],
+    "image": "active_key"
+  },
+  {
+    "id": "advanced_conical_flasks",
+    "name": "Advanced conical flasks",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Furnace II",
+      "Furnace III"
+    ],
+    "description": "Conversely, while wasteful, these are one of the earliest sources of unlimited .",
+    "image": "advanced_conical_flasks"
+  },
+  {
+    "id": "alchemist_s_bag",
+    "name": "Alchemist's bag",
+    "category": "herramienta",
+    "icon": "anvil",
+    "description": "This bag extends the Keeper's inventory by 9 slots but can only hold alchemical items.",
+    "image": "alchemist_s_bag"
+  },
+  {
+    "id": "alchemy_mill",
+    "name": "Alchemy mill",
+    "category": "material",
+    "icon": "stone",
+    "image": "alchemy_mill"
+  },
+  {
+    "id": "alchemy_recipe",
+    "name": "Alchemy recipe",
+    "category": "material",
+    "icon": "stone",
+    "description": "The Alchemy recipe is a usable scroll, sold by Clotho.",
+    "image": "alchemy_recipe"
+  },
+  {
+    "id": "alchemy_workbench_tier_i",
+    "name": "Alchemy workbench (tier I)",
+    "category": "material",
+    "icon": "stone",
+    "image": "alchemy_workbench_tier_i"
+  },
+  {
+    "id": "alchemy_workbench_tier_ii",
+    "name": "Alchemy workbench (tier II)",
+    "category": "material",
+    "icon": "stone",
+    "image": "alchemy_workbench_tier_ii"
+  },
+  {
+    "id": "alcohol",
+    "name": "Alcohol",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Booze",
+      "Clotho"
+    ],
+    "description": "Alcohol is obtained by using a bottle of Booze.",
+    "image": "alcohol"
+  },
+  {
+    "id": "alkali",
+    "name": "Alkali",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "alkali"
+  },
+  {
+    "id": "amulet_of_the_ancient_god",
+    "name": "Amulet of The Ancient God",
+    "category": "material",
+    "icon": "stone",
+    "description": "This item unlocks the tenth vision of the ancient machine in the Talking Skull Cellar.",
+    "image": "amulet_of_the_ancient_god"
+  },
+  {
+    "id": "anchovy",
+    "name": "Anchovy",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Sea"
+    ],
+    "description": "The Anchovy is one of sixteen(16) different fish that can be caught, and either sold to the Lighthouse Keeper, processed for cooking, or - in it's particular case, akin to the Gudgeon - preferably used as bait while fishing for more valuabl",
+    "image": "anchovy"
+  },
+  {
+    "id": "ancient_keys",
+    "name": "Ancient Keys",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Adam"
+    ],
+    "description": "Ancient Keys is retrieved from Adam.",
+    "image": "ancient_keys"
+  },
+  {
+    "id": "ancient_lockpicks",
+    "name": "Ancient Lockpicks",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Miller"
+    ],
+    "description": "The Ancient Lockpicks are received from Miller.",
+    "image": "ancient_lockpicks"
+  },
+  {
+    "id": "ancient_pickaxe",
+    "name": "Ancient Pickaxe",
+    "category": "material",
+    "icon": "anvil",
+    "sources": [
+      "Koukol"
+    ],
+    "description": "Ancient Pickaxe is retrieved from Koukol.",
+    "image": "ancient_pickaxe"
+  },
+  {
+    "id": "ancient_shackles",
+    "name": "Ancient Shackles",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Swamp"
+    ],
+    "description": "The Ancient Shackles can be found in a dig spot on the way to the Swamp.",
+    "image": "ancient_shackles"
+  },
+  {
+    "id": "anvil",
+    "name": "Anvil",
+    "category": "material",
+    "icon": "stone",
+    "image": "anvil"
+  },
+  {
+    "id": "anvil_ii",
+    "name": "Anvil II",
+    "category": "material",
+    "icon": "stone",
+    "image": "anvil_ii"
+  },
+  {
+    "id": "aphorisms_about_the_evils_of_money",
+    "name": "Aphorisms about the evils of money",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Donkey"
+    ],
+    "description": "The Aphorisms about the evils of money item is part of the Game of Crone DLC.",
+    "image": "aphorisms_about_the_evils_of_money"
+  },
+  {
+    "id": "aristocrat_papers",
+    "name": "Aristocrat papers",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Royal services"
+    ],
+    "description": "Aristocrat papers can be obtained from the royal services box.",
+    "image": "aristocrat_papers"
+  },
+  {
+    "id": "aromatizer",
+    "name": "Aromatizer",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Aromatizer is produced through Alchemy at the alchemy workbench (tier II) and is used to make Incense II.",
+    "image": "aromatizer"
+  },
+  {
+    "id": "ash",
+    "name": "Ash",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Place for burning corpses",
+      "Goo",
+      "Wall Crematorium"
+    ],
+    "image": "ash"
+  },
+  {
+    "id": "axe_i",
+    "name": "Axe I",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Krezvold",
+      "Wooden anvil",
+      "Anvil",
+      "Anvil II"
+    ],
+    "description": "The Axe I is equipped in the slot and is used when chopping down trees for logs or when splitting wood at the chopping spot.",
+    "image": "axe_i"
+  },
+  {
+    "id": "axe_ii",
+    "name": "Axe II",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Anvil II"
+    ],
+    "description": "The Axe II is equipped in the slot and is used when chopping down trees for logs or when splitting wood at the chopping spot.",
+    "image": "axe_ii"
+  },
+  {
+    "id": "baked_apple",
+    "name": "Baked apple",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "image": "baked_apple"
+  },
+  {
+    "id": "baked_fish",
+    "name": "Baked fish",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "Baked fish is a food item which restores and applies the good fisherman buff when consumed.",
+    "image": "baked_fish"
+  },
+  {
+    "id": "baked_kebab",
+    "name": "Baked kebab",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "The Baked kebab is a consumable food item which restores energy and bestows an effect.",
+    "image": "baked_kebab"
+  },
+  {
+    "id": "baked_meat",
+    "name": "Baked meat",
+    "category": "comida",
     "icon": "meat",
     "sources": [
-      "Mesa de autopsias"
-    ]
+      "Oven"
+    ],
+    "description": "Baked meat is a consumable food item which restores a relatively small amount of energy when consumed.",
+    "image": "baked_meat"
   },
   {
-    "id": "fat",
-    "name": "Grasa",
-    "category": "material",
-    "icon": "fat",
+    "id": "baked_mushrooms",
+    "name": "Baked mushrooms",
+    "category": "comida",
+    "icon": "herb",
     "sources": [
-      "Mesa de autopsias"
-    ]
+      "Cooking"
+    ],
+    "description": "Baked mushrooms are a food item which restores when consumed.",
+    "image": "baked_mushrooms"
+  },
+  {
+    "id": "baked_pumpkin",
+    "name": "Baked pumpkin",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the slow metabolism buff when consumed.",
+    "image": "baked_pumpkin"
+  },
+  {
+    "id": "baked_salmon",
+    "name": "Baked salmon",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "A food item which restores energy when consumed.",
+    "image": "baked_salmon"
+  },
+  {
+    "id": "balsamic_solution",
+    "name": "Balsamic solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "es:Solución balsámica",
+    "image": "balsamic_solution"
+  },
+  {
+    "id": "bank_checks",
+    "name": "Bank checks",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Donkey"
+    ],
+    "description": "The Bank checks item is part of the Game of Crone DLC.",
+    "image": "bank_checks"
+  },
+  {
+    "id": "barman_doll",
+    "name": "Barman Doll",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Carpenter's workbench Carpenter's workbench II"
+    ],
+    "description": "The Barman Doll is a craft-able item needed to operate the Talking Skull Tavern.",
+    "image": "barman_doll"
+  },
+  {
+    "id": "basket_of_food",
+    "name": "Basket of food",
+    "category": "material",
+    "icon": "stone",
+    "description": "Part of Ms.",
+    "image": "basket_of_food"
+  },
+  {
+    "id": "bat_wing",
+    "name": "Bat wing",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Bat",
+      "Dungeon"
+    ],
+    "description": "Bat wings are dropped by bats which appear at night in few outside areas as well as inside the dungeon.",
+    "image": "bat_wing"
+  },
+  {
+    "id": "battle_horseshoes",
+    "name": "Battle horseshoes",
+    "category": "material",
+    "icon": "stone",
+    "description": "Note: The cost includes the Iron unicorn horns quest item as well.",
+    "image": "battle_horseshoes"
+  },
+  {
+    "id": "bee",
+    "name": "Bee",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Wild hives",
+      "Hives"
+    ],
+    "description": "You can sometimes get bees while harvesting bee hives or wild hives for honey, but only if you have unlocked the insects technology.",
+    "image": "bee"
+  },
+  {
+    "id": "bee_hive",
+    "name": "Bee hive",
+    "category": "material",
+    "icon": "stone",
+    "image": "bee_hive"
   },
   {
     "id": "beeswax",
-    "name": "Cera de abeja",
-    "category": "material",
-    "icon": "wax",
+    "name": "Beeswax",
+    "category": "comida",
+    "icon": "bread",
     "sources": [
-      "Colmenas"
-    ]
+      "Beekeeping"
+    ],
+    "description": "Beeswax can be decomposed into solution and extract with the hand mixer and any of the distillation cubes, respectively.",
+    "image": "beeswax"
   },
   {
-    "id": "herb_red",
-    "name": "Hierba roja",
+    "id": "beet",
+    "name": "Beet",
     "category": "material",
+    "icon": "stone",
+    "description": "Beets are a form of crop which can be grown from beet seeds in the garden below the workyard known as the kitchen garden.",
+    "image": "beet"
+  },
+  {
+    "id": "beet_seed",
+    "name": "Beet seed",
+    "category": "comida",
     "icon": "herb",
     "sources": [
-      "Huerto",
-      "Claros del bosque"
-    ]
+      "Farming",
+      "Dungeon"
+    ],
+    "description": "Beet seeds are one of five different types of basic seeds, to be utilized at the Kitchen Garden.",
+    "image": "beet_seed"
   },
   {
-    "id": "herb_blue",
-    "name": "Hierba azul",
-    "category": "material",
-    "icon": "herb_blue",
+    "id": "beet_slices",
+    "name": "Beet slices",
+    "category": "comida",
+    "icon": "bread",
     "sources": [
-      "Pantano"
-    ]
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "The Beet slices is a food item which restores when consumed.",
+    "image": "beet_slices"
   },
   {
-    "id": "water",
-    "name": "Agua",
+    "id": "belt_buckle",
+    "name": "Belt Buckle",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Woodcutter"
+    ],
+    "description": "The Belt Buckle can be retrieved from Woodcutter.",
+    "image": "belt_buckle"
+  },
+  {
+    "id": "berry",
+    "name": "Berry",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Berry bushes"
+    ],
+    "image": "berry"
+  },
+  {
+    "id": "berry_juice",
+    "name": "Berry juice",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking table"
+    ],
+    "description": "pt-br:Suco de frutinhas",
+    "image": "berry_juice"
+  },
+  {
+    "id": "berry_pie",
+    "name": "Berry pie",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores when consumed.",
+    "image": "berry_pie"
+  },
+  {
+    "id": "berry_pudding",
+    "name": "Berry pudding",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and will apply the steady hand buff for a duration of 2 minutes, reducing the risk of surgical errors during body part extraction.",
+    "image": "berry_pudding"
+  },
+  {
+    "id": "berserk_potion",
+    "name": "Berserk potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "On use, the potion will apply the Berserk potion buff for a duration of 5 minutes.",
+    "image": "berserk_potion"
+  },
+  {
+    "id": "big_universal_bag",
+    "name": "Big universal bag",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Church workbench"
+    ],
+    "description": "You cannot put one bag inside another bag.",
+    "image": "big_universal_bag"
+  },
+  {
+    "id": "black_and_gold_cloak",
+    "name": "Black and gold cloak",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Master Alaric"
+    ],
+    "image": "black_and_gold_cloak"
+  },
+  {
+    "id": "black_jelly",
+    "name": "Black jelly",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dungeon"
+    ],
+    "description": "Black jelly is a mob drop, gained by defeating a poppet, found only within the deeper levels of the dungeon.",
+    "image": "black_jelly"
+  },
+  {
+    "id": "black_paint",
+    "name": "Black paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Black Paint is produced through Alchemy at the Alchemy Workbench (Tier I) and is used in the production of ink.",
+    "image": "black_paint"
+  },
+  {
+    "id": "blessing_of_commerce",
+    "name": "Blessing of commerce",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Sermon"
+    ],
+    "description": "The Blessing of commerce can be obtained by performing a sermon using a .",
+    "image": "blessing_of_commerce"
+  },
+  {
+    "id": "blood",
+    "name": "Blood",
+    "category": "funerario",
+    "icon": "potion_dark",
+    "sources": [
+      "Autopsy"
+    ],
+    "description": "An alternative for getting Blood aside from corpses is failing Alchemy recipes on purpose to obtain Blood Goo, which can be converted into Blood on the Hand Mixer.",
+    "image": "blood"
+  },
+  {
+    "id": "bloody_nails",
+    "name": "Bloody nails",
+    "category": "material",
+    "icon": "potion_dark",
+    "sources": [
+      "Dungeon"
+    ],
+    "description": "The bloody nails are a quest item dropped by iron maidens in the dungeon.",
+    "image": "bloody_nails"
+  },
+  {
+    "id": "blue_fish_fillet",
+    "name": "Blue fish fillet",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking table",
+      "Lighthouse Keeper"
+    ],
+    "description": "As of the official release of the game, the copper-quality blue-fish-fillets are not available, as none of the fish that provide these fillets will ever spawn with a copper-quality.",
+    "image": "blue_fish_fillet"
+  },
+  {
+    "id": "blue_jelly",
+    "name": "Blue jelly",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dungeon"
+    ],
+    "description": "Blue jelly is a mob drop, obtained by killing blue slimes, found only within the dungeon.",
+    "image": "blue_jelly"
+  },
+  {
+    "id": "blue_paint",
+    "name": "Blue paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Blue paint is produced through Alchemy at the alchemy workbench (tier I) and is used in the remodelling of the home.",
+    "image": "blue_paint"
+  },
+  {
+    "id": "boiled_egg",
+    "name": "Boiled egg",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item, not to be confused with fried egg, which restores when consumed.",
+    "image": "boiled_egg"
+  },
+  {
+    "id": "bone",
+    "name": "Bone",
+    "category": "funerario",
+    "icon": "bone",
+    "sources": [
+      "Autopsy"
+    ],
+    "image": "bone"
+  },
+  {
+    "id": "book",
+    "name": "Book",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Desk",
+      "Desk II",
+      "Organ Workbench"
+    ],
+    "description": "Books can be turned into science or used in the crafting of sermons and stone prayer stations.",
+    "image": "book"
+  },
+  {
+    "id": "boost_fertilizer_i",
+    "name": "Boost fertilizer I",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Church workbench",
+      "Organ workbench"
+    ],
+    "description": "Boost fertilizer I is produced at the Church workbench by combining the basic fertilizer peat with an energy elixir, the latter requiring an introduction to alchemy.",
+    "image": "boost_fertilizer_i"
+  },
+  {
+    "id": "boost_fertilizer_ii",
+    "name": "Boost fertilizer II",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Church workbench",
+      "Organ workbench"
+    ],
+    "description": "Boost fertilizer II is produced at the Church workbench by combining the basic fertilizer peat with two energy elixir, the latter requiring an introduction to alchemy.",
+    "image": "boost_fertilizer_ii"
+  },
+  {
+    "id": "booze",
+    "name": "Booze",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Alcohol distiller"
+    ],
+    "description": "With the DLC Stranger Sins, booze - as with most beverages - may be sold regularly, either passively by being stored in the Talking Skulls cellar, or actively by being stored in the Barmans inventory and triggering an event.",
+    "image": "booze"
+  },
+  {
+    "id": "bottle_of_apple_ferment",
+    "name": "Bottle of apple ferment",
+    "category": "comida",
+    "icon": "potion",
+    "sources": [
+      "Fermentation barrel"
+    ],
+    "image": "bottle_of_apple_ferment"
+  },
+  {
+    "id": "bottle_of_apple_juice",
+    "name": "Bottle of apple juice",
+    "category": "comida",
+    "icon": "potion",
+    "sources": [
+      "Pail of apple juice"
+    ],
+    "image": "bottle_of_apple_juice"
+  },
+  {
+    "id": "bottle_of_berry_ferment",
+    "name": "Bottle of berry ferment",
+    "category": "comida",
+    "icon": "potion",
+    "sources": [
+      "Fermentation barrel"
+    ],
+    "image": "bottle_of_berry_ferment"
+  },
+  {
+    "id": "bottle_of_berry_juice",
+    "name": "Bottle of berry juice",
+    "category": "comida",
+    "icon": "potion",
+    "sources": [
+      "Pail of berry juice"
+    ],
+    "image": "bottle_of_berry_juice"
+  },
+  {
+    "id": "bottle_of_grape_juice",
+    "name": "Bottle of grape juice",
+    "category": "comida",
+    "icon": "potion",
+    "sources": [
+      "Pail of grape juice"
+    ],
+    "image": "bottle_of_grape_juice"
+  },
+  {
+    "id": "brain",
+    "name": "Brain",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Autopsy"
+    ],
+    "description": "The Brain is a bodypart the can be removed at the preparation place.",
+    "image": "brain"
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "Bread restores when consumed.",
+    "image": "bread"
+  },
+  {
+    "id": "bream",
+    "name": "Bream",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Waterfall",
+      "River"
+    ],
+    "description": "The Bream is one of sixteen(16) different fish that can be caught, and either processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "bream"
+  },
+  {
+    "id": "broken_glass",
+    "name": "Broken glass",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Souls room"
+    ],
+    "description": "Broken glass is a byproduct of breaking down old broken bottles in the Souls room.",
+    "image": "broken_glass"
+  },
+  {
+    "id": "brown_paint",
+    "name": "Brown Paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "brown_paint"
+  },
+  {
+    "id": "bucket_of_blood",
+    "name": "Bucket of blood",
+    "category": "material",
+    "icon": "potion_dark",
+    "sources": [
+      "Dungeon",
+      "Church workbench"
+    ],
+    "description": "Bucket of blood is a quest item, obtained from a chest in level 5 of the Dungeon as part of a quest for Snake.",
+    "image": "bucket_of_blood"
+  },
+  {
+    "id": "bucket_of_clear_water",
+    "name": "Bucket of clear water",
     "category": "material",
     "icon": "water",
     "sources": [
-      "Pozo del cementerio"
-    ]
+      "Well"
+    ],
+    "description": "Bucket of clear water is obtained from the well in the workyard.",
+    "image": "bucket_of_clear_water"
   },
   {
-    "id": "wheat",
-    "name": "Trigo",
+    "id": "bucket_of_milk",
+    "name": "Bucket of milk",
     "category": "material",
-    "icon": "wheat",
+    "icon": "stone",
     "sources": [
-      "Huerto"
-    ]
+      "Rosa"
+    ],
+    "description": "Bucket of milk can be bought in the northern part of The Village from Rosa.",
+    "image": "bucket_of_milk"
   },
   {
-    "id": "plank",
-    "name": "Tablón",
+    "id": "build_stone_fence",
+    "name": "Build stone fence",
     "category": "material",
-    "icon": "plank"
+    "icon": "grave",
+    "image": "build_stone_fence"
   },
   {
-    "id": "stone_block",
-    "name": "Bloque de piedra",
+    "id": "builder_s_bag",
+    "name": "Builder's bag",
+    "category": "material",
+    "icon": "stone",
+    "image": "builder_s_bag"
+  },
+  {
+    "id": "building_permission",
+    "name": "Building permission",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Royal services"
+    ],
+    "description": "The building permission is an item bought from the royal services located next to the church entrance for .",
+    "image": "building_permission"
+  },
+  {
+    "id": "burger",
+    "name": "Burger",
+    "category": "comida",
+    "icon": "burger",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "The Burger is a food item which restores and applies the Steady Hand buff when consumed, with higher quality versions of the dish having a larger restorative effect.",
+    "image": "burger"
+  },
+  {
+    "id": "burial_certificate",
+    "name": "Burial certificate",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Graves",
+      "Crematorium",
+      "Wall Crematorium"
+    ],
+    "description": "This Burial certificate is an item that will be regularly awarded to the player each time they bury or cremate a corpse, while pointedly not being awarded when the corpse is disposed of in the nearby river.",
+    "image": "burial_certificate"
+  },
+  {
+    "id": "bush_berry_seedling",
+    "name": "Bush berry seedling",
+    "category": "comida",
+    "icon": "herb",
+    "description": "Sold by the witch Clotho and used in the creation of berry bushes in the Orchard directly south of the house.",
+    "image": "bush_berry_seedling"
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Rosa"
+    ],
+    "description": "Butter is an ingredient used in cooking, one source of which is Rosa, the Shepherd's wife.",
+    "image": "butter"
+  },
+  {
+    "id": "butterfly",
+    "name": "Butterfly",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Daytime flowers"
+    ],
+    "description": "The Butterfly is an insect, able to be found by foraging flowers during the day, after unlocking Insects under the given tech tree.",
+    "image": "butterfly"
+  },
+  {
+    "id": "cabbage",
+    "name": "Cabbage",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Cabbage is a crop grown from cabbage seeds in the garden below the workyard in the kitchen garden.",
+    "image": "cabbage"
+  },
+  {
+    "id": "cabbage_seed",
+    "name": "Cabbage seed",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Farming",
+      "Dungeon"
+    ],
+    "description": "Cabbage seeds are one of five different types of basic seeds, to be utilized at the Kitchen Garden.",
+    "image": "cabbage_seed"
+  },
+  {
+    "id": "cabbage_soup",
+    "name": "Cabbage soup",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the deep sleep buff when consumed.",
+    "image": "cabbage_soup"
+  },
+  {
+    "id": "cake",
+    "name": "Cake",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the circumspect buff when consumed.",
+    "image": "cake"
+  },
+  {
+    "id": "candelabra_iii",
+    "name": "Candelabra III",
+    "category": "material",
+    "icon": "stone",
+    "image": "candelabra_iii"
+  },
+  {
+    "id": "candle",
+    "name": "Candle",
+    "category": "funerario",
+    "icon": "candle",
+    "sources": [
+      "Church workbench",
+      "Bishop"
+    ],
+    "image": "candle"
+  },
+  {
+    "id": "carp",
+    "name": "Carp",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Waterfall"
+    ],
+    "description": "The Carp is one of sixteen(16) fish that can be caught, and either processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "carp"
+  },
+  {
+    "id": "carrot",
+    "name": "Carrot",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Carrots can be decomposed to solution with the hand mixer.",
+    "image": "carrot"
+  },
+  {
+    "id": "carrot_cutlet",
+    "name": "Carrot cutlet",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "The Carrot cutlet is a food item which restores when consumed.",
+    "image": "carrot_cutlet"
+  },
+  {
+    "id": "carrot_seed",
+    "name": "Carrot seed",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Farming",
+      "Dungeon"
+    ],
+    "description": "Carrot seeds are one of five different types of basic seeds, to be utilized at the Kitchen Garden.",
+    "image": "carrot_seed"
+  },
+  {
+    "id": "carved_wood",
+    "name": "Carved wood",
+    "category": "material",
+    "icon": "log",
+    "sources": [
+      "Carpenter's workbench II"
+    ],
+    "description": "As of v1.404, it is implemented, and 4 silver quality pieces are used for the construction of the Soul container III (Base).",
+    "image": "carved_wood"
+  },
+  {
+    "id": "carved_wood_silver_quality",
+    "name": "Carved wood (silver quality)",
+    "category": "material",
+    "icon": "log",
+    "sources": [
+      "Carpenter's workbench II"
+    ],
+    "description": "As of v1.404, it is implemented, and 4 silver quality pieces are used for the construction of the Soul container III (Base).",
+    "image": "carved_wood_silver_quality"
+  },
+  {
+    "id": "casual_prayer",
+    "name": "Casual prayer",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench",
+      "Bishop"
+    ],
+    "description": "Basic prayer received at the start of the game from Bishop.",
+    "image": "casual_prayer"
+  },
+  {
+    "id": "cauldron",
+    "name": "Cauldron",
+    "category": "material",
+    "icon": "stone",
+    "description": "The cauldron's only use is as a method of completing Clotho's quest.",
+    "image": "cauldron"
+  },
+  {
+    "id": "ceramic_bowls",
+    "name": "Ceramic bowls",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Potters wheel",
+      "Dungeon pots"
+    ],
+    "description": "Ceramic bowls are a craft-able crafting resource, simply made from clay and water.",
+    "image": "ceramic_bowls"
+  },
+  {
+    "id": "ceramic_funeral_urn",
+    "name": "Ceramic funeral urn",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Cooking table"
+    ],
+    "description": "The Ceramic funeral urn is a craft-able resource, the only purpose of which is the building of stone columbariums, which increases your graveyard rating by 12 once they're constructed.",
+    "image": "ceramic_funeral_urn"
+  },
+  {
+    "id": "ceramic_jug",
+    "name": "Ceramic jug",
+    "category": "material",
+    "icon": "potion",
+    "sources": [
+      "Furnace",
+      "Furnace II",
+      "Furnace III",
+      "Potter"
+    ],
+    "image": "ceramic_jug"
+  },
+  {
+    "id": "chaos_extract",
+    "name": "Chaos extract",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Extrato do caos",
+    "image": "chaos_extract"
+  },
+  {
+    "id": "chaos_powder",
+    "name": "Chaos powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "chaos_powder"
+  },
+  {
+    "id": "chaos_solution",
+    "name": "Chaos solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Solução do caos",
+    "image": "chaos_solution"
+  },
+  {
+    "id": "chapter",
+    "name": "Chapter",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Desk",
+      "Desk II",
+      "Astrologer",
+      "Organ Workbench"
+    ],
+    "image": "chapter"
+  },
+  {
+    "id": "charred_vampire_shoe",
+    "name": "Charred vampire shoe",
+    "category": "material",
+    "icon": "stone",
+    "description": "Charred vampire shoe is a quest item from the Game of Crone DLC.",
+    "image": "charred_vampire_shoe"
+  },
+  {
+    "id": "cheese",
+    "name": "Cheese",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Rosa"
+    ],
+    "description": "Cheese is an ingredient used in cooking.",
+    "image": "cheese"
+  },
+  {
+    "id": "cheese_cake",
+    "name": "Cheese cake",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the circumspect buff when consumed.",
+    "image": "cheese_cake"
+  },
+  {
+    "id": "cheese_patty",
+    "name": "Cheese patty",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores when consumed and will apply the hard worker buff for a duration of 2 minutes.",
+    "image": "cheese_patty"
+  },
+  {
+    "id": "cheese_pie",
+    "name": "Cheese pie",
+    "category": "comida",
+    "icon": "bread",
+    "description": "A food item which restores energy and applies the Handyman mood buff when consumed.",
+    "image": "cheese_pie"
+  },
+  {
+    "id": "chicken_egg",
+    "name": "Chicken egg",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Fresh egg basket"
+    ],
+    "description": "Chicken egg is an ingredient used in cooking, the primary source of which is the Fresh egg basket.",
+    "image": "chicken_egg"
+  },
+  {
+    "id": "chopping_spot",
+    "name": "Chopping spot",
+    "category": "material",
+    "icon": "stone",
+    "image": "chopping_spot"
+  },
+  {
+    "id": "clay",
+    "name": "Clay",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Clay Pits"
+    ],
+    "description": "Clay is a crafting material generally used to produce ceramics and repair kits.",
+    "image": "clay"
+  },
+  {
+    "id": "clay_pot_of_tar",
+    "name": "Clay Pot of Tar",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Witch Hill"
+    ],
+    "description": "The Clay Pot of Tar can be found on Witch Hill.",
+    "image": "clay_pot_of_tar"
+  },
+  {
+    "id": "clay_shards",
+    "name": "Clay Shards",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Adam"
+    ],
+    "description": "The Clay Shards can be retrieved from Adam.",
+    "image": "clay_shards"
+  },
+  {
+    "id": "clean_paper",
+    "name": "Clean paper",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Astrologer",
+      "Church workbench",
+      "Paper press"
+    ],
+    "image": "clean_paper"
+  },
+  {
+    "id": "coal",
+    "name": "Coal",
+    "category": "material",
+    "icon": "ore",
+    "sources": [
+      "Mining"
+    ],
+    "description": "The coal must be extracted with a pick.",
+    "image": "coal"
+  },
+  {
+    "id": "coins",
+    "name": "Coins",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Mrs. Charm"
+    ],
+    "description": "Fake gold coins obtained from Ms.",
+    "image": "coins"
+  },
+  {
+    "id": "combo_prayer",
+    "name": "Combo prayer",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench",
+      "Bishop"
+    ],
+    "description": "A prayer which increases Faith and donations by 50%/100%/150%.",
+    "image": "combo_prayer"
+  },
+  {
+    "id": "communion_cookie",
+    "name": "Communion cookie",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Bishop"
+    ],
+    "description": "Can be bought from the Bishop as a Tier I Item.",
+    "image": "communion_cookie"
+  },
+  {
+    "id": "complex_iron_parts",
+    "name": "Complex iron parts",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Anvil",
+      "Anvil II"
+    ],
+    "description": "de:Komplexe Eisenstücke",
+    "image": "complex_iron_parts"
+  },
+  {
+    "id": "compost_heap",
+    "name": "Compost heap",
+    "category": "material",
+    "icon": "stone",
+    "image": "compost_heap"
+  },
+  {
+    "id": "conical_flasks",
+    "name": "Conical flasks",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Furnace II",
+      "Furnace III"
+    ],
+    "image": "conical_flasks"
+  },
+  {
+    "id": "cookbook",
+    "name": "Cookbook",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Donkey",
+      "Desk"
+    ],
+    "description": "\"50 Ways to cook ratatouille with vegetables and cats\"",
+    "image": "cookbook"
+  },
+  {
+    "id": "corpse",
+    "name": "Corpse",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Donkey",
+      "Graves"
+    ],
+    "description": "A graveyard keeper works with s.",
+    "image": "corpse"
+  },
+  {
+    "id": "crates",
+    "name": "Crates",
+    "category": "material",
+    "icon": "stone",
+    "image": "crates"
+  },
+  {
+    "id": "cream_of_mushroom_soup",
+    "name": "Cream of mushroom soup",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the 'Tough Mood' buff when consumed.",
+    "image": "cream_of_mushroom_soup"
+  },
+  {
+    "id": "creamy_vegetable_soup",
+    "name": "Creamy vegetable soup",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the slow metabolism buff when consumed.",
+    "image": "creamy_vegetable_soup"
+  },
+  {
+    "id": "croissant",
+    "name": "Croissant",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "This recipe can be learned by using Recipe sweet baking, which can be purchased from Miss Chain.",
+    "image": "croissant"
+  },
+  {
+    "id": "crop_waste",
+    "name": "Crop waste",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Crop waste is decomposable to powder at the Alchemy mill.",
+    "image": "crop_waste"
+  },
+  {
+    "id": "crucified_skeleton",
+    "name": "Crucified skeleton",
+    "category": "material",
+    "icon": "stone",
+    "image": "crucified_skeleton"
+  },
+  {
+    "id": "crucified_skeleton_on_the_wall",
+    "name": "Crucified skeleton on the wall",
+    "category": "material",
+    "icon": "stone",
+    "image": "crucified_skeleton_on_the_wall"
+  },
+  {
+    "id": "curtains",
+    "name": "Curtains",
+    "category": "material",
+    "icon": "stone",
+    "image": "curtains"
+  },
+  {
+    "id": "damask_sword",
+    "name": "Damask sword",
+    "category": "herramienta",
+    "icon": "anvil",
+    "description": "The Damask sword is one of the highest tier weapons known, dealing damage per swing while only using .",
+    "image": "damask_sword"
+  },
+  {
+    "id": "damask_sword_with_gem",
+    "name": "Damask sword with gem",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Jewelry table"
+    ],
+    "description": "The Damask sword with gem is a high-tier weapon, which inflicts of damage to enemies, while only consuming .",
+    "image": "damask_sword_with_gem"
+  },
+  {
+    "id": "dark_brain",
+    "name": "Dark brain",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Autopsy"
+    ],
+    "description": "Dark brain, as well as the other variants (Dark heart, Dark intestine), will randomly appear on newly delivered corpses.",
+    "image": "dark_brain"
+  },
+  {
+    "id": "dark_elixir",
+    "name": "Dark elixir",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "dark_elixir"
+  },
+  {
+    "id": "dark_green_paint",
+    "name": "Dark Green Paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "es:Pintura verde oscuro",
+    "image": "dark_green_paint"
+  },
+  {
+    "id": "dark_heart",
+    "name": "Dark heart",
+    "category": "funerario",
+    "icon": "heart",
+    "sources": [
+      "Autopsy"
+    ],
+    "description": "Dark heart, as well as the other variants (Dark brain, Dark intestine), will randomly appear on newly delivered corpses.",
+    "image": "dark_heart"
+  },
+  {
+    "id": "dark_injection",
+    "name": "Dark injection",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "The Dark injection is used at the embalming table to add two .",
+    "image": "dark_injection"
+  },
+  {
+    "id": "dark_intestine",
+    "name": "Dark intestine",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Autopsy"
+    ],
+    "description": "Dark intestine, as well as the other variants (Dark brain, Dark heart), will randomly appear on newly delivered corpses.",
+    "image": "dark_intestine"
+  },
+  {
+    "id": "dark_lungs",
+    "name": "Dark lungs",
+    "category": "funerario",
+    "icon": "grave",
+    "description": "Not obtainable.",
+    "image": "dark_lungs"
+  },
+  {
+    "id": "dark_violet_paint",
+    "name": "Dark Violet Paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Dark Violet Paint is produced through Alchemy at the Alchemy Workbench (Tier I).",
+    "image": "dark_violet_paint"
+  },
+  {
+    "id": "death_extract",
+    "name": "Death extract",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Extrato da morte",
+    "image": "death_extract"
+  },
+  {
+    "id": "death_powder",
+    "name": "Death powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "death_powder"
+  },
+  {
+    "id": "death_solution",
+    "name": "Death solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Solução de morte",
+    "image": "death_solution"
+  },
+  {
+    "id": "diamond_paint",
+    "name": "Diamond Paint",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Tress"
+    ],
+    "description": "Diamond paint is bought from Tress and is used in the remodelling of the home.",
+    "image": "diamond_paint"
+  },
+  {
+    "id": "diary",
+    "name": "Diary",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dungeon"
+    ],
+    "description": "Quest item for Astrologer, obtained from the Dungeon after completing the quest of opening gate for Snake.",
+    "image": "diary"
+  },
+  {
+    "id": "digestion_potion",
+    "name": "Digestion potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Digestion potion is produced through Alchemy at the alchemy workbench (tier II).",
+    "image": "digestion_potion"
+  },
+  {
+    "id": "dinner",
+    "name": "Dinner",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "Dinner is a craftable quest item, by using various processed consumables, created through cooking.",
+    "image": "dinner"
+  },
+  {
+    "id": "distillation_cube_ii",
+    "name": "Distillation cube II",
+    "category": "material",
+    "icon": "stone",
+    "image": "distillation_cube_ii"
+  },
+  {
+    "id": "door_hinge",
+    "name": "Door Hinge",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dig Spot"
+    ],
+    "description": "The Door Hinge can be found in a dig spot between some village ruins, below the Talking Skull and to the left of Dig's home.",
+    "image": "door_hinge"
+  },
+  {
+    "id": "dough",
+    "name": "Dough",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "Dough is an ingredient used in cooking, able to be crafted at the cooking table.",
+    "image": "dough"
+  },
+  {
+    "id": "edible_mushroom",
+    "name": "Edible mushroom",
+    "category": "material",
+    "icon": "herb",
+    "sources": [
+      "Foraging"
+    ],
+    "description": "Edible mushrooms are forageable items located in all outdoor locations on the map.",
+    "image": "edible_mushroom"
+  },
+  {
+    "id": "eel",
+    "name": "Eel",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Sea",
+      "Swamp"
+    ],
+    "description": "The Eel is one of sixteen(16) different 'fish' that can be caught, and either sold to the Lighthouse Keeper, processed for cooking, or - in it's particular case, once studied - processed into a powder for use in alchemy.",
+    "image": "eel"
+  },
+  {
+    "id": "electric_powder",
+    "name": "Electric powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Eel",
+      "Clotho",
+      "Dungeon"
+    ],
+    "description": "ru:Электрический порошок",
+    "image": "electric_powder"
+  },
+  {
+    "id": "embalming_table",
+    "name": "Embalming table",
+    "category": "material",
+    "icon": "stone",
+    "image": "embalming_table"
+  },
+  {
+    "id": "emulsion_of_death",
+    "name": "Emulsion of death",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Brewing stand"
+    ],
+    "image": "emulsion_of_death"
+  },
+  {
+    "id": "endless_notebook",
+    "name": "Endless notebook",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Snake"
+    ],
+    "description": "This is an item required to open the portal for the gravekeeper to return home, it is held by Snake and is given to the player when they complete his final quest.",
+    "image": "endless_notebook"
+  },
+  {
+    "id": "energy_elixir",
+    "name": "Energy elixir",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Energy elixir is produced through Alchemy at the alchemy workbench (tier I) and is used in the production of fertilizer.",
+    "image": "energy_elixir"
+  },
+  {
+    "id": "energy_potion",
+    "name": "Energy potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "description": "Energy potions can be used to restore .",
+    "image": "energy_potion"
+  },
+  {
+    "id": "eternal_burning_coal",
+    "name": "Eternal burning coal",
+    "category": "material",
+    "icon": "ore",
+    "sources": [
+      "Inquisitor"
+    ],
+    "description": "This is a item required to open the portal for the gravekeeper to return home, it is held by Inquisitor and is given to the player when they complete Snake's final quest.",
+    "image": "eternal_burning_coal"
+  },
+  {
+    "id": "excellent_fishing_rod",
+    "name": "Excellent fishing rod",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Lighthouse Keeper"
+    ],
+    "description": "The Excellent fishing rod is a piece of equipment which, unlike most other tools, does not degrade with use.",
+    "image": "excellent_fishing_rod"
+  },
+  {
+    "id": "exhumation_permission",
+    "name": "Exhumation permission",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Royal services"
+    ],
+    "description": "The exhumation permission can be purchased from royal services for a set price of , which is more than Horadric pays you for selling the .",
+    "image": "exhumation_permission"
+  },
+  {
+    "id": "faceted_diamond",
+    "name": "Faceted diamond",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dungeon",
+      "Souls room"
+    ],
+    "description": "In v1.3, a bug was temporarily introduced where the merchant was unable to sell or buy this item.",
+    "image": "faceted_diamond"
+  },
+  {
+    "id": "faceted_emerald",
+    "name": "Faceted emerald",
+    "category": "material",
+    "icon": "stone",
+    "image": "faceted_emerald"
+  },
+  {
+    "id": "faith",
+    "name": "Faith",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Sermons",
+      "Confessional"
+    ],
+    "description": "Faith is a resource that can be obtained either through holding sermons on or occasionally at random from a confessional.",
+    "image": "faith"
+  },
+  {
+    "id": "fancy_lentil_soup",
+    "name": "Fancy lentil soup",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores between and applies the circumspect buff when consumed.",
+    "image": "fancy_lentil_soup"
+  },
+  {
+    "id": "farmer_s_bag",
+    "name": "Farmer's bag",
+    "category": "herramienta",
+    "icon": "anvil",
+    "description": "This bag extends the Keeper's inventory by 9 slots but can only hold certains items related to farming.",
+    "image": "farmer_s_bag"
+  },
+  {
+    "id": "fat",
+    "name": "Fat",
+    "category": "funerario",
+    "icon": "fat",
+    "sources": [
+      "Autopsy"
+    ],
+    "image": "fat"
+  },
+  {
+    "id": "feather",
+    "name": "Feather",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Fresh egg basket",
+      "Astrologer"
+    ],
+    "description": "Feathers cannot be crafted and must be purchased from the Astrologer, or the fresh egg basket.",
+    "image": "feather"
+  },
+  {
+    "id": "firewood",
+    "name": "Firewood",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Chopping spot"
+    ],
+    "description": "Firewood can be crafted on a chopping spot from wood billets or grave decorations, e.g.",
+    "image": "firewood"
+  },
+  {
+    "id": "fish_nuggets",
+    "name": "Fish nuggets",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "Fish nuggets is a food item which restores and applies the fast reflexes buff when consumed.",
+    "image": "fish_nuggets"
+  },
+  {
+    "id": "fish_soup",
+    "name": "Fish soup",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "Fish soup is a food item which restores and applies the good fisherman buff when consumed.",
+    "image": "fish_soup"
+  },
+  {
+    "id": "fisherman_s_bag",
+    "name": "Fisherman's bag",
     "category": "material",
     "icon": "stone"
   },
   {
-    "id": "iron_bar",
-    "name": "Lingote de hierro",
+    "id": "flask",
+    "name": "Flask",
     "category": "material",
-    "icon": "ingot"
+    "icon": "stone",
+    "sources": [
+      "Farmer's Son"
+    ],
+    "description": "The Flask (or Ancient wine flask) is retrieved from the Farmer's Son.",
+    "image": "flask"
   },
   {
-    "id": "nails",
-    "name": "Clavos",
+    "id": "flavor_enhancer",
+    "name": "Flavor enhancer",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Flavor enhancer is produced through Alchemy at the alchemy workbench (tier II) and is used to make higher tier fertilizer.",
+    "image": "flavor_enhancer"
+  },
+  {
+    "id": "flesh",
+    "name": "Flesh",
+    "category": "funerario",
+    "icon": "meat",
+    "sources": [
+      "Autopsy"
+    ],
+    "image": "flesh"
+  },
+  {
+    "id": "flitch",
+    "name": "Flitch",
     "category": "material",
-    "icon": "nails"
+    "icon": "log",
+    "sources": [
+      "Sawhorse",
+      "Circular saw",
+      "Dungeon"
+    ],
+    "description": "Flitch is rough cut wood that has only been coarsely ripped into planks at the circular saw or sawhorse.",
+    "image": "flitch"
   },
   {
     "id": "flour",
-    "name": "Harina",
+    "name": "Flour",
     "category": "comida",
-    "icon": "sack"
+    "icon": "sack",
+    "sources": [
+      "Cooking table"
+    ],
+    "description": "Flour is a cooking resource, made from wheat, used for the production of dough and pastry dough.",
+    "image": "flour"
   },
   {
-    "id": "paper",
-    "name": "Papel",
+    "id": "flowerbed",
+    "name": "Flowerbed",
     "category": "material",
-    "icon": "scroll"
+    "icon": "herb",
+    "image": "flowerbed"
   },
   {
-    "id": "ink",
-    "name": "Tinta",
+    "id": "flyer",
+    "name": "Flyer",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Desk",
+      "Desk II",
+      "Printing press",
+      "Printing press II"
+    ],
+    "description": "Regarding the mass-production of Flyers, despite crafting them at a desk requiring feathers, and significantly more energy and time, the printing press is incredibly inefficient when it comes to ink.",
+    "image": "flyer"
+  },
+  {
+    "id": "food_bag",
+    "name": "Food bag",
+    "category": "material",
+    "icon": "stone",
+    "image": "food_bag"
+  },
+  {
+    "id": "freshener",
+    "name": "Freshener",
     "category": "alquimia",
-    "icon": "potion_dark"
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Freshener is produced through Alchemy at the alchemy workbench (tier I) and is used in the production of incense.",
+    "image": "freshener"
   },
   {
-    "id": "candle",
-    "name": "Vela",
-    "category": "funerario",
-    "icon": "candle",
-    "description": "Ilumina la iglesia y mejora la calidad del sermón."
-  },
-  {
-    "id": "bread",
-    "name": "Pan",
+    "id": "fried_egg",
+    "name": "Fried egg",
     "category": "comida",
-    "icon": "bread"
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores when consumed.",
+    "image": "fried_egg"
   },
   {
-    "id": "burger",
-    "name": "Hamburguesa dudosa",
-    "category": "comida",
-    "icon": "burger",
-    "description": "Mejor no preguntar de dónde sale la carne."
+    "id": "frog",
+    "name": "Frog",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Village",
+      "Swamp"
+    ],
+    "description": "The Frog is one of sixteen (16) different 'fish' that can be caught, and either sold to the Lighthouse Keeper, or also sold to or bought from Clotho the witch.",
+    "image": "frog"
   },
   {
-    "id": "potion_heal",
-    "name": "Poción de vitalidad",
+    "id": "fuel",
+    "name": "Fuel",
     "category": "alquimia",
-    "icon": "potion"
+    "icon": "potion",
+    "sources": [
+      "Wooden stick",
+      "Firewood",
+      "Coal"
+    ],
+    "image": "fuel"
   },
   {
-    "id": "scroll",
-    "name": "Pergamino funerario",
-    "category": "funerario",
-    "icon": "scroll"
+    "id": "furnace_ii",
+    "name": "Furnace II",
+    "category": "material",
+    "icon": "stone",
+    "image": "furnace_ii"
   },
   {
-    "id": "coffin",
-    "name": "Ataúd sencillo",
+    "id": "furnace_iii",
+    "name": "Furnace III",
+    "category": "material",
+    "icon": "stone",
+    "image": "furnace_iii"
+  },
+  {
+    "id": "garden_bed_with_sticks",
+    "name": "Garden bed with sticks",
+    "category": "material",
+    "icon": "log",
+    "image": "garden_bed_with_sticks"
+  },
+  {
+    "id": "garden_certificate",
+    "name": "Garden certificate",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Horadric"
+    ],
+    "description": "Obtained from Horadric after you ask about the garden.",
+    "image": "garden_certificate"
+  },
+  {
+    "id": "glass",
+    "name": "Glass",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Furnace",
+      "Furnace II",
+      "Furnace III"
+    ],
+    "description": "Note; as one upgrades their furnace, glass production becomes less efficient overall.",
+    "image": "glass"
+  },
+  {
+    "id": "glue",
+    "name": "Glue",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "glue"
+  },
+  {
+    "id": "glue_injection",
+    "name": "Glue injection",
     "category": "funerario",
-    "icon": "coffin"
+    "icon": "grave",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "The Glue injection is used at the embalming table to add one .",
+    "image": "glue_injection"
+  },
+  {
+    "id": "gold_crucian",
+    "name": "Gold crucian",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "River"
+    ],
+    "description": "The Gold Crucian is a valuable fish, that can either be processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "gold_crucian"
+  },
+  {
+    "id": "gold_ingot",
+    "name": "Gold ingot",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Furnace II",
+      "Furnace III"
+    ],
+    "image": "gold_ingot"
+  },
+  {
+    "id": "gold_injection",
+    "name": "Gold injection",
+    "category": "funerario",
+    "icon": "coin",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "The Gold injection is used at the embalming table to remove two and add two .",
+    "image": "gold_injection"
+  },
+  {
+    "id": "gold_jewelry_details",
+    "name": "Gold jewelry details",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Jewelry table"
+    ],
+    "description": "These Gold jewelry details are a late-game crafting materials, and can either be crafted at a jewelry table or bought from the Merchant for .",
+    "image": "gold_jewelry_details"
+  },
+  {
+    "id": "gold_nugget",
+    "name": "Gold nugget",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Mining"
+    ],
+    "description": "It is not possible to find any precious metals in the bog iron deposits.",
+    "image": "gold_nugget"
+  },
+  {
+    "id": "gold_powder",
+    "name": "Gold powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "gold_powder"
+  },
+  {
+    "id": "golden_angle",
+    "name": "Golden angle",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Astrologer"
+    ],
+    "description": "This is a item required to open the portal for the gravekeeper to return home, it is held by the Astrologer and is given to the player when they complete his final quest.",
+    "image": "golden_angle"
+  },
+  {
+    "id": "golden_apple",
+    "name": "Golden apple",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Dungeon",
+      "Woodcutter"
+    ],
+    "description": "Snake asks you to retrieve the Golden apple from the Dungeon on level 15.",
+    "image": "golden_apple"
+  },
+  {
+    "id": "golden_elixir",
+    "name": "Golden elixir",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "golden_elixir"
+  },
+  {
+    "id": "goldfish",
+    "name": "Goldfish",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Sea"
+    ],
+    "description": "The Goldfish is the rarest and most valuable fish in the game.",
+    "image": "goldfish"
+  },
+  {
+    "id": "goo",
+    "name": "Goo",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Goo is created when you fail an alchemical combination while using the Alchemy workbench (tier I) or the Alchemy workbench (tier II), where the player combines ingredients that do not equal any existing recipes.",
+    "image": "goo"
+  },
+  {
+    "id": "good_fishing_rod",
+    "name": "Good fishing rod",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Lighthouse Keeper"
+    ],
+    "description": "The Good fishing rod is a piece of equipment which, unlike most other tools, does not degrade with use.",
+    "image": "good_fishing_rod"
+  },
+  {
+    "id": "grape_pie",
+    "name": "Grape pie",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores between and applies the circumspect buff when consumed.",
+    "image": "grape_pie"
+  },
+  {
+    "id": "grape_seed",
+    "name": "Grape seed",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Grape seeds are one of five different types of complex seeds, to be utilized at the Vineyard.",
+    "image": "grape_seed"
+  },
+  {
+    "id": "grapes",
+    "name": "Grapes",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Despite the Merchant being involved in trading the seeds, he is not interested in the produce, nor is any other known vendor.",
+    "image": "grapes"
+  },
+  {
+    "id": "graphite",
+    "name": "Graphite",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Furnace II",
+      "Furnace III"
+    ],
+    "image": "graphite"
+  },
+  {
+    "id": "graphite_powder",
+    "name": "Graphite powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Graphite",
+      "Alchemy mill"
+    ],
+    "description": "Graphite powder is produced by grinding graphite in the alchemy mill.",
+    "image": "graphite_powder"
+  },
+  {
+    "id": "grated_beets",
+    "name": "Grated beets",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "The Grated beets is a food item which restores when consumed.",
+    "image": "grated_beets"
+  },
+  {
+    "id": "grated_carrot",
+    "name": "Grated carrot",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "The Grated carrot is a food item which restores when consumed.",
+    "image": "grated_carrot"
   },
   {
     "id": "gravestone",
-    "name": "Lápida",
+    "name": "Gravestone",
     "category": "funerario",
-    "icon": "grave"
+    "icon": "grave",
+    "sources": [
+      "Stone cutter",
+      "Stone cutter II"
+    ],
+    "description": "The Gravestone is a grave decoration which provides +2 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "gravestone"
+  },
+  {
+    "id": "gravestone_ii",
+    "name": "Gravestone II",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Gravestone II is a grave decoration which provides +3 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "gravestone_ii"
+  },
+  {
+    "id": "gravestone_iii",
+    "name": "Gravestone III",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Gravestone III is a grave decoration which provides +4 when placed on a grave place after a corpse has been buried there.",
+    "image": "gravestone_iii"
+  },
+  {
+    "id": "graveyard_scroll",
+    "name": "Graveyard scroll",
+    "category": "material",
+    "icon": "grave",
+    "sources": [
+      "Inquisitor"
+    ],
+    "description": "Gotten from the Inquisitor at 20.",
+    "image": "graveyard_scroll"
+  },
+  {
+    "id": "green_apple",
+    "name": "Green apple",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Apple trees"
+    ],
+    "description": "Green apples are a consumable food item, harvested from apple trees found near the lighthouse.",
+    "image": "green_apple"
+  },
+  {
+    "id": "green_jelly",
+    "name": "Green jelly",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Green slimes",
+      "Dungeon"
+    ],
+    "description": "Green jelly is obtained by killing green slimes in the dungeon or north of Sweet Home (during the morning).",
+    "image": "green_jelly"
+  },
+  {
+    "id": "green_jelly_food",
+    "name": "Green jelly (food)",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "Green jelly (food) is a consumable item, restoring a relatively small amount of energy upon use.",
+    "image": "green_jelly_food"
+  },
+  {
+    "id": "green_paint",
+    "name": "Green Paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Green Paint is produced through Alchemy at the alchemy workbench (tier I) and is used in the remodelling of the home.",
+    "image": "green_paint"
+  },
+  {
+    "id": "growth_enhancer",
+    "name": "Growth enhancer",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Growth enhancer is produced through Alchemy at the alchemy workbench (tier I) and is used in the production of fertilizer.",
+    "image": "growth_enhancer"
+  },
+  {
+    "id": "gudgeon",
+    "name": "Gudgeon",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Village",
+      "Waterfall"
+    ],
+    "description": "The Gudgeon is one of sixteen(16) different fish that can be caught, and either sold to the Lighthouse Keeper, processed for cooking, or - in it's particular case, akin to the Anchovy - preferably used as bait while fishing for more valuabl",
+    "image": "gudgeon"
+  },
+  {
+    "id": "hard_cover",
+    "name": "Hard cover",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Church workbench",
+      "Astrologer"
+    ],
+    "description": "Hard covers are used to create higher quality books.",
+    "image": "hard_cover"
+  },
+  {
+    "id": "harmed_soul",
+    "name": "Harmed soul",
+    "category": "material",
+    "icon": "stone",
+    "image": "harmed_soul"
+  },
+  {
+    "id": "heal_potion",
+    "name": "Heal potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy workbench (tier I)",
+      "Dungeon"
+    ],
+    "description": "Heal potions can be used to restore .",
+    "image": "heal_potion"
+  },
+  {
+    "id": "health_extract",
+    "name": "Health extract",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Extrato de vida",
+    "image": "health_extract"
+  },
+  {
+    "id": "health_powder",
+    "name": "Health powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "health_powder"
+  },
+  {
+    "id": "health_solution",
+    "name": "Health solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Solução de vida (verde)",
+    "image": "health_solution"
+  },
+  {
+    "id": "heart",
+    "name": "Heart",
+    "category": "funerario",
+    "icon": "heart",
+    "sources": [
+      "Autopsy"
+    ],
+    "description": "The Heart is a bodypart the can be removed at the preparation place and will have the effect of removing , , or chosen randomly from the corpses rating.",
+    "image": "heart"
+  },
+  {
+    "id": "hemp",
+    "name": "Hemp",
+    "category": "comida",
+    "icon": "bread",
+    "description": "Hemp is a form of crop which can be grown from hemp seeds in the garden below the workyard also known as the kitchen garden.",
+    "image": "hemp"
+  },
+  {
+    "id": "hemp_rope",
+    "name": "Hemp rope",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dig",
+      "Church workbench",
+      "Hemp"
+    ],
+    "image": "hemp_rope"
+  },
+  {
+    "id": "hemp_seed",
+    "name": "Hemp seed",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Farming",
+      "Dungeon"
+    ],
+    "description": "Hemp seeds are one of five different types of basic seeds, to be utilized at the Kitchen Garden.",
+    "image": "hemp_seed"
+  },
+  {
+    "id": "hiccup_grass",
+    "name": "Hiccup grass",
+    "category": "material",
+    "icon": "herb",
+    "sources": [
+      "Swamp"
+    ],
+    "description": "Hiccup grass is a forageable plant that grows naturally in the swamp area west of the graveyard.",
+    "image": "hiccup_grass"
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "category": "comida",
+    "icon": "wax",
+    "sources": [
+      "Beekeeping"
+    ],
+    "description": "Honey can be decomposed into solution and powder with the hand mixer and alchemy mill, respectively.",
+    "image": "honey"
+  },
+  {
+    "id": "honey_cake",
+    "name": "Honey cake",
+    "category": "comida",
+    "icon": "wax",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the circumspect buff when consumed.",
+    "image": "honey_cake"
+  },
+  {
+    "id": "honey_pudding",
+    "name": "Honey pudding",
+    "category": "comida",
+    "icon": "wax",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and will apply the steady hand buff for a duration of 2 minutes, reducing the risk of surgical errors during body part extraction.",
+    "image": "honey_pudding"
+  },
+  {
+    "id": "hops",
+    "name": "Hops",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Hops can be decomposed to solution and powder at the hand mixer and alchemy mill, respectively.",
+    "image": "hops"
+  },
+  {
+    "id": "hops_seed",
+    "name": "Hops seed",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Hops seeds are one of five different types of complex seeds, to be utilized at the Vineyard.",
+    "image": "hops_seed"
+  },
+  {
+    "id": "ice_axe",
+    "name": "Ice axe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "description": "The Ice axe equips to the slot and is used when mining.",
+    "image": "ice_axe"
+  },
+  {
+    "id": "incense",
+    "name": "Incense",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench",
+      "Bishop"
+    ],
+    "image": "incense"
+  },
+  {
+    "id": "incense_burner",
+    "name": "Incense burner",
+    "category": "material",
+    "icon": "stone",
+    "image": "incense_burner"
+  },
+  {
+    "id": "incense_burner_ii",
+    "name": "Incense burner II",
+    "category": "material",
+    "icon": "stone",
+    "image": "incense_burner_ii"
+  },
+  {
+    "id": "incense_ii",
+    "name": "Incense II",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench",
+      "Bishop"
+    ],
+    "image": "incense_ii"
+  },
+  {
+    "id": "infusion",
+    "name": "Infusion",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Alcohol distiller"
+    ],
+    "description": "A drink which removes and restores when consumed.",
+    "image": "infusion"
+  },
+  {
+    "id": "ink",
+    "name": "Ink",
+    "category": "material",
+    "icon": "potion_dark",
+    "sources": [
+      "Church workbench"
+    ],
+    "image": "ink"
+  },
+  {
+    "id": "instructions_for_key",
+    "name": "Instructions for key",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Snake"
+    ],
+    "image": "instructions_for_key"
+  },
+  {
+    "id": "intestine",
+    "name": "Intestine",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Autopsy"
+    ],
+    "description": "The Intestine is a bodypart the can be removed at the preparation place and will have the effect of removing , , or chosen randomly from the corpses rating.",
+    "image": "intestine"
+  },
+  {
+    "id": "iron_armor",
+    "name": "Iron armor",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Carpenter's workbench",
+      "Carpenter's workbench II"
+    ],
+    "description": "Iron armor equips to the slot and provides 2 armor.",
+    "image": "iron_armor"
+  },
+  {
+    "id": "iron_block",
+    "name": "Iron block",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Iron Ore Deposit"
+    ],
+    "description": "The iron block is a resource gathered from Iron Ore Deposit and needs to be stored in the Iron Ore Stockpile.",
+    "image": "iron_block"
+  },
+  {
+    "id": "iron_chisel",
+    "name": "Iron chisel",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Carpenter's workbench",
+      "Carpenter's workbench II"
+    ],
+    "description": "An Iron chisel is a degradable piece of equipment, used to refine various resource materials.",
+    "image": "iron_chisel"
+  },
+  {
+    "id": "iron_hammer",
+    "name": "Iron hammer",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Krezvold",
+      "Anvil"
+    ],
+    "description": "The Iron hammer equips to the slot and is used when constructing blueprints and during several other select operations.",
+    "image": "iron_hammer"
+  },
+  {
+    "id": "iron_ingot",
+    "name": "Iron ingot",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Furnace",
+      "Furnace II",
+      "Furnace III"
+    ],
+    "description": "pt-br:Lingote de ferro",
+    "image": "iron_ingot"
+  },
+  {
+    "id": "iron_ore",
+    "name": "Iron ore",
+    "category": "material",
+    "icon": "ore",
+    "sources": [
+      "Mining"
+    ],
+    "description": "Iron ore is collected either from the bog ore outcroppings, from iron deposits or via a zombie ore mine.",
+    "image": "iron_ore"
+  },
+  {
+    "id": "iron_unicorn_horns",
+    "name": "Iron unicorn horns",
+    "category": "material",
+    "icon": "stone",
+    "description": "Note: The cost includes the Battle horseshoes quest item as well.",
+    "image": "iron_unicorn_horns"
+  },
+  {
+    "id": "jelly_of_incredible_power",
+    "name": "Jelly of incredible power",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "jewelry",
+    "name": "Jewelry",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Jewelry table"
+    ],
+    "description": "After you have reached 40 with Ms.",
+    "image": "jewelry"
+  },
+  {
+    "id": "jewelry_table",
+    "name": "Jewelry table",
+    "category": "material",
+    "icon": "stone",
+    "image": "jewelry_table"
+  },
+  {
+    "id": "jointing",
+    "name": "Jointing",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Carpenter's workbench II"
+    ],
+    "image": "jointing"
+  },
+  {
+    "id": "jug_of_milk",
+    "name": "Jug of milk",
+    "category": "comida",
+    "icon": "potion",
+    "sources": [
+      "Rosa"
+    ],
+    "description": "Jug of milk is an ingredient used in cooking, it can be bought from Rosa, the Shepherd's wife, or aquired from refugee camp after finishing Tanner's quest.",
+    "image": "jug_of_milk"
+  },
+  {
+    "id": "keepers_journal",
+    "name": "Keepers journal",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dungeon"
+    ],
+    "description": "Obtainable after you unlock the dungeon as part of the Astrologer's quest.",
+    "image": "keepers_journal"
+  },
+  {
+    "id": "keepers_key",
+    "name": "Keepers key",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Astrologer"
+    ],
+    "image": "keepers_key"
+  },
+  {
+    "id": "lantern",
+    "name": "Lantern",
+    "category": "material",
+    "icon": "stone",
+    "image": "lantern"
+  },
+  {
+    "id": "lasagna",
+    "name": "Lasagna",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the hard worker buff when consumed.",
+    "image": "lasagna"
+  },
+  {
+    "id": "lawn",
+    "name": "Lawn",
+    "category": "material",
+    "icon": "stone",
+    "image": "lawn"
+  },
+  {
+    "id": "legionary_helm",
+    "name": "Legionary Helm",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Farmer"
+    ],
+    "description": "The Legionary Helm is retrieved from the Farmer's house.",
+    "image": "legionary_helm"
+  },
+  {
+    "id": "lens",
+    "name": "Lens",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Carpenter's workbench II"
+    ],
+    "description": "Lens are a craft-able crafting resource, requiring Faith and Oil.",
+    "image": "lens"
+  },
+  {
+    "id": "lentil_cutlets",
+    "name": "Lentil cutlets",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores between and applies the circumspect buff when consumed.",
+    "image": "lentil_cutlets"
+  },
+  {
+    "id": "lentil_porridge",
+    "name": "Lentil porridge",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores energy.",
+    "image": "lentil_porridge"
+  },
+  {
+    "id": "lentil_seed",
+    "name": "Lentil seed",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Farming",
+      "Dungeon"
+    ],
+    "description": "Lentil seeds are one of five different types of complex seeds, to be utilized at the Kitchen Garden.",
+    "image": "lentil_seed"
+  },
+  {
+    "id": "lentils",
+    "name": "Lentils",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Lentils are a form of crop which can be grown from Lentil seeds in the garden below the workyard known as the Kitchen Garden.",
+    "image": "lentils"
+  },
+  {
+    "id": "letter_to_the_blacksmith",
+    "name": "Letter to the blacksmith",
+    "category": "material",
+    "icon": "scroll",
+    "description": "A letter from Horadric to the Village blacksmith.",
+    "image": "letter_to_the_blacksmith"
+  },
+  {
+    "id": "life_extract",
+    "name": "Life extract",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Life extract is a basic alchemy resource associated with one of the fundamental elements.",
+    "image": "life_extract"
+  },
+  {
+    "id": "life_powder",
+    "name": "Life powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Pó de ressurreição",
+    "image": "life_powder"
+  },
+  {
+    "id": "life_solution",
+    "name": "Life solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Solução de vida (amarela)",
+    "image": "life_solution"
+  },
+  {
+    "id": "limestone",
+    "name": "Limestone",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Mining"
+    ],
+    "description": "Limestone is a utilitarian resource that can only be obtained by mining a coal vein, after unlocking the required technology.",
+    "image": "limestone"
+  },
+  {
+    "id": "log",
+    "name": "Log",
+    "category": "material",
+    "icon": "log",
+    "sources": [
+      "Tree"
+    ],
+    "description": "Is the base material for almost any wood-related crafts in the game.",
+    "image": "log"
+  },
+  {
+    "id": "lost_tooth",
+    "name": "Lost tooth",
+    "category": "material",
+    "icon": "stone",
+    "description": "Lost tooth is a quest item from the Better Save Soul DLC.",
+    "image": "lost_tooth"
+  },
+  {
+    "id": "lungs",
+    "name": "Lungs",
+    "category": "funerario",
+    "icon": "grave",
+    "image": "lungs"
+  },
+  {
+    "id": "lure_with_a_gem",
+    "name": "Lure with a gem",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Lighthouse Keeper"
+    ],
+    "description": "Lure with a gem is one of eight(8) available baits to choose from when fishing.",
+    "image": "lure_with_a_gem"
+  },
+  {
+    "id": "lye_injection",
+    "name": "Lye injection",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "The Lye injection is used at the embalming table to add one and one .",
+    "image": "lye_injection"
+  },
+  {
+    "id": "maggot",
+    "name": "Maggot",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Compost"
+    ],
+    "description": "The Maggot is a byproduct of dutiful farming (composting).",
+    "image": "maggot"
+  },
+  {
+    "id": "marble_block",
+    "name": "Marble block",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Marble quarry"
+    ],
+    "description": "The Marble block is a resource gathered at the in the north part of the Quarry.",
+    "image": "marble_block"
+  },
+  {
+    "id": "marble_bust",
+    "name": "Marble bust",
+    "category": "material",
+    "icon": "stone",
+    "description": "Three gold-star marble busts are required by the Bishop in his quest to procure marble statues, and two silver-star marble busts are required in the creation of marble columbariums.",
+    "image": "marble_bust"
+  },
+  {
+    "id": "marble_columbarium",
+    "name": "Marble columbarium",
+    "category": "material",
+    "icon": "stone",
+    "image": "marble_columbarium"
+  },
+  {
+    "id": "marble_cross",
+    "name": "Marble cross",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble cross is a grave decoration which provides +5 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "marble_cross"
+  },
+  {
+    "id": "marble_cross_ii",
+    "name": "Marble cross II",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble cross II is a grave decoration which provides +6 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "marble_cross_ii"
+  },
+  {
+    "id": "marble_flagstones",
+    "name": "Marble flagstones",
+    "category": "material",
+    "icon": "stone",
+    "image": "marble_flagstones"
+  },
+  {
+    "id": "marble_grave_fence",
+    "name": "Marble grave fence",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble grave fence is a grave decoration which provides +4 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "marble_grave_fence"
+  },
+  {
+    "id": "marble_grave_fence_ii",
+    "name": "Marble grave fence II",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble grave fence II is a grave decoration which provides +5 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "marble_grave_fence_ii"
+  },
+  {
+    "id": "marble_grave_fence_iii",
+    "name": "Marble grave fence III",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble grave fence III is a grave decoration which provides +5 when placed on a grave place after a corpse has been buried there.",
+    "image": "marble_grave_fence_iii"
+  },
+  {
+    "id": "marble_grave_fence_iv",
+    "name": "Marble grave fence IV",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble grave fence IV is a grave decoration which provides +6 when placed on a grave place after a corpse has been buried there.",
+    "image": "marble_grave_fence_iv"
+  },
+  {
+    "id": "marble_grave_fence_v",
+    "name": "Marble grave fence V",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble grave fence V is a grave decoration which provides +7 when placed on a grave place after a corpse has been buried there.",
+    "image": "marble_grave_fence_v"
+  },
+  {
+    "id": "marble_grave_fence_vi",
+    "name": "Marble grave fence VI",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "marble_grave_fence_vi"
+  },
+  {
+    "id": "marble_grave_fence_vii",
+    "name": "Marble grave fence VII",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "marble_grave_fence_vii"
+  },
+  {
+    "id": "marble_grave_fence_viii",
+    "name": "Marble grave fence VIII",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "marble_grave_fence_viii"
+  },
+  {
+    "id": "marble_gravestone_ii",
+    "name": "Marble gravestone II",
+    "category": "funerario",
+    "icon": "grave",
+    "description": "The Marble gravestone II is a grave decoration which will provide a bonus to when placed on a grave place after a corpse has been buried there.",
+    "image": "marble_gravestone_ii"
+  },
+  {
+    "id": "marble_gravestone_iii",
+    "name": "Marble gravestone III",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble gravestone III is a grave decoration which provides +6 when placed on a grave place after a corpse has been buried there.",
+    "image": "marble_gravestone_iii"
+  },
+  {
+    "id": "marble_plinth",
+    "name": "Marble plinth",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble plinth is a grave decoration which provides +6 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "marble_plinth"
+  },
+  {
+    "id": "marble_repair_kit",
+    "name": "Marble repair kit",
+    "category": "herramienta",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter",
+      "Stone cutter II"
+    ],
+    "description": "Marble repair kits are used to fix grave fences and grave markers made of marble.",
+    "image": "marble_repair_kit"
+  },
+  {
+    "id": "marble_sarcophagus",
+    "name": "Marble sarcophagus",
+    "category": "funerario",
+    "icon": "stone",
+    "description": "The Marble sarcophagus is a grave decoration that adds bonuses to Grave Decor when placed on a Gravesite after corpse burial.",
+    "image": "marble_sarcophagus"
+  },
+  {
+    "id": "marble_sculpture",
+    "name": "Marble sculpture",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble sculpture is a grave decoration which provides +7 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "marble_sculpture"
+  },
+  {
+    "id": "marble_sculpture_ii",
+    "name": "Marble sculpture II",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble sculpture II is a grave decoration which provides +7 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "marble_sculpture_ii"
+  },
+  {
+    "id": "marble_sculpture_iii",
+    "name": "Marble sculpture III",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble sculpture III is a grave decoration which provides +8 when placed on a grave place after a corpse has been buried there.",
+    "image": "marble_sculpture_iii"
+  },
+  {
+    "id": "marble_sculpture_iv",
+    "name": "Marble sculpture IV",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Marble sculpture IV is a grave decoration which provides +9 when placed on a grave place after a corpse has been buried there.",
+    "image": "marble_sculpture_iv"
+  },
+  {
+    "id": "marble_sculpture_v",
+    "name": "Marble sculpture V",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "marble_sculpture_v"
+  },
+  {
+    "id": "marble_sculpture_vi",
+    "name": "Marble sculpture VI",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "marble_sculpture_vi"
+  },
+  {
+    "id": "memory_powder",
+    "name": "Memory powder",
+    "category": "material",
+    "icon": "sack",
+    "sources": [
+      "Clotho"
+    ],
+    "image": "memory_powder"
+  },
+  {
+    "id": "memory_tincture",
+    "name": "Memory tincture",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Used on the Vampires jaw.",
+    "image": "memory_tincture"
+  },
+  {
+    "id": "metal_scrap",
+    "name": "Metal scrap",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Workstations",
+      "Dungeon",
+      "Iron Maiden"
+    ],
+    "image": "metal_scrap"
+  },
+  {
+    "id": "mirror_of_pride",
+    "name": "Mirror of pride",
+    "category": "material",
+    "icon": "stone",
+    "description": "The Mirror of Pride is an Item obtained from the Bishop upon finishing his questline.",
+    "image": "mirror_of_pride"
+  },
+  {
+    "id": "moth",
+    "name": "Moth",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Nighttime flowers"
+    ],
+    "description": "The Moth is an insect, able to be found by foraging flowers during the night, after unlocking Insects under the given tech tree.",
+    "image": "moth"
+  },
+  {
+    "id": "muffin",
+    "name": "Muffin",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores when consumed.",
+    "image": "muffin"
+  },
+  {
+    "id": "mushroom_patty",
+    "name": "Mushroom patty",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores when consumed and will apply the hard worker buff for a duration of 2 minutes.",
+    "image": "mushroom_patty"
+  },
+  {
+    "id": "mysterious_sauce",
+    "name": "Mysterious sauce",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "nails",
+    "name": "Nails",
+    "category": "material",
+    "icon": "nails",
+    "sources": [
+      "Anvil",
+      "Anvil II",
+      "Wooden anvil",
+      "Cellar",
+      "Dungeon"
+    ],
+    "description": "Nails are one of the most fundamental resources in the game and can be made from [[iron ingot|",
+    "image": "nails"
+  },
+  {
+    "id": "necklace",
+    "name": "Necklace",
+    "category": "material",
+    "icon": "stone",
+    "description": "Necklace is a reward for Ms.",
+    "image": "necklace"
+  },
+  {
+    "id": "necronomicon",
+    "name": "Necronomicon",
+    "category": "material",
+    "icon": "stone",
+    "description": "Snake failed the summoning.",
+    "image": "necronomicon"
+  },
+  {
+    "id": "nori",
+    "name": "Nori",
+    "category": "material",
+    "icon": "stone",
+    "image": "nori"
+  },
+  {
+    "id": "note_from_unknown",
+    "name": "Note from unknown",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Corpse"
+    ],
+    "description": "Note from unknown is a message whose contents change depending on which ending you obtain at the end of the Beatrice's Offer questline.",
+    "image": "note_from_unknown"
+  },
+  {
+    "id": "notes",
+    "name": "Notes",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Desk",
+      "Desk II"
+    ],
+    "description": "Notes are an intermediate step in the process of turning stories into chapters, and potentially books.",
+    "image": "notes"
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "category": "material",
+    "icon": "stone",
+    "description": "Obsidian is a miscellaneous item, introduced by the DLC Stranger Sins, which can only be found when searching for a specific tavern artifact - Ancient Shackles.",
+    "image": "obsidian"
+  },
+  {
+    "id": "ode_for_bishop",
+    "name": "Ode for Bishop",
+    "category": "material",
+    "icon": "stone",
+    "description": "Ode for Bishop is a quest item from the Better Save Soul DLC.",
+    "image": "ode_for_bishop"
+  },
+  {
+    "id": "oil",
+    "name": "Oil",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Seed oil",
+      "Vine press"
+    ],
+    "description": "Oil is a crafting resource used in a variety of applications; from cooking to alchemy.",
+    "image": "oil"
+  },
+  {
+    "id": "old_rusty_key",
+    "name": "Old rusty key",
+    "category": "material",
+    "icon": "stone",
+    "description": "Old rusty key is a quest item from the Better Save Soul DLC.",
+    "image": "old_rusty_key"
+  },
+  {
+    "id": "omelette",
+    "name": "Omelette",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "The Omelette is a food item which restores when consumed.",
+    "image": "omelette"
+  },
+  {
+    "id": "onion",
+    "name": "Onion",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Onions are a form of crop which can be grown from onion seeds in the garden below the workyard known as the kitchen garden.",
+    "image": "onion"
+  },
+  {
+    "id": "onion_rings",
+    "name": "Onion rings",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the beer thirst buff when consumed.",
+    "image": "onion_rings"
+  },
+  {
+    "id": "onion_seed",
+    "name": "Onion seed",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Farming",
+      "Dungeon"
+    ],
+    "description": "Onion seeds are one of five different types of complex seeds, to be utilized at the Kitchen Garden.",
+    "image": "onion_seed"
+  },
+  {
+    "id": "orange_jelly",
+    "name": "Orange jelly",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dungeon"
+    ],
+    "description": "Orange jelly is a mob drop, obtained by killing orange slimes, found only within the dungeon.",
+    "image": "orange_jelly"
+  },
+  {
+    "id": "order_extract",
+    "name": "Order extract",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Extrato da ordem",
+    "image": "order_extract"
+  },
+  {
+    "id": "order_powder",
+    "name": "Order powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "order_powder"
+  },
+  {
+    "id": "order_solution",
+    "name": "Order solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Solução de ordem",
+    "image": "order_solution"
+  },
+  {
+    "id": "organs",
+    "name": "Organs",
+    "category": "funerario",
+    "icon": "grave",
+    "image": "organs"
+  },
+  {
+    "id": "package_of_meat",
+    "name": "Package of meat",
+    "category": "comida",
+    "icon": "meat",
+    "sources": [
+      "Cooking table"
+    ],
+    "description": "Required to complete Horadric's quest, packages of meat give the player a means to \"legitimately\" sell human flesh to the townspeople.",
+    "image": "package_of_meat"
+  },
+  {
+    "id": "pagan_amulet_of_spirit_summoning",
+    "name": "Pagan amulet of spirit summoning",
+    "category": "material",
+    "icon": "stone",
+    "description": "Pagan amulet of spirit summoning is crafted from your Church workbench.",
+    "image": "pagan_amulet_of_spirit_summoning"
+  },
+  {
+    "id": "pail_of_apple_juice",
+    "name": "Pail of apple juice",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Vine press"
+    ],
+    "description": "Pail of apple juice is a product of using a vine press to process a large amount of red apples.",
+    "image": "pail_of_apple_juice"
+  },
+  {
+    "id": "pail_of_berry_juice",
+    "name": "Pail of berry juice",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Vine press"
+    ],
+    "description": "Pail of berry juice is a product of using a vine press to process a large amount of berries.",
+    "image": "pail_of_berry_juice"
+  },
+  {
+    "id": "pail_of_grape_juice",
+    "name": "Pail of grape juice",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Vine press"
+    ],
+    "description": "Pail of grape juice is a product of using a vine press to process a large amount of grapes.",
+    "image": "pail_of_grape_juice"
+  },
+  {
+    "id": "pancakes",
+    "name": "Pancakes",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores when consumed.",
+    "image": "pancakes"
+  },
+  {
+    "id": "panna_cotta",
+    "name": "Panna cotta",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "The Panna cotta is a food item which restores and applies the 'steady hand' buff when consumed.",
+    "image": "panna_cotta"
+  },
+  {
+    "id": "paper_glop",
+    "name": "Paper glop",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Church workbench"
+    ],
+    "description": "pt-br:Mistureba de papel",
+    "image": "paper_glop"
+  },
+  {
+    "id": "paper_with_calculations",
+    "name": "Paper with calculations",
+    "category": "material",
+    "icon": "scroll",
+    "description": "The Paper with calculations is a single-use item which is required to fix the Mill.",
+    "image": "paper_with_calculations"
+  },
+  {
+    "id": "pasta",
+    "name": "Pasta",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the hard worker buff when consumed.",
+    "image": "pasta"
+  },
+  {
+    "id": "pastry_dough",
+    "name": "Pastry dough",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "Pastry dough is an ingredient used in cooking, able to be crafted at the cooking table.",
+    "image": "pastry_dough"
+  },
+  {
+    "id": "peat",
+    "name": "Peat",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Compost heap"
+    ],
+    "description": "Peat is produced by composting crop waste.",
+    "image": "peat"
+  },
+  {
+    "id": "pen_and_ink",
+    "name": "Pen and ink",
+    "category": "material",
+    "icon": "potion_dark",
+    "sources": [
+      "Church workbench"
+    ],
+    "image": "pen_and_ink"
+  },
+  {
+    "id": "perch",
+    "name": "Perch",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Village",
+      "Waterfall"
+    ],
+    "description": "The Perch is one of sixteen(16) different fish that can be caught, and either sold to the Lighthouse Keeper or processed for cooking.",
+    "image": "perch"
+  },
+  {
+    "id": "perfume",
+    "name": "Perfume",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Miss Chain"
+    ],
+    "image": "perfume"
+  },
+  {
+    "id": "pickaxe_i",
+    "name": "Pickaxe I",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Krezvold",
+      "Wooden anvil",
+      "Anvil",
+      "Anvil II"
+    ],
+    "description": "The Pickaxe I is equipped in the slot and is used when collecting stone, clearing debris and mining deposits.",
+    "image": "pickaxe_i"
+  },
+  {
+    "id": "pickaxe_ii",
+    "name": "Pickaxe II",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Anvil II"
+    ],
+    "description": "The Pickaxe II is equipped in the slot and is used when collecting stone, clearing debris and mining deposits.",
+    "image": "pickaxe_ii"
+  },
+  {
+    "id": "piece_of_donkey_hair",
+    "name": "Piece of donkey hair",
+    "category": "material",
+    "icon": "stone",
+    "description": "The Piece of Donkey hair is required to make the Pagan amulet of spirit summoning at the Church workbench with 1 Intestine and 1 Beeswax.",
+    "image": "piece_of_donkey_hair"
+  },
+  {
+    "id": "pigskin_paper",
+    "name": "Pigskin paper",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Church workbench"
+    ],
+    "description": "Pigskin paper is a crafting material, the result of processing animal hide, at the church workbench.",
+    "image": "pigskin_paper"
+  },
+  {
+    "id": "pike",
+    "name": "Pike",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "River"
+    ],
+    "description": "The Pike is one of sixteen(16) different fish that can be caught, and either processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "pike"
+  },
+  {
+    "id": "pile_of_components",
+    "name": "Pile of components",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Donkey"
+    ],
+    "description": "The Pile of components item is part of the Game of Crone DLC.",
+    "image": "pile_of_components"
+  },
+  {
+    "id": "place_for_burning_corpses",
+    "name": "Place for burning corpses",
+    "category": "material",
+    "icon": "stone",
+    "image": "place_for_burning_corpses"
+  },
+  {
+    "id": "place_for_the_apple_tree",
+    "name": "Place for the apple tree",
+    "category": "material",
+    "icon": "stone",
+    "image": "place_for_the_apple_tree"
+  },
+  {
+    "id": "place_for_the_berry_bush",
+    "name": "Place for the berry bush",
+    "category": "material",
+    "icon": "stone",
+    "image": "place_for_the_berry_bush"
+  },
+  {
+    "id": "polishing_paste",
+    "name": "Polishing paste",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Carpenter's workbench",
+      "Carpenter's workbench II"
+    ],
+    "description": "Polishing paste is a craft-able crafting resource.",
+    "image": "polishing_paste"
+  },
+  {
+    "id": "porcelain_funeral_urn",
+    "name": "Porcelain funeral urn",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Cooking table"
+    ],
+    "description": "The Porcelain funeral urn is a craft-able resource, the only purpose of which is the building of marble columbariums, which increases your graveyard rating by 20 once they're constructed.",
+    "image": "porcelain_funeral_urn"
+  },
+  {
+    "id": "porcelain_pitcher",
+    "name": "Porcelain pitcher",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Furnace",
+      "Furnace II",
+      "Furnace III",
+      "Potter"
+    ],
+    "image": "porcelain_pitcher"
+  },
+  {
+    "id": "porter_station",
+    "name": "Porter station",
+    "category": "material",
+    "icon": "stone",
+    "image": "porter_station"
+  },
+  {
+    "id": "potion_bag",
+    "name": "Potion bag",
+    "category": "material",
+    "icon": "potion",
+    "image": "potion_bag"
+  },
+  {
+    "id": "pray_for_souls_contentment",
+    "name": "Pray for souls' contentment",
+    "category": "material",
+    "icon": "stone",
+    "image": "pray_for_souls_contentment"
+  },
+  {
+    "id": "pray_for_souls_repose",
+    "name": "Pray for souls' repose",
+    "category": "material",
+    "icon": "stone",
+    "image": "pray_for_souls_repose"
+  },
+  {
+    "id": "pray_for_souls_thorough_cleansing",
+    "name": "Pray for souls' thorough cleansing",
+    "category": "material",
+    "icon": "stone",
+    "image": "pray_for_souls_thorough_cleansing"
+  },
+  {
+    "id": "prayer_for_donations",
+    "name": "Prayer for donations",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Desk Desk II"
+    ],
+    "description": "A prayer which increases donations by 50%/100%/150% and Faith by 20%.",
+    "image": "prayer_for_donations"
+  },
+  {
+    "id": "prayer_for_excellence",
+    "name": "Prayer for excellence",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Desk",
+      "Desk II"
+    ],
+    "description": "Prayer for Excellence grants the Handyman mood effect, increasing the quality of a few types of crafting by 20% (+0.2 quality).",
+    "image": "prayer_for_excellence"
+  },
+  {
+    "id": "prayer_for_faith",
+    "name": "Prayer for faith",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench",
+      "Bishop"
+    ],
+    "description": "A prayer which increases faith by 50%/100%/150% and donations by 20%.",
+    "image": "prayer_for_faith"
+  },
+  {
+    "id": "prayer_for_imagination",
+    "name": "Prayer for imagination",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench"
+    ],
+    "description": "A prayer which increases writing quality over several days, if you have the minimum required for its quality.",
+    "image": "prayer_for_imagination"
+  },
+  {
+    "id": "prayer_for_prosperity",
+    "name": "Prayer for prosperity",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench"
+    ],
+    "description": "A prayer which creates , used to directly improve vendor tiers.",
+    "image": "prayer_for_prosperity"
+  },
+  {
+    "id": "prayer_for_protection",
+    "name": "Prayer for protection",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench"
+    ],
+    "description": "A prayer which reduces incoming character damage over several days.",
+    "image": "prayer_for_protection"
+  },
+  {
+    "id": "prayer_for_repentance",
+    "name": "Prayer for repentance",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Desk"
+    ],
+    "description": "Performing this sermon will provide you with the Repentance effect which is supposed to increase the number of people which use the confessional in your church during the week.",
+    "image": "prayer_for_repentance"
+  },
+  {
+    "id": "prayer_for_repose",
+    "name": "Prayer for repose",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Desk",
+      "Desk II"
+    ],
+    "description": "A prayer which provides the Repose buff over several days.",
+    "image": "prayer_for_repose"
+  },
+  {
+    "id": "prayer_for_retribution",
+    "name": "Prayer for retribution",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Church workbench"
+    ],
+    "description": "A prayer which increases character damage over several days.",
+    "image": "prayer_for_retribution"
+  },
+  {
+    "id": "prayer_for_shoots_and_roots",
+    "name": "Prayer for shoots and roots",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Desk"
+    ],
+    "description": "Performing this sermon will provide you with the fertility effect which is supposed to increase the yield and growth rates of crops.",
+    "image": "prayer_for_shoots_and_roots"
+  },
+  {
+    "id": "prayer_for_soul_s_thorough_cleansing",
+    "name": "Prayer for soul's thorough cleansing",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Workbench"
+    ],
+    "description": "Prayer for soul's thorough cleansing grants increased Sin shards received from the successfultreatment of soul (x2)"
+  },
+  {
+    "id": "prayer_for_souls_contentment",
+    "name": "Prayer for souls' contentment",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "prayer_for_souls_repose",
+    "name": "Prayer for souls' repose",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "prayer_for_souls_thorough_cleansing",
+    "name": "Prayer for souls' thorough cleansing",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "preparation_place_ii",
+    "name": "Preparation place II",
+    "category": "material",
+    "icon": "stone",
+    "image": "preparation_place_ii"
+  },
+  {
+    "id": "preservative",
+    "name": "Preservative",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "preservative"
+  },
+  {
+    "id": "preservative_injection",
+    "name": "Preservative injection",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "The Preservative injection is used at the embalming table to halt body decay.",
+    "image": "preservative_injection"
+  },
+  {
+    "id": "priestess_ring",
+    "name": "Priestess Ring",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Farmer"
+    ],
+    "description": "The Priestess Ring is received from the Farmer.",
+    "image": "priestess_ring"
+  },
+  {
+    "id": "priests_medallion",
+    "name": "Priests Medallion",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dig"
+    ],
+    "description": "The Priests Medallion is received from Dig.",
+    "image": "priests_medallion"
+  },
+  {
+    "id": "priests_signet",
+    "name": "Priests Signet",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dig"
+    ],
+    "description": "The Priests Signet is received from Dig.",
+    "image": "priests_signet"
+  },
+  {
+    "id": "protection_potion",
+    "name": "Protection potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "On use, the potion will apply the Protection potion buff for a duration of 5 minutes.",
+    "image": "protection_potion"
+  },
+  {
+    "id": "pumpkin",
+    "name": "Pumpkin",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Farming"
+    ],
+    "description": "Pumpkins are a form of crop which can be grown from pumpkin seeds in the garden below the workyard known as the kitchen garden.",
+    "image": "pumpkin"
+  },
+  {
+    "id": "pumpkin_seed",
+    "name": "Pumpkin seed",
+    "category": "comida",
+    "icon": "herb",
+    "sources": [
+      "Farming",
+      "Dungeon"
+    ],
+    "description": "Pumpkin seeds are one of five different types of complex seeds, to be utilized at the Kitchen Garden.",
+    "image": "pumpkin_seed"
+  },
+  {
+    "id": "pumpkin_soup",
+    "name": "Pumpkin soup",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Oven"
+    ],
+    "description": "On use, this consumable will apply the 'Deep Sleep' buff for a duration of 2 minutes, allowing the player to regenerate more energy points when sleeping.",
+    "image": "pumpkin_soup"
+  },
+  {
+    "id": "pyrite",
+    "name": "Pyrite",
+    "category": "material",
+    "icon": "stone",
+    "image": "pyrite"
+  },
+  {
+    "id": "quality_fertilizer_i",
+    "name": "Quality fertilizer I",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Church workbench",
+      "Organ workbench"
+    ],
+    "description": "Quality fertilizer I is produced at the Church workbench by combining the basic fertilizer peat with a growth enhancer, the latter requiring an introduction to alchemy.",
+    "image": "quality_fertilizer_i"
+  },
+  {
+    "id": "quality_fertilizer_ii",
+    "name": "Quality fertilizer II",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Church workbench",
+      "Organ workbench"
+    ],
+    "description": "Quality fertilizer II is produced at the Church workbench by combining the basic fertilizer peat with two flavor enhancer, the latter requiring advanced alchemy.",
+    "image": "quality_fertilizer_ii"
+  },
+  {
+    "id": "quality_fish_fillet",
+    "name": "Quality fish fillet",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking table"
+    ],
+    "description": "As of the official release of the game, the gold-quality quality-fish-fillets are not available, as none of the fish that provide these fillets will ever spawn with a gold-quality.",
+    "image": "quality_fish_fillet"
+  },
+  {
+    "id": "rage_potion",
+    "name": "Rage potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "On use, the potion will apply the Rage potion buff for a duration of 5 minutes.",
+    "image": "rage_potion"
+  },
+  {
+    "id": "random_text_generator",
+    "name": "Random text generator",
+    "category": "material",
+    "icon": "stone",
+    "image": "random_text_generator"
+  },
+  {
+    "id": "rare_dagger",
+    "name": "Rare Dagger",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Tress"
+    ],
+    "description": "The Rare Dagger can be retrieved from Tress.",
+    "image": "rare_dagger"
+  },
+  {
+    "id": "raw_sliced_meat",
+    "name": "Raw sliced meat",
+    "category": "comida",
+    "icon": "meat",
+    "sources": [
+      "Cooking table"
+    ],
+    "description": "Raw sliced meat is an ingredient used in cooking to create baked meat.",
+    "image": "raw_sliced_meat"
+  },
+  {
+    "id": "recipe_fish_delicacies",
+    "name": "Recipe fish delicacies",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Miss Chain"
+    ],
+    "description": "The fish delicacies recipe can be purchased from Miss Chain in The Dead Horse.",
+    "image": "recipe_fish_delicacies"
+  },
+  {
+    "id": "recipe_pies",
+    "name": "Recipe pies",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Miss Chain"
+    ],
+    "description": "The recipe for pies can be purchased from Miss Chain in The Dead Horse.",
+    "image": "recipe_pies"
+  },
+  {
+    "id": "recipe_simple_and_tasty",
+    "name": "Recipe simple and tasty",
+    "category": "comida",
+    "icon": "bread",
+    "description": "You can find this recipe in the Cellar trunk.",
+    "image": "recipe_simple_and_tasty"
+  },
+  {
+    "id": "recipe_sweet_baking",
+    "name": "Recipe sweet baking",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Miss Chain"
+    ],
+    "description": "The sweet baking recipe can be purchased from Miss Chain in The Dead Horse.",
+    "image": "recipe_sweet_baking"
+  },
+  {
+    "id": "recipe_tasty_and_healthy",
+    "name": "Recipe tasty and healthy",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Miss Chain"
+    ],
+    "description": "The tasty and healthy recipe can be purchased from Miss Chain in The Dead Horse.",
+    "image": "recipe_tasty_and_healthy"
+  },
+  {
+    "id": "recipe_big_universal_bag",
+    "name": "Recipe: Big universal bag",
+    "category": "material",
+    "icon": "stone",
+    "description": "This and one bag is rewarded upon completing the refugee camp quest line with Marquis Teodoro Jr.",
+    "image": "recipe_big_universal_bag"
+  },
+  {
+    "id": "red_apple",
+    "name": "Red apple",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Apple trees"
+    ],
+    "description": "Red apples are a consumable food item, harvested from apple trees, which are either found near the lighthouse or planted by the player in the orchard.",
+    "image": "red_apple"
+  },
+  {
+    "id": "red_flower",
+    "name": "Red flower",
+    "category": "material",
+    "icon": "herb",
+    "sources": [
+      "Foraging"
+    ],
+    "description": "Red flowers are a forageable item found in most outdoor areas.",
+    "image": "red_flower"
+  },
+  {
+    "id": "red_jelly",
+    "name": "Red jelly",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "Red jelly is a consumable item, restoring a relatively small amount of energy upon use.",
+    "image": "red_jelly"
+  },
+  {
+    "id": "red_mushroom",
+    "name": "Red mushroom",
+    "category": "material",
+    "icon": "herb",
+    "sources": [
+      "Foraging"
+    ],
+    "description": "Must unlock Master Gatherer.",
+    "image": "red_mushroom"
+  },
+  {
+    "id": "red_paint",
+    "name": "Red Paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Red Paint is produced through Alchemy at the alchemy workbench (tier I) and is used in the remodelling of the home.",
+    "image": "red_paint"
+  },
+  {
+    "id": "red_wine",
+    "name": "Red wine",
+    "category": "comida",
+    "icon": "potion",
+    "sources": [
+      "Wine making barrel"
+    ],
+    "description": "With the DLC Stranger Sins, red wine - as with most beverages - may be sold regularly, either passively by being stored in the Talking Skulls cellar, or actively by being stored in the Barmans inventory and triggering an event.",
+    "image": "red_wine"
+  },
+  {
+    "id": "restore_injection",
+    "name": "Restore injection",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "The Restore injection is used at the embalming table to restore 50% of a body's decay.",
+    "image": "restore_injection"
+  },
+  {
+    "id": "restoring_potion",
+    "name": "Restoring potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "On use, the potion will apply the Restoring potion buff for a duration of 1 minute.",
+    "image": "restoring_potion"
+  },
+  {
+    "id": "revolutionary_donkey_banner",
+    "name": "Revolutionary donkey banner",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "revolutionary_message_2",
+    "name": "Revolutionary message 2",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Donkey"
+    ],
+    "description": "The Revolutionary message 2 item is part of the Game of Crone DLC.",
+    "image": "revolutionary_message_2"
+  },
+  {
+    "id": "rightful_citizen_papers",
+    "name": "Rightful citizen papers",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Royal services"
+    ],
+    "description": "These papers can be obtained from Royal services, as rightful citizen.",
+    "image": "rightful_citizen_papers"
+  },
+  {
+    "id": "river_sand",
+    "name": "River sand",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Mining"
+    ],
+    "description": "These requisite sand mounds are scattered throughout the world, always found near water.",
+    "image": "river_sand"
+  },
+  {
+    "id": "roof_tile",
+    "name": "Roof tile",
+    "category": "material",
+    "icon": "stone",
+    "description": "Recipe is unlocked at the Furnace III when the Woodcutter requests 24x Roof tiles and 4x Curtains in exchange for a Golden apple.",
+    "image": "roof_tile"
+  },
+  {
+    "id": "royal_fish",
+    "name": "Royal fish",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "A food item which restores when consumed.",
+    "image": "royal_fish"
+  },
+  {
+    "id": "ruined_book",
+    "name": "Ruined book",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Ruined Bookcases"
+    ],
+    "description": "Ruined books can be found by breaking down ruined bookcases, found in the church basement and deeper levels of the dungeon.",
+    "image": "ruined_book"
+  },
+  {
+    "id": "rusty_axe",
+    "name": "Rusty axe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Krezvold"
+    ],
+    "description": "The Rusty axe is equipped in the slot and is used when chopping down trees for logs or when splitting wood at the chopping spot.",
+    "image": "rusty_axe"
+  },
+  {
+    "id": "rusty_hammer",
+    "name": "Rusty hammer",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Krezvold"
+    ],
+    "description": "The Rusty hammer equips the the slot and is used when constructing blueprints and during several other select operations.",
+    "image": "rusty_hammer"
+  },
+  {
+    "id": "rusty_pickaxe",
+    "name": "Rusty pickaxe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Krezvold"
+    ],
+    "description": "The Rusty pickaxe is equipped in the slot and is used when collecting stone, clearing debris and mining deposits.",
+    "image": "rusty_pickaxe"
+  },
+  {
+    "id": "rusty_shovel",
+    "name": "Rusty shovel",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Krezvold"
+    ],
+    "description": "The Rusty shovel is equipped in the slot and is used when digging gravesites, clearing bushes and debris, and harvesting river sand and clay.",
+    "image": "rusty_shovel"
+  },
+  {
+    "id": "rusty_sword",
+    "name": "Rusty sword",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Krezvold"
+    ],
+    "description": "The rusty sword equips the the slot and when used (Default spacebar) deals damage to enemies in front of you.",
+    "image": "rusty_sword"
+  },
+  {
+    "id": "salmon",
+    "name": "Salmon",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Sea",
+      "Waterfall"
+    ],
+    "description": "The Salmon is one of sixteen(16) different fish that can be caught, and either processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "salmon"
+  },
+  {
+    "id": "salt",
+    "name": "Salt",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Wall Crematorium",
+      "Crematorium"
+    ],
+    "description": "Is used as a piece of a puzzle during the Merchant's quest-line.",
+    "image": "salt"
+  },
+  {
+    "id": "salty_fork",
+    "name": "Salty fork",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Quest"
+    ],
+    "description": "The Salty Fork is an Item obtained from the Merchant by finishing the Bishop Questline.",
+    "image": "salty_fork"
+  },
+  {
+    "id": "sandwich",
+    "name": "Sandwich",
+    "category": "comida",
+    "icon": "stone",
+    "description": "A food item which restores when consumed.",
+    "image": "sandwich"
+  },
+  {
+    "id": "sardine",
+    "name": "Sardine",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Sea"
+    ],
+    "description": "The Sardine is one of sixteen(16) different fish that can be caught, and either processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "sardine"
+  },
+  {
+    "id": "sawhorse",
+    "name": "Sawhorse",
+    "category": "material",
+    "icon": "stone",
+    "image": "sawhorse"
+  },
+  {
+    "id": "science",
+    "name": "Science",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Writing",
+      "Lens"
+    ],
+    "image": "science"
+  },
+  {
+    "id": "scroll_of_teleportation",
+    "name": "Scroll of Teleportation",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Master Alaric"
+    ],
+    "description": "Grants the ability to teleport once while not consuming the cooldown of Teleportstone.",
+    "image": "scroll_of_teleportation"
+  },
+  {
+    "id": "seed_oil",
+    "name": "Seed oil",
+    "category": "material",
+    "icon": "herb",
+    "sources": [
+      "Vine press"
+    ],
+    "description": "pt-br:Óleo de semente",
+    "image": "seed_oil"
+  },
+  {
+    "id": "shovel_i",
+    "name": "Shovel I",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Wooden anvil",
+      "Anvil",
+      "Anvil II"
+    ],
+    "description": "The Shovel I is equipped in the slot and is used when digging gravesites, clearing bushes and debris, and harvesting river sand and clay.",
+    "image": "shovel_i"
+  },
+  {
+    "id": "shovel_ii",
+    "name": "Shovel II",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Anvil II"
+    ],
+    "description": "The Shovel II is equipped in the slot and is used when digging gravesites, clearing bushes and debris, and harvesting river sand and clay.",
+    "image": "shovel_ii"
+  },
+  {
+    "id": "silk",
+    "name": "Silk",
+    "category": "material",
+    "icon": "stone",
+    "description": "With the implementation of DLC, silk is now necessary in a variety of limited applications, such as curtains for the Woodcutter.",
+    "image": "silk"
+  },
+  {
+    "id": "silver_crucian",
+    "name": "Silver crucian",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Village"
+    ],
+    "description": "The Silver Crucian is one of sixteen(16) different fish that can be caught, and either processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "silver_crucian"
+  },
+  {
+    "id": "silver_elixir",
+    "name": "Silver elixir",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Elixir de prata",
+    "image": "silver_elixir"
+  },
+  {
+    "id": "silver_ingot",
+    "name": "Silver ingot",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Furnace II",
+      "Furnace III"
+    ],
+    "description": "ru:Серебряный_самородок",
+    "image": "silver_ingot"
+  },
+  {
+    "id": "silver_injection",
+    "name": "Silver injection",
+    "category": "funerario",
+    "icon": "coin",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "The Silver injection is used at the embalming table to remove one and add one .",
+    "image": "silver_injection"
+  },
+  {
+    "id": "silver_nugget",
+    "name": "Silver nugget",
+    "category": "material",
+    "icon": "coin",
+    "sources": [
+      "Mining"
+    ],
+    "description": "It is not possible to find any precious metals in the bog iron deposits.",
+    "image": "silver_nugget"
+  },
+  {
+    "id": "silver_powder",
+    "name": "Silver powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "silver_powder"
+  },
+  {
+    "id": "simple_fishing_rod",
+    "name": "Simple fishing rod",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Lighthouse Keeper"
+    ],
+    "description": "The Simple fishing rod is a piece of equipment which, unlike most other tools, does not degrade with use.",
+    "image": "simple_fishing_rod"
+  },
+  {
+    "id": "simple_iron_parts",
+    "name": "Simple iron parts",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Anvil",
+      "Anvil II",
+      "Wooden anvil",
+      "Cellar",
+      "Dungeon"
+    ],
+    "description": "de:Einfache Eisenstücke",
+    "image": "simple_iron_parts"
+  },
+  {
+    "id": "sin_shard",
+    "name": "Sin Shard",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Souls room"
+    ],
+    "description": "Sin Shard is a Better Save Soul DLC item.",
+    "image": "sin_shard"
+  },
+  {
+    "id": "skin",
+    "name": "Skin",
+    "category": "funerario",
+    "icon": "fat",
+    "sources": [
+      "Autopsy"
+    ],
+    "image": "skin"
+  },
+  {
+    "id": "skull",
+    "name": "Skull",
+    "category": "funerario",
+    "icon": "skull",
+    "sources": [
+      "Autopsy"
+    ],
+    "description": "After talking at length with Gerry, he will eventually inform you of the Astrologer.",
+    "image": "skull"
+  },
+  {
+    "id": "skulls_in_a_column",
+    "name": "Skulls in a column",
+    "category": "material",
+    "icon": "skull",
+    "image": "skulls_in_a_column"
+  },
+  {
+    "id": "skulls_in_the_wall",
+    "name": "Skulls in the wall",
+    "category": "material",
+    "icon": "skull",
+    "image": "skulls_in_the_wall"
+  },
+  {
+    "id": "slowing_extract",
+    "name": "Slowing extract",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Extrato de retardamento",
+    "image": "slowing_extract"
+  },
+  {
+    "id": "slowing_powder",
+    "name": "Slowing powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Pó de retardamento",
+    "image": "slowing_powder"
+  },
+  {
+    "id": "slowing_solution",
+    "name": "Slowing solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "pt-br:Solução de retardamento",
+    "image": "slowing_solution"
+  },
+  {
+    "id": "soft_church_bench",
+    "name": "Soft church bench",
+    "category": "material",
+    "icon": "stone",
+    "image": "soft_church_bench"
+  },
+  {
+    "id": "softcover",
+    "name": "Softcover",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Church workbench",
+      "Astrologer"
+    ],
+    "description": "Softcovers are used to make low quality books.",
+    "image": "softcover"
+  },
+  {
+    "id": "speed_potion",
+    "name": "Speed potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "On use, the potion will apply the Speed potion buff for a duration of 10 minutes.",
+    "image": "speed_potion"
+  },
+  {
+    "id": "spice_paint",
+    "name": "Spice Paint",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Tress"
+    ],
+    "description": "Spice paint is bought from Tress and is used in the remodelling of the home.",
+    "image": "spice_paint"
+  },
+  {
+    "id": "spices",
+    "name": "Spices",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Similar to Salt and Ash, its description lists the Alchemy mill as a source, despite there being no known decomposable material., Its current in-game image is identical to that of life powder.",
+    "image": "spices"
+  },
+  {
+    "id": "spider_web",
+    "name": "Spider web",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Dungeon"
+    ],
+    "description": "Spider web can be decomposed to powder and extract with the alchemy mill and either distillation cube, respectively.",
+    "image": "spider_web"
+  },
+  {
+    "id": "stained_glass_window",
+    "name": "Stained glass window",
+    "category": "material",
+    "icon": "stone",
+    "image": "stained_glass_window"
+  },
+  {
+    "id": "stamp",
+    "name": "Stamp",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Royal services",
+      "Snake"
+    ],
+    "description": "Can either be purchased from Royal services for 50, or received from Snake at .",
+    "image": "stamp"
+  },
+  {
+    "id": "statuette_of_the_ancient_god",
+    "name": "Statuette of the Ancient God",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Miss Chain"
+    ],
+    "description": "The Statuette of the Ancient God is retrieved from Horadric.",
+    "image": "statuette_of_the_ancient_god"
+  },
+  {
+    "id": "steel_armor",
+    "name": "Steel armor",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Carpenter's workbench",
+      "Carpenter's workbench II",
+      "Koukol"
+    ],
+    "description": "Better than iron armor.",
+    "image": "steel_armor"
+  },
+  {
+    "id": "steel_chisel",
+    "name": "Steel chisel",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Carpenter's workbench",
+      "Carpenter's workbench II"
+    ],
+    "description": "A Steel chisel is a degradable piece of equipment, used to refine various resource materials.",
+    "image": "steel_chisel"
+  },
+  {
+    "id": "steel_ingot",
+    "name": "Steel ingot",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Furnace II",
+      "Furnace III"
+    ],
+    "image": "steel_ingot"
+  },
+  {
+    "id": "steel_lure",
+    "name": "Steel lure",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Lighthouse Keeper"
+    ],
+    "description": "Steel lure is one of eight(8) available baits to choose from when fishing.",
+    "image": "steel_lure"
+  },
+  {
+    "id": "steel_parts",
+    "name": "Steel parts",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Furnace III"
+    ],
+    "description": "Steel parts are a late-game resource, used for crafting various advanced items and work-stations.",
+    "image": "steel_parts"
+  },
+  {
+    "id": "steel_sword",
+    "name": "Steel sword",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Anvil II",
+      "Koukol",
+      "Krezvold"
+    ],
+    "description": "The Steel sword is a mid-tier weapon, which inflicts of damage to enemies.",
+    "image": "steel_sword"
+  },
+  {
+    "id": "steel_sword_with_gem",
+    "name": "Steel sword with gem",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Jewelry table"
+    ],
+    "description": "The Steel sword with gem is a high-tier weapon, which inflicts of damage to enemies.",
+    "image": "steel_sword_with_gem"
+  },
+  {
+    "id": "stone_block",
+    "name": "Stone block",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Stone Deposit"
+    ],
+    "description": "Stone Blocks can be obtained from large Stone Deposits (You can find the Locations here: Mining), to process them further they need to be packed on the Stone Stockpile.",
+    "image": "stone_block"
+  },
+  {
+    "id": "stone_church_shrine",
+    "name": "Stone church shrine",
+    "category": "material",
+    "icon": "stone",
+    "image": "stone_church_shrine"
+  },
+  {
+    "id": "stone_columbarium",
+    "name": "Stone columbarium",
+    "category": "material",
+    "icon": "stone",
+    "image": "stone_columbarium"
+  },
+  {
+    "id": "stone_cross",
+    "name": "Stone cross",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone cross is a grave decoration which provides +3 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "stone_cross"
+  },
+  {
+    "id": "stone_cross_ii",
+    "name": "Stone cross II",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone cross II is a grave decoration which provides +4 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "stone_cross_ii"
+  },
+  {
+    "id": "stone_grave_fence",
+    "name": "Stone grave fence",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter",
+      "Stone cutter II"
+    ],
+    "description": "The Stone grave fence is a grave decoration which provides +2 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "stone_grave_fence"
+  },
+  {
+    "id": "stone_grave_fence_ii",
+    "name": "Stone grave fence II",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone grave fence II is a grave decoration which provides +3 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "stone_grave_fence_ii"
+  },
+  {
+    "id": "stone_grave_fence_iii",
+    "name": "Stone grave fence III",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone grave fence III is a grave decoration which provides +3 when placed on a grave place after a corpse has been buried there.",
+    "image": "stone_grave_fence_iii"
+  },
+  {
+    "id": "stone_grave_fence_iv",
+    "name": "Stone grave fence IV",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone grave fence IV is a grave decoration which provides +4 when placed on a grave place after a corpse has been buried there.",
+    "image": "stone_grave_fence_iv"
+  },
+  {
+    "id": "stone_grave_fence_v",
+    "name": "Stone grave fence V",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone grave fence V is a grave decoration from the Game of Crone DLC.",
+    "image": "stone_grave_fence_v"
+  },
+  {
+    "id": "stone_grave_fence_vi",
+    "name": "Stone grave fence VI",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "stone_grave_fence_vi"
+  },
+  {
+    "id": "stone_grave_fence_vii",
+    "name": "Stone grave fence VII",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "stone_grave_fence_vii"
+  },
+  {
+    "id": "stone_grave_fence_viii",
+    "name": "Stone grave fence VIII",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "stone_grave_fence_viii"
+  },
+  {
+    "id": "stone_plinth",
+    "name": "Stone plinth",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone plinth is a grave decoration which provides +4 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "stone_plinth"
+  },
+  {
+    "id": "stone_prayer_station",
+    "name": "Stone prayer station",
+    "category": "material",
+    "icon": "stone",
+    "image": "stone_prayer_station"
+  },
+  {
+    "id": "stone_repair_kit",
+    "name": "Stone repair kit",
+    "category": "herramienta",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter",
+      "Stone cutter II"
+    ],
+    "description": "Stone repair kits are used to fix grave fences and grave markers made of stone.",
+    "image": "stone_repair_kit"
+  },
+  {
+    "id": "stone_sarcophagus",
+    "name": "Stone sarcophagus",
+    "category": "funerario",
+    "icon": "stone",
+    "description": "The Stone sarcophagus is a grave decoration which will provide a bonus to when placed on a grave place after a corpse has been buried there.",
+    "image": "stone_sarcophagus"
+  },
+  {
+    "id": "stone_sculpture",
+    "name": "Stone sculpture",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone sculpture is a grave decoration which provides +5 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "stone_sculpture"
+  },
+  {
+    "id": "stone_sculpture_ii",
+    "name": "Stone sculpture II",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone sculpture II is a grave decoration which provides +5 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "stone_sculpture_ii"
+  },
+  {
+    "id": "stone_sculpture_iii",
+    "name": "Stone sculpture III",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone sculpture III is a grave decoration which provides +6 when placed on a grave place after a corpse has been buried there.",
+    "image": "stone_sculpture_iii"
+  },
+  {
+    "id": "stone_sculpture_iv",
+    "name": "Stone sculpture IV",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "The Stone sculpture IV is a grave decoration which provides +7 when placed on a grave place after a corpse has been buried there.",
+    "image": "stone_sculpture_iv"
+  },
+  {
+    "id": "stone_sculpture_v",
+    "name": "Stone sculpture V",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "stone_sculpture_v"
+  },
+  {
+    "id": "stone_sculpture_vi",
+    "name": "Stone sculpture VI",
+    "category": "funerario",
+    "icon": "stone",
+    "sources": [
+      "Stone cutter II"
+    ],
+    "description": "This item can be unlocked in the Better Save Soul DLC Spiritualism (Tech Tree).",
+    "image": "stone_sculpture_vi"
+  },
+  {
+    "id": "story",
+    "name": "Story",
+    "category": "material",
+    "icon": "scroll",
+    "sources": [
+      "Desk",
+      "Study table",
+      "NPCs",
+      "Confessional",
+      "Vagner",
+      "Organ Workbench"
+    ],
+    "description": "The Story is the base resource from which all written works are generated.",
+    "image": "story"
+  },
+  {
+    "id": "study_table",
+    "name": "Study table",
+    "category": "material",
+    "icon": "stone",
+    "image": "study_table"
+  },
+  {
+    "id": "sturgeon",
+    "name": "Sturgeon",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "River",
+      "Waterfall"
+    ],
+    "description": "The Sturgeon is one of sixteen(16) different fish that can be caught, and either processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "sturgeon"
+  },
+  {
+    "id": "sulfur",
+    "name": "Sulfur",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Mining"
+    ],
+    "description": "Sulfur is a utilitarian resource that can only be obtained by mining a coal vein (though some can be found in a diggable mound near village), after unlocking the required technology.",
+    "image": "sulfur"
+  },
+  {
+    "id": "sun_cream_for_vampires",
+    "name": "Sun cream for vampires",
+    "category": "material",
+    "icon": "stone",
+    "description": "Sun cream for vampires is a quest item from the Game of Crone DLC, obtained during the vampire questline.",
+    "image": "sun_cream_for_vampires"
+  },
+  {
+    "id": "sword",
+    "name": "Sword",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Anvil",
+      "Anvil II",
+      "Koukol"
+    ],
+    "description": "The Sword is equiped in the slot and deals damage to enemies in front of the player when used.",
+    "image": "sword"
+  },
+  {
+    "id": "tanning_agent",
+    "name": "Tanning agent",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Tanning agent is produced through Alchemy at the alchemy workbench (tier II), or can be purchased from Clotho, and is used to make hard covers and bags.",
+    "image": "tanning_agent"
+  },
+  {
+    "id": "tavern_reputation",
+    "name": "Tavern reputation",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Talking Skull"
+    ],
+    "image": "tavern_reputation"
+  },
+  {
+    "id": "techbook",
+    "name": "Techbook",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Astrologer",
+      "Random text generator"
+    ],
+    "description": "The Techbook is a consumable product that provides the user with a small bonus towards certain techpoints.",
+    "image": "techbook"
+  },
+  {
+    "id": "teleportstone",
+    "name": "Teleportstone",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Horadric"
+    ],
+    "description": "Can be purchased from Horadric.",
+    "image": "teleportstone"
+  },
+  {
+    "id": "the_legionary_dagger",
+    "name": "The Legionary Dagger",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Krezvold"
+    ],
+    "description": "The Legionary Dagger is received from Krezvold.",
+    "image": "the_legionary_dagger"
+  },
+  {
+    "id": "tilapia",
+    "name": "Tilapia",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Village",
+      "Swamp"
+    ],
+    "description": "The Tilapia is one of sixteen(16) different fish that can be caught, and either sold to the Lighthouse Keeper or processed for cooking.",
+    "image": "tilapia"
+  },
+  {
+    "id": "timber_stockpile",
+    "name": "Timber stockpile",
+    "category": "material",
+    "icon": "stone",
+    "image": "timber_stockpile"
+  },
+  {
+    "id": "toasts_with_onions",
+    "name": "Toasts with onions",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking",
+      "Horadric"
+    ],
+    "description": "A food item which restores and applies the beer thirst buff when consumed.",
+    "image": "toasts_with_onions"
+  },
+  {
+    "id": "tool_bag",
+    "name": "Tool bag",
+    "category": "herramienta",
+    "icon": "anvil",
+    "description": "This bag extends the Keeper's inventory by 9 slots but can only hold tools.",
+    "image": "tool_bag"
+  },
+  {
+    "id": "town_pass",
+    "name": "Town pass",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Snake",
+      "Royal services"
+    ],
+    "description": "A reward from Snake's quest.",
+    "image": "town_pass"
+  },
+  {
+    "id": "toxic_extract",
+    "name": "Toxic extract",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "toxic_extract"
+  },
+  {
+    "id": "toxic_powder",
+    "name": "Toxic powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "toxic_powder"
+  },
+  {
+    "id": "toxic_solution",
+    "name": "Toxic solution",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "toxic_solution"
+  },
+  {
+    "id": "trade_license",
+    "name": "Trade license",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Royal services"
+    ],
+    "description": "A trade license can be bought from the royal services box for .",
+    "image": "trade_license"
+  },
+  {
+    "id": "tree_apple_seedling",
+    "name": "Tree apple seedling",
+    "category": "comida",
+    "icon": "herb",
+    "description": "Sold by the witch Clotho in the west swamp.",
+    "image": "tree_apple_seedling"
+  },
+  {
+    "id": "tuna",
+    "name": "Tuna",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Sea"
+    ],
+    "description": "The Tuna is one of sixteen(16) different fish that can be caught, and either processed for cooking or sold to the Lighthouse Keeper.",
+    "image": "tuna"
+  },
+  {
+    "id": "universal_bag",
+    "name": "Universal bag",
+    "category": "herramienta",
+    "icon": "anvil",
+    "sources": [
+      "Church workbench"
+    ],
+    "description": "You cannot put one bag inside another bag.",
+    "image": "universal_bag"
+  },
+  {
+    "id": "vampire_s_jaw",
+    "name": "Vampire's jaw",
+    "category": "material",
+    "icon": "stone",
+    "description": "Vampire's jaw is a quest item from the Game of Crone DLC, obtained during the vampire questline.",
+    "image": "vampire_s_jaw"
+  },
+  {
+    "id": "vegetable_patty",
+    "name": "Vegetable patty",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores when consumed and will apply the hard worker buff for a duration of 2 minutes.",
+    "image": "vegetable_patty"
+  },
+  {
+    "id": "vegetable_salad",
+    "name": "Vegetable salad",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the deep sleep buff when consumed.",
+    "image": "vegetable_salad"
+  },
+  {
+    "id": "vegetable_soup",
+    "name": "Vegetable soup",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores energy and applies the deep sleep buff when consumed .",
+    "image": "vegetable_soup"
+  },
+  {
+    "id": "vegetable_stew",
+    "name": "Vegetable stew",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking"
+    ],
+    "description": "A food item which restores and applies the 'Rage' buff when consumed.",
+    "image": "vegetable_stew"
+  },
+  {
+    "id": "vine_trellis",
+    "name": "Vine trellis",
+    "category": "material",
+    "icon": "stone",
+    "image": "vine_trellis"
+  },
+  {
+    "id": "violet_paint",
+    "name": "Violet Paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "image": "violet_paint"
+  },
+  {
+    "id": "wall_candelabra_iii",
+    "name": "Wall candelabra III",
+    "category": "material",
+    "icon": "stone",
+    "image": "wall_candelabra_iii"
+  },
+  {
+    "id": "water",
+    "name": "Water",
+    "category": "alquimia",
+    "icon": "water",
+    "sources": [
+      "Bucket of clear water"
+    ],
+    "image": "water"
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "category": "comida",
+    "icon": "wheat",
+    "sources": [
+      "Farming"
+    ],
+    "image": "wheat"
+  },
+  {
+    "id": "wheat_seed",
+    "name": "Wheat seed",
+    "category": "comida",
+    "icon": "wheat",
+    "sources": [
+      "Farming",
+      "Dungeon"
+    ],
+    "description": "Wheat seeds are one of five different types of basic seeds, to be utilized at the Kitchen Garden.",
+    "image": "wheat_seed"
+  },
+  {
+    "id": "whetstone",
+    "name": "Whetstone",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Blacksmith"
+    ],
+    "description": "Used for repairing tools.",
+    "image": "whetstone"
+  },
+  {
+    "id": "white_fish_fillet",
+    "name": "White fish fillet",
+    "category": "comida",
+    "icon": "bread",
+    "sources": [
+      "Cooking table",
+      "Lighthouse Keeper"
+    ],
+    "description": "pt-br:filé de peixe branco",
+    "image": "white_fish_fillet"
+  },
+  {
+    "id": "white_flower",
+    "name": "White flower",
+    "category": "material",
+    "icon": "herb",
+    "sources": [
+      "Foraging"
+    ],
+    "description": "White flowers are a forageable item found in most outdoor areas.",
+    "image": "white_flower"
+  },
+  {
+    "id": "white_paint",
+    "name": "White paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "White paint is produced through Alchemy at the alchemy workbench (tier I) and is used in the production of candles and paper.",
+    "image": "white_paint"
+  },
+  {
+    "id": "white_powder",
+    "name": "White powder",
+    "category": "alquimia",
+    "icon": "sack",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Note, when making White Paint, the white powder must be used in the first slot and then the oil in the second slot.",
+    "image": "white_powder"
+  },
+  {
+    "id": "witcher_s_eye",
+    "name": "Witcher's Eye",
+    "category": "material",
+    "icon": "eye",
+    "sources": [
+      "Marquis Teodoro Jr"
+    ],
+    "description": "To help Alaric figure out how to stop the Ancient Curse, the player must search for leads on the vampires who attacked the Astrologer.",
+    "image": "witcher_s_eye"
+  },
+  {
+    "id": "wood_billet",
+    "name": "Wood billet",
+    "category": "material",
+    "icon": "log",
+    "sources": [
+      "Sawhorse",
+      "Circular saw"
+    ],
+    "description": "Wood billets are a basic resource, made from processing logs at the sawhorse or circular saw.",
+    "image": "wood_billet"
+  },
+  {
+    "id": "wood_chips",
+    "name": "Wood chips",
+    "category": "material",
+    "icon": "log",
+    "description": "pt-br:Lascas de madeira",
+    "image": "wood_chips"
+  },
+  {
+    "id": "wood_repair_kit",
+    "name": "Wood repair kit",
+    "category": "herramienta",
+    "icon": "log",
+    "sources": [
+      "Carpenter's workbench",
+      "Carpenter's workbench II"
+    ],
+    "description": "Wood repair kits are used to fix grave fences and grave markers made of wood.",
+    "image": "wood_repair_kit"
+  },
+  {
+    "id": "wood_wedge",
+    "name": "Wood wedge",
+    "category": "material",
+    "icon": "log",
+    "sources": [
+      "Chopping spot"
+    ],
+    "description": "Wood wedges are used for clearing blockages, are required to remove marble blocks from the quarry by hand, and are used to break marble blocks into pieces of marble.",
+    "image": "wood_wedge"
+  },
+  {
+    "id": "wood_wedge_duplicate",
+    "name": "Wood wedge (duplicate)",
+    "category": "material",
+    "icon": "log",
+    "sources": [
+      "Chopping spot",
+      "Tress"
+    ],
+    "description": "Wood wedge (duplicate) is often used to get rid of Blockages, along with other Items.",
+    "image": "wood_wedge_duplicate"
+  },
+  {
+    "id": "wooden_anvil",
+    "name": "Wooden anvil",
+    "category": "material",
+    "icon": "log",
+    "image": "wooden_anvil"
+  },
+  {
+    "id": "wooden_beam",
+    "name": "Wooden beam",
+    "category": "material",
+    "icon": "plank",
+    "sources": [
+      "Circular saw"
+    ],
+    "description": "Wooden beams can be purchased from Tress and require the circular saw to craft yourself.",
+    "image": "wooden_beam"
+  },
+  {
+    "id": "wooden_cross",
+    "name": "Wooden cross",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Carpenter's workbench"
+    ],
+    "description": "The Wooden cross is a grave decoration which provides +2 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "wooden_cross"
+  },
+  {
+    "id": "wooden_grave_fence",
+    "name": "Wooden grave fence",
+    "category": "funerario",
+    "icon": "grave",
+    "sources": [
+      "Carpenter's workbench"
+    ],
+    "description": "The Wooden grave fence is a grave decoration which provides +1 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "wooden_grave_fence"
+  },
+  {
+    "id": "wooden_marker",
+    "name": "Wooden marker",
+    "category": "funerario",
+    "icon": "log",
+    "sources": [
+      "Sawhorse",
+      "Carpenter's workbench"
+    ],
+    "description": "The Wooden marker is a grave decoration which provides +1 when placed on a gravesite, after a corpse has been buried there.",
+    "image": "wooden_marker"
+  },
+  {
+    "id": "wooden_plank",
+    "name": "Wooden plank",
+    "category": "material",
+    "icon": "plank",
+    "sources": [
+      "Carpenter's workbench",
+      "Carpenter's workbench II"
+    ],
+    "description": "The plank is a near ubiquitous resource and is necessary for producing many of the mid-game Work Stations.",
+    "image": "wooden_plank"
+  },
+  {
+    "id": "wooden_stick",
+    "name": "Wooden stick",
+    "category": "material",
+    "icon": "log",
+    "sources": [
+      "Bushes",
+      "Trees"
+    ],
+    "image": "wooden_stick"
+  },
+  {
+    "id": "yellow_flower",
+    "name": "Yellow flower",
+    "category": "material",
+    "icon": "herb",
+    "sources": [
+      "Foraging"
+    ],
+    "description": "Yellow flowers are a forageable item found in most outdoor areas.",
+    "image": "yellow_flower"
+  },
+  {
+    "id": "yellow_paint",
+    "name": "Yellow Paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "sources": [
+      "Alchemy"
+    ],
+    "description": "Yellow Paint is produced through Alchemy at the Alchemy Workbench (Tier I).",
+    "image": "yellow_paint"
+  },
+  {
+    "id": "zombie",
+    "name": "Zombie",
+    "category": "material",
+    "icon": "stone",
+    "image": "zombie"
+  },
+  {
+    "id": "zombie_alchemy_decomposer",
+    "name": "Zombie alchemy decomposer",
+    "category": "material",
+    "icon": "stone",
+    "image": "zombie_alchemy_decomposer"
+  },
+  {
+    "id": "zombie_alchemy_workbench",
+    "name": "Zombie alchemy workbench",
+    "category": "material",
+    "icon": "stone",
+    "image": "zombie_alchemy_workbench"
+  },
+  {
+    "id": "zombie_juice",
+    "name": "Zombie juice",
+    "category": "funerario",
+    "icon": "grave",
+    "description": "Zombie juice is an alchemical product, used singularly at the resurrection table to convert a corpse into a zombie.",
+    "image": "zombie_juice"
   }
 ]

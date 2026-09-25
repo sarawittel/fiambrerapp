@@ -45,7 +45,7 @@ struct PlannerView: View {
                 HStack(spacing: 8) {
                     Button { router.openRecipe(id) } label: {
                         HStack(spacing: 10) {
-                            PixelIcon(name: item?.icon ?? "skull", size: 32)
+                            PixelIcon(name: item?.icon ?? "skull", image: item?.image, size: 32)
                             VStack(alignment: .leading, spacing: 0) {
                                 Text(item?.name ?? id)
                                 Text(recipe?.station ?? "").font(.pixelBody(18)).foregroundStyle(.secondary)

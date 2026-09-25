@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Alchemy mill",
+    "image": "station_alchemy_mill"
+  },
+  {
+    "name": "Alchemy workbench (tier I)",
+    "image": "station_alchemy_workbench_tier_i"
+  },
+  {
+    "name": "Alchemy workbench (tier II)",
+    "image": "station_alchemy_workbench_tier_ii"
+  },
+  {
+    "name": "Alcohol distiller",
+    "image": "station_alcohol_distiller"
+  },
+  {
+    "name": "Anvil",
+    "image": "station_anvil"
+  },
+  {
+    "name": "Anvil II",
+    "image": "station_anvil_ii"
+  },
+  {
+    "name": "Bee hive",
+    "image": "station_bee_hive"
+  },
+  {
+    "name": "Brewing stand",
+    "image": "station_brewing_stand"
+  },
+  {
+    "name": "Carpenter's workbench",
+    "image": "station_carpenter_s_workbench"
+  },
+  {
+    "name": "Carpenter's workbench II",
+    "image": "station_carpenter_s_workbench_ii"
+  },
+  {
+    "name": "Chopping spot",
+    "image": "station_chopping_spot"
+  },
+  {
+    "name": "Church workbench",
+    "image": "station_church_workbench"
+  },
+  {
+    "name": "Circular saw",
+    "image": "station_circular_saw"
+  },
+  {
+    "name": "Construcción · Alchemy Lab"
+  },
+  {
+    "name": "Construcción · Beekeeping"
+  },
+  {
+    "name": "Construcción · Cabin in the woods"
+  },
+  {
+    "name": "Construcción · Church"
+  },
+  {
+    "name": "Construcción · Crematorium"
+  },
+  {
+    "name": "Construcción · Farming"
+  },
+  {
+    "name": "Construcción · Morgue"
+  },
+  {
+    "name": "Construcción · The Graveyard"
+  },
+  {
+    "name": "Construcción · Workyard"
+  },
+  {
+    "name": "Cooking table",
+    "image": "station_cooking_table"
+  },
+  {
+    "name": "Cooking table (Game of Crone)"
+  },
+  {
+    "name": "Crate factory",
+    "image": "station_crate_factory"
+  },
+  {
+    "name": "Dark design desk",
+    "image": "station_dark_design_desk"
+  },
+  {
+    "name": "Desk",
+    "image": "station_desk"
+  },
+  {
+    "name": "Desk II",
+    "image": "station_desk_ii"
+  },
+  {
+    "name": "Distillation cube",
+    "image": "station_distillation_cube"
+  },
+  {
+    "name": "Distillation cube II",
+    "image": "station_distillation_cube_ii"
+  },
+  {
+    "name": "Embalming table",
+    "image": "station_embalming_table"
+  },
+  {
+    "name": "Fermentation barrel",
+    "image": "station_fermentation_barrel"
+  },
+  {
+    "name": "Furnace",
+    "image": "station_furnace"
+  },
+  {
+    "name": "Furnace II",
+    "image": "station_furnace_ii"
+  },
+  {
+    "name": "Furnace III",
+    "image": "station_furnace_iii"
+  },
+  {
+    "name": "Hand mixer",
+    "image": "station_hand_mixer"
+  },
+  {
+    "name": "Jewelry table",
+    "image": "station_jewelry_table"
+  },
+  {
+    "name": "Mill",
+    "image": "station_mill"
+  },
+  {
+    "name": "Organ Workbench",
+    "image": "station_organ_workbench"
+  },
+  {
+    "name": "Paper press",
+    "image": "station_paper_press"
+  },
+  {
+    "name": "Place for the apple tree",
+    "image": "station_place_for_the_apple_tree"
+  },
+  {
+    "name": "Potter's wheel",
+    "image": "station_potter_s_wheel"
+  },
+  {
+    "name": "Preparation place",
+    "image": "station_preparation_place"
+  },
+  {
+    "name": "Printing press",
+    "image": "station_printing_press"
+  },
+  {
+    "name": "Printing press II",
+    "image": "station_printing_press_ii"
+  },
+  {
+    "name": "Random text generator",
+    "image": "station_random_text_generator"
+  },
+  {
+    "name": "Resurrection table",
+    "image": "station_resurrection_table"
+  },
+  {
+    "name": "Sawhorse",
+    "image": "station_sawhorse"
+  },
+  {
+    "name": "Soul extractor",
+    "image": "station_soul_extractor"
+  },
+  {
+    "name": "Soul extractor II",
+    "image": "station_soul_extractor_ii"
+  },
+  {
+    "name": "Soul extractor III",
+    "image": "station_soul_extractor_iii"
+  },
+  {
+    "name": "Stone cutter",
+    "image": "station_stone_cutter"
+  },
+  {
+    "name": "Stone cutter II",
+    "image": "station_stone_cutter_ii"
+  },
+  {
+    "name": "Study table",
+    "image": "station_study_table"
+  },
+  {
+    "name": "Vine press",
+    "image": "station_vine_press"
+  },
+  {
+    "name": "Wall Crematorium",
+    "image": "station_wall_crematorium"
+  },
+  {
+    "name": "Wine making barrel",
+    "image": "station_wine_making_barrel"
+  },
+  {
+    "name": "Wooden anvil",
+    "image": "station_wooden_anvil"
+  },
+  {
+    "name": "Zombie-brewery",
+    "image": "station_zombie_brewery"
+  },
+  {
+    "name": "Zombie-winery",
+    "image": "station_zombie_winery"
+  }
+]

@@ -85,7 +85,7 @@ struct ItemChip: View {
     private func label(link: Bool) -> some View {
         let item = state.data.item(itemId)
         return HStack(spacing: 6) {
-            PixelIcon(name: item?.icon ?? "skull", size: 24)
+            PixelIcon(name: item?.icon ?? "skull", image: item?.image, size: 24)
             Text(item?.name ?? itemId)
             if let qty {
                 Text("×\(qty)").foregroundStyle(Theme.blood)
@@ -115,6 +115,7 @@ struct ChipFlow: View {
 /// Fila de lista con icono, título y subtítulo.
 struct ListRow: View {
     let icon: String
+    var image: String?
     let title: String
     var subtitle: String?
     var badge: String?
@@ -124,7 +125,7 @@ struct ListRow: View {
     var body: some View {
         Button(action: action) {
             HStack(spacing: 12) {
-                PixelIcon(name: icon, size: 32)
+                PixelIcon(name: icon, image: image, size: 32)
                 VStack(alignment: .leading, spacing: 0) {
                     Text(title).font(.pixelBody(23))
                     if let subtitle {
@@ -155,7 +156,7 @@ struct TodayBadge: View {
     var body: some View {
         Button { router.tab = .calendar } label: {
             HStack(spacing: 6) {
-                PixelIcon(name: state.todayDay.icon, size: 24)
+                PixelIcon(name: state.todayDay.icon, image: state.todayDay.image, size: 24)
                 Text("Hoy: \(state.todayDay.short)")
             }
         }
@@ -174,7 +175,7 @@ struct DayBadges: View {
             ForEach(state.data.days) { day in
                 let on = active.isEmpty || active.contains(day.id)
                 HStack(spacing: 6) {
-                    PixelIcon(name: day.icon, size: 16)
+                    PixelIcon(name: day.icon, image: day.image, size: 16)
                     Text(day.short).font(.pixelBody(20))
                 }
                 .padding(.horizontal, 8)
@@ -258,9 +259,9 @@ struct PixelCheckboxStyle: ToggleStyle {
     }
 }
 
-struct SampleDataNotice: View {
+struct DataSourceNotice: View {
     var body: some View {
-        Text("! Datos de ejemplo – edita los JSON de GK2Core/Resources con la información real del juego.")
+        Text("Datos de la wiki de Graveyard Keeper (graveyardkeeper.fandom.com, CC BY-SA).")
             .font(.pixelBody(18))
             .foregroundStyle(Theme.muted)
             .fixedSize(horizontal: false, vertical: true)

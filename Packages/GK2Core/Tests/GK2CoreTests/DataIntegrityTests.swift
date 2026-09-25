@@ -33,13 +33,36 @@ struct DataIntegrityTests {
         for icon in icons { #expect(Sprites.all[icon] != nil, "icono desconocido: \(icon)") }
     }
 
+    @Test func imagenesExisten() {
+        let images = data.items.compactMap(\.image) + data.days.compactMap(\.image)
+            + data.characters.compactMap(\.image) + data.stationList.compactMap(\.image)
+        #expect(images.count > 600)
+        for image in images { #expect(GameData.imageURL(image) != nil, "imagen desconocida: \(image)") }
+        #expect(data.stationImage("Furnace") != nil)
+    }
+
     @Test func spritesSon8x8() {
         for (name, rows) in Sprites.all {
             #expect(rows.count == 8 && rows.allSatisfy { $0.count == 8 }, "\(name) no es 8x8")
         }
     }
 
-    @Test func busquedaIgnoraTildes() {
-        #expect(data.searchRecipes("ataud").map(\.id) == ["r_coffin"])
+    @Test func busquedaIgnoraTildesYMayusculas() {
+        #expect(data.searchRecipes("WOODEN PLÁNK").contains { $0.id == "r_wooden_plank" })
+    }
+
+    @Test func datosDeLaWiki() {
+        #expect(data.days.map(\.id) == ["orgullo", "lujuria", "gula", "envidia", "ira", "pereza"])
+        #expect(data.items.count > 400)
+        #expect(data.recipes.count > 500)
+        #expect(data.character("merchant")?.days == ["gula"])
+        #expect(data.recipe(producing: "iron_ingot")?.station == "Furnace")
+    }
+
+    @Test func elPlanificadorTerminaConTodasLasRecetas() {
+        for r in data.recipes {
+            let req = Planner.requirements(for: [r.id: 3], recipes: data.recipes, deep: true)
+            #expect(!req.materials.isEmpty, "\(r.id) sin materiales")
+        }
     }
 }

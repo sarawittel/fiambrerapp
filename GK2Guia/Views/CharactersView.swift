@@ -21,7 +21,7 @@ struct CharactersView: View {
                     ForEach(data.days) { day in
                         Button { dayFilter = day.id } label: {
                             HStack(spacing: 4) {
-                                PixelIcon(name: day.icon, size: 16)
+                                PixelIcon(name: day.icon, image: day.image, size: 16)
                                 Text(day.short)
                             }
                         }
@@ -32,6 +32,7 @@ struct CharactersView: View {
                     ForEach(list) { npc in
                         ListRow(
                             icon: npc.icon,
+                            image: npc.image,
                             title: npc.name,
                             subtitle: "\(npc.title) · \(npc.location)",
                             badge: npc.isAvailable(on: state.today) ? "Hoy" : nil,
@@ -57,7 +58,7 @@ struct CharacterDetailView: View {
     var body: some View {
         Panel(style: .parchment) {
             HStack(spacing: 16) {
-                IconFrame(name: npc.icon, size: 64)
+                IconFrame(name: npc.icon, image: npc.image, size: 64)
                 VStack(alignment: .leading, spacing: 8) {
                     Text(npc.name).font(.pixelTitle(16))
                     FlowLayout(spacing: 6) {

@@ -42,7 +42,7 @@ private struct HeaderBar: View {
                     .font(.pixelTitle(16))
                     .foregroundStyle(Theme.candle)
                     .shadow(color: Theme.outline, radius: 0, x: 3, y: 3)
-                Text("GRAVEYARD KEEPER 2")
+                Text("GRAVEYARD KEEPER")
                     .font(.pixelBody(20))
                     .tracking(2)
                     .foregroundStyle(Theme.muted)

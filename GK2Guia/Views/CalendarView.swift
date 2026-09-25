@@ -45,7 +45,7 @@ private struct DayTile: View {
         let active = day.id == state.today
         Button { state.today = day.id } label: {
             VStack(spacing: 8) {
-                PixelIcon(name: day.icon, size: 40)
+                PixelIcon(name: day.icon, image: day.image, size: 40)
                 Text(day.short)
             }
             .foregroundStyle(active ? Theme.ink : Theme.muted)
@@ -72,7 +72,7 @@ private struct NPCList: View {
         } else {
             VStack(spacing: 4) {
                 ForEach(npcs) { npc in
-                    ListRow(icon: npc.icon, title: npc.name, subtitle: npc.location) {
+                    ListRow(icon: npc.icon, image: npc.image, title: npc.name, subtitle: npc.location) {
                         router.openCharacter(npc.id)
                     }
                 }
@@ -91,7 +91,7 @@ private struct WeekGrid: View {
             GridRow {
                 Text("PERSONAJE").font(.pixelTitle(8)).padding(.vertical, 8)
                 ForEach(data.days) { day in
-                    PixelIcon(name: day.icon, size: 16)
+                    PixelIcon(name: day.icon, image: day.image, size: 16)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 8)
                         .background(day.id == state.today ? Theme.candle.opacity(0.15) : .clear)

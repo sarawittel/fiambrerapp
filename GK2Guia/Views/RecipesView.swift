@@ -23,6 +23,7 @@ struct RecipesView: View {
                             let item = state.data.item(recipe.output)
                             ListRow(
                                 icon: item?.icon ?? "skull",
+                                image: item?.image,
                                 title: item?.name ?? recipe.output,
                                 subtitle: recipe.station,
                                 selected: wide && recipe.id == selection
@@ -33,7 +34,7 @@ struct RecipesView: View {
                         Text("Nada por aquí… solo polvo y huesos.").foregroundStyle(Theme.muted)
                     }
                 }
-                SampleDataNotice()
+                DataSourceNotice()
             }
         } detail: { id in
             if let recipe = state.data.recipe(id) {
@@ -80,13 +81,18 @@ struct RecipeDetailView: View {
 
         Panel(style: .parchment) {
             HStack(spacing: 16) {
-                IconFrame(name: item?.icon ?? "skull", size: 64)
+                IconFrame(name: item?.icon ?? "skull", image: item?.image, size: 64)
                 VStack(alignment: .leading, spacing: 8) {
                     Text(item?.name ?? recipe.output).font(.pixelTitle(16))
                     FlowLayout(spacing: 6) {
-                        Tag(recipe.station)
+                        HStack(spacing: 4) {
+                            if let image = data.stationImage(recipe.station) {
+                                PixelIcon(name: "anvil", image: image, size: 24)
+                            }
+                            Tag(recipe.station)
+                        }
                         Tag("Produce ×\(recipe.outputQty)")
-                        if let time = recipe.time { Tag("\(time) h") }
+                        if let time = recipe.time { Tag("Tiempo \(time)") }
                     }
                 }
             }

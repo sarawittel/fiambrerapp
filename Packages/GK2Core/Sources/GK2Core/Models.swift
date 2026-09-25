@@ -12,6 +12,8 @@ public struct Item: Codable, Identifiable, Hashable, Sendable {
     /// Dónde se obtiene si no se fabrica (texto libre).
     public var sources: [String]?
     public var description: String?
+    /// imagen de la wiki en `Resources/Images` (sin extensión); si falta se usa `icon`
+    public var image: String?
 }
 
 public struct Ingredient: Codable, Hashable, Sendable {
@@ -27,11 +29,11 @@ public struct Recipe: Codable, Identifiable, Hashable, Sendable {
     public let outputQty: Int
     public let station: String
     public let ingredients: [Ingredient]
-    /// duración aproximada en horas de juego
-    public var time: Int?
+    /// duración según la wiki, p. ej. "2:30"
+    public var time: String?
     public var notes: String?
 
-    public init(id: String, output: String, outputQty: Int, station: String, ingredients: [Ingredient], time: Int? = nil, notes: String? = nil) {
+    public init(id: String, output: String, outputQty: Int, station: String, ingredients: [Ingredient], time: String? = nil, notes: String? = nil) {
         self.id = id
         self.output = output
         self.outputQty = outputQty
@@ -49,6 +51,13 @@ public struct Day: Codable, Identifiable, Hashable, Sendable {
     public let icon: String
     /// color en hexadecimal, p. ej. "#e0a83a"
     public let color: String
+    public var image: String?
+}
+
+/// Estación de trabajo, para mostrar su imagen junto a las recetas.
+public struct Station: Codable, Hashable, Sendable {
+    public let name: String
+    public var image: String?
 }
 
 public struct NPC: Codable, Identifiable, Hashable, Sendable {
@@ -62,6 +71,7 @@ public struct NPC: Codable, Identifiable, Hashable, Sendable {
     public var sells: [String]?
     public var buys: [String]?
     public var notes: String?
+    public var image: String?
 
     public func isAvailable(on dayId: String) -> Bool {
         days.isEmpty || days.contains(dayId)

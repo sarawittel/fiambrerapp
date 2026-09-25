@@ -4,41 +4,47 @@
     "name": "Día del Orgullo",
     "short": "Orgullo",
     "icon": "crown",
-    "color": "#e0a83a"
-  },
-  {
-    "id": "avaricia",
-    "name": "Día de la Avaricia",
-    "short": "Avaricia",
-    "icon": "coin",
-    "color": "#c9b458"
+    "color": "#e0a83a",
+    "image": "day_orgullo"
   },
   {
     "id": "lujuria",
     "name": "Día de la Lujuria",
     "short": "Lujuria",
     "icon": "heart",
-    "color": "#a8322d"
-  },
-  {
-    "id": "envidia",
-    "name": "Día de la Envidia",
-    "short": "Envidia",
-    "icon": "eye",
-    "color": "#7a8f4a"
+    "color": "#a8322d",
+    "image": "day_lujuria"
   },
   {
     "id": "gula",
     "name": "Día de la Gula",
     "short": "Gula",
     "icon": "meat",
-    "color": "#e07a2a"
+    "color": "#e07a2a",
+    "image": "day_gula"
+  },
+  {
+    "id": "envidia",
+    "name": "Día de la Envidia",
+    "short": "Envidia",
+    "icon": "eye",
+    "color": "#7a8f4a",
+    "image": "day_envidia"
   },
   {
     "id": "ira",
     "name": "Día de la Ira",
     "short": "Ira",
     "icon": "skull",
-    "color": "#7a4a8a"
+    "color": "#7a4a8a",
+    "image": "day_ira"
+  },
+  {
+    "id": "pereza",
+    "name": "Día de la Pereza",
+    "short": "Pereza",
+    "icon": "moon",
+    "color": "#4a8ab0",
+    "image": "day_pereza"
   }
 ]
