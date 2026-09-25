@@ -1,53 +1,65 @@
 # Guía del Guardián · Graveyard Keeper 2
 
-Guía interactiva no oficial de **Graveyard Keeper 2** con estética pixel art. Funciona como web, como app de iOS y como app de macOS a partir del mismo código.
+App nativa en SwiftUI para **iPhone, iPad y Mac**: una guía no oficial de *Graveyard Keeper 2* con estética pixel art.
 
-- **Recetas**: buscador y filtro por estación, ingredientes enlazados y "se usa en".
-- **Qué necesito**: añade recetas a tu plan y calcula los materiales. Puede desglosarlos hasta materias primas, aprovechando el excedente de cada lote. Apunta lo que ya tienes y te dice dónde conseguir el resto y quién lo vende hoy.
-- **Calendario**: el día actual de la semana, quién está hoy, quién llega mañana y una tabla semanal.
-- **Personajes**: fichas con ubicación, días de visita y qué compran y venden.
+- **Recetas**: buscador (ignora tildes), filtro por estación, ingredientes enlazados a su receta y "se usa en".
+- **Qué necesito**: añade recetas a tu plan y calcula los materiales. Puede desglosarlos hasta materias primas, aprovechando el excedente de cada lote. Apuntas lo que tienes y te dice qué falta, dónde conseguirlo, quién lo vende hoy y en qué orden fabricar.
+- **Calendario**: día actual, quién está hoy, quién llega mañana y una tabla semanal.
+- **Personajes**: filtro por día, ubicación, días de visita y qué compran y venden.
 
-El plan, el inventario y el día actual se guardan en el navegador (`localStorage`).
+El plan, el inventario y el día actual se guardan en el dispositivo. En Mac y iPad se ve en dos columnas; en iPhone, con navegación apilada y barra de pestañas inferior.
 
-> ⚠️ Los datos incluidos son **de ejemplo**. Sustitúyelos por los del juego en `src/data/`.
+> ⚠️ Los datos incluidos son **de ejemplo**. Sustitúyelos por los reales en `Packages/GK2Core/Sources/GK2Core/Resources/`.
 
-## Web
+## Ejecutar (sin publicar nada)
 
-```bash
-npm install
-npm run dev        # http://localhost:5173
-npm test           # tests del calculador e integridad de datos
-npm run build      # genera dist/
-```
-
-## iOS y macOS
-
-`apple/` contiene una app SwiftUI multiplataforma que empaqueta `dist/` en un `WKWebView`. Los archivos se sirven con un esquema propio, `gk2://`. No hace falta publicarla.
-
-Requisitos: **Xcode** (App Store) y [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`).
+Requisitos: **Xcode** (gratis en la App Store) y [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`).
 
 ```bash
-npm run apple      # build web + genera apple/GK2Guia.xcodeproj + abre Xcode
+xcodegen generate
+open GK2Guia.xcodeproj
 ```
 
-En Xcode:
 - **Mac**: elige el destino *My Mac* y pulsa ▶.
-- **iPhone/iPad**: en *Signing & Capabilities* elige tu *Team*; basta un Apple ID gratuito. Conecta el dispositivo y pulsa ▶. Con una cuenta gratuita la app caduca a los 7 días y hay que volver a instalarla desde Xcode.
+- **iPhone/iPad**: en *Signing & Capabilities* elige tu *Team*; basta un Apple ID gratuito. Conecta el dispositivo, actívale el *Modo desarrollador* y pulsa ▶. Con cuenta gratuita la instalación caduca a los 7 días; se reinstala con otro ▶.
+- **Simulador**: elige cualquier iPhone o iPad del menú de destinos.
 
-Xcode recompila la web en cada build (fase *Build web*), así que los cambios en `src/` llegan a la app. El `.xcodeproj` se genera y no se versiona: si tocas `apple/project.yml`, vuelve a ejecutar `xcodegen generate`.
+El `.xcodeproj` no se versiona. Si cambias `project.yml` o añades archivos, vuelve a ejecutar `xcodegen generate`.
+
+## Estructura
+
+```
+project.yml                  Definición del proyecto Xcode (XcodeGen)
+GK2Guia/                     App SwiftUI (iOS + macOS)
+  Theme/                     Colores, fuentes, bordes de píxel, iconos
+  State/                     Estado persistente y navegación
+  Views/                     Pantallas y componentes
+  Resources/                 Fuentes pixeladas (OFL) e icono
+Packages/GK2Core/            Modelos, datos y calculador (sin UI, con tests)
+  Sources/GK2Core/Resources/ items.json, recipes.json, days.json, characters.json
+  Sources/GK2Core/Sprites.swift   Sprites de 8×8 (un carácter por píxel)
+scripts/test.sh              Tests; funciona también sin Xcode
+```
 
 ## Añadir datos
 
 | Archivo | Contenido |
 | --- | --- |
-| `src/data/items.ts` | Objetos: id, nombre, icono, dónde se consiguen |
-| `src/data/recipes.ts` | Recetas: estación, ingredientes, unidades por lote |
-| `src/data/days.ts` | Días de la semana, en orden |
-| `src/data/characters.ts` | Personajes: días (`[]` = todos), qué venden y compran |
-| `src/components/icons.ts` | Sprites de 8×8 píxeles (un carácter por píxel) |
+| `items.json` | Objetos: `id`, `name`, `category`, `icon`, `sources` (dónde se consiguen) |
+| `recipes.json` | Recetas: `output`, `outputQty` (unidades por lote), `station`, `ingredients` |
+| `days.json` | Días de la semana, en orden, con `icon` y `color` |
+| `characters.json` | Personajes: `days` (`[]` = todos los días), `sells`, `buys` |
 
-`npm test` avisa si una receta o un personaje hacen referencia a un objeto o día que no existe.
+Para un icono nuevo, añade un sprite en `Sprites.swift`: 8 filas de 8 caracteres con los colores de la paleta.
 
----
+```bash
+./scripts/test.sh
+```
+
+Los tests avisan si una receta o un personaje hacen referencia a un objeto, día o icono que no existe.
+
+## Créditos
+
+Fuentes [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) y [VT323](https://fonts.google.com/specimen/VT323), con licencia SIL Open Font License (incluida en `GK2Guia/Resources/Fonts`).
 
 Proyecto de fans sin relación con Lazy Bear Games ni tinyBuild.
