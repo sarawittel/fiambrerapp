@@ -75,6 +75,20 @@ public struct GameData: Sendable {
         characters.filter { $0.sells?.contains(itemId) == true }
     }
 
+    public func buyers(of itemId: String) -> [NPC] {
+        characters.filter { $0.buys?.contains(itemId) == true }
+    }
+
+    /// Encargos en los que aparece el objeto, como recompensa o como parte de la misión.
+    /// `key` = "personaje/misión", único en todo el juego.
+    public func quests(involving itemId: String) -> [(key: String, npc: NPC, quest: Quest)] {
+        characters.flatMap { npc in
+            (npc.quests ?? [])
+                .filter { ($0.rewards ?? []).contains(itemId) || ($0.items ?? []).contains(itemId) }
+                .map { ("\(npc.id)/\($0.id)", npc, $0) }
+        }
+    }
+
     public func recipes(using itemId: String) -> [Recipe] {
         recipes.filter { $0.ingredients.contains { $0.item == itemId } }
     }
@@ -92,6 +106,19 @@ public struct GameData: Sendable {
             if q.isEmpty { return true }
             return ([r.output] + r.ingredients.map(\.item)).contains { itemName($0).folded.contains(q) }
         }
+    }
+
+    /// Objetos por nombre, sin distinguir tildes, en orden alfabético.
+    /// `craftable` filtra por si tienen receta (`nil` = todos).
+    public func searchItems(_ query: String, category: ItemCategory? = nil, craftable: Bool? = nil) -> [Item] {
+        let q = query.trimmingCharacters(in: .whitespaces).folded
+        return items
+            .filter { item in
+                if let category, item.category != category { return false }
+                if let craftable, (producers[item.id] != nil) != craftable { return false }
+                return q.isEmpty || item.name.folded.contains(q)
+            }
+            .sorted { $0.name.localizedCompare($1.name) == .orderedAscending }
     }
 }
 

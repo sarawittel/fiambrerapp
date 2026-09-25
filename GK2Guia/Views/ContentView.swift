@@ -18,6 +18,7 @@ struct ContentView: View {
             Group {
                 switch router.tab {
                 case .recipes: RecipesView()
+                case .items: ItemsView()
                 case .planner: PlannerView()
                 case .calendar: CalendarView()
                 case .characters: CharactersView()

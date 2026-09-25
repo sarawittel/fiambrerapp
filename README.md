@@ -62,7 +62,7 @@ Cada objeto, personaje, día y estación de trabajo lleva un campo `image` con s
 | `items.json` | Objetos: `id`, `name`, `category`, `icon`, `sources` (dónde se consiguen) |
 | `recipes.json` | Recetas: `output`, `outputQty` (unidades por lote), `station`, `ingredients` |
 | `days.json` | Días de la semana, en orden, con `icon` y `color` |
-| `characters.json` | Personajes: `days` (`[]` = todos los días), `sells`, `buys` |
+| `characters.json` | Personajes: `days` (`[]` = todos los días), `sells`, `buys`, `quests` (encargos: `text` en Markdown con enlaces `gk2://item/<id>` y `gk2://character/<id>`, `rewards`, `items`, `characters`, `friendship` = ♥ que se ganan, `dlc`) y `friendship` (niveles de amistad: `level`, `text`, `items`) |
 
 Para un icono nuevo, añade un sprite en `Sprites.swift`: 8 filas de 8 caracteres con los colores de la paleta.
 

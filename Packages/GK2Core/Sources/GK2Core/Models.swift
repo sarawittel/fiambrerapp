@@ -1,6 +1,6 @@
 import Foundation
 
-public enum ItemCategory: String, Codable, Sendable {
+public enum ItemCategory: String, Codable, CaseIterable, Sendable {
     case material, comida, alquimia, funerario, herramienta
 }
 
@@ -72,8 +72,38 @@ public struct NPC: Codable, Identifiable, Hashable, Sendable {
     public var buys: [String]?
     public var notes: String?
     public var image: String?
+    public var quests: [Quest]?
+    /// niveles de amistad que desbloquean algo, de menor a mayor
+    public var friendship: [FriendshipMilestone]?
 
     public func isAvailable(on dayId: String) -> Bool {
         days.isEmpty || days.contains(dayId)
     }
+}
+
+/// Encargo de un personaje, tal como lo cuenta la wiki.
+public struct Quest: Codable, Identifiable, Hashable, Sendable {
+    /// único dentro del personaje
+    public let id: String
+    public let name: String
+    /// párrafos en Markdown en línea: objetos y personajes como `[**nombre**](gk2://item/<id>)` o `gk2://character/<id>`, amistad como «10 ♥»
+    public let text: [String]
+    /// DLC al que pertenece, p. ej. "Stranger Sins"
+    public var dlc: String?
+    /// amistad que se gana al completarlo
+    public var friendship: Int?
+    /// objetos que te dan o que desbloquea
+    public var rewards: [String]?
+    /// otros objetos que aparecen (lo que te piden, sobre todo)
+    public var items: [String]?
+    /// otros personajes implicados
+    public var characters: [String]?
+}
+
+/// Lo que se desbloquea al llegar a cierto nivel de amistad con un personaje.
+public struct FriendshipMilestone: Codable, Hashable, Sendable {
+    public let level: Int
+    /// Markdown en línea, como `Quest.text`
+    public let text: String
+    public var items: [String]?
 }

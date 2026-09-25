@@ -65,7 +65,7 @@ struct NoteView: View {
     }
 }
 
-/// Objeto con icono. Si es fabricable, lleva a su receta.
+/// Objeto con icono. Si es fabricable, lleva a su receta; si no, a su ficha.
 struct ItemChip: View {
     let itemId: String
     var qty: Int?
@@ -77,6 +77,10 @@ struct ItemChip: View {
             Button { router.openRecipe(recipe.id) } label: { label(link: true) }
                 .buttonStyle(.plain)
                 .help("Ver receta")
+        } else if state.data.item(itemId) != nil {
+            Button { router.openItem(itemId) } label: { label(link: true) }
+                .buttonStyle(.plain)
+                .help("Ver objeto")
         } else {
             label(link: false)
         }

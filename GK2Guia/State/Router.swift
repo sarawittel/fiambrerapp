@@ -1,13 +1,14 @@
 import Observation
 
 enum AppTab: String, CaseIterable, Identifiable {
-    case recipes, planner, calendar, characters
+    case recipes, items, planner, calendar, characters
 
     var id: String { rawValue }
 
     var title: String {
         switch self {
         case .recipes: "Recetas"
+        case .items: "Objetos"
         case .planner: "Qué necesito"
         case .calendar: "Calendario"
         case .characters: "Personajes"
@@ -17,6 +18,7 @@ enum AppTab: String, CaseIterable, Identifiable {
     var shortTitle: String {
         switch self {
         case .recipes: "Recetas"
+        case .items: "Objetos"
         case .planner: "Necesito"
         case .calendar: "Semana"
         case .characters: "Gente"
@@ -26,6 +28,7 @@ enum AppTab: String, CaseIterable, Identifiable {
     var icon: String {
         switch self {
         case .recipes: "cauldron"
+        case .items: "scroll"
         case .planner: "sack"
         case .calendar: "moon"
         case .characters: "person"
@@ -40,6 +43,8 @@ final class Router {
     var tab: AppTab = .recipes
     var recipeId: String?
     var recipePath: [String] = []
+    var itemId: String?
+    var itemPath: [String] = []
     var characterId: String?
     var characterPath: [String] = []
 
@@ -48,6 +53,13 @@ final class Router {
         tab = .recipes
         recipeId = id
         if recipePath.last != id { recipePath.append(id) }
+    }
+
+    func openItem(_ id: String) {
+        if tab != .items { itemPath = [] }
+        tab = .items
+        itemId = id
+        if itemPath.last != id { itemPath.append(id) }
     }
 
     func openCharacter(_ id: String) {

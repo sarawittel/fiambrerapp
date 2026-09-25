@@ -421,6 +421,7 @@ for title, page in PAGES.items():
             if iid and iid not in target:
                 target.append(iid)
     npc["_sells"], npc["_buys"] = sells, buys
+    npc["_text"] = text
     notes = []
     vendor = plain(box.get("vendor", ""))
     if vendor:
@@ -448,8 +449,289 @@ for npc in npcs:
     if buys:
         npc["buys"] = buys
 
-# NPC sin comercio, días ni ubicación útil no aportan nada a la guía
-npcs = [n for n in npcs if n.get("sells") or n.get("buys") or n["days"] or n["location"] != "?"]
+
+# MARK: - Misiones y amistad
+
+HEAD_RE = re.compile(r"^(={2,6})\s*(.*?)\s*=+\s*$", re.M)
+HAPPY_RE = re.compile(
+    r"\{\{\s*happiness\s*\|\s*(\+?)\s*\|?\s*(\d+)\s*\}\}"   # {{Happiness|+20}}, {{Happiness|+|10}}
+    r"|(\+?)(\d+)\s*\{\{\s*happiness\s*\}\}"                # 10 {{Happiness}}
+    r"|\{\{\s*happiness\s*\}\}\s*(\d+)"                     # {{Happiness}}30
+    r"|(\+)(\d+)\s+(?:reputation|happiness)\b",             # +20 reputation
+    re.I)
+# ⟦+10⟧ = 10 de amistad que se ganan; ⟦10⟧ = nivel de amistad
+TOKEN_RE = re.compile(r"⟦(\+?)(\d+)⟧")
+DLCS = {"stranger sins": "Stranger Sins", "breaking dead": "Breaking Dead", "game of crone": "Game of Crone",
+        "better save soul": "Better Save Soul"}
+NOT_QUEST = re.compile(r"trad|sell|purchas|buying|trivia|notes?$|history|easter|loan|gallery|other cutscenes", re.I)
+# frases que describen lo que te dan (los objetos que siguen a la palabra clave son la recompensa)
+REWARD_RE = re.compile(
+    r"\breward|\breceiv|(?<!need to )(?<!have to )(?<!must )\bget\b|\bgives? (?:you|him)\b|\bhands? (?:you|over)\b"
+    r"|\bteach|\brecipes? (?:for|of)\b|\boffers? you\b|\bunlock|\bwill give\b|\bgrab", re.I)
+REWARD_CUT = re.compile(r"\b(?:using|requires?|in exchange for|made (?:with|from)|if you bring)\b", re.I)
+NEVER_GAIN = re.compile(r"should|total|now have|end up|up to|reset", re.I)
+REQUIRES = re.compile(r"(?:\bat|reach\w*|need\w*|requir\w*|least|have|has|once|when)\W*(?:\w+\W+){0,2}$", re.I)
+GAINS = re.compile(r"(?:earn|gain|receiv|get|reward|another|for|by|give[sn]?|increas|raise)\w*\W*(?:\w+\W+){0,3}$", re.I)
+QUALITY_ES = {"copper": "bronce", "silver": "plata", "gold": "oro"}
+DAY_ES = {en.lower(): short for en, _, _, short, *_ in DAYS}
+npc_by_title = dict(npc_title_to_id)
+
+
+def outline(text):
+    """[(nivel, título, cuerpo)] de cada encabezado, en orden."""
+    heads = list(HEAD_RE.finditer(text))
+    return [(len(m.group(1)), m.group(2), text[m.end():heads[i + 1].start() if i + 1 < len(heads) else len(text)])
+            for i, m in enumerate(heads)]
+
+
+def mark_happiness(text):
+    def repl(m):
+        sign = m.group(1) or m.group(3) or m.group(6) or ""
+        return f"⟦{sign}{m.group(2) or m.group(4) or m.group(5) or m.group(7)}⟧"
+    return HAPPY_RE.sub(repl, text)
+
+
+def money(copper):
+    g, rest = divmod(int(copper), 10000)
+    s, c = divmod(rest, 100)
+    parts = [f"{n} {u}" for n, u in ((g, "oro"), (s, "plata"), (c, "cobre")) if n]
+    return " ".join(parts) or "0 cobre"
+
+
+def strip_tables(text):
+    out, depth = [], 0
+    for line in text.split("\n"):
+        s = line.strip()
+        if s.startswith("{|"):
+            depth += 1
+        elif s.startswith("|}"):
+            depth = max(0, depth - 1)
+        elif not depth:
+            out.append(line)
+    return "\n".join(out)
+
+
+def rich(text):
+    """Wikitext -> Markdown en línea: objetos y personajes como enlaces `gk2://item/<id>` y
+    `gk2://character/<id>` (o en negrita si no existen), amistad como «10 ♥»."""
+    def link(target, label):
+        # ⟪tipo:id|texto⟫ hasta el final, para que no lo toquen las demás sustituciones
+        title = canonical(target)
+        if title in items and title not in TECH_POINTS:
+            return f"⟪item:{items[title]['id']}|{label}⟫"
+        if title in npc_by_title:
+            return f"⟪character:{npc_by_title[title]}|{label}⟫"
+        return None
+
+    def item(m):
+        name, qty, quality = m.group(1).strip(), (m.group(2) or "").strip(), (m.group(3) or "").strip().lower()
+        out = link(name, name) or f"**{name}**"
+        if qty.isdigit() and int(qty) > 1:
+            out = f"{qty} × {out}"
+        if quality in QUALITY_ES:
+            out += f" ({QUALITY_ES[quality]})"
+        return out
+    t = re.sub(r"\[\[(?:[Ff]ile|[Ii]mage):(?:[^\[\]]|\[\[[^\]]*\]\])*\]\]", "", text)
+    t = re.sub(r"<s>.*?</s>", "", t, flags=re.S)
+    t = re.sub(r"<br\s*/?>", " ", t)
+    t = re.sub(r"<[^>]+>", "", t)
+    t = re.sub(r"\{\{\s*[Ii]tem\s*\|([^|}]*)(?:\|([^|}]*))?(?:\|([^|}]*))?[^}]*\}\}", item, t)
+    t = re.sub(r"\{\{\s*[Mm]oney\s*\|\s*(\d+)\s*\}\}", lambda m: money(m.group(1)), t)
+    t = re.sub(r"\{\{\s*[Dd]ay\s*\|([^|}]*)\}\}", lambda m: DAY_ES.get(m.group(1).strip().lower(), m.group(1)), t)
+    t = re.sub(r"\{\{\s*[Qq]uality\s*\|([^|}]*)\}\}", lambda m: f"({QUALITY_ES.get(m.group(1).strip().lower(), m.group(1))})", t)
+    t = re.sub(r"\{\{\s*[Tt]echpoint\s*\|([^|}]*)[^}]*\}\}", r"\1", t)
+    t = re.sub(r"\{\{\s*[Gg]raveyard [Rr]ating\s*\}\}", "de valoración del cementerio", t)
+    t = re.sub(r"\{\{\s*[Cc]hurch [Rr]ating\s*\}\}", "de valoración de la iglesia", t)
+    t = re.sub(r"\{\{[^{}]*\}\}", "", t)
+    t = re.sub(r"\[\[([^|\]]*)(?:\|([^\]]*))?\]\]",
+               lambda m: link(m.group(1), (m.group(2) or m.group(1)).strip()) or (m.group(2) or m.group(1)), t)
+    t = re.sub(r"\[https?://\S+\s*([^\]]*)\]", r"\1", t)
+    t = re.sub(r"'''(.+?)'''", r"**\1**", t)
+    t = t.replace("''", "")
+    t = TOKEN_RE.sub(lambda m: f"{m.group(1)}{m.group(2)} ♥", t)
+    t = re.sub(r"\*\*\s*\*\*", "", t)
+    t = re.sub(r"⟪(\w+):(\w+)\|([^⟫]*)⟫",
+               lambda m: f"[**{m.group(3).strip() or m.group(2)}**](gk2://{m.group(1)}/{m.group(2)})", t)
+    return re.sub(r"\s+", " ", t).strip(" ,;")
+
+
+def paragraphs(text):
+    """Párrafos y viñetas de un cuerpo de sección."""
+    out, buf = [], []
+    for line in strip_tables(text).split("\n"):
+        s = line.strip()
+        if not s or s.startswith(("[[Category", "{{Navbox", "__")) or re.match(r"\[\[[a-z-]{2,5}:", s):
+            if buf:
+                out.append(" ".join(buf))
+                buf = []
+            continue
+        m = re.match(r"^([*#:]+)\s*(.*)", s)
+        if m:
+            if buf:
+                out.append(" ".join(buf))
+                buf = []
+            out.append(("• " if len(m.group(1)) == 1 else "   ◦ ") + m.group(2))
+        else:
+            buf.append(s)
+    if buf:
+        out.append(" ".join(buf))
+    return [p for p in (rich(x) for x in out) if p.strip("•◦ ")]
+
+
+def sentences(text):
+    for line in strip_tables(text).split("\n"):
+        yield from (s for s in re.split(r"(?<=[.!?])\s+(?=[A-Z\[{])", line) if s.strip())
+
+
+def mentions(text, self_id):
+    """Objetos y personajes enlazados en el texto, en orden de aparición."""
+    items_found, npcs_found = [], []
+    for m in re.finditer(r"\{\{\s*[Ii]tem\s*\|([^|}]*)|\[\[(?![Ff]ile:|[Ii]mage:|[Cc]ategory:)([^|\]]+)", text):
+        title = canonical(m.group(1) or m.group(2))
+        if not title or title in TECH_POINTS:
+            continue
+        if title in items and items[title]["id"] not in items_found:
+            items_found.append(items[title]["id"])
+        npc_id = npc_by_title.get(title)
+        if npc_id and npc_id != self_id and npc_id not in npcs_found:
+            npcs_found.append(npc_id)
+    return items_found, npcs_found
+
+
+def reward_items(text):
+    found = []
+    for s in sentences(text):
+        m = REWARD_RE.search(s)
+        if not m:
+            continue
+        tail = s[m.start():]
+        cut = REWARD_CUT.search(tail)
+        for iid in mentions(tail[:cut.start()] if cut else tail, None)[0]:
+            if iid not in found:
+                found.append(iid)
+    return found
+
+
+def happiness_marks(text):
+    """[(valor, es_ganancia, es_requisito, posición)] de cada mención de amistad."""
+    out = []
+    for m in TOKEN_RE.finditer(text):
+        before = plain(TOKEN_RE.sub(r"\2", text[max(0, m.start() - 80):m.start()]))[-50:]
+        value, signed = int(m.group(2)), m.group(1) == "+"
+        if NEVER_GAIN.search(before[-25:]):
+            out.append((value, False, False, m.start()))
+        elif signed:
+            out.append((value, True, False, m.start()))
+        elif REQUIRES.search(before):
+            out.append((value, False, True, m.start()))
+        else:
+            out.append((value, bool(GAINS.search(before)), False, m.start()))
+    return out
+
+
+def dlc_of(title):
+    return next((name for key, name in DLCS.items() if key in title.lower()), None)
+
+
+def quest_sections(text):
+    """(título, cuerpo, dlc) de cada misión: subsecciones de «Quests» o de las secciones de DLC."""
+    ol = outline(text)
+
+    def descendants(i):
+        j = i + 1
+        while j < len(ol) and ol[j][0] > ol[i][0]:
+            j += 1
+        return list(range(i + 1, j))
+
+    def body(i):
+        return ol[i][2] + "".join(f"\n'''{ol[k][1]}'''\n{ol[k][2]}" for k in descendants(i))
+
+    def walk(i, dlc):
+        title = plain(ol[i][1])
+        dlc = dlc_of(title) or dlc
+        desc = descendants(i)
+        if not desc:
+            if re.search(r"quest", title, re.I):
+                yield "", ol[i][2], dlc
+            return
+        top = min(ol[k][0] for k in desc)
+        for k in desc:
+            if ol[k][0] != top:
+                continue
+            name = plain(re.sub(r"\{\{\s*happiness[^}]*\}\}", "", ol[k][1], flags=re.I))
+            if NOT_QUEST.search(name) and "quest" not in name.lower():
+                continue
+            if re.fullmatch(r"quests?", name, re.I) or (dlc_of(name) and descendants(k)):
+                yield from walk(k, dlc_of(name) or dlc)
+            else:
+                yield ol[k][1], body(k), dlc_of(name) or dlc
+
+    for i, (level, title, _) in enumerate(ol):
+        if level == 2 and (re.search(r"quest", title, re.I) or dlc_of(title)):
+            yield from walk(i, None)
+
+
+for npc in npcs:
+    text = mark_happiness(npc.pop("_text"))
+    quests, used = [], set()
+    for heading, body, dlc in quest_sections(text):
+        name = plain(re.sub(r"\(.*?DLC\)|⟦[^⟧]*⟧", "", heading)).strip() or "Encargos"
+        qid = slug(name) or "encargos"
+        n = 2
+        while qid in used:
+            qid, n = f"{slug(name)}_{n}", n + 1
+        used.add(qid)
+        paras = paragraphs(body)
+        if not paras:
+            continue
+        mentioned, people = mentions(body, npc["id"])
+        rewards = [i for i in reward_items(body) if i in mentioned]
+        gain = sum(v for v, g, _, _ in happiness_marks(heading) + happiness_marks(body) if g)
+        quest = {"id": qid, "name": name, "text": paras}
+        if dlc:
+            quest["dlc"] = dlc
+        if gain:
+            quest["friendship"] = gain
+        if rewards:
+            quest["rewards"] = rewards
+        others = [i for i in mentioned if i not in rewards]
+        if others:
+            quest["items"] = others
+        if people:
+            quest["characters"] = people
+        quests.append(quest)
+    if quests:
+        npc["quests"] = quests
+
+    # niveles de amistad que desbloquean algo, en cualquier parte de la página salvo el comercio
+    milestones = {}
+    own_names = {npc["name"].lower(), npc["id"].replace("_", " ")}
+    for level, title, body in outline(text):
+        if NOT_QUEST.search(plain(title)):
+            continue
+        for s in sentences(body):
+            marks = [v for v, _, req, _ in happiness_marks(s) if req]
+            if not marks:
+                continue
+            items_found, people = mentions(s, npc["id"])
+            # «con Snake» en la página de Horadric: es la amistad de otro personaje
+            if people and not any(n in s.lower() for n in own_names):
+                continue
+            # «20 ♥ with [[Gerry]]» en la página de Gunter
+            other = re.search(r"⟧\s*with (?:the )?\[\[([^|\]]+)", s)
+            if other and npc_by_title.get(canonical(other.group(1))) not in (None, npc["id"]):
+                continue
+            if s.lstrip().startswith("("):  # aclaraciones sueltas entre paréntesis
+                continue
+            entry = {"level": max(marks), "text": rich(s)}
+            if items_found:
+                entry["items"] = items_found
+            milestones.setdefault((entry["level"], entry["text"]), entry)
+    if milestones:
+        npc["friendship"] = sorted(milestones.values(), key=lambda m: m["level"])
+
+# NPC sin comercio, días, misiones ni ubicación útil no aportan nada a la guía
+npcs = [n for n in npcs if n.get("sells") or n.get("buys") or n.get("quests") or n["days"] or n["location"] != "?"]
 npcs.sort(key=lambda n: n["name"])
 
 

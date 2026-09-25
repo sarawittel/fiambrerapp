@@ -54,8 +54,12 @@ struct CharactersView: View {
 
 struct CharacterDetailView: View {
     let npc: NPC
+    @Environment(AppState.self) private var state
 
     var body: some View {
+        let quests = npc.quests ?? []
+        let done = quests.filter { state.isDone($0, of: npc) }.count
+
         Panel(style: .parchment) {
             HStack(spacing: 16) {
                 IconFrame(name: npc.icon, image: npc.image, size: 64)
@@ -69,6 +73,16 @@ struct CharacterDetailView: View {
             }
             SectionTitle("Días de visita")
             DayBadges(active: npc.days)
+            if !quests.isEmpty {
+                SectionTitle("Encargos · \(done)/\(quests.count)")
+                VStack(spacing: 8) {
+                    ForEach(quests) { QuestCard(npc: npc, quest: $0) }
+                }
+            }
+            if let friendship = npc.friendship, !friendship.isEmpty {
+                SectionTitle("Amistad")
+                FriendshipLadder(milestones: friendship)
+            }
             if let sells = npc.sells, !sells.isEmpty {
                 SectionTitle("Vende")
                 ChipFlow(itemIds: sells)
