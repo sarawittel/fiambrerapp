@@ -29,7 +29,7 @@ struct GK2GuiaApp: App {
     }
 
     var body: some Scene {
-        WindowGroup("Guía del Guardián") {
+        WindowGroup("Fiambrera") {
             ContentView()
                 .environment(state)
                 .environment(router)

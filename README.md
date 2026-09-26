@@ -1,4 +1,4 @@
-# Guía del Guardián · Graveyard Keeper
+# Fiambrera · Graveyard Keeper
 
 App nativa en SwiftUI para **iPhone**: una guía no oficial de *Graveyard Keeper* con estética pixel art. De momento cubre el primer juego; la idea es añadir *Graveyard Keeper 2* después.
 
