@@ -29,11 +29,25 @@ open GK2Guia.xcodeproj
 
 [iloader](https://github.com/nab138/iloader) firma apps con tu Apple ID (como Xcode) y las instala por USB. Con la opción **LiveContainer + SideStore** instala [LiveContainer](https://github.com/LiveContainer/LiveContainer), una app contenedor que ejecuta otras apps dentro sin instalarlas por separado. Así solo LiveContainer ocupa uno de los **3 huecos** de un Apple ID gratuito y solo hay que renovar su firma. [SideStore](https://sidestore.io) va integrado y renueva la firma desde el propio iPhone.
 
+> [!Warning]
+> El SideStore integrado en **LiveContainer 3.8.0** (la versión *Stable* que instala iloader) no deja iniciar sesión: al pulsar *Sign in* sale «The data couldn't be read because it isn't in the correct format» ([LiveContainer #1620](https://github.com/LiveContainer/LiveContainer/issues/1620)). Los mantenedores lo dan por arreglado en la **nightly** (3.8.10): descarga [`LiveContainer+SideStore.ipa`](https://github.com/LiveContainer/LiveContainer/releases/download/nightly/LiveContainer%2BSideStore.ipa) de la [release nightly](https://github.com/LiveContainer/LiveContainer/releases/tag/nightly) e instálala como `.ipa` propio en lugar de pulsar el botón *Stable*. Si iloader no deja elegir un `.ipa`, usa [Impactor](https://github.com/khcrysalis/Impactor/releases/latest): añade el Apple ID en el engranaje, arrastra el `.ipa`, marca **Only Register Main Bundle** y pulsa **Install**. La nightly se genera automáticamente con cada cambio y puede tener fallos; cuando salga una versión estable posterior, vuelve a la *Stable*.
+
 Instalación (una vez):
 
-1. Conecta el iPhone por cable, abre iloader, inicia sesión con tu Apple ID y pulsa **LiveContainer + SideStore (Stable)**.
+1. Conecta el iPhone por cable, abre iloader, inicia sesión con tu Apple ID e instala **LiveContainer + SideStore** (la nightly, ver el aviso de arriba). Usa siempre el mismo Apple ID: así se instala encima sin perder datos.
 2. **Confía en el certificado**: *Ajustes → General → VPN y gestión de dispositivos*, toca tu Apple ID (en «App de desarrollador») y pulsa *Confiar*. Sin esto la app se cierra al abrirla o sale «Desarrollador no fiable».
 3. **Activa el Modo de desarrollador** (iOS 16+): *Ajustes → Privacidad y seguridad → Modo de desarrollador* (al final). El iPhone se reinicia y pide confirmarlo.
+4. **Coloca el pairing file**: en iloader, *Manage Pairing File* → **Place** en la fila de LiveContainer (con el iPhone conectado). Es lo que permite al SideStore integrado hablar con el iPhone para instalar y renovar. No uses *Export*: ese archivo da acceso al iPhone a quien lo tenga.
+5. **Conecta la VPN local**: instala **LocalDevVPN** desde la App Store, ábrela y pulsa *Connect* (debe salir el icono VPN en la barra de estado). En SideStore, *Settings → Health Check* debería mostrar en verde *VPN Tunnel*, *Device Reachability* y *Pairing file*. *Developer Disk Image* sin montar es normal: solo hace falta para JIT.
+6. **Inicia sesión en el SideStore integrado**: en LiveContainer, pestaña *Apps*, toca el botón de SideStore (arriba a la izquierda) → *Settings* → inicia sesión con tu Apple ID (si ya aparece una sesión, cierra sesión y vuelve a entrar). El login no necesita la VPN, solo internet.
+7. **Renueva la firma una vez**: con la VPN conectada, *My Apps* → **Refresh All**. Así SideStore guarda el certificado.
+8. **Importa el certificado en LiveContainer**: sal de SideStore y, en los *Ajustes* de LiveContainer, pulsa **Import Certificate from SideStore**. Si ha ido bien, el botón pasa a decir *Remove Certificate*; puedes comprobarlo en *JIT-Less Mode Diagnose*. Sin certificado, LiveContainer no puede firmar las apps de dentro y avisa de que lo importes.
+
+Si al iniciar sesión en SideStore falla:
+
+- **«The data couldn't be read because it isn't in the correct format» nada más pulsar *Sign in***: si usas la 3.8.0, instala la nightly (aviso de arriba). Si no, el fallo está en el servidor de *anisette* (SideStore lo consulta antes de mandar nada a Apple): en *Settings → Anisette Server* pulsa **Reset adi.pb**, elige otro servidor (el oficial `ani.sidestore.io` o `ani.npeg.us`; evita los `http://`), cierra LiveContainer desde el multitarea y vuelve a intentarlo. Prueba también con datos móviles por si la wifi bloquea el servidor.
+- **«Certificate not found» al importar**: en SideStore → *Settings*, al final, pulsa **Export Signing Certificate...**, ponle una contraseña y guárdalo. En LiveContainer → *Ajustes* → **Import Certificate**, elige ese archivo y escribe la contraseña.
+- **Health Check se queda en «checking status»**: desconecta el cable USB, desconecta y vuelve a conectar LocalDevVPN y reabre LiveContainer.
 
 Instalar o actualizar Fiambrerapp:
 
@@ -45,6 +59,7 @@ A tener en cuenta:
 
 - Con Apple ID gratuito la firma de LiveContainer **caduca a los 7 días**: renuévala desde el SideStore integrado (necesita su VPN local activa). Las apps de dentro no caducan por separado. Si LiveContainer llega a caducar, vuelve a instalarlo con iloader y el cable.
 - Usa siempre el mismo Apple ID; con otro, iOS lo trata como otra app.
+- En iloader deja desmarcado **Don't use keyring**: en macOS el Llavero funciona, y con esa opción los certificados, el estado de anisette y los pairing files se guardan en disco sin cifrar.
 - Los datos de Fiambrerapp viven dentro de LiveContainer: se conservan al actualizar el `.ipa`, pero se pierden si borras la app en LiveContainer o LiveContainer entero.
 - Algunas apps (extensiones, widgets, ciertos permisos) no funcionan dentro del contenedor; esas se instalan aparte con SideStore y ocupan un hueco.
 
