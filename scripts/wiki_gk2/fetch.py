@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Descarga de la wiki de Graveyard Keeper 2 (fextralife) las páginas índice («Items and Materials»,
-«Crafting Recipes», «Characters») y las que enlaza cada una, en HTML, a cache/pages/.
+«Crafting Recipes», «Characters», «Technology Costs», «Quests») y las que enlaza cada una, en HTML, a cache/pages/.
 
 La wiki no sirve wikitext (`action=raw` está desactivado), así que convert.py lee el HTML.
 """
 import json, os, re, sys, time, urllib.parse, urllib.request
 
 BASE = "https://graveyardkeeper2.wiki.fextralife.com/"
-HUBS = ["Items_and_Materials", "Crafting_Recipes", "Characters"]
-# páginas de recetas que «Crafting Recipes» solo enlaza en «What to do next» (también en convert.py)
-EXTRA = ["Cooking_Recipes", "Alchemy_Recipes", "Workshop_Construction", "Where_to_Buy_Materials"]
+HUBS = ["Items_and_Materials", "Crafting_Recipes", "Characters", "Technology_Costs", "Quests"]
+# páginas de recetas que «Crafting Recipes» solo enlaza en «What to do next» (también en convert.py), la guía, los logros y los talentos
+EXTRA = ["Cooking_Recipes", "Alchemy_Recipes", "Workshop_Construction", "Where_to_Buy_Materials",
+         "Beginner_Walkthrough", "Graveyard_Keeper_2_Achievements",
+         "Talents_and_Inspirations"]
 PAGES = os.path.join(os.path.dirname(__file__), "cache", "pages")
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh) gk-guia/1.0 (personal guide)"}
 

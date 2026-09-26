@@ -5,7 +5,7 @@ App nativa en SwiftUI para **iPhone**: una guía no oficial de *Graveyard Keeper
 - **Recetas**: buscador (ignora tildes), filtro por estación, ingredientes enlazados a su receta y "se usa en".
 - **Qué necesito**: añade recetas a tu plan y calcula los materiales. Puede desglosarlos hasta materias primas, aprovechando el excedente de cada lote. Apuntas lo que tienes y te dice qué falta, dónde conseguirlo, quién lo vende y en qué orden fabricar.
 - **Tecnologías**: árboles con coste, requisitos y lo que desbloquea; buscador por tecnología o por el objeto que desbloquea.
-- **GK1 / GK2**: el botón de arriba cambia de juego en cualquier momento. Cada juego guarda su propia partida (plan, inventario, misiones, tecnologías y logros). GK2 comparte con GK1 objetos, recetas, tecnologías, personajes y días, pero no misiones, amistad ni logros.
+- **GK1 / GK2**: el botón de arriba cambia de juego en cualquier momento. Cada juego guarda su propia partida (plan, inventario, misiones, tecnologías y logros). GK2 tiene sus propios datos, sacados de la wiki de GK2: objetos, recetas, personajes, misiones, tecnologías, logros y la guía para principiantes (pasos que se pueden marcar como hechos). De momento no tiene días ni amistad.
 - **Personajes**: buscador (nombre, papel o lugar), filtro por día, días de visita y qué compran y venden.
 
 El plan, el inventario y el día actual se guardan en el dispositivo. Se navega con pantallas apiladas y una barra de pestañas inferior.
@@ -53,7 +53,16 @@ Instalar o actualizar Fiambrerapp:
 
 1. `./scripts/ipa.sh` genera `build/Fiambrerapp.ipa` sin firmar.
 2. Pásalo al iPhone (AirDrop o Archivos).
-3. En LiveContainer pulsa **+** y elige el `.ipa`. Puedes crear un atajo en la pantalla de inicio desde LiveContainer.
+3. En LiveContainer pulsa **+** y elige el `.ipa`.
+
+Acceso directo en la pantalla de inicio (opcional):
+
+1. En LiveContainer, mantén pulsada Fiambrerapp → *Add to Home Screen* → **Copy Launch URL**. Copia algo como `livecontainer://livecontainer-launch?bundle-name=local.gk2guia.app.app&container-folder-name=<UUID>`. Usa la URL tal cual: el `.app.app` es correcto.
+2. Compruébala pegándola en Safari: debe abrir Fiambrerapp.
+3. En la app **Atajos**, crea un atajo nuevo con la acción **Abrir URL** y pega la URL.
+4. Ponle el nombre `Fiambrerapp` (y un icono, si quieres) y pulsa compartir → **Añadir a pantalla de inicio**.
+
+El atajo abre LiveContainer un instante y luego lanza la app. Actualizar el `.ipa` normalmente conserva la URL. Si borras la app y la vuelves a instalar en LiveContainer, cambia el UUID del contenedor y hay que copiar la URL otra vez.
 
 A tener en cuenta:
 

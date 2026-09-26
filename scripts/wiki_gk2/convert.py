@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Convierte las páginas de la wiki de Graveyard Keeper 2 (cache/pages, de fetch.py)
-a GK2Core/Data/GK2/items.json y recipes.json, y descarga sus iconos a Data/GK2/Images.
+a GK2Core/Data/GK2/items.json, recipes.json, characters.json, technologies.json, walkthrough.json y
+guide.json, y descarga sus
+iconos a Data/GK2/Images.
 
 - Páginas de «Items and Materials»: un objeto cada una.
 - Páginas de «Crafting Recipes» (por familia de estaciones): solo recetas.
@@ -8,9 +10,14 @@ a GK2Core/Data/GK2/items.json y recipes.json, y descarga sus iconos a Data/GK2/I
   collares de la Mesa de joyería: recetas automáticas. Las repetidas entre páginas se juntan.
 - Páginas que son guías en prosa: recetas y orígenes de guide.json, y su primer párrafo como descripción.
 - Los ingredientes que no tienen página también son objetos (sin descripción).
+- Páginas de «Technology Costs»: un árbol de tecnología cada una; lo que desbloquean sale de las recetas.
+- «Talents and Inspirations»: un árbol más, con las inspiraciones de primer nivel de su tabla.
+- «Beginner Walkthrough»: la guía para principiantes (hitos y pasos), con los objetos y personajes que nombra.
+- «Graveyard Keeper 2 Achievements»: los logros, un apartado por tabla (guide.json).
+- Guías que enlaza «Quests»: las misiones, en `quests` de quien las da (characters.json).
 
 Traducciones: es_items.json (objetos), es_names.json (estaciones, extensiones, tecnologías y ventajas),
-es.json (descripciones). Lo que falte se avisa al final.
+es_achievements.json (logros), es_quests.json (misiones; también en los textos), es.json (descripciones). Lo que falte se avisa al final.
 """
 import html, json, os, re, shutil, sys, time, unicodedata, urllib.request
 
@@ -423,6 +430,305 @@ def notes(r):
     return ". ".join(parts) + "." if parts else None
 
 
+# MARK: - Tecnologías
+
+TECH_INDEX = "Technology_Costs"
+TECH_HEADER = ["Technology", "Red / green / blue", "Prerequisites and visibility"]
+# cocina: no cuestan puntos, cada una se desbloquea haciendo algo
+TECH_UNLOCK_HEADER = ["Technology", "How to unlock it"]
+REPUTATION = re.compile(r"^(.+) reputation (\d+)$")
+# la wiki de GK2 no tiene iconos de los árboles: los de GK1 (Data/Images)
+TREE_IMAGES = {
+    "Building": "tech_building", "Metallurgy": "tech_smithing", "Farming": "tech_farming_and_nature",
+    "Theology": "tech_theology", "Anatomy_and_Alchemy": "tech_anatomy_and_alchemy", "Cooking": "tech_cookery",
+}
+# artículo delante del nombre traducido del personaje («con la Monja»)
+ARTICLES = {"Nun": "la "}
+# tecnologías que se llaman igual en dos árboles: el de las recetas que las piden («Supply: Fabric» es de
+# Construcción, tras el Banco de montaje; la «Fabric» de Agricultura viene del hilo de lino)
+UNLOCK_TREE = {"Fabric": "Building"}
+
+
+def tech_trees(recipes, characters):
+    """Un árbol por página de «Technology Costs», en su orden, con una sola rama sin nombre.
+    Lo que desbloquea cada tecnología sale de las recetas que la piden («Technology: X»)."""
+    npc_id = {c.get("wikiName", c["name"]): c for c in characters}
+    unlocks = {}  # nombre de la tecnología → [desbloqueos]
+    for r in recipes:
+        if not r.get("tech"):
+            continue
+        entry = {"kind": "blueprint" if r.get("construction") else "recipe",
+                 "name": item_es(r["output"]), "item": slug(r["output"])}
+        if entry not in unlocks.setdefault(r["tech"], []):
+            unlocks[r["tech"]].append(entry)
+    trees, used = [], set()
+    for page in [p for p in linked_pages(TECH_INDEX) if p.endswith("_Technologies")]:
+        body = content(page)
+        rows = next(t for t in tables(body) if t[0] in (TECH_HEADER, TECH_UNLOCK_HEADER))
+        ids = {slug(r[0]) for r in rows[1:]}
+        if len(ids) != len(rows) - 1:
+            sys.exit(f"{page}: tecnologías repetidas")
+        techs, tree_name = [], page.removesuffix("_Technologies")
+        for row in rows[1:]:
+            tech = {"id": slug(row[0]), "name": name_es(row[0])}
+            conditions, requires = [], []
+            if rows[0] == TECH_HEADER:
+                cost = dict(zip(("red", "green", "blue"), map(int, row[1].split(" / "))))
+                if cost := {k: v for k, v in cost.items() if v}:
+                    tech["cost"] = cost
+                for part in row[2].split("; "):
+                    if part == "No prerequisite listed":
+                        pass
+                    elif part == "Hidden at start":
+                        conditions.append("Oculta al principio: aparece al avanzar en el juego.")
+                    elif m := REPUTATION.match(part):
+                        c = npc_id.get(m.group(1)) or sys.exit(f"{page}: personaje desconocido {m.group(1)!r}")
+                        conditions.append(f"Necesita {m.group(2)} de reputación con {ARTICLES.get(m.group(1), '')}"
+                                          f"[**{c['name']}**](gk2://character/{c['id']}).")
+                    elif slug(part) in ids:
+                        requires.append(slug(part))
+                    else:
+                        sys.exit(f"{page}: requisito desconocido {part!r}")
+            elif row[1] in ES:
+                conditions.append(ES[row[1]])
+            else:
+                missing["es.json"].add(row[1])
+            if conditions:
+                tech["condition"] = " ".join(conditions)
+            if requires:
+                tech["requires"] = requires
+            if row[0] in unlocks and UNLOCK_TREE.get(row[0], tree_name) == tree_name:
+                tech["unlocks"] = unlocks[row[0]]
+                used.add(row[0])
+            techs.append(tech)
+        tree = {"id": slug(tree_name), "name": name_es(tree_name.replace("_", " ") + " Technologies")}
+        first = text(re.search(r"<p>(?!<br />)(.*?)</p>", body, re.S).group(1))
+        if first in ES:
+            tree["text"] = [ES[first]]
+        else:
+            missing["es.json"].add(first)
+        shutil.copyfile(os.path.join(GK1_DATA, "Images", TREE_IMAGES[tree_name] + ".png"),
+                        os.path.join(IMAGES, f"tech_{tree['id']}.png"))
+        tree["image"] = f"GK2/tech_{tree['id']}"
+        trees.append(tree | {"branches": [{"techs": techs}]})
+    if unknown := set(unlocks) - used:
+        sys.exit(f"tecnologías de recetas que no están en «{TECH_INDEX}»: {sorted(unknown)}")
+    return trees
+
+
+# MARK: - Talentos
+
+TALENTS_PAGE = "Talents_and_Inspirations"
+INSPIRATION_HEADER = ["Inspiration", "Objective", "Goal", "Technology lock"]
+NO_LOCK = "No technology lock listed"
+# apartados de la página que explican cómo funcionan (texto del árbol)
+TALENT_SECTIONS = ["Choose a use for points", "Zombie progression", "Claim completed inspirations with Faith"]
+COUNTS = re.compile(r"^What counts for (.+)\?$")
+
+
+def talent_tree():
+    """«Talents and Inspirations» como un árbol más de la pestaña Tecnologías: las inspiraciones de primer
+    nivel de su tabla, con el objetivo y la tecnología que las bloquea en `condition`. No cuestan puntos
+    (se reclaman con Fe). El texto del árbol sale de la introducción y de los apartados que lo explican."""
+    body = content(TALENTS_PAGE)
+    body = re.sub(r"<aside.*?</aside>", "", body[:body.find('id="What_to_do_next"')], flags=re.S)
+    parts = re.split(r'<h2>.*?<span class="mw-headline" id="[^"]+">(.*?)</span></h2>', body, flags=re.S)
+    intro = [text(p) for p in re.findall(r"<p>(?!<br />)(.*?)</p>", parts[0], re.S)]
+    paragraphs, counts, rows = [es(p) for p in intro if p], {}, None
+    for title, section in zip(parts[1::2], parts[2::2]):
+        title = text(title)
+        prose = [text(p) for p in re.findall(r"<p>(.*?)</p>", section, re.S) if text(p)]
+        if title in TALENT_SECTIONS:
+            paragraphs += [es(p) for p in prose]
+        elif m := COUNTS.match(title):
+            counts[m.group(1)] = [es(p) for p in prose]
+        rows = rows or next((t for t in tables(section) if t and t[0][-4:] == INSPIRATION_HEADER), None)
+    if not rows:
+        sys.exit(f"{TALENTS_PAGE}: falta la tabla de inspiraciones")
+    techs = []
+    for name, objective, goal, lock in (r[-4:] for r in rows[1:]):
+        condition = [es(objective).rstrip(".") + f". Objetivo del primer nivel: {goal}."]
+        if lock != NO_LOCK:
+            condition.append(f"Necesita la tecnología {name_es(lock)}.")
+        condition += counts.pop(name, [])
+        techs.append({"id": slug(name), "name": name_es(name), "condition": " ".join(condition)})
+    if counts:
+        sys.exit(f"{TALENTS_PAGE}: «What counts for» de inspiraciones que no están en la tabla: {sorted(counts)}")
+    tree = {"id": slug(TALENTS_PAGE), "name": name_es(TALENTS_PAGE.replace("_", " ")), "text": paragraphs}
+    shutil.copyfile(os.path.join(GK1_DATA, "Images", "tech_spiritualism.png"), os.path.join(IMAGES, f"tech_{tree['id']}.png"))
+    return tree | {"image": f"GK2/tech_{tree['id']}", "branches": [{"techs": techs}]}
+
+
+# MARK: - Guía para principiantes
+
+WALKTHROUGH_PAGE = "Beginner_Walkthrough"
+CHECKLIST = "Early progression checklist"
+MILESTONE_HEADER = ["Milestone", "Completion check"]
+
+
+ES_QUESTS = load("es_quests.json")
+missing["es_quests.json"] = set()
+# campos de texto donde se cambian los nombres de misiones en inglés por «el español»
+PROSE_KEYS = {"text", "description", "notes", "condition", "links", "check", "sources"}
+
+
+def quest_es(name):
+    if name not in ES_QUESTS:
+        missing["es_quests.json"].add(name)
+    return ES_QUESTS.get(name, name)
+
+
+def swap_quests(value, key=None):
+    """«Planted and Delivered» → «Sembrado y entregado» en los textos (sin comillas dobles si ya las lleva,
+    y sin ellas en las etiquetas en negrita de los enlaces)"""
+    if isinstance(value, dict):
+        return {k: swap_quests(v, k) for k, v in value.items()}
+    if isinstance(value, list):
+        return [swap_quests(v, key) for v in value]
+    if not isinstance(value, str) or key not in PROSE_KEYS:
+        return value
+    for en, es_name in sorted(ES_QUESTS.items(), key=lambda kv: -len(kv[0])):
+        value = value.replace(f"«{en}»", f"«{es_name}»").replace(f"**{en}**", f"**{es_name}**")
+        value = re.sub(r"(?<![«\w])" + re.escape(en) + r"(?![\w»])", f"«{es_name}»", value)
+    return value
+
+
+def es(english):
+    if english not in ES:
+        missing["es.json"].add(english)
+    return ES.get(english, english)
+
+
+def mentions(prose, names):
+    """ids de los nombres (wiki → id) que salen en el texto, en orden de aparición; admite el plural en -s"""
+    prose, found = prose.replace("’", "'"), []
+    for name in sorted(names, key=len, reverse=True):
+        pattern = r"\b" + re.escape(name) + r"s?\b"
+        if m := re.search(pattern, prose):
+            found.append((m.start(), names[name]))
+            # todas las veces, para que «Clay» no salga de otro «Clay Plates»
+            prose = re.sub(pattern, lambda m: "#" * len(m.group(0)), prose)
+    return list(dict.fromkeys(i for _, i in sorted(found)))
+
+
+def walkthrough(items, characters, page_item):
+    """«Beginner Walkthrough»: la introducción, los hitos de la tabla y un paso por apartado. Los párrafos
+    no enlazan nada: los objetos y personajes que nombran salen aparte. Cada enlace de la lista del apartado
+    («Faith — …») apunta al objeto o personaje si existe."""
+    item_ids = {i.get("wikiName", i["name"]): i["id"] for i in items}
+    npc_ids = {c.get("wikiName", c["name"]): c["id"] for c in characters}
+    known = {i["id"] for i in items}
+    body = content(WALKTHROUGH_PAGE)
+    body = body[:body.find('id="What_to_do_next"')]
+    parts = re.split(r'<h2>.*?<span class="mw-headline" id="[^"]+">(.*?)</span></h2>', body, flags=re.S)
+    intro = [text(p) for p in re.findall(r"<p>(?!<br />)(.*?)</p>", parts[0], re.S)]
+    guide = {"name": "Guía para principiantes", "text": [es(p) for p in intro if p], "steps": []}
+    for title, section in zip(parts[1::2], parts[2::2]):
+        title = re.sub(r"^\d+\. ", "", text(title))
+        prose = [text(p) for p in re.findall(r"<p>(.*?)</p>", section, re.S)]
+        step = {"id": slug(title), "name": es(title), "text": [es(p) for p in prose if p], "links": []}
+        for li, page in re.findall(r'<li>(<a href="/([^"#]+)" title="[^"]+">.*?)</li>', section, re.S):
+            label, _, rest = es(text(li)).partition(" — ")
+            target = page_item.get(page, page.replace("_", " "))
+            if slug(target) in known:
+                label = f"[**{label}**](gk2://item/{slug(target)})"
+            elif target in npc_ids:
+                label = f"[**{label}**](gk2://character/{npc_ids[target]})"
+            else:
+                label = f"**{label}**"
+            step["links"].append(f"{label} — {rest}" if rest else label)
+        english = " ".join(prose)
+        if found := mentions(english, item_ids):
+            step["items"] = found
+        if found := mentions(english, npc_ids):
+            step["characters"] = found
+        if title == CHECKLIST:
+            rows = next(t for t in tables(section) if t[0] == MILESTONE_HEADER)
+            guide["milestones"] = [{"id": slug(r[0]), "name": es(r[0]), "check": es(r[1])} for r in rows[1:]]
+            guide["checklist"] = step
+        else:
+            guide["steps"].append(step)
+    if "milestones" not in guide:
+        sys.exit(f"{WALKTHROUGH_PAGE}: falta la tabla «{CHECKLIST}»")
+    return guide
+
+
+# MARK: - Misiones
+
+QUESTS_INDEX = "Quests"
+GIVER = re.compile(r"^(.+) character portrait from the game\.$")
+
+
+def quests(items, characters):
+    """personaje → [misiones] de las guías que enlaza «Quests», en su orden. Cada página: un párrafo de
+    introducción, el retrato de quien la da y un apartado por etapa («**Etapa.** texto»). El nombre
+    se traduce con es_quests.json."""
+    item_ids = {i.get("wikiName", i["name"]): i["id"] for i in items}
+    npc_ids = {c.get("wikiName", c["name"]): c["id"] for c in characters}
+    out = {}
+    for page in linked_pages(QUESTS_INDEX):
+        body = content(page)
+        body = re.sub(r"<aside.*?</aside>", "", body[:body.find('id="What_to_do_next"')], flags=re.S)
+        caption = text(re.search(r'<div class="kiln-core-caption">(.*?)</div>', body, re.S).group(1))
+        if not (m := GIVER.match(caption)) or m.group(1) not in npc_ids:
+            sys.exit(f"{page}: no se sabe quién da la misión ({caption!r})")
+        parts = re.split(r'<h2>.*?<span class="mw-headline" id="[^"]+">(.*?)</span></h2>', body, flags=re.S)
+        intro = [text(p) for p in re.findall(r"<p>(?!<br />)(.*?)</p>", parts[0], re.S)]
+        english, paragraphs = [p for p in intro if p], [es(p) for p in intro if p]
+        for title, section in zip(parts[1::2], parts[2::2]):
+            prose = " ".join(text(p) for p in re.findall(r"<p>(.*?)</p>", section, re.S))
+            english.append(prose)
+            paragraphs.append(f"**{es(text(title))}.** {es(prose)}")
+        name = html.unescape(page.replace("_", " "))
+        # el id sale del nombre en inglés, que queda en `wikiName`
+        quest = {"id": slug(name), "name": quest_es(name), "wikiName": name, "text": paragraphs}
+        if found := mentions(" ".join(english), item_ids):
+            quest["items"] = found
+        giver = npc_ids[m.group(1)]
+        if found := [c for c in mentions(" ".join(english), npc_ids) if c != giver]:
+            quest["characters"] = found
+        out.setdefault(giver, []).append(quest)
+    return out
+
+
+# MARK: - Logros
+
+ACHIEVEMENTS_PAGE = "Graveyard_Keeper_2_Achievements"
+ACHIEVEMENT_HEADER = ["Achievement", "Completion description"]
+ES_ACHIEVEMENTS = load("es_achievements.json")
+missing["es_achievements.json"] = set()
+
+
+def achievement_guide(characters):
+    """Un apartado por tabla de la página de logros, en su orden; los que van plegados como spoiler se marcan.
+    La wiki de GK2 no tiene imágenes de logros: la app enseña el icono de la corona."""
+    npc_ids = {c.get("wikiName", c["name"]): c["id"] for c in characters}
+    body = content(ACHIEVEMENTS_PAGE)
+    body = body[:body.find('id="What_to_do_next"')]
+    parts = re.split(r'<h2><span class="mw-headline" id="[^"]+">(.*?)</span></h2>', body)
+    sections, ids = [], set()
+    for title, section in zip(parts[1::2], parts[2::2]):
+        rows = next(t for t in tables(section) if t[0] == ACHIEVEMENT_HEADER)
+        achievements = []
+        for name, description in rows[1:]:
+            if name not in ES_ACHIEVEMENTS:
+                missing["es_achievements.json"].add(name)
+            a = {"id": slug(name), "name": ES_ACHIEVEMENTS.get(name, name), "text": [es(description)]}
+            if a["id"] in ids:
+                sys.exit(f"{ACHIEVEMENTS_PAGE}: logro repetido {name!r}")
+            ids.add(a["id"])
+            if found := mentions(description, npc_ids):
+                a["characters"] = found
+            if a["name"] != name:
+                a["wikiName"] = name
+            achievements.append(a)
+        # `name` ya en español: GuideSection.title solo traduce los apartados de GK1
+        sections.append({"id": slug(text(title)), "name": es(text(title))}
+                        | ({"spoiler": True} if "kiln-spoiler" in section else {})
+                        | {"achievements": achievements})
+    return sections
+
+
 # MARK: - Imágenes
 
 # iconos de la wiki de GK2 que ninguna página enseña junto al objeto (nombre → fichero, sin «Graveyard_Keeper_2_i_»)
@@ -636,8 +942,15 @@ def main():
         if npc_notes:
             c["notes"] = "\n\n".join(npc_notes)
         characters.append(c)
+    for c in characters:
+        c.pop("quests", None)
+    for giver, found in quests(items, characters).items():
+        next(c for c in characters if c["id"] == giver)["quests"] = found
 
-    ids = {i["id"] for i in items} | {"npc_" + c["id"] for c in characters}
+    trees = tech_trees(recipes, characters) + [talent_tree()]
+    guide = walkthrough(items, characters, page_item)
+    achievements = achievement_guide(characters)
+    ids = {i["id"] for i in items} | {"npc_" + c["id"] for c in characters} | {"tech_" + t["id"] for t in trees}
     for f in os.listdir(IMAGES):
         if f.removesuffix(".png") not in ids:
             os.remove(os.path.join(IMAGES, f))
@@ -655,11 +968,23 @@ def main():
             recipe["notes"] = note
         out.append(recipe)
 
-    for name, data in (("items", items), ("recipes", out), ("characters", characters)):
+    items, characters, trees = swap_quests(items), swap_quests(characters), swap_quests(trees)
+    guide, achievements = swap_quests(guide), swap_quests(achievements)
+    for name, data in (("items", items), ("recipes", out), ("characters", characters), ("technologies", trees)):
         with open(os.path.join(OUT, name + ".json"), "w") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
             f.write("\n")
-    print(f"GK2: {len(items)} objetos · {len(out)} recetas · {len(characters)} personajes · {len(os.listdir(IMAGES))} imágenes")
+    with open(os.path.join(OUT, "guide.json"), "w") as f:
+        json.dump(achievements, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    with open(os.path.join(OUT, "walkthrough.json"), "w") as f:
+        json.dump(guide, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    print(f"GK2: {len(items)} objetos · {len(out)} recetas · {len(characters)} personajes · "
+          f"{sum(len(t['branches'][0]['techs']) for t in trees)} tecnologías · {len(guide['steps'])} pasos de la guía · "
+          f"{sum(len(g['achievements']) for g in achievements)} logros · "
+          f"{sum(len(c.get('quests', [])) for c in characters)} misiones · "
+          f"{len(os.listdir(IMAGES))} imágenes")
     for file, names in missing.items():
         if names:
             print(f"sin traducir en {file}:")

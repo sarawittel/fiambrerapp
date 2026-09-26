@@ -217,7 +217,7 @@
     "wikiName": "Dream Dust",
     "category": "alquimia",
     "icon": "sack",
-    "description": "Se hace con 1 Hoja y 1 Sangre en el Laboratorio I o II. La fórmula pide 0 propiedades alquímicas rojas, 1 verde y 1 azul. Lleva un Polvo de sueños al Médico de la peste en la Abandoned Tower para Sweet Dreams.",
+    "description": "Se hace con 1 Hoja y 1 Sangre en el Laboratorio I o II. La fórmula pide 0 propiedades alquímicas rojas, 1 verde y 1 azul. Lleva un Polvo de sueños al Médico de la peste en la Abandoned Tower para «Dulces sueños».",
     "image": "GK2/dream_dust"
   },
   {
@@ -229,7 +229,7 @@
     "sources": [
       "Se compra a Gunter en su torre"
     ],
-    "description": "Se compra a Gunter en la torre del Astrólogo y se carga en el Banco de formulación con 1 de Fe. La receta de carga se desbloquea durante Congregation Trouble y da 1 Hipnodispositivo cargado. Devuélvele uno a Gunter y da el sermón de prueba que pide para avanzar hacia la máquina de relaciones públicas."
+    "description": "Se compra a Gunter en la torre del Astrólogo y se carga en el Banco de formulación con 1 de Fe. La receta de carga se desbloquea durante «Problemas en la congregación» y da 1 Hipnodispositivo cargado. Devuélvele uno a Gunter y da el sermón de prueba que pide para avanzar hacia la máquina de relaciones públicas."
   },
   {
     "id": "green_scroll",

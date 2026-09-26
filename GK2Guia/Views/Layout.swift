@@ -65,16 +65,23 @@ struct FlowLayout: Layout {
 
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
         let result = arrange(maxWidth: bounds.width, subviews: subviews)
-        for (subview, point) in zip(subviews, result.points) {
-            subview.place(at: CGPoint(x: bounds.minX + point.x, y: bounds.minY + point.y), proposal: .unspecified)
+        for (subview, (point, width)) in zip(subviews, zip(result.points, result.clamped)) {
+            subview.place(at: CGPoint(x: bounds.minX + point.x, y: bounds.minY + point.y),
+                          proposal: width.map { ProposedViewSize(width: $0, height: nil) } ?? .unspecified)
         }
     }
 
-    private func arrange(maxWidth: CGFloat, subviews: Subviews) -> (size: CGSize, points: [CGPoint]) {
-        var points: [CGPoint] = []
+    private func arrange(maxWidth: CGFloat, subviews: Subviews) -> (size: CGSize, points: [CGPoint], clamped: [CGFloat?]) {
+        var points: [CGPoint] = [], clamped: [CGFloat?] = []
         var x: CGFloat = 0, y: CGFloat = 0, rowHeight: CGFloat = 0, width: CGFloat = 0
         for subview in subviews {
-            let size = subview.sizeThatFits(.unspecified)
+            // lo que no cabe ni solo en una fila se ajusta al ancho (su texto salta de línea)
+            var size = subview.sizeThatFits(.unspecified)
+            let tooWide = size.width > maxWidth
+            if tooWide {
+                size = subview.sizeThatFits(ProposedViewSize(width: maxWidth, height: nil))
+            }
+            clamped.append(tooWide ? maxWidth : nil)
             if x > 0, x + size.width > maxWidth {
                 x = 0
                 y += rowHeight + spacing
@@ -85,6 +92,6 @@ struct FlowLayout: Layout {
             rowHeight = max(rowHeight, size.height)
             width = max(width, x - spacing)
         }
-        return (CGSize(width: width, height: y + rowHeight), points)
+        return (CGSize(width: width, height: y + rowHeight), points, clamped)
     }
 }

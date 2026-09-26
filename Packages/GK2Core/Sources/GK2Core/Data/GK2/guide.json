@@ -1,0 +1,351 @@
+[
+  {
+    "id": "crafting_and_gathering",
+    "name": "Fabricar y recolectar",
+    "achievements": [
+      {
+        "id": "master_farmer",
+        "name": "Granjero experto",
+        "text": [
+          "Has cosechado 100 cultivos. ¡Hay para todo el pueblo!"
+        ],
+        "wikiName": "Master Farmer"
+      },
+      {
+        "id": "master_cook",
+        "name": "Cocinero experto",
+        "text": [
+          "¡Has cocinado 100 platos! No pasarás hambre."
+        ],
+        "wikiName": "Master Cook"
+      },
+      {
+        "id": "bronze_age",
+        "name": "Edad del Bronce",
+        "text": [
+          "Has fundido 100 lingotes de bronce."
+        ],
+        "wikiName": "Bronze Age"
+      },
+      {
+        "id": "iron_age",
+        "name": "Edad del Hierro",
+        "text": [
+          "Has fundido 100 lingotes de hierro. ¿Para qué tantos?"
+        ],
+        "wikiName": "Iron Age"
+      },
+      {
+        "id": "novice_alchemist",
+        "name": "Alquimista novato",
+        "text": [
+          "Has preparado 25 pociones. Las cejas volverán a crecer."
+        ],
+        "wikiName": "Novice Alchemist"
+      },
+      {
+        "id": "tree_bane",
+        "name": "Azote de los árboles",
+        "text": [
+          "¡Has talado 100 árboles! Ahora todo el bosque te teme."
+        ],
+        "wikiName": "Tree Bane"
+      },
+      {
+        "id": "stroke_of_genius",
+        "name": "Golpe de genio",
+        "text": [
+          "Has tenido 150 inspiraciones. Tu mente echa chispas."
+        ],
+        "wikiName": "Stroke of Genius"
+      },
+      {
+        "id": "fish_magnet",
+        "name": "Imán para peces",
+        "text": [
+          "Has pescado 50 peces, y ahora han puesto precio a tu cabeza."
+        ],
+        "wikiName": "Fish Magnet"
+      },
+      {
+        "id": "supplier",
+        "name": "Proveedor",
+        "text": [
+          "Has creado 50 suministros. El pueblo depende de ti."
+        ],
+        "wikiName": "Supplier"
+      },
+      {
+        "id": "alcohol_baron",
+        "name": "Barón del alcohol",
+        "text": [
+          "Has producido 100 botellas de alcohol… Manéjalas con cuidado."
+        ],
+        "wikiName": "Alcohol Baron"
+      },
+      {
+        "id": "warmaker",
+        "name": "Señor de la guerra",
+        "text": [
+          "Has fabricado 50 objetos de combate. ¡Qué tiempos para vivir!"
+        ],
+        "wikiName": "Warmaker"
+      }
+    ]
+  },
+  {
+    "id": "town_and_graveyard",
+    "name": "Pueblo y cementerio",
+    "achievements": [
+      {
+        "id": "words_of_faith",
+        "name": "Palabras de fe",
+        "text": [
+          "Has dado tu primer sermón."
+        ],
+        "wikiName": "Words of Faith"
+      },
+      {
+        "id": "open_for_business",
+        "name": "Abierto al público",
+        "text": [
+          "Has completado tu primer encargo del pueblo."
+        ],
+        "wikiName": "Open for Business"
+      },
+      {
+        "id": "back_to_life",
+        "name": "De vuelta a la vida",
+        "text": [
+          "El pueblo ha dado sus primeros pasos hacia la recuperación."
+        ],
+        "wikiName": "Back to Life"
+      },
+      {
+        "id": "a_new_dawn",
+        "name": "Un nuevo amanecer",
+        "text": [
+          "La parte sur del pueblo ha quedado libre de zombis."
+        ],
+        "wikiName": "A New Dawn"
+      },
+      {
+        "id": "patron_of_merchants",
+        "name": "Patrón de los mercaderes",
+        "text": [
+          "Has construido todos los puestos del mercado del pueblo."
+        ],
+        "wikiName": "Patron of merchants"
+      },
+      {
+        "id": "urban_planner",
+        "name": "Urbanista",
+        "text": [
+          "Has restaurado todas las casas del pueblo. ¡Nunca había estado tan bonito!"
+        ],
+        "wikiName": "Urban Planner"
+      },
+      {
+        "id": "home_sweet_tomb",
+        "name": "Hogar, dulce tumba",
+        "text": [
+          "La calidad de tu cementerio ha llegado a 200. Descansa con estilo."
+        ],
+        "wikiName": "Home Sweet Tomb"
+      },
+      {
+        "id": "merchants_best_friend",
+        "name": "El mejor amigo de los mercaderes",
+        "text": [
+          "Has completado 25 encargos de mercaderes."
+        ],
+        "wikiName": "Merchants' Best Friend"
+      },
+      {
+        "id": "true_graveyard_keeper",
+        "name": "Auténtico guardián del cementerio",
+        "text": [
+          "¡Has enterrado 50 cadáveres! ¡Ahora eres el auténtico guardián del cementerio!"
+        ],
+        "wikiName": "True Graveyard Keeper"
+      },
+      {
+        "id": "shepherd_of_souls",
+        "name": "Pastor de almas",
+        "text": [
+          "¡Has predicado 50 sermones! Todo un pastor de almas descarriadas."
+        ],
+        "wikiName": "Shepherd of Souls"
+      },
+      {
+        "id": "necromancer",
+        "name": "Nigromante",
+        "text": [
+          "Has resucitado 50 zombis. ¡Todo un ejército!"
+        ],
+        "wikiName": "Necromancer"
+      }
+    ]
+  },
+  {
+    "id": "story_milestones",
+    "name": "Hitos de la historia",
+    "spoiler": true,
+    "achievements": [
+      {
+        "id": "a_new_beginning",
+        "name": "Un nuevo comienzo",
+        "text": [
+          "El viaje ha comenzado. El mundo te espera."
+        ],
+        "wikiName": "A New Beginning"
+      },
+      {
+        "id": "two_faces",
+        "name": "Dos caras",
+        "text": [
+          "Has conocido a Januarius y a Jully. Aunque parece que son la misma persona."
+        ],
+        "characters": [
+          "januarius"
+        ],
+        "wikiName": "Two faces"
+      },
+      {
+        "id": "a_man_of_many_talents",
+        "name": "Un hombre de muchos talentos",
+        "text": [
+          "Jack ha encontrado el camino al pueblo."
+        ],
+        "characters": [
+          "jack"
+        ],
+        "wikiName": "A Man of Many Talents"
+      },
+      {
+        "id": "first_blood",
+        "name": "Primera sangre",
+        "text": [
+          "Has ganado tu primera batalla."
+        ],
+        "wikiName": "First Blood"
+      },
+      {
+        "id": "the_man_behind_the_curtain",
+        "name": "El hombre tras el telón",
+        "text": [
+          "Gunter ha entrado en la historia."
+        ],
+        "characters": [
+          "gunter"
+        ],
+        "wikiName": "The Man Behind the Curtain"
+      },
+      {
+        "id": "friends_in_low_places",
+        "name": "Amigos en los bajos fondos",
+        "text": [
+          "Has conocido a los bandidos."
+        ],
+        "wikiName": "Friends in Low Places"
+      },
+      {
+        "id": "a_little_magic",
+        "name": "Un poco de magia",
+        "text": [
+          "El hada ha respondido a la llamada."
+        ],
+        "wikiName": "A Little Magic"
+      },
+      {
+        "id": "a_night_to_remember",
+        "name": "Una noche para recordar",
+        "text": [
+          "Has ido al concierto de Linda."
+        ],
+        "wikiName": "A Night to Remember"
+      },
+      {
+        "id": "forbidden_knowledge",
+        "name": "Conocimiento prohibido",
+        "text": [
+          "Has encontrado el Necronomicón. Algunos libros deberían seguir enterrados."
+        ],
+        "wikiName": "Forbidden Knowledge"
+      },
+      {
+        "id": "the_people_have_spoken",
+        "name": "El pueblo ha hablado",
+        "text": [
+          "Las elecciones han terminado. El futuro está decidido."
+        ],
+        "wikiName": "The People Have Spoken"
+      },
+      {
+        "id": "the_end_of_the_journey",
+        "name": "El final del viaje",
+        "text": [
+          "Has completado el juego."
+        ],
+        "wikiName": "The End of the Journey"
+      }
+    ]
+  },
+  {
+    "id": "hidden_achievements",
+    "name": "Logros ocultos",
+    "spoiler": true,
+    "achievements": [
+      {
+        "id": "a_dangerous_romance",
+        "name": "Un romance peligroso",
+        "text": [
+          "Linda y Albert se han encontrado. La ciencia y la pasión rara vez se llevan bien."
+        ],
+        "characters": [
+          "albert"
+        ],
+        "wikiName": "A Dangerous Romance"
+      },
+      {
+        "id": "the_ancient_one",
+        "name": "El Primigenio",
+        "text": [
+          "Has encontrado al Dios Antiguo."
+        ],
+        "wikiName": "The Ancient One"
+      },
+      {
+        "id": "two_broken_souls",
+        "name": "Dos almas rotas",
+        "text": [
+          "Jack y Gunter forman un equipo sorprendentemente bueno."
+        ],
+        "characters": [
+          "jack",
+          "gunter"
+        ],
+        "wikiName": "Two Broken Souls"
+      },
+      {
+        "id": "an_unlikely_pair",
+        "name": "Una pareja improbable",
+        "text": [
+          "Agatha y Herbert han encontrado un terreno común."
+        ],
+        "characters": [
+          "herbert"
+        ],
+        "wikiName": "An Unlikely Pair"
+      },
+      {
+        "id": "the_other_keeper",
+        "name": "El otro guardián",
+        "text": [
+          "Has encontrado a tu otro yo."
+        ],
+        "wikiName": "The Other Keeper"
+      }
+    ]
+  }
+]

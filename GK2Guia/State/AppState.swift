@@ -26,6 +26,8 @@ final class AppState {
     var researched: Set<String> { didSet { save(researched, key: Self.key(Keys.researched, for: game)) } }
     /// ids de los logros conseguidos
     var achieved: Set<String> { didSet { save(achieved, key: Self.key(Keys.achieved, for: game)) } }
+    /// ids de los pasos hechos de la guía para principiantes
+    var walkthroughDone: Set<String> { didSet { save(walkthroughDone, key: Self.key(Keys.walkthrough, for: game)) } }
     /// baúles del jugador, en el orden en que los creó
     var chests: [Chest] { didSet { save(chests, key: Self.key(Keys.chests, for: game)) } }
 
@@ -34,6 +36,7 @@ final class AppState {
         static let game = "gk2.game", deep = "gk2.deep"
         static let plan = "plan", owned = "owned", quests = "doneQuests"
         static let researched = "researched", achieved = "achieved", chests = "chests"
+        static let walkthrough = "walkthrough"
     }
 
     private static func key(_ name: String, for game: Game) -> String {
@@ -53,6 +56,7 @@ final class AppState {
         doneQuests = Self.load(Self.key(Keys.quests, for: game), from: defaults) ?? []
         researched = Self.load(Self.key(Keys.researched, for: game), from: defaults) ?? []
         achieved = Self.load(Self.key(Keys.achieved, for: game), from: defaults) ?? []
+        walkthroughDone = Self.load(Self.key(Keys.walkthrough, for: game), from: defaults) ?? []
         chests = Self.load(Self.key(Keys.chests, for: game), from: defaults) ?? []
     }
 
@@ -63,6 +67,7 @@ final class AppState {
         doneQuests = load(Keys.quests) ?? []
         researched = load(Keys.researched) ?? []
         achieved = load(Keys.achieved) ?? []
+        walkthroughDone = load(Keys.walkthrough) ?? []
         chests = load(Keys.chests) ?? []
     }
 
@@ -101,6 +106,12 @@ final class AppState {
 
     func setAchieved(_ done: Bool, _ achievement: Achievement) {
         if done { achieved.insert(achievement.id) } else { achieved.remove(achievement.id) }
+    }
+
+    func isDone(_ step: WalkthroughStep) -> Bool { walkthroughDone.contains(step.id) }
+
+    func setDone(_ done: Bool, _ step: WalkthroughStep) {
+        if done { walkthroughDone.insert(step.id) } else { walkthroughDone.remove(step.id) }
     }
 
     // MARK: - Baúles

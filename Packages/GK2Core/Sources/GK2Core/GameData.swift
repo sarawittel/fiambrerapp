@@ -9,6 +9,8 @@ public struct GameData: Sendable {
     public let stationList: [Station]
     public let technologies: [TechTree]
     public let guide: [GuideSection]
+    /// guía paso a paso (solo GK2)
+    public let walkthrough: Walkthrough?
 
     private let itemsById: [String: Item]
     private let recipesById: [String: Recipe]
@@ -19,8 +21,9 @@ public struct GameData: Sendable {
     private let treesById: [String: TechTree]
     private let sectionsById: [String: GuideSection]
 
-    public init(items: [Item], recipes: [Recipe], days: [Day], characters: [NPC], stations: [Station] = [], technologies: [TechTree] = [], guide: [GuideSection] = []) {
+    public init(items: [Item], recipes: [Recipe], days: [Day], characters: [NPC], stations: [Station] = [], technologies: [TechTree] = [], guide: [GuideSection] = [], walkthrough: Walkthrough? = nil) {
         self.items = items
+        self.walkthrough = walkthrough
         self.technologies = technologies
         self.guide = guide
         sectionsById = Dictionary(guide.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
@@ -61,12 +64,15 @@ public struct GameData: Sendable {
     }
 
     /// GK2 tiene sus propios datos en `Data/GK2` (scripts/wiki_gk2), sin nada de GK1.
-    /// De momento objetos, recetas y personajes (sin días: la wiki de GK2 no dice cuándo están).
+    /// De momento objetos, recetas, personajes, tecnologías, logros y la guía para principiantes
+    /// (sin días: la wiki de GK2 no dice cuándo están).
     static let bundledGK2: GameData = {
         do {
             return try GameData(
                 items: load("items", in: "GK2"), recipes: load("recipes", in: "GK2"),
-                days: [], characters: load("characters", in: "GK2")
+                days: [], characters: load("characters", in: "GK2"),
+                technologies: load("technologies", in: "GK2"),
+                guide: load("guide", in: "GK2"), walkthrough: load("walkthrough", in: "GK2")
             )
         } catch {
             fatalError("No se pudieron cargar los datos de GK2: \(error)")

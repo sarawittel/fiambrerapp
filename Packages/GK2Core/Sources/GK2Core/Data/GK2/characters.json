@@ -51,7 +51,22 @@
       "flax_thread"
     ],
     "image": "GK2/npc_herm",
-    "notes": "Herm está en Herm's Store. Sus primeros encargos consisten en abastecer al pueblo y llevarle Trigo cosechado; al completar Planted and Delivered sube su nivel de comercio.\n\nVende desde el nivel 1: Chatarra de bronce, Semilla de trigo. Desde el nivel 2: Filete de pez de río, Huevo de gallina, Remolacha, Semilla de remolacha, Semilla de zanahoria, Semillas de lino, Semillas de lúpulo, Trigo, Zanahoria. Desde el nivel 3: Hilo de lino, Jarra de leche, Plantón de arbusto, Plantón de arándano, Plantón de manzano, Plantón de rododendro.\n\nCompra desde el nivel 1: Chatarra de bronce, Filete de pez de río, Leña, Palo, Semilla de trigo, Tabla. Desde el nivel 2: Huevo de gallina, Ladrillo, Plato de arcilla, Remolacha, Semilla de remolacha, Semilla de zanahoria, Semillas de lino, Semillas de lúpulo, Tablón de madera, Trigo, Zanahoria. Desde el nivel 3: Hilo de lino, Jarra de leche, Plantón de arbusto, Plantón de arándano, Plantón de manzano, Plantón de rododendro."
+    "notes": "Herm está en Herm's Store. Sus primeros encargos consisten en abastecer al pueblo y llevarle Trigo cosechado; al completar «Sembrado y entregado» sube su nivel de comercio.\n\nVende desde el nivel 1: Chatarra de bronce, Semilla de trigo. Desde el nivel 2: Filete de pez de río, Huevo de gallina, Remolacha, Semilla de remolacha, Semilla de zanahoria, Semillas de lino, Semillas de lúpulo, Trigo, Zanahoria. Desde el nivel 3: Hilo de lino, Jarra de leche, Plantón de arbusto, Plantón de arándano, Plantón de manzano, Plantón de rododendro.\n\nCompra desde el nivel 1: Chatarra de bronce, Filete de pez de río, Leña, Palo, Semilla de trigo, Tabla. Desde el nivel 2: Huevo de gallina, Ladrillo, Plato de arcilla, Remolacha, Semilla de remolacha, Semilla de zanahoria, Semillas de lino, Semillas de lúpulo, Tablón de madera, Trigo, Zanahoria. Desde el nivel 3: Hilo de lino, Jarra de leche, Plantón de arbusto, Plantón de arándano, Plantón de manzano, Plantón de rododendro.",
+    "quests": [
+      {
+        "id": "planted_and_delivered",
+        "name": "Sembrado y entregado",
+        "wikiName": "Planted and Delivered",
+        "text": [
+          "Cultiva Trigo y dale a Herm 5 de Trigo en su tienda. La misión sugiere comprar antes de 16 a 20 semillas de trigo, pero la entrega solo pide 5 de Trigo cosechado.",
+          "**Cultiva las muestras.** Compra de 16 a 20 semillas de trigo a Herm y plántalas en tu huerto. Guarda al menos 5 de Trigo cosechado para la entrega.",
+          "**Vuelve con Herm.** Lleva 5 de Trigo a la tienda de Herm y elige la conversación de las muestras gratis. Al terminar, sube el nivel de comercio de Herm y se desbloquea la tecnología de cocinar verduras."
+        ],
+        "items": [
+          "wheat"
+        ]
+      }
+    ]
   },
   {
     "id": "jack",
@@ -61,7 +76,24 @@
     "icon": "person",
     "days": [],
     "image": "GK2/npc_jack",
-    "notes": "Jack es el capataz que necesita ayuda para construir un barco en Twins' Land. Para prepararlo hacen falta madera, herramientas de bronce y que los hermanos ayuden a remar."
+    "notes": "Jack es el capataz que necesita ayuda para construir un barco en Twins' Land. Para prepararlo hacen falta madera, herramientas de bronce y que los hermanos ayuden a remar.",
+    "quests": [
+      {
+        "id": "jack_in_a_boat",
+        "name": "Jack en un barco",
+        "wikiName": "Jack in a Boat",
+        "text": [
+          "Ayuda a Jack a construir su barco en Twins’ Land: llévale 5 Tablones de madera, luego 5 Piezas de bronce, y convence a los gemelos para que remen. Para convencerlos hacen falta 10 de reputación con el pueblo.",
+          "**Entrega la madera.** Busca a Jack en Twins’ Land y dale 5 Tablones de madera. Así te pide las herramientas y que reclutes a los hermanos.",
+          "**Lleva las herramientas y recluta a los gemelos.** Dale a Jack 5 Piezas de bronce. Habla con los hermanos, que están cerca, sobre remar; para convencerlos hacen falta 10 de reputación con el pueblo.",
+          "**Despide a Jack.** Cuando esté todo preparado, pregúntale a Jack si está listo para zarpar. El siguiente objetivo te dice que esperes noticias y descanses; no indica cuántas horas exactamente."
+        ],
+        "items": [
+          "wooden_plank",
+          "bronze_detail"
+        ]
+      }
+    ]
   },
   {
     "id": "herbert",
@@ -71,7 +103,58 @@
     "icon": "person",
     "days": [],
     "image": "GK2/npc_herbert",
-    "notes": "Herbert es el jefe de la guardia. Los primeros objetivos te mandan con él al Crossroads; más adelante, Swords and Bell te lleva a los Barracks."
+    "notes": "Herbert es el jefe de la guardia. Los primeros objetivos te mandan con él al Crossroads; más adelante, «Espadas y campana» te lleva a los Barracks.",
+    "quests": [
+      {
+        "id": "certificate_please",
+        "name": "El certificado, por favor",
+        "wikiName": "Certificate, Please",
+        "text": [
+          "Lleva un Certificado de entierro I a Herbert en el Crossroads. La conversación comprueba que tienes un certificado: basta con llevarlo en el inventario, no se entrega.",
+          "**Consigue un certificado.** Haz un entierro y guarda su Certificado de entierro. La misión comprueba que llevas un Certificado de entierro I en el inventario.",
+          "**Habla con Herbert.** Ve al Crossroads y habla con Herbert, el jefe de la guardia. Al completar el objetivo ganas 10 de reputación con Herbert y empiezan más objetivos del pueblo y del cementerio."
+        ]
+      },
+      {
+        "id": "grave_expectations",
+        "name": "Esperanzas sepulcrales",
+        "wikiName": "Grave Expectations",
+        "text": [
+          "Sube la calidad del cementerio a 10 y luego informa a Herbert en el Crossroads. Es un mínimo de calidad: enterrar muchos cadáveres no basta por sí solo.",
+          "**Mejora el cementerio.** Llega a 10 de calidad del cementerio. Comprueba la calidad actual de la zona antes de volver con Herbert.",
+          "**Informa de la mejora.** Habla con Herbert en el Crossroads cuando llegues al mínimo. Esta etapa da 10 de reputación con Herbert."
+        ]
+      },
+      {
+        "id": "fighting_spirit_required",
+        "name": "Se necesita espíritu de lucha",
+        "wikiName": "Fighting Spirit Required",
+        "text": [
+          "Dale a Herbert 3 de Fe en el Crossroads para ayudar a la guardia. Aparta esa cantidad de la Fe que pienses gastar en otras cosas.",
+          "**Prepara la Fe.** Lleva 3 de Fe para la entrega. Aquí sí se entrega el objeto, no es una comprobación de reputación ni de calidad de una zona.",
+          "**Haz la entrega.** Vuelve con Herbert al Crossroads y entrégale la Fe. Las recompensas incluyen 2 de Gratitud del pueblo y 1 de Historia."
+        ],
+        "items": [
+          "faith",
+          "town_gratitude"
+        ]
+      },
+      {
+        "id": "swords_and_bell",
+        "name": "Espadas y campana",
+        "wikiName": "Swords and Bell",
+        "text": [
+          "Llega a 12 de calidad del cuartel y fabrica una Campana mágica para Herbert. La receta de la campana usa 1 de Sangre y 1 Lingote de bronce en un Yunque de madera, de hierro o de acero.",
+          "**Prepara el cuartel.** Construye barricadas y contrata mercenarios como indica el objetivo, hasta llegar a 12 de calidad del cuartel. Habla con Herbert en el cuartel.",
+          "**Fabrica y entrega la campana.** Fabrica 1 Campana mágica con 1 de Sangre y 1 Lingote de bronce en uno de esos yunques. Llévasela a Herbert al cuartel."
+        ],
+        "items": [
+          "magic_bell",
+          "blood",
+          "bronze_ingot"
+        ]
+      }
+    ]
   },
   {
     "id": "nun",
@@ -82,7 +165,20 @@
     "icon": "person",
     "days": [],
     "image": "GK2/npc_nun",
-    "notes": "Conoce a la Monja en la Village Tavern para Holy Moly! Sus objetivos siguientes pasan a la iglesia, que necesita calidad 10 antes de poder dar el sermón."
+    "notes": "Conoce a la Monja en la Village Tavern para «¡Santo cielo!» Sus objetivos siguientes pasan a la iglesia, que necesita calidad 10 antes de poder dar el sermón.",
+    "quests": [
+      {
+        "id": "holy_moly",
+        "name": "¡Santo cielo!",
+        "wikiName": "Holy Moly!",
+        "text": [
+          "Conoce a la Monja en la taberna del pueblo y luego sube la iglesia a 10 de calidad. Después de los preparativos, el guardián tiene que dar el sermón.",
+          "**Conoce a la Monja.** Ve a la taberna del pueblo y habla con la Monja. Al conocerla se desbloquea la tecnología Limpieza de la iglesia.",
+          "**Prepara la iglesia.** Sube la iglesia a 10 de calidad y habla allí con la Monja. Esta etapa desbloquea Escritura básica.",
+          "**Da el sermón.** Da el sermón en la iglesia. La última etapa da 10 de reputación con la Monja; preparar la iglesia no es el objetivo final."
+        ]
+      }
+    ]
   },
   {
     "id": "gunter",
@@ -118,7 +214,22 @@
     "icon": "person",
     "days": [],
     "image": "GK2/npc_albert",
-    "notes": "Albert es el Médico de la peste. En Sweet Dreams tienes que llevarle Polvo de sueños a la Abandoned Tower y luego seguirle por la trampilla del laboratorio de alquimia."
+    "notes": "Albert es el Médico de la peste. En «Dulces sueños» tienes que llevarle Polvo de sueños a la Abandoned Tower y luego seguirle por la trampilla del laboratorio de alquimia.",
+    "quests": [
+      {
+        "id": "sweet_dreams",
+        "name": "Dulces sueños",
+        "wikiName": "Sweet Dreams",
+        "text": [
+          "Enséñale Polvo de sueños al Médico de la peste en la torre abandonada y luego sigue a Albert por la trampilla del laboratorio de alquimia.",
+          "**Lleva Polvo de sueños.** Lleva 1 Polvo de sueños y habla con el Médico de la peste en la torre abandonada. La conversación comprueba que lo llevas; no se entrega.",
+          "**Sigue a Albert.** Después de la etapa del polvo, usa la trampilla del laboratorio de alquimia para seguir a Albert. La conversación del polvo da 10 de reputación con Albert antes de este objetivo."
+        ],
+        "items": [
+          "dream_dust"
+        ]
+      }
+    ]
   },
   {
     "id": "jeffry",
@@ -128,7 +239,24 @@
     "icon": "person",
     "days": [],
     "image": "GK2/npc_jeffry",
-    "notes": "Jeffry es uno de los gemelos de Two Peas in a Pod. Durante el objetivo de reconciliación, búscalo al sur del pueblo, cerca de la Hangman's House."
+    "notes": "Jeffry es uno de los gemelos de «Como dos gotas de agua». Durante el objetivo de reconciliación, búscalo al sur del pueblo, cerca de la Hangman's House.",
+    "quests": [
+      {
+        "id": "two_peas_in_a_pod",
+        "name": "Como dos gotas de agua",
+        "wikiName": "Two Peas in a Pod",
+        "text": [
+          "Resuelve la disputa de los gemelos y llévales 6 Platos de arcilla. La entrega final da una Caña básica y 5 de reputación con el pueblo.",
+          "**Busca a los hermanos.** Cruza el puente hacia Twins’ Land, en el sur del pueblo. Pregúntale a Heffry qué ha pasado.",
+          "**Habla con Jeffry.** Busca a Jeffry más al sur, cerca de la casa del Verdugo, y habla con él de hacer las paces con su gemelo.",
+          "**Lleva la cerámica.** Entrega 6 Platos de arcilla a los hermanos en Twins’ Land. Esta etapa da una Caña básica, útil para empezar a pescar."
+        ],
+        "items": [
+          "clay_plate",
+          "basic_rod"
+        ]
+      }
+    ]
   },
   {
     "id": "januarius",

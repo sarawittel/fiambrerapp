@@ -1,0 +1,3737 @@
+[
+  {
+    "id": "building",
+    "name": "Construcción",
+    "text": [
+      "Las tecnologías de construcción abarcan la carpintería, la cantería, las herramientas de construcción y la producción para el pueblo. Los puntos de tecnología se cuentan aparte de los materiales para construir cada estación."
+    ],
+    "image": "GK2/tech_building",
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "the_concept_of_wood",
+            "name": "El concepto de la madera",
+            "cost": {
+              "red": 2,
+              "green": 2
+            },
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Tabla",
+                "item": "board"
+              },
+              {
+                "kind": "recipe",
+                "name": "Tronco corto",
+                "item": "short_log"
+              }
+            ]
+          },
+          {
+            "id": "chopping",
+            "name": "Corte de leña",
+            "cost": {
+              "red": 8
+            },
+            "requires": [
+              "the_concept_of_wood"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Leña",
+                "item": "firewood"
+              },
+              {
+                "kind": "recipe",
+                "name": "Cuña de madera",
+                "item": "wood_wedge"
+              }
+            ]
+          },
+          {
+            "id": "woodworking_i",
+            "name": "Carpintería I",
+            "cost": {
+              "red": 10
+            },
+            "requires": [
+              "the_concept_of_wood"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Tablón de madera",
+                "item": "wooden_plank"
+              }
+            ]
+          },
+          {
+            "id": "suit_up",
+            "name": "¡A vestirse!",
+            "cost": {
+              "red": 15
+            },
+            "requires": [
+              "woodworking_i"
+            ]
+          },
+          {
+            "id": "the_concept_of_stone",
+            "name": "El concepto de la piedra",
+            "cost": {
+              "red": 15
+            },
+            "requires": [
+              "the_concept_of_wood"
+            ]
+          },
+          {
+            "id": "tool_rack",
+            "name": "Estante de herramientas",
+            "cost": {
+              "red": 35
+            },
+            "requires": [
+              "the_concept_of_stone",
+              "woodworking_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Baúl sencillo",
+                "item": "simple_chest"
+              }
+            ]
+          },
+          {
+            "id": "pottery_i",
+            "name": "Alfarería I",
+            "cost": {
+              "red": 10,
+              "green": 5
+            },
+            "requires": [
+              "the_concept_of_stone"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Plato de arcilla",
+                "item": "clay_plate"
+              }
+            ]
+          },
+          {
+            "id": "zombie_assistant",
+            "name": "Asistente zombi",
+            "cost": {
+              "red": 35,
+              "green": 5
+            },
+            "requires": [
+              "tool_rack"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Estación de suministro zombi",
+                "item": "zombie_supplier_station"
+              }
+            ]
+          },
+          {
+            "id": "oiled_wood",
+            "name": "Madera aceitada",
+            "cost": {
+              "red": 20,
+              "green": 20
+            },
+            "requires": [
+              "tool_rack"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de madera I",
+                "item": "wooden_kit_i"
+              },
+              {
+                "kind": "recipe",
+                "name": "Tablón aceitado",
+                "item": "oiled_plank"
+              },
+              {
+                "kind": "recipe",
+                "name": "Baratijas de madera",
+                "item": "wooden_trinkets"
+              }
+            ]
+          },
+          {
+            "id": "stone_polishing",
+            "name": "Pulido de piedra",
+            "cost": {
+              "red": 20,
+              "green": 5
+            },
+            "requires": [
+              "the_concept_of_stone",
+              "tool_rack"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de piedra",
+                "item": "stone_kit"
+              }
+            ]
+          },
+          {
+            "id": "brick_making",
+            "name": "Fabricación de ladrillos",
+            "cost": {
+              "red": 15,
+              "green": 5
+            },
+            "requires": [
+              "pottery_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Ladrillo",
+                "item": "brick"
+              }
+            ]
+          },
+          {
+            "id": "woodworking_ii",
+            "name": "Carpintería II",
+            "cost": {
+              "red": 40,
+              "green": 5
+            },
+            "requires": [
+              "oiled_wood"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Cincel de bronce",
+                "item": "bronze_chisel"
+              },
+              {
+                "kind": "recipe",
+                "name": "Kit de muebles I",
+                "item": "furniture_kit_i"
+              }
+            ]
+          },
+          {
+            "id": "houses_repairing",
+            "name": "Reparación de casas",
+            "cost": {
+              "red": 45,
+              "green": 10
+            },
+            "requires": [
+              "stone_polishing",
+              "brick_making"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de construcción I",
+                "item": "building_kit_i"
+              }
+            ]
+          },
+          {
+            "id": "circular_saw",
+            "name": "Sierra circular",
+            "cost": {
+              "red": 35,
+              "green": 10
+            },
+            "condition": "Necesita 40 de reputación con [**Jack**](gk2://character/jack).",
+            "requires": [
+              "oiled_wood"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Viga de madera",
+                "item": "wooden_beam"
+              },
+              {
+                "kind": "recipe",
+                "name": "Viga aceitada",
+                "item": "oiled_beam"
+              }
+            ]
+          },
+          {
+            "id": "market_stalls_i",
+            "name": "Puestos del mercado I",
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "woodworking_ii"
+            ]
+          },
+          {
+            "id": "tool_rack_ii",
+            "name": "Estante de herramientas II",
+            "cost": {
+              "red": 60,
+              "green": 10,
+              "blue": 20
+            },
+            "requires": [
+              "tool_rack",
+              "woodworking_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Cincel de hierro",
+                "item": "iron_chisel"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Baúl",
+                "item": "chest"
+              }
+            ]
+          },
+          {
+            "id": "stone_carving",
+            "name": "Tallado de piedra",
+            "cost": {
+              "red": 60
+            },
+            "requires": [
+              "stone_polishing"
+            ]
+          },
+          {
+            "id": "ceramic_firing",
+            "name": "Cocción de cerámica",
+            "cost": {
+              "red": 55
+            },
+            "requires": [
+              "brick_making"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Urna de arcilla",
+                "item": "clay_urn"
+              }
+            ]
+          },
+          {
+            "id": "zombie_lumberjack",
+            "name": "Leñador zombi",
+            "cost": {
+              "red": 75,
+              "blue": 10
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "circular_saw"
+            ]
+          },
+          {
+            "id": "wooden_joint",
+            "name": "Ensamble de madera",
+            "cost": {
+              "red": 90,
+              "blue": 25
+            },
+            "requires": [
+              "tool_rack_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Ensamble de madera",
+                "item": "wooden_joint"
+              }
+            ]
+          },
+          {
+            "id": "the_concept_of_marble",
+            "name": "El concepto del mármol",
+            "cost": {
+              "red": 80,
+              "blue": 30
+            },
+            "requires": [
+              "tool_rack_ii",
+              "stone_carving"
+            ]
+          },
+          {
+            "id": "zombie_stone_mining",
+            "name": "Minería de piedra zombi",
+            "cost": {
+              "red": 70,
+              "blue": 10
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "stone_carving"
+            ]
+          },
+          {
+            "id": "wood_carving",
+            "name": "Tallado de madera",
+            "cost": {
+              "red": 120,
+              "blue": 30
+            },
+            "requires": [
+              "wooden_joint"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Madera tallada",
+                "item": "carved_wood"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Baúl grande",
+                "item": "large_chest"
+              }
+            ]
+          },
+          {
+            "id": "conveyors",
+            "name": "Cintas transportadoras",
+            "cost": {
+              "red": 70,
+              "blue": 20
+            },
+            "condition": "Necesita 50 de reputación con [**Jack**](gk2://character/jack).",
+            "requires": [
+              "tool_rack_ii"
+            ]
+          },
+          {
+            "id": "marble_polishing",
+            "name": "Pulido del mármol",
+            "cost": {
+              "red": 100,
+              "blue": 20
+            },
+            "requires": [
+              "the_concept_of_marble"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Canicas de piedra",
+                "item": "stone_marbles"
+              }
+            ]
+          },
+          {
+            "id": "zombie_marble_mining",
+            "name": "Minería de mármol zombi",
+            "cost": {
+              "red": 120,
+              "blue": 30
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "the_concept_of_marble"
+            ]
+          },
+          {
+            "id": "zombie_lumberjack_ii",
+            "name": "Leñador zombi II",
+            "cost": {
+              "red": 120,
+              "blue": 25
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "zombie_lumberjack"
+            ]
+          },
+          {
+            "id": "artisans_i",
+            "name": "Artesanos I",
+            "cost": {
+              "red": 75,
+              "green": 25
+            },
+            "requires": [
+              "conveyors"
+            ]
+          },
+          {
+            "id": "assembly_bench",
+            "name": "Banco de montaje",
+            "cost": {
+              "red": 75,
+              "blue": 20
+            },
+            "requires": [
+              "conveyors"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de madera I",
+                "item": "wooden_kit_i"
+              },
+              {
+                "kind": "recipe",
+                "name": "Kit de piedra",
+                "item": "stone_kit"
+              }
+            ]
+          },
+          {
+            "id": "marble_carving",
+            "name": "Tallado del mármol",
+            "cost": {
+              "red": 175,
+              "blue": 50
+            },
+            "requires": [
+              "marble_polishing"
+            ]
+          },
+          {
+            "id": "crate",
+            "name": "Caja",
+            "cost": {
+              "red": 100,
+              "blue": 10
+            },
+            "requires": [
+              "assembly_bench"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Caja",
+                "item": "crate"
+              }
+            ]
+          },
+          {
+            "id": "wooden_kit_i",
+            "name": "Kit de madera I",
+            "cost": {
+              "red": 100,
+              "blue": 10
+            },
+            "requires": [
+              "assembly_bench"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de madera I",
+                "item": "wooden_kit_i"
+              }
+            ]
+          },
+          {
+            "id": "fabric",
+            "name": "Tela",
+            "cost": {
+              "red": 100,
+              "blue": 10
+            },
+            "requires": [
+              "assembly_bench"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Suministro: tela",
+                "item": "supply_fabric"
+              }
+            ]
+          },
+          {
+            "id": "zombie_delivery",
+            "name": "Reparto zombi",
+            "cost": {
+              "red": 110,
+              "blue": 10
+            },
+            "requires": [
+              "crate"
+            ]
+          },
+          {
+            "id": "building_kit_i",
+            "name": "Kit de construcción I",
+            "cost": {
+              "red": 110,
+              "blue": 10
+            },
+            "requires": [
+              "wooden_kit_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de construcción I",
+                "item": "building_kit_i"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: materiales de construcción I",
+                "item": "supply_building_materials_i"
+              }
+            ]
+          },
+          {
+            "id": "market_stalls_ii",
+            "name": "Puestos del mercado II",
+            "cost": {
+              "red": 130,
+              "green": 30
+            },
+            "requires": [
+              "building_kit_i"
+            ]
+          },
+          {
+            "id": "assembly_bench_ii",
+            "name": "Banco de montaje II",
+            "cost": {
+              "red": 110,
+              "blue": 20
+            },
+            "requires": [
+              "building_kit_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Suministro: herramientas de hierro",
+                "item": "supply_iron_tools"
+              }
+            ]
+          },
+          {
+            "id": "artisans_ii",
+            "name": "Artesanos II",
+            "cost": {
+              "red": 100,
+              "green": 75
+            },
+            "requires": [
+              "building_kit_i"
+            ]
+          },
+          {
+            "id": "furniture_kit_i",
+            "name": "Kit de muebles I",
+            "cost": {
+              "red": 120,
+              "blue": 20
+            },
+            "requires": [
+              "assembly_bench_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de muebles I",
+                "item": "furniture_kit_i"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: muebles I",
+                "item": "supply_furniture_i"
+              }
+            ]
+          },
+          {
+            "id": "wooden_kit_ii",
+            "name": "Kit de madera II",
+            "cost": {
+              "red": 120,
+              "blue": 20
+            },
+            "requires": [
+              "assembly_bench_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de madera II",
+                "item": "wooden_kit_ii"
+              }
+            ]
+          },
+          {
+            "id": "kitchen_supplies",
+            "name": "Menaje de cocina",
+            "cost": {
+              "red": 120,
+              "blue": 20
+            },
+            "requires": [
+              "assembly_bench_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Suministro: cubertería I",
+                "item": "supply_cutlery_i"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: utensilios de cocina",
+                "item": "supply_kitchen_utensils"
+              }
+            ]
+          },
+          {
+            "id": "ways_of_stone",
+            "name": "Los caminos de la piedra",
+            "cost": {
+              "red": 120,
+              "blue": 20
+            },
+            "requires": [
+              "assembly_bench_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de mármol",
+                "item": "marble_kit"
+              },
+              {
+                "kind": "recipe",
+                "name": "Kit de escultura I",
+                "item": "sculpture_kit_i"
+              }
+            ]
+          },
+          {
+            "id": "market_stalls_iii",
+            "name": "Puestos del mercado III",
+            "cost": {
+              "red": 150,
+              "green": 50
+            },
+            "requires": [
+              "furniture_kit_i"
+            ]
+          },
+          {
+            "id": "appliances_i",
+            "name": "Electrodomésticos I",
+            "cost": {
+              "red": 130,
+              "blue": 20
+            },
+            "requires": [
+              "furniture_kit_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Suministro: electrodomésticos I",
+                "item": "supply_appliances_i"
+              }
+            ]
+          },
+          {
+            "id": "bioreactor",
+            "name": "Biorreactor",
+            "cost": {
+              "red": 130,
+              "blue": 20
+            },
+            "requires": [
+              "wooden_kit_ii"
+            ]
+          },
+          {
+            "id": "clothes_i",
+            "name": "Ropa I",
+            "cost": {
+              "red": 130,
+              "blue": 20
+            },
+            "requires": [
+              "kitchen_supplies"
+            ]
+          },
+          {
+            "id": "zombie_mechanisms",
+            "name": "Mecanismos zombi",
+            "cost": {
+              "red": 140,
+              "blue": 20
+            },
+            "requires": [
+              "bioreactor"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Mecanismo zombi",
+                "item": "zombie_mechanism"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: mecanismo de ingeniería",
+                "item": "supply_engineering_mechanism"
+              }
+            ]
+          },
+          {
+            "id": "assembly_bench_iii",
+            "name": "Banco de montaje III",
+            "cost": {
+              "red": 150,
+              "blue": 30
+            },
+            "requires": [
+              "zombie_mechanisms"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de escultura II",
+                "item": "sculpture_kit_ii"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: cubertería II",
+                "item": "supply_cutlery_ii"
+              }
+            ]
+          },
+          {
+            "id": "furniture_kit_ii",
+            "name": "Kit de muebles II",
+            "cost": {
+              "red": 160,
+              "blue": 30
+            },
+            "requires": [
+              "assembly_bench_iii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de muebles II",
+                "item": "furniture_kit_ii"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: muebles II",
+                "item": "supply_furniture_ii"
+              }
+            ]
+          },
+          {
+            "id": "building_kit_ii",
+            "name": "Kit de construcción II",
+            "cost": {
+              "red": 160,
+              "blue": 30
+            },
+            "requires": [
+              "assembly_bench_iii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de construcción II",
+                "item": "building_kit_ii"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: materiales de construcción II",
+                "item": "supply_building_materials_ii"
+              }
+            ]
+          },
+          {
+            "id": "clothes_ii",
+            "name": "Ropa II",
+            "cost": {
+              "red": 160,
+              "blue": 30
+            },
+            "requires": [
+              "clothes_i",
+              "assembly_bench_iii"
+            ]
+          },
+          {
+            "id": "appliances_ii",
+            "name": "Electrodomésticos II",
+            "cost": {
+              "red": 170,
+              "blue": 30
+            },
+            "requires": [
+              "furniture_kit_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Suministro: electrodomésticos II",
+                "item": "supply_appliances_ii"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "metallurgy",
+    "name": "Metalurgia",
+    "text": [
+      "La metalurgia avanza por el trabajo del metal, el vidrio y la fabricación de equipo. Una tecnología avanzada puede requerir otra anterior y reputación con un personaje: no basta con tener los puntos."
+    ],
+    "image": "GK2/tech_metallurgy",
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "bronze_works",
+            "name": "Trabajos en bronce",
+            "cost": {
+              "red": 5
+            },
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Clavos de bronce",
+                "item": "bronze_nails"
+              }
+            ]
+          },
+          {
+            "id": "bronze_melting",
+            "name": "Fundición de bronce",
+            "cost": {
+              "red": 10
+            },
+            "requires": [
+              "bronze_works"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Combustible",
+                "item": "fuel"
+              },
+              {
+                "kind": "recipe",
+                "name": "Lingote de bronce",
+                "item": "bronze_ingot"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Horno I",
+                "item": "furnace_i"
+              }
+            ]
+          },
+          {
+            "id": "glass",
+            "name": "Vidrio",
+            "cost": {
+              "red": 30,
+              "green": 10
+            },
+            "requires": [
+              "bronze_melting"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Vidrio",
+                "item": "glass"
+              }
+            ]
+          },
+          {
+            "id": "bronze_craft",
+            "name": "Artesanía del bronce",
+            "cost": {
+              "red": 30
+            },
+            "requires": [
+              "bronze_melting"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pieza de bronce",
+                "item": "bronze_detail"
+              }
+            ]
+          },
+          {
+            "id": "bronze_forge",
+            "name": "Forja de bronce",
+            "cost": {
+              "red": 20
+            },
+            "requires": [
+              "bronze_craft"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Estaño",
+                "item": "tin"
+              },
+              {
+                "kind": "recipe",
+                "name": "Lingote de bronce",
+                "item": "bronze_ingot"
+              }
+            ]
+          },
+          {
+            "id": "bronze_blades",
+            "name": "Hojas de bronce",
+            "cost": {
+              "red": 15,
+              "green": 5
+            },
+            "requires": [
+              "bronze_craft"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Hacha de bronce",
+                "item": "bronze_axe"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pico de bronce",
+                "item": "bronze_pickaxe"
+              }
+            ]
+          },
+          {
+            "id": "bronze_instruments",
+            "name": "Instrumentos de bronce",
+            "cost": {
+              "red": 15,
+              "green": 5
+            },
+            "requires": [
+              "bronze_craft"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Martillo de bronce",
+                "item": "bronze_hammer"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pala de bronce",
+                "item": "bronze_shovel"
+              }
+            ]
+          },
+          {
+            "id": "glass_blowing",
+            "name": "Soplado de vidrio",
+            "cost": {
+              "red": 45,
+              "green": 10
+            },
+            "requires": [
+              "glass"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Botella vacía",
+                "item": "empty_bottle"
+              },
+              {
+                "kind": "recipe",
+                "name": "Matraces de alquimia I",
+                "item": "alchemy_flasks_i"
+              }
+            ]
+          },
+          {
+            "id": "bronze_polishing",
+            "name": "Pulido del bronce",
+            "cost": {
+              "red": 30
+            },
+            "requires": [
+              "bronze_forge"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Bronce pulido",
+                "item": "polished_bronze"
+              },
+              {
+                "kind": "recipe",
+                "name": "Baratijas de cobre",
+                "item": "copper_trinkets"
+              },
+              {
+                "kind": "recipe",
+                "name": "Herramientas de bronce",
+                "item": "bronze_tools"
+              }
+            ]
+          },
+          {
+            "id": "firewood_shed_ii",
+            "name": "Leñera II",
+            "cost": {
+              "red": 20,
+              "green": 5
+            },
+            "requires": [
+              "bronze_forge"
+            ]
+          },
+          {
+            "id": "reinforced_plank",
+            "name": "Tablón reforzado",
+            "cost": {
+              "red": 45
+            },
+            "condition": "Necesita 20 de reputación con [**Herbert**](gk2://character/herbert).",
+            "requires": [
+              "bronze_forge"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Tablón reforzado",
+                "item": "reinforced_plank"
+              }
+            ]
+          },
+          {
+            "id": "bronze_equipment",
+            "name": "Equipo de bronce",
+            "cost": {
+              "red": 30
+            },
+            "condition": "Necesita 20 de reputación con [**Herbert**](gk2://character/herbert).",
+            "requires": [
+              "bronze_forge"
+            ]
+          },
+          {
+            "id": "iron_forge",
+            "name": "Forja de hierro",
+            "cost": {
+              "red": 35
+            },
+            "requires": [
+              "bronze_polishing"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Lingote de hierro",
+                "item": "iron_ingot"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: hierro",
+                "item": "supply_iron"
+              }
+            ]
+          },
+          {
+            "id": "simple_barricades",
+            "name": "Barricadas sencillas",
+            "cost": {
+              "red": 60,
+              "green": 25
+            },
+            "requires": [
+              "reinforced_plank"
+            ]
+          },
+          {
+            "id": "bronze_weapons",
+            "name": "Armas de bronce",
+            "cost": {
+              "red": 35,
+              "green": 10
+            },
+            "requires": [
+              "bronze_equipment"
+            ]
+          },
+          {
+            "id": "iron_smithing",
+            "name": "Herrería del hierro",
+            "cost": {
+              "red": 50
+            },
+            "requires": [
+              "iron_forge"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Engranaje de bronce",
+                "item": "bronze_gear"
+              },
+              {
+                "kind": "recipe",
+                "name": "Clavos de hierro",
+                "item": "iron_nails"
+              }
+            ]
+          },
+          {
+            "id": "bellows",
+            "name": "Fuelle",
+            "cost": {
+              "red": 30
+            },
+            "requires": [
+              "iron_forge"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Lente",
+                "item": "lens"
+              }
+            ]
+          },
+          {
+            "id": "archers_tower",
+            "name": "Torre de arqueros",
+            "cost": {
+              "red": 60,
+              "green": 25
+            },
+            "requires": [
+              "simple_barricades"
+            ]
+          },
+          {
+            "id": "zombie_digging",
+            "name": "Excavación zombi",
+            "cost": {
+              "red": 50,
+              "blue": 10
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "iron_smithing"
+            ]
+          },
+          {
+            "id": "iron_works",
+            "name": "Trabajos en hierro",
+            "cost": {
+              "red": 75
+            },
+            "requires": [
+              "iron_smithing"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de hierro I",
+                "item": "iron_kit_i"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pieza de hierro",
+                "item": "iron_detail"
+              }
+            ]
+          },
+          {
+            "id": "zombie_mining",
+            "name": "Minería zombi",
+            "cost": {
+              "red": 60,
+              "blue": 10
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "iron_smithing"
+            ]
+          },
+          {
+            "id": "smithy_i",
+            "name": "Herrería I",
+            "cost": {
+              "red": 75,
+              "blue": 20
+            },
+            "requires": [
+              "iron_smithing"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Ladrillo",
+                "item": "brick"
+              },
+              {
+                "kind": "recipe",
+                "name": "Vidrio",
+                "item": "glass"
+              }
+            ]
+          },
+          {
+            "id": "reinforced_beam",
+            "name": "Viga reforzada",
+            "cost": {
+              "red": 75
+            },
+            "requires": [
+              "iron_works"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Viga reforzada",
+                "item": "reinforced_beam"
+              }
+            ]
+          },
+          {
+            "id": "iron_equipment",
+            "name": "Equipo de hierro",
+            "cost": {
+              "red": 80
+            },
+            "requires": [
+              "iron_works"
+            ]
+          },
+          {
+            "id": "iron_instruments_i",
+            "name": "Instrumentos de hierro I",
+            "cost": {
+              "red": 80,
+              "blue": 15
+            },
+            "requires": [
+              "iron_works"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Hacha de hierro",
+                "item": "iron_axe"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pala de hierro",
+                "item": "iron_shovel"
+              }
+            ]
+          },
+          {
+            "id": "iron_instruments_ii",
+            "name": "Instrumentos de hierro II",
+            "cost": {
+              "red": 80,
+              "blue": 15
+            },
+            "requires": [
+              "iron_works"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pico de hierro",
+                "item": "iron_pickaxe"
+              },
+              {
+                "kind": "recipe",
+                "name": "Martillo de hierro",
+                "item": "iron_hammer"
+              }
+            ]
+          },
+          {
+            "id": "smithy_hammer",
+            "name": "Herrería: martillo",
+            "cost": {
+              "red": 80,
+              "blue": 30
+            },
+            "requires": [
+              "smithy_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de hierro I",
+                "item": "iron_kit_i"
+              },
+              {
+                "kind": "recipe",
+                "name": "Lingote de hierro",
+                "item": "iron_ingot"
+              }
+            ]
+          },
+          {
+            "id": "robust_barricades",
+            "name": "Barricadas robustas",
+            "cost": {
+              "red": 90,
+              "green": 30
+            },
+            "requires": [
+              "reinforced_beam"
+            ]
+          },
+          {
+            "id": "iron_weapons",
+            "name": "Armas de hierro",
+            "cost": {
+              "red": 90,
+              "blue": 10
+            },
+            "requires": [
+              "iron_equipment"
+            ]
+          },
+          {
+            "id": "iron_products",
+            "name": "Productos de hierro",
+            "cost": {
+              "red": 90,
+              "blue": 10
+            },
+            "requires": [
+              "iron_instruments_i",
+              "iron_instruments_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pieza avanzada",
+                "item": "advanced_detail"
+              },
+              {
+                "kind": "recipe",
+                "name": "Herramientas de hierro",
+                "item": "iron_tools"
+              }
+            ]
+          },
+          {
+            "id": "zombie_gears",
+            "name": "Engranajes zombi",
+            "cost": {
+              "red": 90,
+              "blue": 20
+            },
+            "requires": [
+              "smithy_hammer"
+            ]
+          },
+          {
+            "id": "smithy_bellows",
+            "name": "Herrería: fuelle",
+            "cost": {
+              "red": 90,
+              "blue": 20
+            },
+            "requires": [
+              "smithy_hammer"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Vajilla",
+                "item": "tableware"
+              },
+              {
+                "kind": "recipe",
+                "name": "Recipientes de vidrio",
+                "item": "glass_containers"
+              }
+            ]
+          },
+          {
+            "id": "archers_tower_ii",
+            "name": "Torre de arqueros II",
+            "cost": {
+              "red": 100,
+              "green": 50
+            },
+            "requires": [
+              "robust_barricades"
+            ]
+          },
+          {
+            "id": "steel_smithing",
+            "name": "Herrería del acero",
+            "cost": {
+              "red": 120,
+              "blue": 15
+            },
+            "condition": "Necesita 70 de reputación con [**Jack**](gk2://character/jack).",
+            "requires": [
+              "iron_products"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pieza de acero",
+                "item": "steel_detail"
+              },
+              {
+                "kind": "recipe",
+                "name": "Tornillos de acero",
+                "item": "steel_screws"
+              }
+            ]
+          },
+          {
+            "id": "reinforced_barricades",
+            "name": "Barricadas reforzadas",
+            "cost": {
+              "red": 150,
+              "green": 75
+            },
+            "requires": [
+              "steel_smithing"
+            ]
+          },
+          {
+            "id": "steel_instruments_i",
+            "name": "Instrumentos de acero I",
+            "cost": {
+              "red": 150,
+              "blue": 20
+            },
+            "requires": [
+              "steel_smithing"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Hacha de acero",
+                "item": "steel_axe"
+              },
+              {
+                "kind": "recipe",
+                "name": "Martillo de acero",
+                "item": "steel_hammer"
+              }
+            ]
+          },
+          {
+            "id": "steel_instruments_ii",
+            "name": "Instrumentos de acero II",
+            "cost": {
+              "red": 150,
+              "blue": 20
+            },
+            "requires": [
+              "steel_smithing"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pico de acero",
+                "item": "steel_pickaxe"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pala de acero",
+                "item": "steel_shovel"
+              }
+            ]
+          },
+          {
+            "id": "steel_casting",
+            "name": "Fundición de acero",
+            "cost": {
+              "red": 150,
+              "blue": 20
+            },
+            "requires": [
+              "steel_smithing"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Piezas de ingeniería",
+                "item": "engineering_details"
+              },
+              {
+                "kind": "recipe",
+                "name": "Herramientas de acero",
+                "item": "steel_tools"
+              }
+            ]
+          },
+          {
+            "id": "archers_tower_iii",
+            "name": "Torre de arqueros III",
+            "cost": {
+              "red": 160,
+              "green": 80
+            },
+            "requires": [
+              "reinforced_barricades"
+            ]
+          },
+          {
+            "id": "steel_weapons",
+            "name": "Armas de acero",
+            "cost": {
+              "red": 160,
+              "blue": 10
+            },
+            "requires": [
+              "steel_instruments_i"
+            ]
+          },
+          {
+            "id": "steel_equipment",
+            "name": "Equipo de acero",
+            "cost": {
+              "red": 160,
+              "blue": 10
+            },
+            "requires": [
+              "steel_instruments_ii"
+            ]
+          },
+          {
+            "id": "smithy_ii",
+            "name": "Herrería II",
+            "cost": {
+              "red": 160,
+              "blue": 20
+            },
+            "requires": [
+              "steel_casting"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Moldes de arcilla",
+                "item": "clay_molds"
+              },
+              {
+                "kind": "recipe",
+                "name": "Kit de hierro II",
+                "item": "iron_kit_ii"
+              }
+            ]
+          },
+          {
+            "id": "steel_works",
+            "name": "Trabajos en acero",
+            "cost": {
+              "red": 175,
+              "blue": 20
+            },
+            "requires": [
+              "smithy_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit de ingeniería",
+                "item": "engineering_kit"
+              },
+              {
+                "kind": "recipe",
+                "name": "Suministro: herramientas de acero",
+                "item": "supply_steel_tools"
+              }
+            ]
+          },
+          {
+            "id": "lenses",
+            "name": "Lentes",
+            "cost": {
+              "red": 175,
+              "blue": 20
+            },
+            "requires": [
+              "smithy_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Lente",
+                "item": "lens"
+              }
+            ]
+          },
+          {
+            "id": "masterwork_equipment",
+            "name": "Equipo de obra maestra",
+            "cost": {
+              "red": 200,
+              "blue": 25
+            },
+            "requires": [
+              "steel_equipment"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "farming",
+    "name": "Agricultura",
+    "text": [
+      "Las tecnologías de agricultura incluyen la jardinería, la pesca, los fertilizantes y la elaboración de bebidas. Desbloquea primero Jardinería por 5 puntos verdes. Después elige Fertilizantes I por otros 10 puntos verdes o Pesca I por otros 15; las dos requieren Jardinería."
+    ],
+    "image": "GK2/tech_farming",
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "orchardry",
+            "name": "Fruticultura",
+            "cost": {
+              "green": 20
+            }
+          },
+          {
+            "id": "gardening",
+            "name": "Jardinería",
+            "cost": {
+              "green": 5
+            }
+          },
+          {
+            "id": "cold_pressing",
+            "name": "Prensado en frío",
+            "cost": {
+              "green": 20
+            },
+            "requires": [
+              "orchardry"
+            ]
+          },
+          {
+            "id": "fertilizers_i",
+            "name": "Fertilizantes I",
+            "cost": {
+              "green": 10
+            },
+            "requires": [
+              "gardening"
+            ]
+          },
+          {
+            "id": "fishing_i",
+            "name": "Pesca I",
+            "cost": {
+              "green": 15
+            },
+            "requires": [
+              "gardening"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Caña básica",
+                "item": "basic_rod"
+              }
+            ]
+          },
+          {
+            "id": "cider_brewery",
+            "name": "Sidrería",
+            "cost": {
+              "green": 30
+            },
+            "requires": [
+              "cold_pressing"
+            ]
+          },
+          {
+            "id": "garden_improvement_i",
+            "name": "Mejora del huerto I",
+            "cost": {
+              "green": 30
+            },
+            "requires": [
+              "fertilizers_i"
+            ]
+          },
+          {
+            "id": "fertilizers_ii",
+            "name": "Fertilizantes II",
+            "cost": {
+              "green": 30,
+              "blue": 10
+            },
+            "requires": [
+              "fertilizers_i"
+            ]
+          },
+          {
+            "id": "flax_thread",
+            "name": "Hilo de lino",
+            "cost": {
+              "green": 45
+            },
+            "requires": [
+              "garden_improvement_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Hilo de lino",
+                "item": "flax_thread"
+              }
+            ]
+          },
+          {
+            "id": "beekeeping",
+            "name": "Apicultura",
+            "cost": {
+              "green": 50
+            },
+            "requires": [
+              "garden_improvement_i"
+            ]
+          },
+          {
+            "id": "fishing_ii",
+            "name": "Pesca II",
+            "cost": {
+              "green": 40
+            },
+            "requires": [
+              "garden_improvement_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Caña de aficionado",
+                "item": "amateur_rod"
+              },
+              {
+                "kind": "recipe",
+                "name": "Cebo de migas",
+                "item": "breadcrumb_bait"
+              }
+            ]
+          },
+          {
+            "id": "vineyard",
+            "name": "Viñedo",
+            "cost": {
+              "green": 55
+            },
+            "requires": [
+              "fertilizers_ii"
+            ]
+          },
+          {
+            "id": "fabric",
+            "name": "Tela",
+            "cost": {
+              "green": 60
+            },
+            "requires": [
+              "flax_thread"
+            ]
+          },
+          {
+            "id": "zombie_gardening",
+            "name": "Jardinería zombi",
+            "cost": {
+              "green": 60,
+              "blue": 20
+            },
+            "requires": [
+              "garden_improvement_i"
+            ]
+          },
+          {
+            "id": "fertilizers_iii",
+            "name": "Fertilizantes III",
+            "cost": {
+              "green": 60,
+              "blue": 15
+            },
+            "requires": [
+              "fertilizers_ii"
+            ]
+          },
+          {
+            "id": "sewing_basics",
+            "name": "Costura básica",
+            "cost": {
+              "green": 80
+            },
+            "requires": [
+              "fabric"
+            ]
+          },
+          {
+            "id": "mead_making",
+            "name": "Elaboración de hidromiel",
+            "cost": {
+              "green": 80
+            },
+            "requires": [
+              "beekeeping"
+            ]
+          },
+          {
+            "id": "garden_improvement_ii",
+            "name": "Mejora del huerto II",
+            "cost": {
+              "green": 100,
+              "blue": 25
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "fertilizers_iii",
+              "zombie_gardening"
+            ]
+          },
+          {
+            "id": "brewing",
+            "name": "Elaboración de cerveza",
+            "cost": {
+              "green": 80
+            },
+            "requires": [
+              "vineyard"
+            ]
+          },
+          {
+            "id": "vegetable_supplies",
+            "name": "Suministros de verdura",
+            "cost": {
+              "green": 120,
+              "blue": 25
+            },
+            "requires": [
+              "zombie_gardening"
+            ]
+          },
+          {
+            "id": "preservation_supplies",
+            "name": "Suministros de conservas",
+            "cost": {
+              "green": 140,
+              "blue": 25
+            },
+            "requires": [
+              "vegetable_supplies"
+            ]
+          },
+          {
+            "id": "flour_supplies",
+            "name": "Suministros de harina",
+            "cost": {
+              "green": 130,
+              "blue": 20
+            },
+            "requires": [
+              "vegetable_supplies"
+            ]
+          },
+          {
+            "id": "zombie_vineyard",
+            "name": "Viñedo zombi",
+            "cost": {
+              "green": 150,
+              "blue": 50
+            },
+            "requires": [
+              "brewing"
+            ]
+          },
+          {
+            "id": "preservation_supplies_ii",
+            "name": "Suministros de conservas II",
+            "cost": {
+              "green": 150,
+              "blue": 30
+            },
+            "requires": [
+              "preservation_supplies"
+            ]
+          },
+          {
+            "id": "fertilizers_iv",
+            "name": "Fertilizantes IV",
+            "cost": {
+              "green": 150,
+              "blue": 30
+            },
+            "requires": [
+              "zombie_vineyard"
+            ]
+          },
+          {
+            "id": "fishing_iii",
+            "name": "Pesca III",
+            "cost": {
+              "green": 120
+            },
+            "requires": [
+              "zombie_vineyard"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Caña avanzada",
+                "item": "advanced_rod"
+              },
+              {
+                "kind": "recipe",
+                "name": "Cebo de insectos",
+                "item": "insect_bait"
+              }
+            ]
+          },
+          {
+            "id": "vineyard_improvement",
+            "name": "Mejora del viñedo",
+            "cost": {
+              "green": 175,
+              "blue": 50
+            },
+            "requires": [
+              "fertilizers_iv"
+            ]
+          },
+          {
+            "id": "winemaking",
+            "name": "Vinificación",
+            "cost": {
+              "green": 175,
+              "blue": 20
+            },
+            "requires": [
+              "fertilizers_iv"
+            ]
+          },
+          {
+            "id": "fishing_iv",
+            "name": "Pesca IV",
+            "cost": {
+              "green": 150
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "vineyard_improvement"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Caña profesional",
+                "item": "pro_rod"
+              },
+              {
+                "kind": "recipe",
+                "name": "Cebo vivo",
+                "item": "live_bait"
+              }
+            ]
+          },
+          {
+            "id": "millstone",
+            "name": "Muela de molino",
+            "cost": {
+              "red": 5,
+              "green": 10
+            },
+            "requires": [
+              "gardening"
+            ]
+          },
+          {
+            "id": "bread",
+            "name": "Pan",
+            "cost": {
+              "green": 25
+            },
+            "requires": [
+              "millstone"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Masa",
+                "item": "dough"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pan",
+                "item": "bread"
+              }
+            ]
+          },
+          {
+            "id": "kitchen_ii",
+            "name": "Cocina II",
+            "cost": {
+              "green": 50,
+              "blue": 10
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "bread"
+            ]
+          },
+          {
+            "id": "oven_ii",
+            "name": "Horno de cocina II",
+            "cost": {
+              "green": 60,
+              "blue": 10
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "kitchen_ii"
+            ]
+          },
+          {
+            "id": "bed_improvement",
+            "name": "Mejora de la cama",
+            "cost": {
+              "green": 100,
+              "blue": 20
+            },
+            "requires": [
+              "oven_ii"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "theology",
+    "name": "Teología",
+    "text": [
+      "Las tecnologías de teología incluyen la escritura, los libros, los periódicos y las mejoras de la iglesia. Antes de reservar puntos para una tecnología avanzada, comprueba la reputación que pide además de sus requisitos."
+    ],
+    "image": "GK2/tech_theology",
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "writing_basic",
+            "name": "Escritura básica",
+            "cost": {
+              "red": 5,
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Escritorio",
+                "item": "writing_desk"
+              }
+            ]
+          },
+          {
+            "id": "writing_supplies",
+            "name": "Material de escritura",
+            "cost": {
+              "red": 10,
+              "blue": 5
+            },
+            "requires": [
+              "writing_basic"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Papel limpio",
+                "item": "clean_paper"
+              },
+              {
+                "kind": "recipe",
+                "name": "Tinta",
+                "item": "ink"
+              },
+              {
+                "kind": "recipe",
+                "name": "Kit científico I",
+                "item": "science_kit_i"
+              }
+            ]
+          },
+          {
+            "id": "religious_writing_i",
+            "name": "Escritura religiosa I",
+            "cost": {
+              "red": 5,
+              "green": 5,
+              "blue": 20
+            },
+            "requires": [
+              "writing_basic",
+              "church_cleaning"
+            ]
+          },
+          {
+            "id": "delicate_work",
+            "name": "Trabajo delicado",
+            "cost": {
+              "red": 10,
+              "green": 10,
+              "blue": 15
+            },
+            "requires": [
+              "writing_supplies"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de joyería",
+                "item": "jewelry_table"
+              }
+            ]
+          },
+          {
+            "id": "books_i",
+            "name": "Libros I",
+            "cost": {
+              "red": 20,
+              "green": 20,
+              "blue": 10
+            },
+            "requires": [
+              "writing_supplies"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Cuaderno de tapa blanda en blanco",
+                "item": "blank_softcover_notebook"
+              }
+            ]
+          },
+          {
+            "id": "writing_tools_i",
+            "name": "Útiles de escritura I",
+            "cost": {
+              "green": 80,
+              "blue": 80
+            },
+            "condition": "Necesita 20 de reputación con [**Gunter**](gk2://character/gunter).",
+            "requires": [
+              "books_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kit científico II",
+                "item": "science_kit_ii"
+              }
+            ]
+          },
+          {
+            "id": "newspaper",
+            "name": "Periódico",
+            "cost": {
+              "red": 30,
+              "green": 10,
+              "blue": 20
+            },
+            "condition": "Necesita 20 de reputación con [**Gunter**](gk2://character/gunter).",
+            "requires": [
+              "books_i"
+            ]
+          },
+          {
+            "id": "self_help_books",
+            "name": "Libros de autoayuda",
+            "cost": {
+              "red": 50,
+              "green": 50,
+              "blue": 50
+            },
+            "requires": [
+              "newspaper"
+            ]
+          },
+          {
+            "id": "books_ii",
+            "name": "Libros II",
+            "cost": {
+              "red": 30,
+              "green": 30,
+              "blue": 20
+            },
+            "requires": [
+              "newspaper"
+            ]
+          },
+          {
+            "id": "religious_writing_ii",
+            "name": "Escritura religiosa II",
+            "cost": {
+              "red": 10,
+              "green": 10,
+              "blue": 40
+            },
+            "requires": [
+              "newspaper"
+            ]
+          },
+          {
+            "id": "storytelling_i",
+            "name": "Narración I",
+            "cost": {
+              "green": 80,
+              "blue": 80
+            },
+            "requires": [
+              "books_ii"
+            ]
+          },
+          {
+            "id": "paper_press",
+            "name": "Prensa de papel",
+            "cost": {
+              "red": 50,
+              "blue": 10
+            },
+            "requires": [
+              "books_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Papel limpio",
+                "item": "clean_paper"
+              }
+            ]
+          },
+          {
+            "id": "writing_tools_ii",
+            "name": "Útiles de escritura II",
+            "cost": {
+              "red": 20,
+              "green": 20,
+              "blue": 50
+            },
+            "requires": [
+              "paper_press"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Cuaderno de tapa dura en blanco",
+                "item": "blank_hardcover_notebook"
+              }
+            ]
+          },
+          {
+            "id": "self_help_books_ii",
+            "name": "Libros de autoayuda II",
+            "cost": {
+              "red": 100,
+              "green": 100,
+              "blue": 100
+            },
+            "requires": [
+              "writing_tools_ii"
+            ]
+          },
+          {
+            "id": "fine_jewelry",
+            "name": "Joyería fina",
+            "cost": {
+              "red": 30,
+              "green": 30,
+              "blue": 70
+            },
+            "requires": [
+              "writing_tools_ii"
+            ]
+          },
+          {
+            "id": "church_cleaning",
+            "name": "Limpieza de la iglesia",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco interior I",
+                "item": "interior_bench_i"
+              }
+            ]
+          },
+          {
+            "id": "church_lighting_i",
+            "name": "Luces de la iglesia I",
+            "cost": {
+              "red": 5,
+              "green": 10,
+              "blue": 5
+            },
+            "requires": [
+              "church_cleaning"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Candelabro I",
+                "item": "candelabra_i"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Banco de formulación",
+                "item": "formulation_bench"
+              }
+            ]
+          },
+          {
+            "id": "church_furniture_i",
+            "name": "Mobiliario de la iglesia I",
+            "cost": {
+              "red": 10,
+              "blue": 5
+            },
+            "requires": [
+              "church_cleaning"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Confesionario I",
+                "item": "confession_booth_i"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Altar de la iglesia I",
+                "item": "church_shrine_i"
+              }
+            ]
+          },
+          {
+            "id": "church_smells_i",
+            "name": "Aromas de la iglesia I",
+            "cost": {
+              "red": 10,
+              "green": 50,
+              "blue": 30
+            },
+            "requires": [
+              "church_lighting_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Aromas de la iglesia I",
+                "item": "church_smells_i"
+              }
+            ]
+          },
+          {
+            "id": "church_carpets",
+            "name": "Alfombras de la iglesia",
+            "cost": {
+              "red": 20,
+              "green": 5,
+              "blue": 10
+            },
+            "condition": "Necesita 30 de reputación con la [**Monja**](gk2://character/nun).",
+            "requires": [
+              "church_furniture_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco interior II",
+                "item": "interior_bench_ii"
+              }
+            ]
+          },
+          {
+            "id": "church_lighting_ii",
+            "name": "Luces de la iglesia II",
+            "cost": {
+              "red": 5,
+              "green": 20,
+              "blue": 20
+            },
+            "requires": [
+              "church_carpets"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Candelabro II",
+                "item": "candelabra_ii"
+              }
+            ]
+          },
+          {
+            "id": "church_music_i",
+            "name": "Música de iglesia I",
+            "cost": {
+              "red": 50,
+              "blue": 20
+            },
+            "requires": [
+              "church_carpets"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Partituras",
+                "item": "music_notes"
+              }
+            ]
+          },
+          {
+            "id": "church_smells_ii",
+            "name": "Aromas de la iglesia II",
+            "cost": {
+              "red": 10,
+              "green": 100,
+              "blue": 100
+            },
+            "requires": [
+              "church_lighting_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Aromas de la iglesia II",
+                "item": "church_smells_ii"
+              }
+            ]
+          },
+          {
+            "id": "church_furniture_ii",
+            "name": "Mobiliario de la iglesia II",
+            "cost": {
+              "red": 50,
+              "green": 20,
+              "blue": 30
+            },
+            "requires": [
+              "church_carpets"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Confesionario II",
+                "item": "confession_booth_ii"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Altar de la iglesia II",
+                "item": "church_shrine_ii"
+              }
+            ]
+          },
+          {
+            "id": "church_illumination",
+            "name": "Iluminación de la iglesia",
+            "cost": {
+              "red": 100,
+              "green": 20,
+              "blue": 50
+            },
+            "condition": "Necesita 50 de reputación con la [**Monja**](gk2://character/nun).",
+            "requires": [
+              "church_furniture_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco interior III",
+                "item": "interior_bench_iii"
+              }
+            ]
+          },
+          {
+            "id": "church_lighting_iii",
+            "name": "Luces de la iglesia III",
+            "cost": {
+              "red": 50,
+              "green": 50,
+              "blue": 100
+            },
+            "requires": [
+              "church_illumination"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Candelabro III",
+                "item": "candelabra_iii"
+              }
+            ]
+          },
+          {
+            "id": "church_furniture_iii",
+            "name": "Mobiliario de la iglesia III",
+            "cost": {
+              "red": 100,
+              "green": 70,
+              "blue": 80
+            },
+            "requires": [
+              "church_illumination"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Confesionario III",
+                "item": "confession_booth_iii"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Aromas de la iglesia III",
+                "item": "church_smells_iii"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Altar de la iglesia III",
+                "item": "church_shrine_iii"
+              }
+            ]
+          },
+          {
+            "id": "church_music_ii",
+            "name": "Música de iglesia II",
+            "cost": {
+              "red": 150,
+              "blue": 100
+            },
+            "requires": [
+              "church_illumination"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "anatomy_and_alchemy",
+    "name": "Anatomía y alquimia",
+    "text": [
+      "Las tecnologías de anatomía y alquimia abarcan el trabajo de laboratorio, la reanimación y las mejoras en el tratamiento de cadáveres y en el cementerio. El coste de cada tecnología no incluye el de sus requisitos."
+    ],
+    "image": "GK2/tech_anatomy_and_alchemy",
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "alchemy_basic",
+            "name": "Alquimia: básica",
+            "condition": "Necesita 10 de reputación con [**Albert**](gk2://character/albert).",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Laboratorio I",
+                "item": "laboratory_i"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Estante de matraces",
+                "item": "flask_shelf"
+              }
+            ]
+          },
+          {
+            "id": "alchemy_distillation",
+            "name": "Alquimia: destilación",
+            "cost": {
+              "red": 5,
+              "green": 5
+            },
+            "requires": [
+              "alchemy_basic"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Grasa fundida",
+                "item": "melted_fat"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Cubo de destilación",
+                "item": "distillation_cube"
+              }
+            ]
+          },
+          {
+            "id": "battle_potions_i",
+            "name": "Pociones de combate I",
+            "cost": {
+              "red": 10,
+              "green": 10,
+              "blue": 10
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "alchemy_basic"
+            ]
+          },
+          {
+            "id": "reanimation",
+            "name": "Reanimación",
+            "cost": {
+              "red": 30,
+              "green": 10,
+              "blue": 10
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "alchemy_distillation",
+              "skull_and_teeth"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de resurrección I",
+                "item": "resurrection_table_i"
+              }
+            ]
+          },
+          {
+            "id": "laboratory_ii",
+            "name": "Laboratorio II",
+            "cost": {
+              "red": 20,
+              "green": 40
+            },
+            "requires": [
+              "battle_potions_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Laboratorio II",
+                "item": "laboratory_ii"
+              }
+            ]
+          },
+          {
+            "id": "paint",
+            "name": "Pintura",
+            "cost": {
+              "red": 20,
+              "green": 20
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pintura",
+                "item": "paint"
+              }
+            ]
+          },
+          {
+            "id": "battle_potions_ii",
+            "name": "Pociones de combate II",
+            "cost": {
+              "red": 25,
+              "green": 25,
+              "blue": 25
+            },
+            "requires": [
+              "laboratory_ii"
+            ]
+          },
+          {
+            "id": "lacquer",
+            "name": "Laca",
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "laboratory_ii"
+            ]
+          },
+          {
+            "id": "dynamite",
+            "name": "Dinamita",
+            "cost": {
+              "red": 30,
+              "green": 30
+            },
+            "condition": "Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "battle_potions_ii"
+            ]
+          },
+          {
+            "id": "transmutation_i",
+            "name": "Transmutación I",
+            "cost": {
+              "green": 40,
+              "blue": 40
+            },
+            "requires": [
+              "reanimation_liquid"
+            ]
+          },
+          {
+            "id": "battle_potions_iii",
+            "name": "Pociones de combate III",
+            "cost": {
+              "red": 70,
+              "green": 70,
+              "blue": 70
+            },
+            "requires": [
+              "reanimation_liquid"
+            ]
+          },
+          {
+            "id": "alchemy_advanced",
+            "name": "Alquimia: avanzada",
+            "cost": {
+              "red": 200,
+              "blue": 100
+            },
+            "requires": [
+              "battle_potions_iii"
+            ]
+          },
+          {
+            "id": "practical_potions",
+            "name": "Pociones prácticas",
+            "cost": {
+              "green": 100,
+              "blue": 100
+            },
+            "requires": [
+              "alchemy_advanced"
+            ]
+          },
+          {
+            "id": "crafting_potions",
+            "name": "Pociones de artesanía",
+            "cost": {
+              "red": 100,
+              "green": 80
+            },
+            "requires": [
+              "alchemy_advanced"
+            ]
+          },
+          {
+            "id": "autopsy_basic",
+            "name": "Autopsia: básica",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de autopsias I",
+                "item": "autopsy_table_i"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Palé de cadáveres I",
+                "item": "corpse_pallet_i"
+              }
+            ]
+          },
+          {
+            "id": "body_places_i",
+            "name": "Sitios para cuerpos I",
+            "cost": {
+              "red": 5,
+              "green": 5
+            },
+            "requires": [
+              "autopsy_basic"
+            ]
+          },
+          {
+            "id": "soft_parts",
+            "name": "Partes blandas",
+            "requires": [
+              "autopsy_basic"
+            ]
+          },
+          {
+            "id": "skin_and_bones",
+            "name": "Piel y huesos",
+            "cost": {
+              "green": 5,
+              "blue": 2
+            },
+            "requires": [
+              "soft_parts"
+            ]
+          },
+          {
+            "id": "skull_and_teeth",
+            "name": "Calavera y dientes",
+            "cost": {
+              "red": 5,
+              "blue": 5
+            },
+            "requires": [
+              "skin_and_bones"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Diente",
+                "item": "tooth"
+              }
+            ]
+          },
+          {
+            "id": "autopsy_advanced",
+            "name": "Autopsia: avanzada",
+            "cost": {
+              "blue": 20
+            },
+            "requires": [
+              "skull_and_teeth"
+            ]
+          },
+          {
+            "id": "embalming_i",
+            "name": "Embalsamamiento I",
+            "cost": {
+              "red": 50,
+              "blue": 10
+            },
+            "requires": [
+              "autopsy_advanced"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de embalsamar I",
+                "item": "embalming_table_i"
+              }
+            ]
+          },
+          {
+            "id": "autopsy_master",
+            "name": "Autopsia: maestra",
+            "cost": {
+              "red": 10,
+              "green": 30,
+              "blue": 10
+            },
+            "requires": [
+              "embalming_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de autopsias II",
+                "item": "autopsy_table_ii"
+              }
+            ]
+          },
+          {
+            "id": "body_places_ii",
+            "name": "Sitios para cuerpos II",
+            "cost": {
+              "red": 50,
+              "green": 50
+            },
+            "requires": [
+              "autopsy_master"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Palé de cadáveres II",
+                "item": "corpse_pallet_ii"
+              }
+            ]
+          },
+          {
+            "id": "reanimation_liquid",
+            "name": "Líquido de reanimación",
+            "cost": {
+              "red": 30,
+              "green": 40,
+              "blue": 50
+            },
+            "condition": "Necesita 20 de reputación con [**Gunter**](gk2://character/gunter). Oculta al principio: aparece al avanzar en el juego.",
+            "requires": [
+              "battle_potions_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Alcohol",
+                "item": "alcohol"
+              },
+              {
+                "kind": "recipe",
+                "name": "Líquido de reanimación",
+                "item": "reanimation_liquid"
+              }
+            ]
+          },
+          {
+            "id": "reanimation_ii",
+            "name": "Reanimación II",
+            "cost": {
+              "blue": 100
+            },
+            "requires": [
+              "reanimation_liquid"
+            ],
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Lingote de oro",
+                "item": "golden_ingot"
+              }
+            ]
+          },
+          {
+            "id": "embalming_iii",
+            "name": "Embalsamamiento III",
+            "cost": {
+              "red": 150,
+              "blue": 150
+            },
+            "requires": [
+              "reanimation_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de embalsamar II",
+                "item": "embalming_table_ii"
+              }
+            ]
+          },
+          {
+            "id": "reanimation_iii",
+            "name": "Reanimación III",
+            "cost": {
+              "blue": 300
+            },
+            "requires": [
+              "embalming_iii"
+            ]
+          },
+          {
+            "id": "wooden_sign",
+            "name": "Letrero de madera"
+          },
+          {
+            "id": "wooden_gravestones_i",
+            "name": "Lápidas de madera I",
+            "cost": {
+              "red": 5,
+              "green": 2
+            },
+            "requires": [
+              "wooden_sign"
+            ]
+          },
+          {
+            "id": "graveyard_keeper_i",
+            "name": "Guardián del cementerio I",
+            "cost": {
+              "red": 2,
+              "green": 5
+            },
+            "requires": [
+              "wooden_sign"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco exterior I",
+                "item": "exterior_bench_i"
+              }
+            ]
+          },
+          {
+            "id": "wooden_gravestones_ii",
+            "name": "Lápidas de madera II",
+            "cost": {
+              "red": 20,
+              "blue": 5
+            },
+            "requires": [
+              "wooden_gravestones_i"
+            ]
+          },
+          {
+            "id": "graveyard_keeper_ii",
+            "name": "Guardián del cementerio II",
+            "cost": {
+              "red": 5,
+              "green": 5,
+              "blue": 5
+            },
+            "requires": [
+              "graveyard_keeper_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Monumento I",
+                "item": "monument_i"
+              }
+            ]
+          },
+          {
+            "id": "columbariums_i",
+            "name": "Columbarios I",
+            "cost": {
+              "green": 10,
+              "blue": 10
+            },
+            "requires": [
+              "graveyard_keeper_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Columbario I",
+                "item": "columbarium_i"
+              }
+            ]
+          },
+          {
+            "id": "graveyard_keeper_iii",
+            "name": "Guardián del cementerio III",
+            "cost": {
+              "red": 20,
+              "green": 20
+            },
+            "requires": [
+              "graveyard_keeper_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Parterre I",
+                "item": "flower_bed_i"
+              }
+            ]
+          },
+          {
+            "id": "stone_gravestones_i",
+            "name": "Lápidas de piedra I",
+            "cost": {
+              "red": 50,
+              "blue": 10
+            },
+            "condition": "Necesita 25 de reputación con la [**Monja**](gk2://character/nun).",
+            "requires": [
+              "columbariums_i",
+              "graveyard_keeper_iii"
+            ]
+          },
+          {
+            "id": "graveyard_decor_i",
+            "name": "Decoración del cementerio I",
+            "cost": {
+              "green": 40,
+              "blue": 10
+            },
+            "condition": "Necesita 25 de reputación con la [**Monja**](gk2://character/nun).",
+            "requires": [
+              "columbariums_i",
+              "graveyard_keeper_iii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Farol I",
+                "item": "lantern_i"
+              }
+            ]
+          },
+          {
+            "id": "mixed_graveyard_i",
+            "name": "Cementerio mixto I",
+            "cost": {
+              "red": 30,
+              "green": 30,
+              "blue": 10
+            },
+            "requires": [
+              "graveyard_decor_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Cripta",
+                "item": "crypt"
+              }
+            ]
+          },
+          {
+            "id": "graveyard_keeper_iv",
+            "name": "Guardián del cementerio IV",
+            "cost": {
+              "red": 80,
+              "blue": 20
+            },
+            "requires": [
+              "graveyard_decor_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Monumento II",
+                "item": "monument_ii"
+              }
+            ]
+          },
+          {
+            "id": "graveyard_path_and_fence_i",
+            "name": "Caminos y vallas del cementerio I",
+            "cost": {
+              "red": 20,
+              "green": 20,
+              "blue": 20
+            },
+            "requires": [
+              "mixed_graveyard_i",
+              "graveyard_keeper_iv"
+            ]
+          },
+          {
+            "id": "stone_gravestones_ii",
+            "name": "Lápidas de piedra II",
+            "cost": {
+              "red": 100,
+              "blue": 30
+            },
+            "requires": [
+              "graveyard_path_and_fence_i"
+            ]
+          },
+          {
+            "id": "mixed_graveyard_ii",
+            "name": "Cementerio mixto II",
+            "cost": {
+              "red": 50,
+              "green": 50,
+              "blue": 30
+            },
+            "requires": [
+              "graveyard_path_and_fence_i"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Parterre II",
+                "item": "flower_bed_ii"
+              }
+            ]
+          },
+          {
+            "id": "marble_gravestones_i",
+            "name": "Lápidas de mármol I",
+            "cost": {
+              "red": 200,
+              "blue": 50
+            },
+            "requires": [
+              "stone_gravestones_ii"
+            ]
+          },
+          {
+            "id": "mixed_graveyard_iii",
+            "name": "Cementerio mixto III",
+            "cost": {
+              "red": 80,
+              "green": 80,
+              "blue": 40
+            },
+            "requires": [
+              "mixed_graveyard_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Monumento III",
+                "item": "monument_iii"
+              }
+            ]
+          },
+          {
+            "id": "graveyard_path_and_fence_ii",
+            "name": "Caminos y vallas del cementerio II",
+            "cost": {
+              "red": 100,
+              "green": 100,
+              "blue": 100
+            },
+            "requires": [
+              "marble_gravestones_i",
+              "mixed_graveyard_iii"
+            ]
+          },
+          {
+            "id": "marble_gravestones_ii",
+            "name": "Lápidas de mármol II",
+            "cost": {
+              "red": 300,
+              "blue": 100
+            },
+            "requires": [
+              "graveyard_path_and_fence_ii"
+            ]
+          },
+          {
+            "id": "columbariums_ii",
+            "name": "Columbarios II",
+            "cost": {
+              "green": 150,
+              "blue": 100
+            },
+            "requires": [
+              "graveyard_path_and_fence_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Columbario II",
+                "item": "columbarium_ii"
+              }
+            ]
+          },
+          {
+            "id": "graveyard_decor_ii",
+            "name": "Decoración del cementerio II",
+            "cost": {
+              "red": 200,
+              "green": 100,
+              "blue": 100
+            },
+            "requires": [
+              "marble_gravestones_ii",
+              "columbariums_ii"
+            ],
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco exterior II",
+                "item": "exterior_bench_ii"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Parterre III",
+                "item": "flower_bed_iii"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Farol II",
+                "item": "lantern_ii"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cooking",
+    "name": "Cocina",
+    "text": [
+      "Las 20 tecnologías de cocina no cuestan puntos, pero cada una se desbloquea haciendo algo concreto. Repara la cocina para las primeras recetas y desbloquea los demás platos cosechando, pescando, cocinando y con encargos. Cada tecnología dice cómo se consigue."
+    ],
+    "image": "GK2/tech_cooking",
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "first_snacks",
+            "name": "Primeros tentempiés",
+            "condition": "Repara la Mesa de cocina rota de casa: 2 Tablones de madera y maestría de construcción 3.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Batido de bayas",
+                "item": "berry_smoothie"
+              },
+              {
+                "kind": "recipe",
+                "name": "Yogur",
+                "item": "yogurt"
+              }
+            ]
+          },
+          {
+            "id": "first_dishes",
+            "name": "Primeros platos",
+            "condition": "Repara el Horno de cocina roto de casa: 2 Trozos de piedra y maestría de construcción 3.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Manzana asada",
+                "item": "baked_apple"
+              },
+              {
+                "kind": "recipe",
+                "name": "Setas asadas",
+                "item": "baked_mushrooms"
+              },
+              {
+                "kind": "recipe",
+                "name": "Tarta de bayas",
+                "item": "berry_pie"
+              }
+            ]
+          },
+          {
+            "id": "pastries",
+            "name": "Repostería",
+            "condition": "Termina una tanda de Tarta de bayas en el Horno de cocina. Primeros platos desbloquea esa primera receta de tarta.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Magdalena",
+                "item": "muffin"
+              },
+              {
+                "kind": "recipe",
+                "name": "Cruasán",
+                "item": "croissant"
+              }
+            ]
+          },
+          {
+            "id": "vegetable_dishes",
+            "name": "Platos de verduras",
+            "condition": "Completa el encargo «Sembrado y entregado» de Herm.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Sopa de verduras",
+                "item": "vegetable_soup"
+              }
+            ]
+          },
+          {
+            "id": "carrot_dishes",
+            "name": "Platos de zanahoria",
+            "condition": "Cosecha tus Zanahorias maduras.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Chuleta de zanahoria",
+                "item": "carrot_cutlet"
+              },
+              {
+                "kind": "recipe",
+                "name": "Sopa de zanahoria",
+                "item": "carrot_soup"
+              }
+            ]
+          },
+          {
+            "id": "beet_dishes",
+            "name": "Platos de remolacha",
+            "condition": "Cosecha tus Remolachas maduras.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Remolacha rallada",
+                "item": "grated_beets"
+              },
+              {
+                "kind": "recipe",
+                "name": "Rodajas de remolacha",
+                "item": "beet_slices"
+              }
+            ]
+          },
+          {
+            "id": "cabbage_dishes",
+            "name": "Platos de col",
+            "condition": "Cosecha tus Coles maduras.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Sopa de col",
+                "item": "cabbage_soup"
+              }
+            ]
+          },
+          {
+            "id": "onion_dishes",
+            "name": "Platos de cebolla",
+            "condition": "Cosecha tus Cebollas maduras.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Aros de cebolla",
+                "item": "onion_rings"
+              },
+              {
+                "kind": "recipe",
+                "name": "Tostada con cebolla",
+                "item": "toast_with_onions"
+              }
+            ]
+          },
+          {
+            "id": "pumpkin_dishes",
+            "name": "Platos de calabaza",
+            "condition": "Cosecha tus Calabazas maduras.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Sopa de calabaza",
+                "item": "pumpkin_soup"
+              },
+              {
+                "kind": "recipe",
+                "name": "Calabaza asada",
+                "item": "baked_pumpkin"
+              }
+            ]
+          },
+          {
+            "id": "oh_no",
+            "name": "¡Oh, no!",
+            "condition": "Usa (cómete) Carne del inventario. También da 10 de energía y 10 de locura.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Carne asada",
+                "item": "baked_meat"
+              }
+            ]
+          },
+          {
+            "id": "anyway",
+            "name": "De todos modos...",
+            "condition": "Termina una tanda de Carne asada en el Horno de cocina después de desbloquear ¡Oh, no!.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Lasaña",
+                "item": "lasagna"
+              }
+            ]
+          },
+          {
+            "id": "river_fish_dishes",
+            "name": "Platos de pez de río",
+            "condition": "Completa «El arte silencioso», la entrega de pescado a Herm: 1 Rutilo y 1 Gobio.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Nuggets de pescado",
+                "item": "fish_nuggets"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pescado al horno",
+                "item": "baked_fish"
+              }
+            ]
+          },
+          {
+            "id": "sea_fish_dishes",
+            "name": "Platos de pez de mar",
+            "condition": "Dale al Pescador 5 Filetes de pez de río en la primera entrega de «Pescado para el pescador».",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Sopa de pescado",
+                "item": "fish_soup"
+              },
+              {
+                "kind": "recipe",
+                "name": "Salmón al horno",
+                "item": "baked_salmon"
+              }
+            ]
+          },
+          {
+            "id": "mysterious_fish_dishes",
+            "name": "Platos de pez misterioso",
+            "condition": "Sigue con «Pescado para el pescador» entregando 5 Filetes de pez de mar.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Filete de pez misterioso",
+                "item": "mysterious_fish_fillet"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pastel del pescador",
+                "item": "fisherman_s_pie"
+              }
+            ]
+          },
+          {
+            "id": "soldier_s_food",
+            "name": "Comida de soldado",
+            "condition": "Completa «Golosinas»: lleva de noche 1 Tarta de bayas y 2 Cervezas a los guardias junto al fuego, cerca de la Hangman’s House.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Guiso del soldado",
+                "item": "soldier_s_stew"
+              }
+            ]
+          },
+          {
+            "id": "kraken_steak",
+            "name": "Filete de kraken",
+            "condition": "Pesca un Kraken Jr en el punto de pesca del Port.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Filete de kraken",
+                "item": "kraken_steak"
+              }
+            ]
+          },
+          {
+            "id": "fried_golden_carp",
+            "name": "Carpa dorada frita",
+            "condition": "Pesca una Carpa mítica en el punto de pesca del Village.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Carpa dorada frita",
+                "item": "fried_golden_carp"
+              }
+            ]
+          },
+          {
+            "id": "heavenly_salmon",
+            "name": "Salmón celestial al horno",
+            "condition": "Pesca un Salmón celestial en el punto de pesca del Forest.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Salmón celestial al horno",
+                "item": "heavenly_salmon"
+              }
+            ]
+          },
+          {
+            "id": "elder_s_meal",
+            "name": "Comida del anciano",
+            "condition": "Pesca un Siluro anciano en el punto de pesca del Swamp.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Comida del anciano",
+                "item": "elder_s_meal"
+              }
+            ]
+          },
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "condition": "Empieza el encargo de Chocolate de Linda en «Historia de amor». La receta se desbloquea al empezar el encargo, antes de entregar el Chocolate.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Chocolate",
+                "item": "chocolate"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "talents_and_inspirations",
+    "name": "Talentos e inspiraciones",
+    "text": [
+      "Al hacer cosas ganas puntos de inspiración de cinco colores, que se gastan en ventajas o en subir talentos. Los zombis tienen sus propios niveles de talento y sus ventajas, que también se pueden mejorar; mejorar al guardián y mejorar a un trabajador son formas de progresar distintas.",
+      "Los puntos de inspiración sirven para comprar ventajas o subir talentos. Las tecnologías son una parte aparte del progreso: comprar una tecnología y subir un talento no son lo mismo.",
+      "Los trabajadores zombis tienen sus propios talentos y ventajas, y pueden llevar equipo. Al asignar un zombi a una estación de trabajo le das un oficio.",
+      "Completar un objetivo no siempre da su experiencia gratis: abre la pantalla de inspiraciones y reclámalo pagando la Fe que indica, de tu inventario. Carpintero I cuesta 0 de Fe, Carpintero II cuesta 1 y Carpintero III cuesta 2; el precio cambia según el objetivo y el nivel. Reclamar la recompensa hace avanzar la rama; las tecnologías se compran aparte."
+    ],
+    "image": "GK2/tech_talents_and_inspirations",
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "lumberjack_i",
+            "name": "Leñador I",
+            "condition": "Tala árboles. Objetivo del primer nivel: 5."
+          },
+          {
+            "id": "woodcutter_i",
+            "name": "Hachero I",
+            "condition": "Corta árboles en troncos y leña. Objetivo del primer nivel: 10."
+          },
+          {
+            "id": "carpenter_i",
+            "name": "Carpintero I",
+            "condition": "Completa tandas de carpintería que cuenten. Objetivo del primer nivel: 10. Carpintero I necesita 10 de progreso. Haz Tablas en el Caballete de aserrar o Tablones de madera en un Banco de carpintería: cada tanda terminada suma 1, dé los objetos que dé, así que con diez tandas se completa el primer nivel. El Tronco corto y la Leña no cuentan. También cuentan el Tablón aceitado, las Baratijas de madera, la Viga de madera, la Viga aceitada, el Ensamble de madera, la Madera tallada, las cuatro cañas de pescar que se fabrican y la Silla cómoda."
+          },
+          {
+            "id": "rock_breaker_i",
+            "name": "Picapedrero I",
+            "condition": "Rompe piedras. Objetivo del primer nivel: 3."
+          },
+          {
+            "id": "home_sweet_home_i",
+            "name": "Hogar, dulce hogar I",
+            "condition": "Restaura edificios del pueblo. Objetivo del primer nivel: 1. Necesita la tecnología Puestos del mercado I."
+          },
+          {
+            "id": "shop_owner_i",
+            "name": "Tendero I",
+            "condition": "Devuelve la vida a las tiendas del pueblo. Objetivo del primer nivel: 1. Necesita la tecnología Puestos del mercado I."
+          },
+          {
+            "id": "furniture_maker_i",
+            "name": "Mueblero I",
+            "condition": "Llena los huecos con cosas para sentarse: fabrica kits de muebles. Objetivo del primer nivel: 3. Necesita la tecnología Carpintería II."
+          },
+          {
+            "id": "marble_madness_i",
+            "name": "Locura de mármol I",
+            "condition": "Corta placas de mármol. Objetivo del primer nivel: 5. Necesita la tecnología El concepto del mármol."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -162,6 +162,8 @@ public struct Quest: Codable, Identifiable, Hashable, Sendable {
     /// único dentro del personaje
     public let id: String
     public let name: String
+    /// nombre en la wiki (inglés) cuando `name` está traducido (GK2)
+    public var wikiName: String?
     /// párrafos en Markdown en línea: objetos y personajes como `[**nombre**](gk2://item/<id>)` o `gk2://character/<id>`, amistad como «10 ♥»
     public let text: [String]
     /// DLC al que pertenece, p. ej. "Stranger Sins"
@@ -247,10 +249,43 @@ public struct TechUnlock: Codable, Hashable, Sendable {
 /// Apartado de la guía de logros («Starting Out», «Questlines»…), en el orden de la wiki.
 public struct GuideSection: Codable, Identifiable, Hashable, Sendable {
     public let id: String
+    /// el de la wiki en GK1 (la app lo traduce); en GK2 ya en español
     public let name: String
     /// la wiki lo marca como spoiler (la tabla sale plegada)
     public var spoiler: Bool?
     public let achievements: [Achievement]
+}
+
+/// Guía paso a paso («Beginner Walkthrough» de GK2), en el orden de la wiki.
+public struct Walkthrough: Codable, Hashable, Sendable {
+    public let name: String
+    /// introducción, en Markdown en línea
+    public let text: [String]
+    /// apartado de los hitos: su texto y enlaces; los hitos van en `milestones`
+    public let checklist: WalkthroughStep
+    public let milestones: [Milestone]
+    public let steps: [WalkthroughStep]
+}
+
+/// Hito de la guía («Early progression checklist»).
+public struct Milestone: Codable, Identifiable, Hashable, Sendable {
+    public let id: String
+    public let name: String
+    /// cómo saber que está hecho
+    public let check: String
+}
+
+/// Paso de la guía; el jugador lo marca como hecho (`id` estable).
+public struct WalkthroughStep: Codable, Identifiable, Hashable, Sendable {
+    public let id: String
+    public let name: String
+    /// párrafos en Markdown en línea
+    public let text: [String]
+    /// «**Página** — para qué sirve»; la página enlaza al objeto o personaje si existe
+    public let links: [String]
+    /// objetos y personajes que nombra el texto
+    public var items: [String]?
+    public var characters: [String]?
 }
 
 public struct Achievement: Codable, Identifiable, Hashable, Sendable {

@@ -32,7 +32,7 @@ struct TechnologiesView: View {
                                     icon: "candle",
                                     image: tree.image,
                                     title: tech.name,
-                                    subtitle: tree.name + (state.isResearched(tech, in: tree) ? " · investigada" : "")
+                                    subtitle: tree.name + (state.isResearched(tech, in: tree) ? " · \(tree.doneWord)" : "")
                                 ) { router.openTechTree(tree.id, tech: tech.id) }
                             }
                         }
@@ -48,7 +48,7 @@ struct TechnologiesView: View {
                                     icon: "candle",
                                     image: tree.image,
                                     title: tree.name,
-                                    subtitle: "\(done)/\(techs.count) investigadas" + (tree.dlc.map { " · DLC \($0)" } ?? "")
+                                    subtitle: "\(done)/\(techs.count) \(tree.doneWord)s" + (tree.dlc.map { " · DLC \($0)" } ?? "")
                                 ) { router.openTechTree(tree.id) }
                             }
                         }
@@ -92,7 +92,7 @@ struct TechTreeDetailView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(tree.name).font(.pixelTitle(16))
                         FlowLayout(spacing: 6) {
-                            Tag("\(done)/\(techs.count) investigadas")
+                            Tag("\(done)/\(techs.count) \(tree.doneWord)s")
                             if let dlc = tree.dlc { Tag("DLC \(dlc)") }
                         }
                     }
@@ -139,7 +139,7 @@ struct TechCard: View {
             HStack(alignment: .top, spacing: 10) {
                 Toggle(isOn: Binding(get: { done }, set: { state.setResearched($0, tech, in: tree) })) { EmptyView() }
                     .toggleStyle(PixelCheckboxStyle())
-                    .accessibilityLabel(done ? "Investigada" : "Pendiente")
+                    .accessibilityLabel(done ? tree.doneWord.capitalized : "Pendiente")
                 VStack(alignment: .leading, spacing: 4) {
                     Text(tech.name)
                         .font(.pixelBody(23))
@@ -248,4 +248,9 @@ extension String {
         default: "puntos violeta"
         }
     }
+}
+
+extension TechTree {
+    /// cómo se dice que una está hecha: los talentos (GK2) se consiguen, no se investigan
+    var doneWord: String { id == "talents_and_inspirations" ? "conseguida" : "investigada" }
 }

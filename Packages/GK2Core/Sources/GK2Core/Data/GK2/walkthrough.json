@@ -1,0 +1,184 @@
+{
+  "name": "Guía para principiantes",
+  "text": [
+    "Apunta a tres primeros hitos: 10 de calidad del cementerio, tu primer sermón en la iglesia y la primera batalla de Herbert en el Port. Cuando abras el Port, restaura la tienda de Linda y devuélvele a Gunter sus cartas del tarot para recibir tus primeros trabajadores. Los pasos de abajo enlazan esos primeros objetivos; el cultivo, la pesca y los preparativos del barco pueden avanzar a la vez."
+  ],
+  "steps": [
+    {
+      "id": "bury_a_corpse_and_reach_herbert",
+      "name": "Entierra un cadáver y ve a ver a Herbert",
+      "text": [
+        "En la mesa de planos del cementerio, marca una tumba, cávala con la pala, coloca el cadáver, entiérralo y ponle una señal. Guarda un Certificado de entierro I y habla con Herbert en el Crossroads para «El certificado, por favor»: esa conversación comprueba que llevas el certificado. Después sube la calidad del cementerio a 10 y vuelve a hablar con él para «Esperanzas sepulcrales»."
+      ],
+      "links": [
+        "**Entierros en el cementerio** — Sigue los pasos para colocar y enterrar.",
+        "**Calidad de los cadáveres** — Elige decoraciones que puedan mejorar la nota de la tumba.",
+        "**El certificado, por favor** — Qué certificado hace falta y a quién llevarlo.",
+        "**Esperanzas sepulcrales** — Termina el objetivo de 10 de calidad de Herbert."
+      ],
+      "characters": [
+        "herbert"
+      ]
+    },
+    {
+      "id": "establish_food_materials_and_a_fishing_rod",
+      "name": "Consigue comida, materiales y una caña de pescar",
+      "text": [
+        "Compra semillas de trigo a Herm y cultiva Trigo en tu huerto. «Sembrado y entregado» sugiere de 16 a 20 semillas, pero para la entrega solo hacen falta 5 de Trigo cosechado. Trabaja en el barco de Jack con 5 Tablones de madera, 5 Piezas de bronce y 10 de reputación con el pueblo. Resuelve la disputa de los gemelos y entrega 6 Platos de arcilla para ganar una Caña básica. Son preparativos útiles que se hacen en paralelo; la recompensa de pesca no se indica como requisito de la primera batalla."
+      ],
+      "links": [
+        "**Sembrado y entregado** — Desbloquea el siguiente nivel de comercio de Herm entregándole el Trigo.",
+        "**Jack en un barco** — Prepara los materiales de Jack y recluta a los gemelos.",
+        "**Como dos gotas de agua** — Gana la caña con la entrega de cerámica.",
+        "**Recetas de cocina** — Convierte los ingredientes que tengas en tandas de comida.",
+        "[**Lingote de hierro**](gk2://item/iron_ingot) — Mira el camino del Horno II cuando tus siguientes recetas pidan hierro."
+      ],
+      "items": [
+        "wheat",
+        "wooden_plank",
+        "bronze_detail",
+        "clay_plate",
+        "basic_rod"
+      ],
+      "characters": [
+        "herm",
+        "jack"
+      ]
+    },
+    {
+      "id": "open_the_church_and_hold_a_sermon",
+      "name": "Abre la iglesia y da un sermón",
+      "text": [
+        "Conoce a la Monja en la taberna del pueblo para desbloquear la tecnología Limpieza de la iglesia, luego sube la iglesia a 10 de calidad y habla allí con ella. Da el sermón para terminar «¡Santo cielo!» Las ceremonias normales se celebran el día marcado con el símbolo de la Ira. La asistencia depende tanto de la calidad de la iglesia como de los «me gusta» disponibles, así que, si va poca gente, mejora el más bajo de los dos."
+      ],
+      "links": [
+        "**¡Santo cielo!** — Sigue los objetivos de la primera ceremonia de la Monja.",
+        "**Iglesia y sermones** — Cómo funcionan la asistencia, los «me gusta» y las ceremonias semanales.",
+        "[**Fe**](gk2://item/faith) — Gana Fe para Herbert y para las recompensas de inspiración que desbloquean la maestría."
+      ],
+      "characters": [
+        "nun"
+      ]
+    },
+    {
+      "id": "prepare_herberts_force",
+      "name": "Prepara las tropas de Herbert",
+      "text": [
+        "Dale a Herbert 3 de Fe en el Crossroads para «Se necesita espíritu de lucha». «Espadas y campana» pide 12 de calidad del cuartel y 1 Campana mágica; la receta de la campana usa 1 de Sangre y 1 Lingote de bronce en un yunque. Habla con Herbert delante del cuartel durante «Primero… ¿lodo?» para empezar «Abrirse paso hasta el Port», que exige 12 de poder en total con un escuadrón. Antes de intentarlo, equípate la espada y la armadura del tutorial de defensa del principio: en esa conversación del taller, el artesano te dice que cojas la armadura y la siguiente instrucción te pide equiparte la espada y la armadura que llevas. Esta guía empieza en el primer entierro, después de esa introducción."
+      ],
+      "links": [
+        "**Se necesita espíritu de lucha** — Entrega las 3 de Fe.",
+        "**Espadas y campana** — Termina el cuartel y la campana.",
+        "**Abrirse paso hasta el Port** — Restricciones, órdenes y recompensas de la batalla."
+      ],
+      "items": [
+        "faith",
+        "magic_bell",
+        "blood",
+        "bronze_ingot"
+      ],
+      "characters": [
+        "herbert"
+      ]
+    },
+    {
+      "id": "open_the_shop_and_collect_gunters_workers",
+      "name": "Abre la tienda y recoge los trabajadores de Gunter",
+      "text": [
+        "En el Port, visita a Gunter en la torre del Astrólogo y habla con él de los zombis y del favor que te pide. Linda, en el Dockside Club, tiene sus cartas del tarot, pero quiere que restaures y abastezcas la vieja tienda de al lado. Completa «Puerto seguro», llévale las cartas a Gunter y elige «Take zombies». Vuelve a casa después de su entrega: te dice que llegará por la mañana."
+      ],
+      "links": [
+        "**Puerto seguro** — Reabre la tienda del Port y consigue las cartas.",
+        "**Una amistad escrita en las estrellas** — Cambia las cartas del tarot y recibe a los trabajadores.",
+        "**Trabajadores zombis** — Asígnalos y planea su formación."
+      ],
+      "characters": [
+        "gunter"
+      ]
+    },
+    {
+      "id": "what_to_do_after_the_first_workers",
+      "name": "Qué hacer después de los primeros trabajadores",
+      "text": [
+        "Sigue con «Dulces sueños» junto a Albert para investigar el laboratorio y la sala de resurrección. Atento a «Problemas en la congregación» después de una ceremonia: lleva a la máquina de relaciones públicas y a tu límite semanal de zombis. Para que sigan llegando cadáveres, la siguiente misión de Agatha pide 20 de calidad del cementerio y reparar la alcantarilla del Crossroads. Son ramas de progreso independientes, no un calendario obligatorio día a día."
+      ],
+      "links": [
+        "**Resurrección de zombis** — Prepara la sala, los collares y lo necesario para reanimar.",
+        "**Límite de zombis y máquina de relaciones públicas** — Evita que tener más trabajadores reduzca la asistencia.",
+        "**Entrega de cadáveres** — Recupera las entregas con los encargos de Agatha.",
+        "**Montar la fábrica** — Abre la fábrica y monta una primera línea de producción."
+      ],
+      "characters": [
+        "albert"
+      ]
+    },
+    {
+      "id": "after_the_first_workers_choose_your_next_branch",
+      "name": "Después de los primeros trabajadores: elige tu siguiente rama",
+      "text": [
+        "Para la ruta del laboratorio de Albert, prepara Polvo de sueños. Más adelante, «Tras las luces del hada» pide un Diente y Cola de cometa para fabricar algo en la Mesa de cocina. Para abrir la puerta de la sala de resurrección hace falta Grasa fundida, y para fabricar collares, más tarde, Cristal azul. Sigue los desbloqueos enlazados; no hace falta todo esto para los primeros trabajadores que te entrega Gunter."
+      ],
+      "links": [
+        "[**Polvo de sueños**](gk2://item/dream_dust) — Fabrica el objeto de la primera misión del laboratorio.",
+        "[**Diente**](gk2://item/tooth) — Desbloquea el procesado de Calaveras y prepara el ingrediente del hada.",
+        "[**Grasa fundida**](gk2://item/melted_fat) — Fabrica el material que abre la sala de resurrección.",
+        "[**Cristal azul**](gk2://item/blue_crystal) — Mira en qué nivel lo vende Gunter antes de hacer collares.",
+        "**Resurrección de zombis** — Sigue la ruta completa para hacerte tus propios trabajadores."
+      ],
+      "items": [
+        "dream_dust",
+        "tooth",
+        "comet_s_tail",
+        "melted_fat",
+        "blue_crystal"
+      ],
+      "characters": [
+        "albert",
+        "gunter"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "first_burial",
+      "name": "Primer entierro",
+      "check": "Entierra el cadáver, ponle una señal y llévale a Herbert el Certificado de entierro I."
+    },
+    {
+      "id": "graveyard",
+      "name": "Cementerio",
+      "check": "Llega a 10 de calidad del cementerio para «Esperanzas sepulcrales»."
+    },
+    {
+      "id": "first_church_ceremony",
+      "name": "Primera ceremonia en la iglesia",
+      "check": "Llega a 10 de calidad de la iglesia, habla con la Monja y da el sermón."
+    },
+    {
+      "id": "herberts_preparations",
+      "name": "Preparativos de Herbert",
+      "check": "Dale 3 de Fe y cumple el objetivo de 12 de calidad del cuartel y la Campana mágica."
+    },
+    {
+      "id": "first_port_battle",
+      "name": "Primera batalla en el Port",
+      "check": "Prepara un escuadrón con 12 de poder en total y el equipo inicial."
+    },
+    {
+      "id": "first_workers",
+      "name": "Primeros trabajadores",
+      "check": "Restaura la tienda de Linda, devuélvele a Gunter sus cartas del tarot y elige «Take zombies»."
+    }
+  ],
+  "checklist": {
+    "id": "early_progression_checklist",
+    "name": "Hitos del principio",
+    "text": [
+      "Usa estos hitos para saber cuál es tu siguiente paso. La comida, el cultivo, la pesca y el barco pueden avanzar a la vez que la ruta principal; no es un calendario fijo día a día."
+    ],
+    "links": [
+      "[**Fe**](gk2://item/faith) — Consigue el recurso que pide Herbert y que se usa más adelante.",
+      "**Distribución de la base y la fábrica** — Construye para tu siguiente objetivo en vez de llenar todos los huecos enseguida."
+    ]
+  }
+}

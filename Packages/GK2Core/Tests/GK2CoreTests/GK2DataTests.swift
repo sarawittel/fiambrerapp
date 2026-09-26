@@ -9,7 +9,10 @@ struct GK2DataTests {
     @Test func noCompartenNadaConGK1() {
         let gk1 = GameData.bundled(for: .gk1)
         #expect(data.items != gk1.items && data.recipes != gk1.recipes)
-        #expect(data.days.isEmpty && data.technologies.isEmpty && data.guide.isEmpty)
+        #expect(data.days.isEmpty)
+        #expect(Set(data.guide.flatMap(\.achievements).map(\.id)).isDisjoint(with: gk1.guide.flatMap(\.achievements).map(\.id)))
+        #expect(gk1.walkthrough == nil && data.walkthrough != nil)
+        #expect(Set(data.technologies.map(\.id)) != Set(gk1.technologies.map(\.id)))
         #expect(Set(data.characters.map(\.id)).isDisjoint(with: ["horadric", "bishop", "merchant"]))
         // los ids pueden coincidir, los datos no: en GK2 el lingote de hierro sale de la herrería
         #expect(data.recipe(producing: "iron_ingot")?.station == "Herrería I")
@@ -25,6 +28,90 @@ struct GK2DataTests {
             #expect(r.outputQty > 0, "\(r.id) produce 0 unidades")
             for ing in r.ingredients { #expect(data.item(ing.item) != nil, "\(r.id) → \(ing.item)") }
         }
+    }
+
+    @Test func guiaParaPrincipiantes() throws {
+        let guide = try #require(data.walkthrough)
+        #expect(guide.milestones.map(\.id) == ["first_burial", "graveyard", "first_church_ceremony",
+                                                "herberts_preparations", "first_port_battle", "first_workers"])
+        #expect(guide.milestones.first?.name == "Primer entierro")
+        #expect(guide.steps.first?.id == "bury_a_corpse_and_reach_herbert")
+        #expect(guide.steps.count == 7)
+        // ids únicos: se guardan los pasos hechos
+        #expect(Set(guide.steps.map(\.id)).count == guide.steps.count)
+        for step in [guide.checklist] + guide.steps {
+            #expect(!step.text.isEmpty && !step.links.isEmpty, "\(step.id) vacío")
+            for id in step.items ?? [] { #expect(data.item(id) != nil, "\(step.id) → \(id)") }
+            for id in step.characters ?? [] { #expect(data.character(id) != nil, "\(step.id) → \(id)") }
+            for link in step.links {
+                for match in link.matches(of: #/gk2://(item|character)/([a-z0-9_]+)/#) {
+                    let id = String(match.2)
+                    #expect(match.1 == "item" ? data.item(id) != nil : data.character(id) != nil, "\(step.id) → \(link)")
+                }
+            }
+        }
+        // los nombres del texto en inglés, también en plural («5 Wooden Planks»)
+        let food = try #require(guide.steps.first { $0.id == "establish_food_materials_and_a_fishing_rod" })
+        #expect(food.items == ["wheat", "wooden_plank", "bronze_detail", "clay_plate", "basic_rod"])
+        #expect(food.characters == ["herm", "jack"])
+        #expect(food.links.last?.hasPrefix("[**Lingote de hierro**](gk2://item/iron_ingot)") == true)
+    }
+
+    @Test func logros() throws {
+        #expect(data.guide.map(\.id) == ["crafting_and_gathering", "town_and_graveyard", "story_milestones", "hidden_achievements"])
+        #expect(data.guide.map { $0.spoiler == true } == [false, false, true, true])
+        let all = data.guide.flatMap(\.achievements)
+        #expect(all.count == 38)
+        #expect(Set(all.map(\.id)).count == all.count)
+        for a in all {
+            #expect(!a.text.isEmpty && a.name != a.id, "\(a.id) sin traducir")
+            for id in a.characters ?? [] { #expect(data.character(id) != nil, "\(a.id) → \(id)") }
+        }
+        let farmer = try #require(all.first)
+        #expect(farmer.id == "master_farmer" && farmer.name == "Granjero experto" && farmer.wikiName == "Master Farmer")
+        #expect(farmer.text == ["Has cosechado 100 cultivos. ¡Hay para todo el pueblo!"])
+        #expect(all.first { $0.id == "two_broken_souls" }?.characters == ["jack", "gunter"])
+    }
+
+    @Test func misiones() throws {
+        let givers = data.characters.filter { $0.quests?.isEmpty == false }
+        #expect(givers.flatMap { $0.quests ?? [] }.count == 9)
+        for npc in givers {
+            let ids = (npc.quests ?? []).map(\.id)
+            #expect(Set(ids).count == ids.count, "\(npc.id): misiones repetidas")
+            for q in npc.quests ?? [] {
+                #expect(q.text.count >= 3, "\(q.id) sin etapas")
+                for id in q.items ?? [] { #expect(data.item(id) != nil, "\(q.id) → \(id)") }
+                for id in q.characters ?? [] { #expect(data.character(id) != nil, "\(q.id) → \(id)") }
+            }
+        }
+        let herbert = try #require(data.character("herbert")?.quests)
+        #expect(herbert.map(\.id) == ["certificate_please", "grave_expectations", "fighting_spirit_required", "swords_and_bell"])
+        let peas = try #require(data.character("jeffry")?.quests?.first)
+        #expect(peas.name == "Como dos gotas de agua" && peas.wikiName == "Two Peas in a Pod")
+        // los nombres de misiones en los textos también van en español
+        let food = try #require(data.walkthrough?.steps[1])
+        #expect(food.text[0].contains("«Sembrado y entregado» sugiere"))
+        #expect(food.links[0].hasPrefix("**Sembrado y entregado** — "))
+        // «Clay» no sale de «Clay Plates»
+        #expect(peas.items == ["clay_plate", "basic_rod"])
+        #expect(peas.text[1].hasPrefix("**Busca a los hermanos.** Cruza el puente"))
+    }
+
+    @Test func talentos() throws {
+        // el último árbol de la pestaña Tecnologías: las inspiraciones de primer nivel
+        let tree = try #require(data.technologies.last)
+        #expect(tree.id == "talents_and_inspirations" && tree.name == "Talentos e inspiraciones")
+        #expect(tree.image.flatMap(GameData.imageURL) != nil)
+        #expect(tree.text?.isEmpty == false)
+        #expect(tree.technologies.map(\.id) == ["lumberjack_i", "woodcutter_i", "carpenter_i", "rock_breaker_i",
+                                                 "home_sweet_home_i", "shop_owner_i", "furniture_maker_i", "marble_madness_i"])
+        for tech in tree.technologies { #expect(tech.cost == nil && tech.condition != nil, "\(tech.id)") }
+        let carpenter = try #require(tree.technologies.first { $0.id == "carpenter_i" }?.condition)
+        #expect(carpenter.hasPrefix("Completa tandas de carpintería que cuenten. Objetivo del primer nivel: 10."))
+        #expect(carpenter.contains("Silla cómoda"))
+        #expect(tree.technologies.first { $0.id == "marble_madness_i" }?.condition?
+            .hasSuffix("Necesita la tecnología El concepto del mármol.") == true)
     }
 
     @Test func iconosEImagenesExisten() {
@@ -170,6 +257,40 @@ struct GK2DataTests {
         #expect(data.sellers(of: "board").map(\.id) == ["builder"])
         #expect(data.buyers(of: "board").map(\.id) == ["herm"])
         #expect(data.sellers(of: "blue_crystal").map(\.id) == ["gunter"])
+    }
+
+    @Test func tecnologias() throws {
+        // un árbol por página de «Technology Costs», en su orden, y al final los talentos
+        #expect(data.technologies.map(\.id) == ["building", "metallurgy", "farming", "theology", "anatomy_and_alchemy", "cooking",
+                                                "talents_and_inspirations"])
+        #expect(data.technologies.dropLast().map(\.technologies.count).reduce(0, +) == 226)
+        for tree in data.technologies {
+            let ids = Set(tree.technologies.map(\.id))
+            #expect(ids.count == tree.technologies.count, "\(tree.id): ids repetidos")
+            #expect(tree.image.flatMap(GameData.imageURL) != nil, "\(tree.id) sin imagen")
+            #expect(tree.text?.isEmpty == false)
+            for tech in tree.technologies {
+                for r in tech.requires ?? [] { #expect(ids.contains(r), "\(tree.id)/\(tech.id) → \(r)") }
+                for u in tech.unlocks ?? [] { #expect(u.item.flatMap(data.item) != nil, "\(tree.id)/\(tech.id) → \(u.name)") }
+            }
+        }
+        let building = try #require(data.techTree("building"))
+        #expect(building.name == "Construcción")
+        let chopping = try #require(building.technologies.first { $0.id == "chopping" })
+        #expect(chopping.name == "Corte de leña" && chopping.cost == TechCost(red: 8) && chopping.requires == ["the_concept_of_wood"])
+        // la reputación y las ocultas van en la condición
+        let saw = try #require(building.technologies.first { $0.id == "circular_saw" })
+        #expect(saw.condition == "Necesita 40 de reputación con [**Jack**](gk2://character/jack).")
+        #expect(building.technologies.first { $0.id == "market_stalls_i" }?.cost == nil)
+        // lo que desbloquea sale de las recetas que piden la tecnología
+        #expect(data.technologies(unlocking: "board").map(\.tech.id) == ["the_concept_of_wood"])
+        #expect(data.technologies(unlocking: "furnace_i").first?.tech.unlocks?.first { $0.item == "furnace_i" }?.kind == .blueprint)
+        // «Fabric» está en dos árboles: la receta es de la de Construcción
+        #expect(data.technologies(unlocking: "supply_fabric").map(\.tree.id) == ["building"])
+        // la cocina no cuesta puntos: cada una dice cómo se desbloquea
+        let cooking = try #require(data.techTree("cooking"))
+        #expect(cooking.technologies.allSatisfy { $0.cost == nil && $0.condition != nil })
+        #expect(data.searchTechnologies("tarta").contains { $0.tech.id == "first_dishes" })
     }
 
     @Test func elPlanificadorTerminaConTodasLasRecetas() {
