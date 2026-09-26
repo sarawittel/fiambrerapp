@@ -1,4 +1,4 @@
-# Fiambrera · Graveyard Keeper
+# Fiambrerapp · Graveyard Keeper
 
 App nativa en SwiftUI para **iPhone**: una guía no oficial de *Graveyard Keeper* con estética pixel art. De momento cubre el primer juego; la idea es añadir *Graveyard Keeper 2* después.
 
@@ -23,7 +23,30 @@ open GK2Guia.xcodeproj
 
 - **iPhone**: en *Signing & Capabilities* elige tu *Team*; basta un Apple ID gratuito. Conecta el dispositivo, actívale el *Modo desarrollador* y pulsa ▶. Con cuenta gratuita la instalación caduca a los 7 días; se reinstala con otro ▶.
 - **Simulador**: elige cualquier iPhone del menú de destinos.
-- **Con [iloader](https://github.com/nab138/iloader)**: `./scripts/ipa.sh` genera `build/Fiambrera.ipa` sin firmar; iloader lo firma con tu Apple ID al instalarlo.
+- **Con [iloader](https://github.com/nab138/iloader) + LiveContainer** (recomendado sin Xcode): ver abajo.
+
+### Instalar con iloader y LiveContainer
+
+[iloader](https://github.com/nab138/iloader) firma apps con tu Apple ID (como Xcode) y las instala por USB. Con la opción **LiveContainer + SideStore** instala [LiveContainer](https://github.com/LiveContainer/LiveContainer), una app contenedor que ejecuta otras apps dentro sin instalarlas por separado. Así solo LiveContainer ocupa uno de los **3 huecos** de un Apple ID gratuito y solo hay que renovar su firma. [SideStore](https://sidestore.io) va integrado y renueva la firma desde el propio iPhone.
+
+Instalación (una vez):
+
+1. Conecta el iPhone por cable, abre iloader, inicia sesión con tu Apple ID y pulsa **LiveContainer + SideStore (Stable)**.
+2. **Confía en el certificado**: *Ajustes → General → VPN y gestión de dispositivos*, toca tu Apple ID (en «App de desarrollador») y pulsa *Confiar*. Sin esto la app se cierra al abrirla o sale «Desarrollador no fiable».
+3. **Activa el Modo de desarrollador** (iOS 16+): *Ajustes → Privacidad y seguridad → Modo de desarrollador* (al final). El iPhone se reinicia y pide confirmarlo.
+
+Instalar o actualizar Fiambrerapp:
+
+1. `./scripts/ipa.sh` genera `build/Fiambrerapp.ipa` sin firmar.
+2. Pásalo al iPhone (AirDrop o Archivos).
+3. En LiveContainer pulsa **+** y elige el `.ipa`. Puedes crear un atajo en la pantalla de inicio desde LiveContainer.
+
+A tener en cuenta:
+
+- Con Apple ID gratuito la firma de LiveContainer **caduca a los 7 días**: renuévala desde el SideStore integrado (necesita su VPN local activa). Las apps de dentro no caducan por separado. Si LiveContainer llega a caducar, vuelve a instalarlo con iloader y el cable.
+- Usa siempre el mismo Apple ID; con otro, iOS lo trata como otra app.
+- Los datos de Fiambrerapp viven dentro de LiveContainer: se conservan al actualizar el `.ipa`, pero se pierden si borras la app en LiveContainer o LiveContainer entero.
+- Algunas apps (extensiones, widgets, ciertos permisos) no funcionan dentro del contenedor; esas se instalan aparte con SideStore y ocupan un hueco.
 
 El `.xcodeproj` no se versiona. Si cambias `project.yml` o añades archivos, vuelve a ejecutar `xcodegen generate`.
 
@@ -40,7 +63,7 @@ Packages/GK2Core/            Modelos, datos y calculador (sin UI, con tests)
   Sources/GK2Core/Data/      items.json, recipes.json, days.json, characters.json, stations.json, technologies.json, guide.json, Images/
   Sources/GK2Core/Sprites.swift   Sprites de 8×8 (un carácter por píxel)
 scripts/test.sh              Tests; funciona también sin Xcode
-scripts/ipa.sh               Genera build/Fiambrera.ipa (Release, sin firmar) para iloader
+scripts/ipa.sh               Genera build/Fiambrerapp.ipa (Release, sin firmar) para iloader
 scripts/wiki/                fetch.py + convert.py: importan los datos desde la wiki
 ```
 

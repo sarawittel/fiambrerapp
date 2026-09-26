@@ -12,7 +12,7 @@ open GK2Guia.xcodeproj            # build/run from Xcode (simulator or device)
 
 ./scripts/test.sh                 # GK2Core tests; also works with only the Command Line Tools (adds Testing.framework flags)
 ./scripts/test.sh --filter PlannerTests/deep   # single test (args are passed through to `swift test`)
-./scripts/ipa.sh                  # unsigned Release build/Fiambrera.ipa, to sideload with iloader (it signs with the Apple ID)
+./scripts/ipa.sh                  # unsigned Release build/Fiambrerapp.ipa, to sideload with iloader (it signs with the Apple ID)
 swift test --package-path Packages/GK2Core     # what CI runs (.github/workflows/ci.yml, macos-15)
 ```
 
