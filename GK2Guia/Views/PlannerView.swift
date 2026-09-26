@@ -49,11 +49,12 @@ struct PlannerView: View {
     private var cards: some View {
         let data = state.data
         let matching = Set(data.searchRecipes(query).map(\.id))
+        let stock = state.stock
         let entries = state.plan.keys
             .filter { matching.contains($0) }
             .map { id in
                 let requirements = Planner.requirements(for: [id: state.count(of: id)], recipes: data.recipes, deep: state.deepBreakdown)
-                return (id: id, requirements: requirements, progress: requirements.progress(owned: state.owned))
+                return (id: id, requirements: requirements, progress: requirements.progress(owned: stock))
             }
             .sorted {
                 $0.progress != $1.progress
@@ -157,30 +158,35 @@ private struct MaterialRow: View {
 
     var body: some View {
         let have = state.owned[itemId, default: 0]
-        let missing = max(0, needed - have)
+        let stored = state.storedCount(of: itemId)
+        let missing = max(0, needed - have - stored)
 
         VStack(alignment: .leading, spacing: 6) {
             ViewThatFits(in: .horizontal) {
                 HStack(spacing: 12) {
                     ItemChip(itemId: itemId)
                     Spacer(minLength: 8)
-                    numbers(have: have, missing: missing)
+                    numbers(have: have, stored: stored, missing: missing)
                 }
                 VStack(alignment: .leading, spacing: 6) {
                     ItemChip(itemId: itemId)
-                    numbers(have: have, missing: missing)
+                    numbers(have: have, stored: stored, missing: missing)
                 }
             }
+            inChests
             whereToGet
         }
         .padding(.vertical, 10)
         .opacity(missing == 0 ? 0.6 : 1)
     }
 
-    private func numbers(have: Int, missing: Int) -> some View {
+    private func numbers(have: Int, stored: Int, missing: Int) -> some View {
         HStack(spacing: 14) {
             labeled("Necesito") { Text("\(needed)").font(.pixelBody(26)) }
             labeled("Tengo") { CountField(value: have) { state.setOwned($0, for: itemId) } }
+            if stored > 0 {
+                labeled("Baúles") { Text("\(stored)").font(.pixelBody(26)) }
+            }
             labeled("Faltan") {
                 Text(missing == 0 ? "✓" : "\(missing)")
                     .font(.pixelBody(26))
@@ -193,6 +199,25 @@ private struct MaterialRow: View {
         VStack(spacing: 2) {
             Text(label.uppercased()).font(.pixelTitle(7)).foregroundStyle(Theme.parchmentMuted)
             value()
+        }
+    }
+
+    /// Baúles donde ya está el material; cada uno abre su baúl.
+    @ViewBuilder private var inChests: some View {
+        let stored = state.chests(containing: itemId)
+        if !stored.isEmpty {
+            FlowLayout(spacing: 6) {
+                ForEach(stored, id: \.chest.id) { entry in
+                    Button { router.openChest(entry.chest.id) } label: {
+                        HStack(spacing: 6) {
+                            PixelIcon(name: "chest", size: 16)
+                            Text("\(entry.chest.name) ×\(entry.count)")
+                        }
+                    }
+                    .buttonStyle(.pixel(.button, compact: true))
+                    .accessibilityLabel("\(entry.count) en \(entry.chest.name)")
+                }
+            }
         }
     }
 

@@ -151,6 +151,16 @@ final class AppState {
         }
     }
 
+    /// Unidades del objeto guardadas entre todos los baúles.
+    func storedCount(of itemId: String) -> Int { chests.reduce(0) { $0 + $1.count(of: itemId) } }
+
+    /// Lo que tengo encima (`owned`) más lo guardado en los baúles, para saber lo que falta del plan.
+    var stock: [String: Int] {
+        chests.reduce(into: owned) { stock, chest in
+            for (itemId, count) in chest.items { stock[itemId, default: 0] += count }
+        }
+    }
+
     /// Baúles cuyo nombre, o el de algún objeto que guardan, contiene la búsqueda (sin distinguir tildes).
     /// `items` son los objetos que casan, para decir dónde está lo que se busca.
     func searchChests(_ query: String) -> [(chest: Chest, items: [String])] {
