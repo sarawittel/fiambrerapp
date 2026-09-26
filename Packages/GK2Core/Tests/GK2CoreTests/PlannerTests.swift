@@ -57,4 +57,14 @@ struct PlannerTests {
     func ignoresInvalid() {
         #expect(Planner.requirements(for: ["nope": 3, "r_shelf": 0], recipes: recipes, deep: true).materials.isEmpty)
     }
+
+    @Test("el progreso cuenta cada material hasta lo necesario")
+    func progress() {
+        let req = Requirements(materials: ["plank": 8, "nails": 12], steps: [])
+        #expect(req.progress(owned: [:]) == 0)
+        // 8 tablones de sobra no compensan los clavos: (8 + 2) / 20
+        #expect(req.progress(owned: ["plank": 16, "nails": 2]) == 0.5)
+        #expect(req.progress(owned: ["plank": 8, "nails": 12]) == 1)
+        #expect(Requirements(materials: [:], steps: []).progress(owned: [:]) == 1)
+    }
 }

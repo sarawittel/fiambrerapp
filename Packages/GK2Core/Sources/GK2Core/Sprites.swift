@@ -47,6 +47,7 @@ public enum Sprites {
         "moon": ["...kkk..", "..kyyk..", ".kyyk...", ".kyk....", ".kyk....", ".kyyk...", "..kyyk..", "...kkk.."],
         "anvil": ["........", "kkkkkkkk", "klllllsk", ".kssssk.", "..kssk..", ".kssssk.", "kkkkkkkk", "........"],
         "cauldron": ["...c....", "..c..c..", "kkkkkkkk", "kggcgggk", "kssssssk", "kssssssk", ".kssssk.", ".k....k."],
+        "chest": ["........", ".kkkkkk.", "kbbbbbbk", "kddyyddk", "kkkyykkk", "kbbkkbbk", "kbbbbbbk", "kkkkkkkk"],
         "person": ["..kkkk..", ".kddddk.", ".kdwwdk.", ".kdwwdk.", "..kkkk..", ".kddddk.", "kddddddk", "kkkkkkkk"],
     ]
 

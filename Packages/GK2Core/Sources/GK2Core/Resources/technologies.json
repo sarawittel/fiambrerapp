@@ -1,0 +1,4069 @@
+[
+  {
+    "id": "anatomy_and_alchemy",
+    "name": "Anatomía y alquimia",
+    "text": [
+      "La mitad de este árbol tecnológico trata sobre las [**autopsias**](gk2://item/corpse) y el tipo de órganos que puedes obtener. Se desbloquea con el tutorial.",
+      "La otra mitad, la parte de alquimia, se desbloquea al hablar con la [**anciana**](gk2://character/clotho) en el pantano.",
+      "Una parte muy pequeña trata sobre los [**Zombi**](gk2://item/zombie)s y se desbloquea al hablar con [**Gunter**](gk2://character/gunter).",
+      "A medida que desbloquees más objetos en este árbol, tendrás acceso a mejores técnicas y recursos de autopsia, así como a más aparatos y productos alquímicos.",
+      "Como parte del DLC Game of Crone, al final de este árbol tecnológico se muestran todas las [**bolsas**](gk2://character/tanner) desbloqueadas que puedes fabricar (no están conectadas entre sí ni con nada más)."
+    ],
+    "branches": [
+      {
+        "name": "Anatomía",
+        "text": [
+          "Esta rama se desbloquea en el tutorial al hablar con [**Gerry**](gk2://character/gerry). Para más información sobre las operaciones anatómicas, consulta Morgue."
+        ],
+        "techs": [
+          {
+            "id": "first_slice",
+            "name": "Primer corte",
+            "condition": "Se desbloquea con el tutorial.",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Zona de preparación"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Palé"
+              },
+              {
+                "kind": "extract",
+                "name": "Carne",
+                "item": "flesh"
+              }
+            ]
+          },
+          {
+            "id": "hardspares",
+            "name": "Piezas duras",
+            "cost": {
+              "red": 10,
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "extract",
+                "name": "Calavera",
+                "item": "skull"
+              },
+              {
+                "kind": "extract",
+                "name": "Hueso",
+                "item": "bone"
+              },
+              {
+                "kind": "extract",
+                "name": "Piel",
+                "item": "skin"
+              }
+            ],
+            "requires": [
+              "first_slice"
+            ]
+          },
+          {
+            "id": "softspares",
+            "name": "Piezas blandas",
+            "cost": {
+              "red": 10,
+              "green": 10
+            },
+            "unlocks": [
+              {
+                "kind": "extract",
+                "name": "Sangre",
+                "item": "blood"
+              },
+              {
+                "kind": "extract",
+                "name": "Grasa",
+                "item": "fat"
+              }
+            ],
+            "requires": [
+              "first_slice"
+            ]
+          },
+          {
+            "id": "gentle_butcher",
+            "name": "Carnicero delicado",
+            "cost": {
+              "green": 5,
+              "blue": 25
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Carnicero"
+              }
+            ],
+            "requires": [
+              "hardspares",
+              "softspares"
+            ]
+          },
+          {
+            "id": "important_parts",
+            "name": "Piezas importantes",
+            "cost": {
+              "green": 30
+            },
+            "unlocks": [
+              {
+                "kind": "extract",
+                "name": "Cerebro",
+                "item": "brain"
+              },
+              {
+                "kind": "extract",
+                "name": "Corazón",
+                "item": "heart"
+              },
+              {
+                "kind": "extract",
+                "name": "Intestino",
+                "item": "intestine"
+              }
+            ],
+            "requires": [
+              "softspares"
+            ]
+          },
+          {
+            "id": "anatomy_ii",
+            "name": "Anatomía II",
+            "cost": {
+              "red": 50,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Lugar de preparación II",
+                "item": "preparation_place_ii"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Palé doble"
+              }
+            ],
+            "requires": [
+              "important_parts"
+            ]
+          },
+          {
+            "id": "surgery",
+            "name": "Cirugía",
+            "cost": {
+              "red": 50,
+              "green": 150,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Cirujano"
+              }
+            ],
+            "requires": [
+              "anatomy_ii"
+            ]
+          },
+          {
+            "id": "dark_bodies",
+            "name": "Cuerpos oscuros",
+            "condition": "Completa el encargo del [**Inquisidor**](gk2://character/inquisitor)s",
+            "unlocks": [
+              {
+                "kind": "extract",
+                "name": "Cerebro oscuro",
+                "item": "dark_brain"
+              },
+              {
+                "kind": "extract",
+                "name": "Corazón oscuro",
+                "item": "dark_heart"
+              },
+              {
+                "kind": "extract",
+                "name": "Intestino oscuro",
+                "item": "dark_intestine"
+              }
+            ],
+            "requires": [
+              "anatomy_ii"
+            ]
+          },
+          {
+            "id": "cultist",
+            "name": "Sectario",
+            "cost": {
+              "blue": 300
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Sectario"
+              }
+            ],
+            "requires": [
+              "dark_bodies"
+            ]
+          },
+          {
+            "id": "embalming",
+            "name": "Embalsamamiento",
+            "cost": {
+              "blue": 10,
+              "green": 50
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de embalsamamiento",
+                "item": "embalming_table"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Estante mortuorio"
+              },
+              {
+                "kind": "recipe",
+                "name": "Oración por el reposo",
+                "item": "prayer_for_repose"
+              }
+            ],
+            "requires": [
+              "first_slice",
+              "embalming_liquids"
+            ]
+          },
+          {
+            "id": "embalming_ii",
+            "name": "Embalsamamiento II",
+            "cost": {
+              "blue": 50,
+              "green": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de embalsamamiento",
+                "item": "embalming_table"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Palé refrigerado"
+              }
+            ],
+            "requires": [
+              "embalming"
+            ]
+          },
+          {
+            "id": "second_chance",
+            "name": "Segunda oportunidad",
+            "cost": {
+              "red": 10,
+              "blue": 10
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y registra el armario roto cercano.",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de resurrección"
+              }
+            ]
+          },
+          {
+            "id": "zombie_logistics",
+            "name": "Logística zombi",
+            "cost": {
+              "red": 10,
+              "green": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Puesto del porteador",
+                "item": "porter_station"
+              }
+            ],
+            "requires": [
+              "second_chance"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Alquimia",
+        "text": [
+          "Esta rama se desbloquea al aceptar el encargo de restaurar la memoria de [**Clotho**](gk2://character/clotho). Para más información sobre los distintos procesos, consulta alquimia."
+        ],
+        "techs": [
+          {
+            "id": "the_beginning_of_alchemy",
+            "name": "Los inicios de la alquimia",
+            "cost": {
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Molino de alquimia",
+                "item": "alchemy_mill"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Banco de alquimia (nivel I)",
+                "item": "alchemy_workbench_tier_i"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Batidora manual"
+              }
+            ]
+          },
+          {
+            "id": "embalming_liquids",
+            "name": "Líquidos de embalsamar",
+            "cost": {
+              "green": 30,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco de trabajo de la iglesia"
+              },
+              {
+                "kind": "recipe",
+                "name": "Inyección de lejía",
+                "item": "lye_injection"
+              },
+              {
+                "kind": "recipe",
+                "name": "Inyección de ácido",
+                "item": "acid_injection"
+              }
+            ],
+            "requires": [
+              "the_beginning_of_alchemy"
+            ]
+          },
+          {
+            "id": "embalming_liquids_ii",
+            "name": "Líquidos de embalsamar II",
+            "cost": {
+              "green": 50,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Inyección de pegamento",
+                "item": "glue_injection"
+              },
+              {
+                "kind": "recipe",
+                "name": "Inyección de conservante",
+                "item": "preservative_injection"
+              },
+              {
+                "kind": "recipe",
+                "name": "Inyección restauradora",
+                "item": "restore_injection"
+              }
+            ],
+            "requires": [
+              "embalming_liquids",
+              "advanced_alchemy"
+            ]
+          },
+          {
+            "id": "embalming_liquids_iii",
+            "name": "Líquidos de embalsamar III",
+            "cost": {
+              "green": 80,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Inyección oscura",
+                "item": "dark_injection"
+              },
+              {
+                "kind": "recipe",
+                "name": "Inyección de plata",
+                "item": "silver_injection"
+              },
+              {
+                "kind": "recipe",
+                "name": "Inyección de oro",
+                "item": "gold_injection"
+              }
+            ],
+            "requires": [
+              "embalming_liquids_ii"
+            ]
+          },
+          {
+            "id": "alchemy_storage",
+            "name": "Almacén alquímico",
+            "cost": {
+              "red": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Estante de alquimia"
+              }
+            ],
+            "requires": [
+              "the_beginning_of_alchemy"
+            ]
+          },
+          {
+            "id": "advanced_alchemy",
+            "name": "Alquimia avanzada",
+            "cost": {
+              "green": 20,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco de alquimia (nivel II)",
+                "item": "alchemy_workbench_tier_ii"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Cubo de destilación"
+              }
+            ],
+            "requires": [
+              "alchemy_storage"
+            ]
+          },
+          {
+            "id": "distillate",
+            "name": "Destilado",
+            "cost": {
+              "green": 30,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Cubo de destilación II",
+                "item": "distillation_cube_ii"
+              }
+            ],
+            "requires": [
+              "advanced_alchemy"
+            ]
+          },
+          {
+            "id": "master_of_alchemy",
+            "name": "Maestro de alquimia",
+            "cost": {
+              "green": 100,
+              "blue": 40
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Científico"
+              }
+            ],
+            "requires": [
+              "distillate"
+            ]
+          },
+          {
+            "id": "zombie_alchemy_workbench",
+            "name": "Banco de alquimia zombi",
+            "cost": {
+              "red": 15,
+              "green": 15,
+              "blue": 30
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Descomponedor alquímico zombi",
+                "item": "zombie_alchemy_decomposer"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Banco de alquimia zombi",
+                "item": "zombie_alchemy_workbench"
+              }
+            ],
+            "requires": [
+              "distillate"
+            ]
+          }
+        ]
+      }
+    ],
+    "image": "tech_anatomy_and_alchemy"
+  },
+  {
+    "id": "theology",
+    "name": "Teología",
+    "text": [
+      "Este árbol tecnológico trata sobre la iglesia y el cementerio. Se desbloquea al conocer por primera vez al [**obispo**](gk2://character/bishop). A través de él puedes desbloquear mejores [**Lápida**](gk2://item/gravestone)s y [**vallas**](gk2://item/stone_grave_fence) para mejorar la valoración del cementerio, nuevos objetos para la iglesia que ayudan a aumentar su valoración, y nuevos sermones que otorgan bonificaciones únicas."
+    ],
+    "branches": [
+      {
+        "name": "Fe",
+        "text": [
+          "Esta rama se desbloquea al completar el [**encargo del obispo**](gk2://character/bishop) de subir la valoración del cementerio a 5. Te dará el perk de predicador, que te permite dar sermones en la iglesia local. Más adelante en el árbol podrás elaborar más sermones."
+        ],
+        "techs": [
+          {
+            "id": "faith",
+            "name": "Fe",
+            "condition": "Se desbloquea al reabrir la iglesia",
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Oración por la fe",
+                "item": "prayer_for_faith"
+              },
+              {
+                "kind": "perk",
+                "name": "Predicador"
+              }
+            ]
+          },
+          {
+            "id": "light_of_faith",
+            "name": "Luz de la fe",
+            "cost": {
+              "red": 5,
+              "green": 5,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Candelabro I"
+              },
+              {
+                "kind": "create",
+                "name": "Vela",
+                "item": "candle"
+              },
+              {
+                "kind": "create",
+                "name": "Vela",
+                "item": "candle"
+              }
+            ],
+            "requires": [
+              "faith"
+            ]
+          },
+          {
+            "id": "illumination_of_faith",
+            "name": "Iluminación de la fe",
+            "cost": {
+              "red": 50,
+              "blue": 25
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Candelabro II"
+              },
+              {
+                "kind": "create",
+                "name": "Vela",
+                "item": "candle"
+              },
+              {
+                "kind": "create",
+                "name": "Vidriera",
+                "item": "stained_glass_window"
+              }
+            ],
+            "requires": [
+              "light_of_faith"
+            ]
+          },
+          {
+            "id": "shining_of_faith",
+            "name": "Resplandor de la fe",
+            "cost": {
+              "red": 250,
+              "green": 100,
+              "blue": 100
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Candelabro III",
+                "item": "candelabra_iii"
+              }
+            ],
+            "requires": [
+              "illumination_of_faith",
+              "superpower_of_faith"
+            ]
+          },
+          {
+            "id": "comfort_of_faith",
+            "name": "Consuelo de la fe",
+            "cost": {
+              "red": 10,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco de iglesia"
+              }
+            ],
+            "requires": [
+              "faith"
+            ]
+          },
+          {
+            "id": "power_of_faith",
+            "name": "Poder de la fe",
+            "cost": {
+              "red": 10,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Confesionario"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Altar de madera de la iglesia"
+              },
+              {
+                "kind": "create",
+                "name": "Oración por el arrepentimiento",
+                "item": "prayer_for_repentance"
+              }
+            ],
+            "requires": [
+              "comfort_of_faith"
+            ]
+          },
+          {
+            "id": "softness_of_faith",
+            "name": "Suavidad de la fe",
+            "cost": {
+              "red": 25,
+              "green": 50,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco de iglesia acolchado",
+                "item": "soft_church_bench"
+              }
+            ],
+            "requires": [
+              "power_of_faith"
+            ]
+          },
+          {
+            "id": "superpower_of_faith",
+            "name": "Superpoder de la fe",
+            "cost": {
+              "red": 150,
+              "blue": 250
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Confesionario II"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Altar de piedra de la iglesia",
+                "item": "stone_church_shrine"
+              }
+            ],
+            "requires": [
+              "softness_of_faith"
+            ]
+          },
+          {
+            "id": "smell_of_faith",
+            "name": "Aroma de la fe",
+            "cost": {
+              "red": 10,
+              "green": 30,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Incensario",
+                "item": "incense_burner"
+              },
+              {
+                "kind": "create",
+                "name": "Incienso",
+                "item": "incense"
+              }
+            ],
+            "requires": [
+              "power_of_faith"
+            ]
+          },
+          {
+            "id": "pheromones",
+            "name": "Feromonas",
+            "cost": {
+              "red": 10,
+              "green": 100,
+              "blue": 100
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Incensario II",
+                "item": "incense_burner_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Incienso II",
+                "item": "incense_ii"
+              }
+            ],
+            "requires": [
+              "smell_of_faith"
+            ]
+          },
+          {
+            "id": "business_of_faith",
+            "name": "El negocio de la fe",
+            "cost": {
+              "red": 10,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Folleto",
+                "item": "flyer"
+              },
+              {
+                "kind": "create",
+                "name": "Oración por la prosperidad",
+                "item": "prayer_for_prosperity"
+              }
+            ],
+            "requires": [
+              "faith"
+            ]
+          },
+          {
+            "id": "price_of_faith",
+            "name": "El precio de la fe",
+            "cost": {
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Oración por las donaciones",
+                "item": "prayer_for_donations"
+              },
+              {
+                "kind": "create",
+                "name": "Oración combinada",
+                "item": "combo_prayer"
+              },
+              {
+                "kind": "perk",
+                "name": "Cardenal"
+              }
+            ],
+            "requires": [
+              "business_of_faith"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tumbas",
+        "text": [
+          "Al llegar al cementerio por primera vez, el [**obispo**](gk2://character/bishop) te pedirá que seas el guardián del cementerio. Obtienes acceso al árbol tecnológico para poder mejorar el cementerio hasta una valoración de 5 y completar su encargo. Desbloquear todas estas tecnologías cuesta un total de **1455,155**, y **635** puntos de tecnología."
+        ],
+        "techs": [
+          {
+            "id": "humble_marker",
+            "name": "Marcador humilde",
+            "condition": "Se desbloquea al conocer al [**obispo**](gk2://character/bishop)",
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Marcador de madera",
+                "item": "wooden_marker"
+              }
+            ]
+          },
+          {
+            "id": "simple_gravestones",
+            "name": "Lápidas simples",
+            "cost": {
+              "red": 10,
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de madera",
+                "item": "wooden_grave_fence"
+              },
+              {
+                "kind": "create",
+                "name": "Cruz de madera",
+                "item": "wooden_cross"
+              },
+              {
+                "kind": "create",
+                "name": "Lápida",
+                "item": "gravestone"
+              }
+            ],
+            "requires": [
+              "humble_marker"
+            ]
+          },
+          {
+            "id": "cremation",
+            "name": "Cremación",
+            "cost": {
+              "red": 5,
+              "green": 20,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Lugar para quemar cadáveres",
+                "item": "place_for_burning_corpses"
+              },
+              {
+                "kind": "create",
+                "name": "Urna funeraria de cerámica",
+                "item": "ceramic_funeral_urn"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Columbario de piedra",
+                "item": "stone_columbarium"
+              }
+            ],
+            "requires": [
+              "simple_gravestones"
+            ]
+          },
+          {
+            "id": "graveyard_enchancement",
+            "name": "Mejora del cementerio",
+            "cost": {
+              "red": 40,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Puesto de oración de madera"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Césped",
+                "item": "lawn"
+              }
+            ],
+            "requires": [
+              "cremation"
+            ]
+          },
+          {
+            "id": "cremation_ii",
+            "name": "Cremación II",
+            "cost": {
+              "red": 120,
+              "green": 80,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Urna funeraria de porcelana",
+                "item": "porcelain_funeral_urn"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Columbario de mármol",
+                "item": "marble_columbarium"
+              }
+            ],
+            "requires": [
+              "cremation"
+            ]
+          },
+          {
+            "id": "stone_prayer_station",
+            "name": "Puesto de oración de piedra",
+            "cost": {
+              "red": 150,
+              "blue": 100
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Puesto de oración de piedra",
+                "item": "stone_prayer_station"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Losas de mármol",
+                "item": "marble_flagstones"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Farol",
+                "item": "lantern"
+              }
+            ],
+            "requires": [
+              "cremation_ii"
+            ]
+          },
+          {
+            "id": "stone_gravestones",
+            "name": "Lápidas de piedra",
+            "cost": {
+              "red": 30,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de piedra",
+                "item": "stone_grave_fence"
+              },
+              {
+                "kind": "create",
+                "name": "Cruz de piedra",
+                "item": "stone_cross"
+              },
+              {
+                "kind": "create",
+                "name": "Lápida II",
+                "item": "gravestone_ii"
+              }
+            ],
+            "requires": [
+              "simple_gravestones"
+            ]
+          },
+          {
+            "id": "carved_gravestones",
+            "name": "Lápidas talladas",
+            "cost": {
+              "red": 100,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de piedra II",
+                "item": "stone_grave_fence_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Cruz de piedra II",
+                "item": "stone_cross_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Pedestal de piedra",
+                "item": "stone_plinth"
+              }
+            ],
+            "requires": [
+              "stone_gravestones"
+            ]
+          },
+          {
+            "id": "grave_monuments",
+            "name": "Monumentos funerarios",
+            "cost": {
+              "red": 150,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Escultura de piedra",
+                "item": "stone_sculpture"
+              },
+              {
+                "kind": "create",
+                "name": "Escultura de piedra II",
+                "item": "stone_sculpture_ii"
+              }
+            ],
+            "requires": [
+              "carved_gravestones"
+            ]
+          },
+          {
+            "id": "marble_gravestones",
+            "name": "Lápidas marmóreas",
+            "cost": {
+              "red": 250,
+              "blue": 100
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de mármol",
+                "item": "marble_grave_fence"
+              },
+              {
+                "kind": "create",
+                "name": "Cruz de mármol",
+                "item": "marble_cross"
+              }
+            ],
+            "requires": [
+              "grave_monuments"
+            ]
+          },
+          {
+            "id": "carved_marble_gravestones",
+            "name": "Lápidas de mármol talladas",
+            "cost": {
+              "red": 300,
+              "green": 50,
+              "blue": 150
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de mármol II",
+                "item": "marble_grave_fence_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Cruz de mármol II",
+                "item": "marble_cross_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Pedestal de mármol",
+                "item": "marble_plinth"
+              }
+            ],
+            "requires": [
+              "marble_gravestones"
+            ]
+          },
+          {
+            "id": "crypts",
+            "name": "Criptas",
+            "cost": {
+              "red": 300,
+              "blue": 150
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Escultura de mármol",
+                "item": "marble_sculpture"
+              },
+              {
+                "kind": "create",
+                "name": "Escultura de mármol II",
+                "item": "marble_sculpture_ii"
+              }
+            ],
+            "requires": [
+              "marble_gravestones"
+            ]
+          },
+          {
+            "id": "advanced_gravestones",
+            "name": "Lápidas avanzadas",
+            "condition": "El [**Enterrador**](gk2://character/undertaker) del Refugee camp (DLC Game of Crone) · 5 plata",
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de piedra III",
+                "item": "stone_grave_fence_iii"
+              },
+              {
+                "kind": "create",
+                "name": "Valla de tumba de piedra IV",
+                "item": "stone_grave_fence_iv"
+              },
+              {
+                "kind": "create",
+                "name": "Lápida III",
+                "item": "gravestone_iii"
+              }
+            ],
+            "dlc": "Game of Crone"
+          },
+          {
+            "id": "advanced_gravestones_ii",
+            "name": "Lápidas avanzadas II",
+            "condition": "El [**Enterrador**](gk2://character/undertaker) del Refugee camp (DLC Game of Crone) · 10 plata",
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de piedra V",
+                "item": "stone_grave_fence_v"
+              },
+              {
+                "kind": "create",
+                "name": "Lápida de mármol III",
+                "item": "marble_gravestone_iii"
+              },
+              {
+                "kind": "create",
+                "name": "Valla de tumba de mármol III",
+                "item": "marble_grave_fence_iii"
+              }
+            ],
+            "dlc": "Game of Crone"
+          },
+          {
+            "id": "marble_fences",
+            "name": "Vallas de mármol",
+            "condition": "El [**Enterrador**](gk2://character/undertaker) del Refugee camp (DLC Game of Crone) · 28 plata",
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de mármol IV",
+                "item": "marble_grave_fence_iv"
+              },
+              {
+                "kind": "create",
+                "name": "Valla de tumba de mármol V",
+                "item": "marble_grave_fence_v"
+              }
+            ],
+            "dlc": "Game of Crone"
+          },
+          {
+            "id": "stone_statues",
+            "name": "Estatuas de piedra",
+            "condition": "El [**Enterrador**](gk2://character/undertaker) del Refugee camp (DLC Game of Crone) · 12 plata",
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Escultura de piedra III",
+                "item": "stone_sculpture_iii"
+              },
+              {
+                "kind": "create",
+                "name": "Escultura de piedra IV",
+                "item": "stone_sculpture_iv"
+              }
+            ],
+            "dlc": "Game of Crone"
+          },
+          {
+            "id": "marble_statues",
+            "name": "Estatuas de mármol",
+            "condition": "El [**Enterrador**](gk2://character/undertaker) del Refugee camp (DLC Game of Crone) · 25 plata",
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Escultura de mármol III",
+                "item": "marble_sculpture_iii"
+              },
+              {
+                "kind": "create",
+                "name": "Escultura de mármol IV",
+                "item": "marble_sculpture_iv"
+              }
+            ],
+            "dlc": "Game of Crone"
+          }
+        ]
+      }
+    ],
+    "image": "tech_theology"
+  },
+  {
+    "id": "book_writing",
+    "name": "Escritura de libros",
+    "text": [
+      "Este árbol tecnológico trata sobre la producción de conocimiento y ciencia. Las primeras etapas del árbol tratan los fundamentos de la fabricación de papel y tinta, pero los niveles posteriores cambian cómo puedes usar historias para crear recursos escritos más complejos, útiles para sermones de nivel superior y la fabricación.",
+      "Se desbloquea al alcanzar una valoración del cementerio de 5, hablar con el [**Obispo**](gk2://character/bishop) y reabrir la iglesia."
+    ],
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "research",
+            "name": "Investigación",
+            "condition": "Habla con el [**Obispo**](gk2://character/bishop) y reabre la iglesia",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de estudio",
+                "item": "study_table"
+              },
+              {
+                "kind": "gathering",
+                "name": "Libro estropeado",
+                "item": "ruined_book"
+              },
+              {
+                "kind": "perk",
+                "name": "Mente curiosa"
+              }
+            ]
+          },
+          {
+            "id": "journalist",
+            "name": "Periodista",
+            "cost": {
+              "green": 10,
+              "blue": 5
+            },
+            "condition": "Habla con [**Ms. Charm**](gk2://character/ms_charm)",
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Periodista"
+              }
+            ],
+            "requires": [
+              "research"
+            ]
+          },
+          {
+            "id": "writing",
+            "name": "Escritura",
+            "cost": {
+              "red": 5,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Escritorio"
+              },
+              {
+                "kind": "create",
+                "name": "Notas",
+                "item": "notes"
+              },
+              {
+                "kind": "create",
+                "name": "Capítulo",
+                "item": "chapter"
+              }
+            ],
+            "requires": [
+              "research"
+            ]
+          },
+          {
+            "id": "inventing_stories",
+            "name": "Inventar historias",
+            "cost": {
+              "blue": 25
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Historia",
+                "item": "story"
+              }
+            ],
+            "requires": [
+              "writing"
+            ]
+          },
+          {
+            "id": "random_text_generator",
+            "name": "Generador de texto aleatorio",
+            "cost": {
+              "green": 15,
+              "blue": 20
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Generador de texto aleatorio",
+                "item": "random_text_generator"
+              }
+            ],
+            "requires": [
+              "inventing_stories"
+            ]
+          },
+          {
+            "id": "writing_tricks",
+            "name": "Trucos de escritura",
+            "cost": {
+              "red": 10,
+              "blue": 40
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Oración por la imaginación",
+                "item": "prayer_for_imagination"
+              },
+              {
+                "kind": "perk",
+                "name": "Escritor"
+              }
+            ],
+            "requires": [
+              "inventing_stories"
+            ]
+          },
+          {
+            "id": "books",
+            "name": "Libros",
+            "cost": {
+              "red": 50,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Tapa blanda",
+                "item": "softcover"
+              },
+              {
+                "kind": "create",
+                "name": "Tapa dura",
+                "item": "hard_cover"
+              },
+              {
+                "kind": "create",
+                "name": "Libro",
+                "item": "book"
+              }
+            ],
+            "requires": [
+              "writing"
+            ]
+          },
+          {
+            "id": "playwright",
+            "name": "Dramaturgo",
+            "cost": {
+              "blue": 150
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Dramaturgo"
+              }
+            ],
+            "requires": [
+              "books"
+            ]
+          },
+          {
+            "id": "paper_crafting",
+            "name": "Artesanía de papel",
+            "cost": {
+              "red": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco de trabajo de la iglesia"
+              },
+              {
+                "kind": "create",
+                "name": "Papel de piel de cerdo",
+                "item": "pigskin_paper"
+              },
+              {
+                "kind": "create",
+                "name": "Papel limpio",
+                "item": "clean_paper"
+              }
+            ],
+            "requires": [
+              "research"
+            ]
+          },
+          {
+            "id": "writing_supplies",
+            "name": "Material de escritura",
+            "cost": {
+              "red": 10,
+              "green": 5,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Estante de pergaminos"
+              },
+              {
+                "kind": "create",
+                "name": "Tinta",
+                "item": "ink"
+              },
+              {
+                "kind": "create",
+                "name": "Pluma y tinta",
+                "item": "pen_and_ink"
+              }
+            ],
+            "requires": [
+              "paper_crafting"
+            ]
+          },
+          {
+            "id": "writer_s_inspiration",
+            "name": "Inspiración del escritor",
+            "cost": {
+              "red": 100,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Estantería de libros"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Escritorio II"
+              }
+            ],
+            "requires": [
+              "writing_supplies"
+            ]
+          },
+          {
+            "id": "paper_production",
+            "name": "Producción de papel",
+            "cost": {
+              "red": 50,
+              "green": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Prensa de papel"
+              },
+              {
+                "kind": "create",
+                "name": "Papel limpio",
+                "item": "clean_paper"
+              },
+              {
+                "kind": "create",
+                "name": "Pasta de papel",
+                "item": "paper_glop"
+              }
+            ],
+            "requires": [
+              "writer_s_inspiration"
+            ]
+          },
+          {
+            "id": "a_simple_printing_press",
+            "name": "Imprenta sencilla",
+            "cost": {
+              "red": 100,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Imprenta"
+              },
+              {
+                "kind": "create",
+                "name": "Folleto",
+                "item": "flyer"
+              }
+            ],
+            "requires": [
+              "paper_production"
+            ]
+          },
+          {
+            "id": "complex_printing_press",
+            "name": "Imprenta compleja",
+            "cost": {
+              "red": 100,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Imprenta II"
+              }
+            ],
+            "requires": [
+              "a_simple_printing_press"
+            ]
+          }
+        ]
+      }
+    ],
+    "image": "tech_book_writing"
+  },
+  {
+    "id": "farming_and_nature",
+    "name": "Agricultura y naturaleza",
+    "text": [
+      "Este árbol tecnológico trata sobre la agricultura y la manipulación de la naturaleza. Incluye el cultivo, la recolección de alimentos, los árboles frutales, la apicultura, la producción de vino y cerveza, y la pesca."
+    ],
+    "branches": [
+      {
+        "name": "Agricultura",
+        "text": [
+          "Esta rama se desbloquea al hablar con [**Horadric**](gk2://character/horadric) sobre el huerto, después de leer el cartel de la mesa de planos que hay allí. Para más información sobre el cultivo, consulta agricultura."
+        ],
+        "techs": [
+          {
+            "id": "garden_beds",
+            "name": "Bancales",
+            "condition": "Habla con [**Horadric**](gk2://character/horadric) sobre el huerto",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Bancal vacío"
+              }
+            ]
+          },
+          {
+            "id": "improvement",
+            "name": "Mejora",
+            "cost": {
+              "red": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Baúl"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Bancal con estacas",
+                "item": "garden_bed_with_sticks"
+              }
+            ],
+            "requires": [
+              "garden_beds"
+            ]
+          },
+          {
+            "id": "gardening",
+            "name": "Jardinería",
+            "cost": {
+              "green": 50,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Oración por brotes y raíces",
+                "item": "prayer_for_shoots_and_roots"
+              },
+              {
+                "kind": "perk",
+                "name": "Granjero"
+              }
+            ],
+            "requires": [
+              "improvement"
+            ]
+          },
+          {
+            "id": "zombie_gardening",
+            "name": "Jardinería zombi",
+            "cost": {
+              "green": 20,
+              "blue": 5
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Granja zombi"
+              }
+            ],
+            "requires": [
+              "gardening"
+            ]
+          },
+          {
+            "id": "decay",
+            "name": "Descomposición",
+            "cost": {
+              "green": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Montón de compost",
+                "item": "compost_heap"
+              },
+              {
+                "kind": "create",
+                "name": "Turba",
+                "item": "peat"
+              },
+              {
+                "kind": "gathering",
+                "name": "Gusano",
+                "item": "maggot"
+              }
+            ],
+            "requires": [
+              "garden_beds"
+            ]
+          },
+          {
+            "id": "simple_fertilizers",
+            "name": "Fertilizantes simples",
+            "cost": {
+              "green": 75,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Fertilizante de crecimiento I",
+                "item": "boost_fertilizer_i"
+              },
+              {
+                "kind": "create",
+                "name": "Fertilizante de calidad I",
+                "item": "quality_fertilizer_i"
+              }
+            ],
+            "requires": [
+              "decay"
+            ]
+          },
+          {
+            "id": "complex_fertilizers",
+            "name": "Fertilizantes complejos",
+            "cost": {
+              "green": 150,
+              "blue": 35
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Fertilizante de crecimiento II",
+                "item": "boost_fertilizer_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Fertilizante de calidad II",
+                "item": "quality_fertilizer_ii"
+              }
+            ],
+            "requires": [
+              "simple_fertilizers"
+            ]
+          },
+          {
+            "id": "brewing",
+            "name": "Elaboración de cerveza",
+            "cost": {
+              "green": 100,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Soporte de elaboración"
+              },
+              {
+                "kind": "create",
+                "name": "Jarra de cerveza",
+                "item": "a_mug_of_beer"
+              }
+            ],
+            "requires": [
+              "decay"
+            ]
+          },
+          {
+            "id": "zombie_brewery",
+            "name": "Cervecería zombi",
+            "cost": {
+              "green": 50,
+              "blue": 10
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Cervecería zombi"
+              }
+            ],
+            "requires": [
+              "brewing"
+            ]
+          },
+          {
+            "id": "digestion",
+            "name": "Digestión",
+            "cost": {
+              "green": 20,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Barril de fermentación"
+              },
+              {
+                "kind": "create",
+                "name": "Botella de fermento de manzana",
+                "item": "bottle_of_apple_ferment"
+              },
+              {
+                "kind": "create",
+                "name": "Botella de fermento de bayas",
+                "item": "bottle_of_berry_ferment"
+              }
+            ],
+            "requires": [
+              "brewing"
+            ]
+          },
+          {
+            "id": "strong_alcohol",
+            "name": "Licores fuertes",
+            "cost": {
+              "green": 150,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Destilador de alcohol"
+              },
+              {
+                "kind": "create",
+                "name": "Licor",
+                "item": "booze"
+              }
+            ],
+            "requires": [
+              "digestion",
+              "winemaking"
+            ]
+          },
+          {
+            "id": "blending",
+            "name": "Mezclas",
+            "cost": {
+              "green": 50,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Maestro vinatero"
+              }
+            ],
+            "requires": [
+              "strong_alcohol"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Naturaleza",
+        "text": [
+          "Esta rama se desbloquea al volver del pueblo por primera vez y conocer a [**Gerry**](gk2://character/gerry) cerca del huerto."
+        ],
+        "techs": [
+          {
+            "id": "gathering",
+            "name": "Recolección",
+            "condition": "Vuelve del pueblo",
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Seta comestible",
+                "item": "edible_mushroom"
+              },
+              {
+                "kind": "gathering",
+                "name": "Baya",
+                "item": "berry"
+              },
+              {
+                "kind": "gathering",
+                "name": "Manzana roja",
+                "item": "red_apple"
+              }
+            ]
+          },
+          {
+            "id": "master_gathering",
+            "name": "Recolección experta",
+            "cost": {
+              "green": 5,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Seta roja",
+                "item": "red_mushroom"
+              },
+              {
+                "kind": "perk",
+                "name": "Recolector experto"
+              }
+            ],
+            "requires": [
+              "gathering"
+            ]
+          },
+          {
+            "id": "transplanting",
+            "name": "Trasplante",
+            "cost": {
+              "red": 5,
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Lugar para el arbusto de bayas",
+                "item": "place_for_the_berry_bush"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Lugar para el manzano",
+                "item": "place_for_the_apple_tree"
+              }
+            ],
+            "requires": [
+              "gathering"
+            ]
+          },
+          {
+            "id": "grape_farming",
+            "name": "Cultivo de uva",
+            "cost": {
+              "red": 5,
+              "green": 20,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Espaldera de vid",
+                "item": "vine_trellis"
+              },
+              {
+                "kind": "gathering",
+                "name": "Uvas",
+                "item": "grapes"
+              },
+              {
+                "kind": "gathering",
+                "name": "Lúpulo",
+                "item": "hops"
+              }
+            ],
+            "requires": [
+              "transplanting"
+            ]
+          },
+          {
+            "id": "zombie_vineyard",
+            "name": "Viñedo zombi",
+            "cost": {
+              "red": 25,
+              "green": 125,
+              "blue": 25
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Viñedo zombi"
+              }
+            ],
+            "requires": [
+              "grape_farming"
+            ]
+          },
+          {
+            "id": "winemaking",
+            "name": "Vinificación",
+            "cost": {
+              "red": 50,
+              "green": 20,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Prensa de uvas"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Barril de vinificación"
+              },
+              {
+                "kind": "create",
+                "name": "Vino tinto",
+                "item": "red_wine"
+              }
+            ],
+            "requires": [
+              "grape_farming"
+            ]
+          },
+          {
+            "id": "zombie_winery",
+            "name": "Bodega zombi",
+            "cost": {
+              "red": 100,
+              "green": 50,
+              "blue": 50
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Bodega zombi"
+              }
+            ],
+            "requires": [
+              "winemaking"
+            ]
+          },
+          {
+            "id": "beekeeping",
+            "name": "Apicultura",
+            "cost": {
+              "green": 15
+            },
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Miel",
+                "item": "honey"
+              },
+              {
+                "kind": "gathering",
+                "name": "Cera de abeja",
+                "item": "beeswax"
+              }
+            ],
+            "requires": [
+              "gathering"
+            ]
+          },
+          {
+            "id": "insects",
+            "name": "Insectos",
+            "cost": {
+              "green": 20,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Mariposa",
+                "item": "butterfly"
+              },
+              {
+                "kind": "gathering",
+                "name": "Polilla",
+                "item": "moth"
+              },
+              {
+                "kind": "gathering",
+                "name": "Abeja",
+                "item": "bee"
+              }
+            ],
+            "requires": [
+              "beekeeping"
+            ]
+          },
+          {
+            "id": "bee_domestication",
+            "name": "Domesticación de abejas",
+            "cost": {
+              "red": 30,
+              "green": 50
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Colmena",
+                "item": "bee_hive"
+              }
+            ],
+            "requires": [
+              "insects"
+            ]
+          },
+          {
+            "id": "beefriend",
+            "name": "Amigo de las abejas",
+            "cost": {
+              "green": 20,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Apicultor"
+              }
+            ],
+            "requires": [
+              "bee_domestication"
+            ]
+          }
+        ]
+      }
+    ],
+    "image": "tech_farming_and_nature"
+  },
+  {
+    "id": "smithing",
+    "name": "Herrería",
+    "text": [
+      "Este árbol tecnológico trata sobre el procesamiento de hierro y arena para obtener piezas metálicas, herramientas y vidrio. Se desbloquea al preguntarle al [**herrero**](gk2://character/krezvold) dónde encontrar mineral de hierro."
+    ],
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "iron",
+            "name": "Hierro",
+            "condition": "Habla con el [**herrero**](gk2://character/krezvold)",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Horno"
+              },
+              {
+                "kind": "create",
+                "name": "Lingote de hierro",
+                "item": "iron_ingot"
+              },
+              {
+                "kind": "gathering",
+                "name": "Mineral de hierro",
+                "item": "iron_ore"
+              }
+            ]
+          },
+          {
+            "id": "primitive_forging",
+            "name": "Forja primitiva",
+            "cost": {
+              "red": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Yunque de madera",
+                "item": "wooden_anvil"
+              },
+              {
+                "kind": "create",
+                "name": "Clavos",
+                "item": "nails"
+              },
+              {
+                "kind": "create",
+                "name": "Piezas de hierro simples",
+                "item": "simple_iron_parts"
+              }
+            ],
+            "requires": [
+              "iron"
+            ]
+          },
+          {
+            "id": "tools",
+            "name": "Herramientas",
+            "cost": {
+              "red": 20
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Pala I",
+                "item": "shovel_i"
+              },
+              {
+                "kind": "create",
+                "name": "Pico I",
+                "item": "pickaxe_i"
+              },
+              {
+                "kind": "create",
+                "name": "Hacha I",
+                "item": "axe_i"
+              }
+            ],
+            "requires": [
+              "primitive_forging"
+            ]
+          },
+          {
+            "id": "advanced_forging",
+            "name": "Forja avanzada",
+            "cost": {
+              "red": 40,
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Yunque",
+                "item": "anvil"
+              },
+              {
+                "kind": "create",
+                "name": "Piezas de hierro complejas",
+                "item": "complex_iron_parts"
+              },
+              {
+                "kind": "create",
+                "name": "Cincel de hierro",
+                "item": "iron_chisel"
+              }
+            ],
+            "requires": [
+              "primitive_forging"
+            ]
+          },
+          {
+            "id": "inborn_blacksmith",
+            "name": "Herrero nato",
+            "cost": {
+              "red": 20,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Herrero"
+              }
+            ],
+            "requires": [
+              "advanced_forging"
+            ]
+          },
+          {
+            "id": "weapons",
+            "name": "Armas",
+            "cost": {
+              "red": 55,
+              "green": 25
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Espada",
+                "item": "sword"
+              },
+              {
+                "kind": "create",
+                "name": "Armadura de hierro",
+                "item": "iron_armor"
+              }
+            ],
+            "requires": [
+              "advanced_forging"
+            ]
+          },
+          {
+            "id": "martial_skills",
+            "name": "Artes marciales",
+            "cost": {
+              "red": 10,
+              "blue": 75
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Oración por la retribución",
+                "item": "prayer_for_retribution"
+              },
+              {
+                "kind": "create",
+                "name": "Oración por la protección",
+                "item": "prayer_for_protection"
+              },
+              {
+                "kind": "perk",
+                "name": "Grandullón"
+              }
+            ],
+            "requires": [
+              "weapons"
+            ]
+          },
+          {
+            "id": "steel",
+            "name": "Acero",
+            "cost": {
+              "red": 100,
+              "green": 50,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Yunque II",
+                "item": "anvil_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Cincel de acero",
+                "item": "steel_chisel"
+              },
+              {
+                "kind": "create",
+                "name": "Martillo de hierro",
+                "item": "iron_hammer"
+              }
+            ],
+            "requires": [
+              "advanced_forging",
+              "advanced_smelting"
+            ]
+          },
+          {
+            "id": "steel_weapons",
+            "name": "Armas de acero",
+            "cost": {
+              "red": 100,
+              "green": 20,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Espada de acero",
+                "item": "steel_sword"
+              },
+              {
+                "kind": "create",
+                "name": "Armadura de acero",
+                "item": "steel_armor"
+              }
+            ],
+            "requires": [
+              "steel"
+            ]
+          },
+          {
+            "id": "skilled_casting",
+            "name": "Fundición experta",
+            "cost": {
+              "red": 300,
+              "green": 50,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Espada de acero con gema",
+                "item": "steel_sword_with_gem"
+              },
+              {
+                "kind": "create",
+                "name": "Espada de damasco con gema",
+                "item": "damask_sword_with_gem"
+              }
+            ],
+            "requires": [
+              "steel_weapons"
+            ]
+          },
+          {
+            "id": "sword_master",
+            "name": "Maestro espadachín",
+            "cost": {
+              "red": 50,
+              "blue": 100
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Maestro espadachín"
+              }
+            ],
+            "requires": [
+              "steel_weapons"
+            ]
+          },
+          {
+            "id": "engineer",
+            "name": "Ingeniero",
+            "cost": {
+              "red": 50,
+              "blue": 100
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Oración por la excelencia",
+                "item": "prayer_for_excellence"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Bomba de agua"
+              },
+              {
+                "kind": "perk",
+                "name": "Ingeniero"
+              }
+            ],
+            "requires": [
+              "steel"
+            ]
+          },
+          {
+            "id": "steel_tools",
+            "name": "Herramientas de acero",
+            "cost": {
+              "red": 100
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Hacha II",
+                "item": "axe_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Pala II",
+                "item": "shovel_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Pico II",
+                "item": "pickaxe_ii"
+              }
+            ],
+            "requires": [
+              "steel"
+            ]
+          },
+          {
+            "id": "advanced_smelting",
+            "name": "Fundición avanzada",
+            "cost": {
+              "red": 50,
+              "green": 20,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Horno II",
+                "item": "furnace_ii"
+              },
+              {
+                "kind": "create",
+                "name": "Lingote de acero",
+                "item": "steel_ingot"
+              }
+            ],
+            "requires": [
+              "primitive_forging"
+            ]
+          },
+          {
+            "id": "rules_of_burning",
+            "name": "Normas de combustión",
+            "cost": {
+              "red": 10,
+              "green": 50,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Red de faroles"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Lugar para farol"
+              },
+              {
+                "kind": "perk",
+                "name": "Fogonero"
+              }
+            ],
+            "requires": [
+              "advanced_smelting"
+            ]
+          },
+          {
+            "id": "iron_castings",
+            "name": "Fundición de hierro",
+            "cost": {
+              "red": 200,
+              "green": 50,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Horno III",
+                "item": "furnace_iii"
+              },
+              {
+                "kind": "create",
+                "name": "Piezas de acero",
+                "item": "steel_parts"
+              }
+            ],
+            "requires": [
+              "advanced_smelting"
+            ]
+          },
+          {
+            "id": "jeweler",
+            "name": "Joyero",
+            "cost": {
+              "red": 100,
+              "green": 50,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Lingote de plata",
+                "item": "silver_ingot"
+              },
+              {
+                "kind": "create",
+                "name": "Lingote de oro",
+                "item": "gold_ingot"
+              }
+            ],
+            "requires": [
+              "iron_castings"
+            ]
+          },
+          {
+            "id": "precious_little_things",
+            "name": "Pequeñas preciosidades",
+            "cost": {
+              "red": 150,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mesa de joyería",
+                "item": "jewelry_table"
+              },
+              {
+                "kind": "create",
+                "name": "Piezas de joyería de oro",
+                "item": "gold_jewelry_details"
+              },
+              {
+                "kind": "create",
+                "name": "Joyas",
+                "item": "jewelry"
+              }
+            ],
+            "requires": [
+              "jeweler"
+            ]
+          },
+          {
+            "id": "glass",
+            "name": "Vidrio",
+            "cost": {
+              "red": 10,
+              "green": 10
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Vidrio",
+                "item": "glass"
+              }
+            ],
+            "requires": [
+              "iron"
+            ]
+          },
+          {
+            "id": "glass_blower",
+            "name": "Soplador de vidrio",
+            "cost": {
+              "red": 30,
+              "green": 10,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Matraces cónicos",
+                "item": "conical_flasks"
+              }
+            ],
+            "requires": [
+              "glass"
+            ]
+          },
+          {
+            "id": "glass_blower_ii",
+            "name": "Soplador de vidrio II",
+            "cost": {
+              "red": 50,
+              "green": 10,
+              "blue": 30
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Matraces cónicos avanzados",
+                "item": "advanced_conical_flasks"
+              },
+              {
+                "kind": "create",
+                "name": "Lente",
+                "item": "lens"
+              }
+            ],
+            "requires": [
+              "glass_blower"
+            ]
+          }
+        ]
+      }
+    ],
+    "image": "tech_smithing"
+  },
+  {
+    "id": "building",
+    "name": "Construcción",
+    "text": [
+      "Este árbol tecnológico trata principalmente sobre el procesamiento de madera, piedra y tierra para obtener productos más elaborados."
+    ],
+    "branches": [
+      {
+        "name": "Madera",
+        "text": [
+          "Esta rama se desbloquea en el tutorial al hablar primero con el [**obispo**](gk2://character/bishop). La mayor parte del trabajo con madera se hace en el patio de trabajo."
+        ],
+        "techs": [
+          {
+            "id": "the_concept_of_wood",
+            "name": "El concepto de madera",
+            "condition": "Habla con el [**obispo**](gk2://character/bishop)",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Acopio de madera",
+                "item": "timber_stockpile"
+              },
+              {
+                "kind": "gathering",
+                "name": "Tronco",
+                "item": "log"
+              },
+              {
+                "kind": "gathering",
+                "name": "Palo de madera",
+                "item": "wooden_stick"
+              }
+            ]
+          },
+          {
+            "id": "sawing",
+            "name": "Aserrado",
+            "cost": {
+              "red": 5,
+              "green": 2
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Caballete de aserrar",
+                "item": "sawhorse"
+              },
+              {
+                "kind": "create",
+                "name": "Tabla",
+                "item": "flitch"
+              },
+              {
+                "kind": "create",
+                "name": "Taco de madera",
+                "item": "wood_billet"
+              }
+            ],
+            "requires": [
+              "the_concept_of_wood"
+            ]
+          },
+          {
+            "id": "firewood",
+            "name": "Leña",
+            "cost": {
+              "red": 10,
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Zona de corte",
+                "item": "chopping_spot"
+              },
+              {
+                "kind": "create",
+                "name": "Leña",
+                "item": "firewood"
+              },
+              {
+                "kind": "create",
+                "name": "Cuña de madera",
+                "item": "wood_wedge"
+              }
+            ],
+            "requires": [
+              "sawing"
+            ]
+          },
+          {
+            "id": "woodcutter",
+            "name": "Leñador",
+            "cost": {
+              "red": 50,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Tronco",
+                "item": "log"
+              },
+              {
+                "kind": "perk",
+                "name": "Leñador"
+              }
+            ],
+            "requires": [
+              "firewood"
+            ]
+          },
+          {
+            "id": "zombie_woodcutting",
+            "name": "Tala zombi",
+            "cost": {
+              "red": 10,
+              "green": 10,
+              "blue": 5
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Empezar a construir el aserradero"
+              }
+            ],
+            "requires": [
+              "woodcutter"
+            ]
+          },
+          {
+            "id": "woodworking",
+            "name": "Carpintería",
+            "cost": {
+              "red": 20,
+              "green": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco de carpintero"
+              },
+              {
+                "kind": "create",
+                "name": "Tablón de madera",
+                "item": "wooden_plank"
+              },
+              {
+                "kind": "create",
+                "name": "Kit de reparación de madera",
+                "item": "wood_repair_kit"
+              }
+            ],
+            "requires": [
+              "sawing"
+            ]
+          },
+          {
+            "id": "assembly_stand",
+            "name": "Soporte de montaje",
+            "cost": {
+              "red": 200,
+              "green": 50,
+              "blue": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Banco de carpintero II"
+              },
+              {
+                "kind": "create",
+                "name": "Ensamblaje",
+                "item": "jointing"
+              }
+            ],
+            "requires": [
+              "woodworking"
+            ]
+          },
+          {
+            "id": "fine_woodworking",
+            "name": "Ebanistería fina",
+            "cost": {
+              "red": 300,
+              "green": 50,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Madera tallada",
+                "item": "carved_wood"
+              }
+            ],
+            "requires": [
+              "assembly_stand"
+            ]
+          },
+          {
+            "id": "circular_saw",
+            "name": "Sierra circular",
+            "cost": {
+              "red": 200,
+              "green": 20,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Sierra circular"
+              },
+              {
+                "kind": "create",
+                "name": "Viga de madera",
+                "item": "wooden_beam"
+              }
+            ],
+            "requires": [
+              "woodworking"
+            ]
+          },
+          {
+            "id": "tricks_of_the_trade",
+            "name": "Trucos del oficio",
+            "cost": {
+              "red": 50,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Oración por la excelencia",
+                "item": "prayer_for_excellence"
+              },
+              {
+                "kind": "perk",
+                "name": "Carpintero"
+              },
+              {
+                "kind": "perk",
+                "name": "Cantero"
+              }
+            ],
+            "requires": [
+              "circular_saw",
+              "stone_carving"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Piedra",
+        "text": [
+          "Esta rama se desbloquea en el tutorial al hablar primero con el [**obispo**](gk2://character/bishop). La mayor parte del trabajo con piedra se hace en el patio de trabajo."
+        ],
+        "techs": [
+          {
+            "id": "the_concept_of_stone",
+            "name": "El concepto de piedra",
+            "condition": "Habla con el [**obispo**](gk2://character/bishop)",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Acopio de piedra"
+              },
+              {
+                "kind": "gathering",
+                "name": "Roca de piedra"
+              }
+            ]
+          },
+          {
+            "id": "stoneworking",
+            "name": "Cantería",
+            "cost": {
+              "red": 15,
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Cortapiedras"
+              },
+              {
+                "kind": "create",
+                "name": "Pieza de piedra",
+                "item": "a_piece_of_stone"
+              },
+              {
+                "kind": "create",
+                "name": "Kit de reparación de piedra",
+                "item": "stone_repair_kit"
+              }
+            ],
+            "requires": [
+              "the_concept_of_stone"
+            ]
+          },
+          {
+            "id": "stone_carving",
+            "name": "Talla de piedra",
+            "cost": {
+              "red": 150,
+              "green": 70,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Cortapiedras II"
+              },
+              {
+                "kind": "create",
+                "name": "Ladrillo de piedra pulido",
+                "item": "a_polished_brick_of_stone"
+              },
+              {
+                "kind": "create",
+                "name": "Pieza de piedra tallada",
+                "item": "a_carved_piece_of_stone"
+              }
+            ],
+            "requires": [
+              "stoneworking"
+            ]
+          },
+          {
+            "id": "marble_quarrying",
+            "name": "Cantería de mármol",
+            "cost": {
+              "red": 200,
+              "green": 200,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Pieza de mármol",
+                "item": "a_piece_of_marble"
+              },
+              {
+                "kind": "create",
+                "name": "Kit de reparación de mármol",
+                "item": "marble_repair_kit"
+              },
+              {
+                "kind": "gathering",
+                "name": "Roca de mármol grande"
+              }
+            ],
+            "requires": [
+              "stone_carving"
+            ]
+          },
+          {
+            "id": "the_art_of_stone",
+            "name": "El arte de la piedra",
+            "cost": {
+              "red": 300,
+              "green": 50,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Ladrillo de mármol pulido",
+                "item": "a_polished_brick_of_marble"
+              },
+              {
+                "kind": "create",
+                "name": "Pieza de mármol tallada",
+                "item": "a_carved_piece_of_marble"
+              }
+            ],
+            "requires": [
+              "marble_quarrying"
+            ]
+          },
+          {
+            "id": "zombie_quarrying_i",
+            "name": "Cantería zombi I",
+            "cost": {
+              "red": 10,
+              "green": 10,
+              "blue": 5
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Cantera de piedra zombi"
+              }
+            ],
+            "requires": [
+              "stone_carving"
+            ]
+          },
+          {
+            "id": "zombie_quarrying_ii",
+            "name": "Cantería zombi II",
+            "cost": {
+              "red": 20,
+              "green": 10
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Cantera de mármol zombi"
+              }
+            ],
+            "requires": [
+              "zombie_quarrying_i",
+              "marble_quarrying"
+            ]
+          },
+          {
+            "id": "mining",
+            "name": "Minería",
+            "cost": {
+              "red": 10,
+              "green": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Acopio de mineral de hierro"
+              },
+              {
+                "kind": "gathering",
+                "name": "Carbón",
+                "item": "coal"
+              },
+              {
+                "kind": "gathering",
+                "name": "Mineral de hierro",
+                "item": "iron_ore"
+              }
+            ],
+            "requires": [
+              "the_concept_of_stone"
+            ]
+          },
+          {
+            "id": "zombie_mining",
+            "name": "Minería zombi",
+            "cost": {
+              "red": 10,
+              "green": 10,
+              "blue": 5
+            },
+            "condition": "Habla con [**Gunter**](gk2://character/gunter) y desentierra el [**Zombi**](gk2://item/zombie) enterrado",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Mina de mineral zombi"
+              }
+            ],
+            "requires": [
+              "mining"
+            ]
+          },
+          {
+            "id": "precious_metals",
+            "name": "Metales preciosos",
+            "cost": {
+              "red": 10,
+              "green": 50,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Grafito",
+                "item": "graphite"
+              },
+              {
+                "kind": "gathering",
+                "name": "Pepita de oro",
+                "item": "gold_nugget"
+              },
+              {
+                "kind": "gathering",
+                "name": "Pepita de plata",
+                "item": "silver_nugget"
+              }
+            ],
+            "requires": [
+              "mining"
+            ]
+          },
+          {
+            "id": "related_ore",
+            "name": "Mineral asociado",
+            "cost": {
+              "red": 10,
+              "green": 100,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Pirita",
+                "item": "pyrite"
+              },
+              {
+                "kind": "gathering",
+                "name": "Azufre",
+                "item": "sulfur"
+              },
+              {
+                "kind": "gathering",
+                "name": "Caliza",
+                "item": "limestone"
+              }
+            ],
+            "requires": [
+              "precious_metals"
+            ]
+          },
+          {
+            "id": "scent_of_gold",
+            "name": "Olor a oro",
+            "cost": {
+              "green": 50,
+              "blue": 100
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Minero"
+              }
+            ],
+            "requires": [
+              "related_ore"
+            ]
+          },
+          {
+            "id": "gems",
+            "name": "Gemas",
+            "cost": {
+              "red": 100,
+              "green": 200,
+              "blue": 50
+            },
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Diamante tallado",
+                "item": "faceted_diamond"
+              }
+            ],
+            "requires": [
+              "related_ore"
+            ]
+          },
+          {
+            "id": "best_friend",
+            "name": "Mejor amigo",
+            "cost": {
+              "blue": 150
+            },
+            "unlocks": [
+              {
+                "kind": "perk",
+                "name": "Joyero"
+              }
+            ],
+            "requires": [
+              "gems"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Arcilla",
+        "text": [
+          "Esta rama se desbloquea al recibir el [**encargo de los cuencos de arcilla**](gk2://character/bishop) del [**obispo**](gk2://character/bishop)."
+        ],
+        "techs": [
+          {
+            "id": "the_concept_of_dirt",
+            "name": "El concepto de tierra",
+            "condition": "Haz cuencos de arcilla para el [**obispo**](gk2://character/bishop)",
+            "unlocks": [
+              {
+                "kind": "gathering",
+                "name": "Arena de río",
+                "item": "river_sand"
+              },
+              {
+                "kind": "gathering",
+                "name": "Arcilla",
+                "item": "clay"
+              }
+            ]
+          },
+          {
+            "id": "clay",
+            "name": "Arcilla",
+            "cost": {
+              "red": 5,
+              "green": 5
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Torno de alfarero"
+              },
+              {
+                "kind": "create",
+                "name": "Cuencos de cerámica",
+                "item": "ceramic_bowls"
+              },
+              {
+                "kind": "create",
+                "name": "Pasta de pulir",
+                "item": "polishing_paste"
+              }
+            ],
+            "requires": [
+              "the_concept_of_dirt"
+            ]
+          },
+          {
+            "id": "ceramic_firing",
+            "name": "Cocción de cerámica",
+            "cost": {
+              "red": 20,
+              "green": 10,
+              "blue": 5
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Jarra de cerámica",
+                "item": "ceramic_jug"
+              },
+              {
+                "kind": "create",
+                "name": "Jarra de porcelana",
+                "item": "porcelain_pitcher"
+              }
+            ],
+            "requires": [
+              "clay"
+            ]
+          }
+        ]
+      }
+    ],
+    "image": "tech_building"
+  },
+  {
+    "id": "cookery",
+    "name": "Cocina",
+    "text": [
+      "La pestaña de cocina se va desbloqueando a medida que descubres los ingredientes necesarios para preparar platos. Para las recetas, consulta cocina. Este árbol tecnológico se desbloquea al hacer tu primer corte."
+    ],
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "simple_and_tasty",
+            "name": "Sencillo y sabroso",
+            "condition": "Coge (y usa) [**Receta: sencillo y sabroso**](gk2://item/recipe_simple_and_tasty) del baúl del sótano.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Setas asadas",
+                "item": "baked_mushrooms"
+              },
+              {
+                "kind": "recipe",
+                "name": "Manzana asada",
+                "item": "baked_apple"
+              }
+            ]
+          },
+          {
+            "id": "sweet_baking_pastries",
+            "name": "Repostería (pasteles dulces)",
+            "condition": "Cómpralo a [**Miss Chain**](gk2://character/miss_chain) por 2 plata.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Tortitas",
+                "item": "pancakes"
+              },
+              {
+                "kind": "recipe",
+                "name": "Cruasán",
+                "item": "croissant"
+              },
+              {
+                "kind": "recipe",
+                "name": "Magdalena",
+                "item": "muffin"
+              }
+            ]
+          },
+          {
+            "id": "pies",
+            "name": "Pasteles",
+            "condition": "Cómpralo a [**Miss Chain**](gk2://character/miss_chain) por 1 plata.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pastel de bayas",
+                "item": "berry_pie"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pastel de uva",
+                "item": "grape_pie"
+              }
+            ]
+          },
+          {
+            "id": "cake",
+            "name": "Tarta",
+            "condition": "Entrega 5 × [**Miel**](gk2://item/honey) a [**Dig**](gk2://character/dig).",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Tarta",
+                "item": "cake"
+              }
+            ]
+          },
+          {
+            "id": "vegetable_dishes",
+            "name": "Platos de verdura",
+            "condition": "Pregunta al [**granjero**](gk2://character/farmer) sobre el cultivo.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Croqueta de zanahoria",
+                "item": "carrot_cutlet"
+              },
+              {
+                "kind": "recipe",
+                "name": "Cuenco de chucrut",
+                "item": "a_bowl_of_sauerkraut"
+              },
+              {
+                "kind": "recipe",
+                "name": "Rodajas de remolacha",
+                "item": "beet_slices"
+              }
+            ]
+          },
+          {
+            "id": "soups",
+            "name": "Sopas",
+            "condition": "Entrega una [**Calabaza**](gk2://item/pumpkin) (plata) a [**Clotho**](gk2://character/clotho).",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Sopa de col",
+                "item": "cabbage_soup"
+              },
+              {
+                "kind": "recipe",
+                "name": "Sopa de calabaza",
+                "item": "pumpkin_soup"
+              },
+              {
+                "kind": "recipe",
+                "name": "Sopa de verduras",
+                "item": "vegetable_soup"
+              }
+            ]
+          },
+          {
+            "id": "tasty_and_healthy",
+            "name": "Rico y sano",
+            "condition": "Cómpralo a [**Miss Chain**](gk2://character/miss_chain) por 5 plata 40 cobre.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Cuenco de sopa de calabaza",
+                "item": "a_bowl_of_pumpkin_soup"
+              },
+              {
+                "kind": "recipe",
+                "name": "Calabaza asada",
+                "item": "baked_pumpkin"
+              },
+              {
+                "kind": "recipe",
+                "name": "Cuenco de lentejas",
+                "item": "a_bowl_of_lentils"
+              }
+            ]
+          },
+          {
+            "id": "jelly",
+            "name": "Gelatina",
+            "condition": "Se desbloquea en el tutorial tras completar [**el encargo del herrero**](gk2://character/krezvold).",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Gelatina verde (comida)",
+                "item": "green_jelly_food"
+              },
+              {
+                "kind": "recipe",
+                "name": "Gelatina roja",
+                "item": "red_jelly"
+              }
+            ]
+          },
+          {
+            "id": "egg_dishes",
+            "name": "Platos con huevo",
+            "condition": "Interactúa con [**cesta de huevos frescos**](gk2://character/fresh_egg_basket).",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Tortilla",
+                "item": "omelette"
+              },
+              {
+                "kind": "recipe",
+                "name": "Huevo frito",
+                "item": "fried_egg"
+              }
+            ]
+          },
+          {
+            "id": "meat_fiesta",
+            "name": "Fiesta de carne",
+            "condition": "Se desbloquea en el tutorial al hacer tu primer corte.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Hamburguesa",
+                "item": "burger"
+              },
+              {
+                "kind": "recipe",
+                "name": "Sándwich",
+                "item": "sandwich"
+              },
+              {
+                "kind": "recipe",
+                "name": "Carne asada",
+                "item": "baked_meat"
+              }
+            ]
+          },
+          {
+            "id": "bread",
+            "name": "Pan",
+            "condition": "Vuelve al cementerio después de ir al pueblo por primera vez.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Masa",
+                "item": "dough"
+              },
+              {
+                "kind": "recipe",
+                "name": "Masa de repostería",
+                "item": "pastry_dough"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pan",
+                "item": "bread"
+              }
+            ]
+          },
+          {
+            "id": "good_carbs",
+            "name": "Carbohidratos buenos",
+            "condition": "Entrega un [**Hacha I**](gk2://item/axe_i) al [**leñador**](gk2://character/woodcutter).",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Lasaña",
+                "item": "lasagna"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pasta",
+                "item": "pasta"
+              }
+            ]
+          },
+          {
+            "id": "beer_snacks",
+            "name": "Tapas para la cerveza",
+            "condition": "Habla con [**Horadric**](gk2://character/horadric) después de conseguir en algún momento una [**Cebolla**](gk2://item/onion) (bronce).",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Aros de cebolla",
+                "item": "onion_rings"
+              },
+              {
+                "kind": "recipe",
+                "name": "Tostadas con cebolla",
+                "item": "toasts_with_onions"
+              }
+            ]
+          },
+          {
+            "id": "fish_dishes",
+            "name": "Platos de pescado",
+            "condition": "Pregunta al [**farero**](gk2://character/lighthouse_keeper) sobre cómo cocinar pescado.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pescado asado",
+                "item": "baked_fish"
+              },
+              {
+                "kind": "recipe",
+                "name": "Sopa de pescado",
+                "item": "fish_soup"
+              },
+              {
+                "kind": "recipe",
+                "name": "Nuggets de pescado",
+                "item": "fish_nuggets"
+              }
+            ]
+          },
+          {
+            "id": "kebab",
+            "name": "Kebab",
+            "condition": "Entrega 4 × [**Filete de pescado de calidad**](gk2://item/quality_fish_fillet) (plata) al [**barón gitano**](gk2://character/gypsy_baron).",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Kebab asado",
+                "item": "baked_kebab"
+              }
+            ]
+          },
+          {
+            "id": "fish_delicacies",
+            "name": "Delicias de pescado",
+            "condition": "Cómpralo a [**Miss Chain**](gk2://character/miss_chain) por 8 plata 30 cobre.",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Salmón asado",
+                "item": "baked_salmon"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pez real",
+                "item": "royal_fish"
+              }
+            ]
+          },
+          {
+            "id": "nectar_of_the_gods",
+            "name": "Néctar de los dioses",
+            "condition": "Entrega [**Jarra de cerveza**](gk2://item/a_mug_of_beer) (oro) a [**Horadric**](gk2://character/horadric).",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Jarra de hidromiel",
+                "item": "a_mug_of_mead"
+              }
+            ]
+          },
+          {
+            "id": "simple_snacks",
+            "name": "Tentempiés sencillos",
+            "condition": "Cómpralo al [**Cocinero**](gk2://character/cook) por 1 plata.",
+            "dlc": "Game of Crone",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Zanahoria rallada",
+                "item": "grated_carrot"
+              },
+              {
+                "kind": "recipe",
+                "name": "Remolacha rallada",
+                "item": "grated_beets"
+              },
+              {
+                "kind": "recipe",
+                "name": "Huevo cocido",
+                "item": "boiled_egg"
+              }
+            ]
+          },
+          {
+            "id": "vegetable_set",
+            "name": "Surtido de verduras",
+            "condition": "Cómpralo al [**Cocinero**](gk2://character/cook) por 3 plata.",
+            "dlc": "Game of Crone",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Ensalada de verduras",
+                "item": "vegetable_salad"
+              },
+              {
+                "kind": "recipe",
+                "name": "Estofado de verduras",
+                "item": "vegetable_stew"
+              },
+              {
+                "kind": "recipe",
+                "name": "Crema de verduras",
+                "item": "creamy_vegetable_soup"
+              }
+            ]
+          },
+          {
+            "id": "milk_processing",
+            "name": "Procesado de leche",
+            "condition": "Cómpralo al [**Cocinero**](gk2://character/cook) por 2 plata 50 cobre.",
+            "dlc": "Game of Crone",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Queso",
+                "item": "cheese"
+              },
+              {
+                "kind": "recipe",
+                "name": "Mantequilla",
+                "item": "butter"
+              },
+              {
+                "kind": "recipe",
+                "name": "Crema de setas",
+                "item": "cream_of_mushroom_soup"
+              }
+            ]
+          },
+          {
+            "id": "in_lentil_we_trust",
+            "name": "En la lenteja confiamos",
+            "condition": "Cómpralo al [**Cocinero**](gk2://character/cook) por 3 plata 50 cobre.",
+            "dlc": "Game of Crone",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Gachas de lentejas",
+                "item": "lentil_porridge"
+              },
+              {
+                "kind": "recipe",
+                "name": "Sopa de lentejas elaborada",
+                "item": "fancy_lentil_soup"
+              },
+              {
+                "kind": "recipe",
+                "name": "Croquetas de lentejas",
+                "item": "lentil_cutlets"
+              }
+            ]
+          },
+          {
+            "id": "patties",
+            "name": "Hamburguesas",
+            "condition": "Cómpralo al [**Cocinero**](gk2://character/cook) por 7 plata 50 cobre.",
+            "dlc": "Game of Crone",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Hamburguesa vegetal",
+                "item": "vegetable_patty"
+              },
+              {
+                "kind": "recipe",
+                "name": "Hamburguesa de setas",
+                "item": "mushroom_patty"
+              },
+              {
+                "kind": "recipe",
+                "name": "Hamburguesa de queso",
+                "item": "cheese_patty"
+              }
+            ]
+          },
+          {
+            "id": "jelly_desserts",
+            "name": "Postres de gelatina",
+            "condition": "Cómpralo al [**Cocinero**](gk2://character/cook) por 8 plata.",
+            "dlc": "Game of Crone",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Panna cotta",
+                "item": "panna_cotta"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pudin de miel",
+                "item": "honey_pudding"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pudin de bayas",
+                "item": "berry_pudding"
+              }
+            ]
+          },
+          {
+            "id": "cheese_dishes",
+            "name": "Platos con queso",
+            "condition": "Cómpralo al [**Cocinero**](gk2://character/cook) por 6 plata 50 cobre.",
+            "dlc": "Game of Crone",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Tarta de queso",
+                "item": "cheese_cake"
+              },
+              {
+                "kind": "recipe",
+                "name": "Pastel de queso",
+                "item": "cheese_pie"
+              }
+            ]
+          },
+          {
+            "id": "honey_cake",
+            "name": "Pastel de miel",
+            "condition": "Habla con el [**Cocinero**](gk2://character/cook) después de construirle las dos colmenas en el campamento de refugiados",
+            "dlc": "Game of Crone",
+            "unlocks": [
+              {
+                "kind": "recipe",
+                "name": "Pastel de miel",
+                "item": "honey_cake"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "image": "tech_cookery"
+  },
+  {
+    "id": "spiritualism",
+    "name": "Espiritismo",
+    "text": [
+      "Este árbol de tecnología trata principalmente de productos relacionados con las almas y forma parte del DLC Better Save Soul. Esta rama se desbloquea hablando primero con [**Smiler**](gk2://character/smiler)."
+    ],
+    "branches": [
+      {
+        "techs": [
+          {
+            "id": "beginner_healer",
+            "name": "Sanador novato",
+            "condition": "Habla con [**Smiler**](gk2://character/smiler)",
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Contenedor de almas I"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Banco de órganos"
+              }
+            ]
+          },
+          {
+            "id": "healer_enthusiast",
+            "name": "Sanador entusiasta",
+            "cost": {
+              "red": 10,
+              "green": 15,
+              "soul": 10
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Extensión: sanación de la soberbia"
+              },
+              {
+                "kind": "create",
+                "name": "Control remoto de fabricación"
+              }
+            ],
+            "requires": [
+              "beginner_healer"
+            ]
+          },
+          {
+            "id": "stone_grave_fence",
+            "name": "Valla de tumba de piedra",
+            "cost": {
+              "red": 50,
+              "green": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de piedra VI",
+                "item": "stone_grave_fence_vi"
+              },
+              {
+                "kind": "create",
+                "name": "Valla de tumba de piedra VII",
+                "item": "stone_grave_fence_vii"
+              },
+              {
+                "kind": "create",
+                "name": "Valla de tumba de piedra VIII",
+                "item": "stone_grave_fence_viii"
+              }
+            ],
+            "requires": [
+              "healer_enthusiast"
+            ]
+          },
+          {
+            "id": "prays_for_souls",
+            "name": "Oraciones por las almas",
+            "cost": {
+              "red": 25,
+              "green": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Oración por el reposo de las almas"
+              },
+              {
+                "kind": "create",
+                "name": "Oración por la satisfacción de las almas"
+              },
+              {
+                "kind": "create",
+                "name": "Oración por la limpieza a fondo de las almas"
+              }
+            ],
+            "requires": [
+              "healer_enthusiast"
+            ]
+          },
+          {
+            "id": "updated_equipment",
+            "name": "Equipo mejorado",
+            "cost": {
+              "red": 20,
+              "green": 15
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Contenedor de almas II"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Extractor de almas II"
+              }
+            ],
+            "requires": [
+              "healer_enthusiast"
+            ]
+          },
+          {
+            "id": "useful_equipment",
+            "name": "Equipo útil",
+            "cost": {
+              "red": 50,
+              "green": 30
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Crematorio de pared"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Receptor de almas"
+              }
+            ],
+            "requires": [
+              "healer_enthusiast"
+            ]
+          },
+          {
+            "id": "marble_grave_fence",
+            "name": "Valla de tumba de mármol",
+            "cost": {
+              "red": 100,
+              "green": 75
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Valla de tumba de mármol VI",
+                "item": "marble_grave_fence_vi"
+              },
+              {
+                "kind": "create",
+                "name": "Valla de tumba de mármol VII",
+                "item": "marble_grave_fence_vii"
+              },
+              {
+                "kind": "create",
+                "name": "Valla de tumba de mármol VIII",
+                "item": "marble_grave_fence_viii"
+              }
+            ],
+            "requires": [
+              "stone_grave_fence"
+            ]
+          },
+          {
+            "id": "experienced_healer",
+            "name": "Sanador experimentado",
+            "cost": {
+              "red": 15,
+              "green": 20,
+              "soul": 15
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Extensión: sanación de la ira"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Extensión: sanación de la gula"
+              }
+            ],
+            "requires": [
+              "updated_equipment"
+            ]
+          },
+          {
+            "id": "stone_gravestones",
+            "name": "Lápidas de piedra",
+            "cost": {
+              "red": 80,
+              "green": 150
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Escultura de piedra V",
+                "item": "stone_sculpture_v"
+              },
+              {
+                "kind": "create",
+                "name": "Escultura de piedra VI",
+                "item": "stone_sculpture_vi"
+              }
+            ],
+            "requires": [
+              "experienced_healer"
+            ]
+          },
+          {
+            "id": "exquisite_writing",
+            "name": "Escritura exquisita",
+            "cost": {
+              "red": 40,
+              "green": 35,
+              "blue": 10
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Historia",
+                "item": "story"
+              },
+              {
+                "kind": "create",
+                "name": "Capítulo",
+                "item": "chapter"
+              },
+              {
+                "kind": "create",
+                "name": "Libro",
+                "item": "book"
+              }
+            ],
+            "requires": [
+              "experienced_healer"
+            ]
+          },
+          {
+            "id": "updated_equipment_ii",
+            "name": "Equipo mejorado II",
+            "cost": {
+              "red": 30,
+              "green": 20
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Contenedor de almas III (base)"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Extractor de almas III"
+              }
+            ],
+            "requires": [
+              "experienced_healer"
+            ]
+          },
+          {
+            "id": "simplified_farming",
+            "name": "Agricultura simplificada",
+            "cost": {
+              "red": 30,
+              "green": 50
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Fertilizante de crecimiento I",
+                "item": "boost_fertilizer_i"
+              },
+              {
+                "kind": "create",
+                "name": "Fertilizante de calidad I",
+                "item": "quality_fertilizer_i"
+              }
+            ],
+            "requires": [
+              "experienced_healer"
+            ]
+          },
+          {
+            "id": "marble_gravestones",
+            "name": "Lápidas de mármol",
+            "cost": {
+              "red": 120,
+              "green": 170
+            },
+            "unlocks": [
+              {
+                "kind": "create",
+                "name": "Escultura de mármol V",
+                "item": "marble_sculpture_v"
+              },
+              {
+                "kind": "create",
+                "name": "Escultura de mármol VI",
+                "item": "marble_sculpture_vi"
+              }
+            ],
+            "requires": [
+              "stone_gravestones"
+            ]
+          },
+          {
+            "id": "professional_healer",
+            "name": "Sanador profesional",
+            "cost": {
+              "red": 25,
+              "green": 25,
+              "soul": 30
+            },
+            "unlocks": [
+              {
+                "kind": "blueprint",
+                "name": "Extensión: sanación de la pereza"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Extensión: sanación de la lujuria"
+              },
+              {
+                "kind": "blueprint",
+                "name": "Extensión: sanación de la envidia"
+              }
+            ],
+            "requires": [
+              "updated_equipment_ii"
+            ]
+          }
+        ]
+      }
+    ],
+    "dlc": "Better Save Soul",
+    "image": "tech_spiritualism"
+  }
+]

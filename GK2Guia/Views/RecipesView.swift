@@ -25,7 +25,7 @@ struct RecipesView: View {
                                 icon: item?.icon ?? "skull",
                                 image: item?.image,
                                 title: item?.name ?? recipe.output,
-                                subtitle: recipe.station,
+                                subtitle: [recipe.station, state.chestSummary(of: recipe.output)].compactMap { $0 }.joined(separator: " · "),
                                 selected: wide && recipe.id == selection
                             ) { router.openRecipe(recipe.id) }
                         }
@@ -78,12 +78,14 @@ struct RecipeDetailView: View {
         let item = data.item(recipe.output)
         let usedIn = data.recipes(using: recipe.output)
         let inPlan = state.count(of: recipe.id)
+        let techs = data.technologies(unlocking: recipe.output)
 
         Panel(style: .parchment) {
             HStack(spacing: 16) {
                 IconFrame(name: item?.icon ?? "skull", image: item?.image, size: 64)
                 VStack(alignment: .leading, spacing: 8) {
                     Text(item?.name ?? recipe.output).font(.pixelTitle(16))
+                    if let wikiName = item?.wikiName { WikiName(wikiName) }
                     FlowLayout(spacing: 6) {
                         HStack(spacing: 4) {
                             if let image = data.stationImage(recipe.station) {
@@ -101,6 +103,10 @@ struct RecipeDetailView: View {
                 Text("«\(description)»").foregroundStyle(Theme.parchmentMuted)
             }
 
+            ChestSection(itemId: recipe.output)
+
+            if let item { ItemFacts(item: item) }
+
             SectionTitle("Ingredientes")
             ForEach(recipe.ingredients, id: \.item) { ing in
                 FlowLayout(spacing: 10) {
@@ -112,6 +118,11 @@ struct RecipeDetailView: View {
             }
 
             if let notes = recipe.notes { NoteView(text: notes) }
+
+            if !techs.isEmpty {
+                SectionTitle("Se desbloquea con")
+                TechChips(entries: techs)
+            }
 
             if !usedIn.isEmpty {
                 SectionTitle("Se usa en")

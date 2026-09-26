@@ -1,232 +1,291 @@
 [
   {
-    "name": "Alchemy mill",
-    "image": "station_alchemy_mill"
+    "name": "Banco de alquimia (nivel I)",
+    "image": "station_alchemy_workbench_tier_i",
+    "wikiName": "Alchemy workbench (tier I)"
   },
   {
-    "name": "Alchemy workbench (tier I)",
-    "image": "station_alchemy_workbench_tier_i"
+    "name": "Banco de alquimia (nivel II)",
+    "image": "station_alchemy_workbench_tier_ii",
+    "wikiName": "Alchemy workbench (tier II)"
   },
   {
-    "name": "Alchemy workbench (tier II)",
-    "image": "station_alchemy_workbench_tier_ii"
+    "name": "Banco de carpintero",
+    "image": "station_carpenter_s_workbench",
+    "wikiName": "Carpenter's workbench"
   },
   {
-    "name": "Alcohol distiller",
-    "image": "station_alcohol_distiller"
+    "name": "Banco de carpintero II",
+    "image": "station_carpenter_s_workbench_ii",
+    "wikiName": "Carpenter's workbench II"
   },
   {
-    "name": "Anvil",
-    "image": "station_anvil"
+    "name": "Banco de trabajo de la iglesia",
+    "image": "station_church_workbench",
+    "wikiName": "Church workbench"
   },
   {
-    "name": "Anvil II",
-    "image": "station_anvil_ii"
+    "name": "Banco de órganos",
+    "image": "station_organ_workbench",
+    "wikiName": "Organ Workbench"
   },
   {
-    "name": "Bee hive",
-    "image": "station_bee_hive"
+    "name": "Barril de fermentación",
+    "image": "station_fermentation_barrel",
+    "wikiName": "Fermentation barrel"
   },
   {
-    "name": "Brewing stand",
-    "image": "station_brewing_stand"
+    "name": "Barril de vinificación",
+    "image": "station_wine_making_barrel",
+    "wikiName": "Wine making barrel"
   },
   {
-    "name": "Carpenter's workbench",
-    "image": "station_carpenter_s_workbench"
+    "name": "Batidora manual",
+    "image": "station_hand_mixer",
+    "wikiName": "Hand mixer"
   },
   {
-    "name": "Carpenter's workbench II",
-    "image": "station_carpenter_s_workbench_ii"
+    "name": "Bodega zombi",
+    "image": "station_zombie_winery",
+    "wikiName": "Zombie-winery"
   },
   {
-    "name": "Chopping spot",
-    "image": "station_chopping_spot"
+    "name": "Caballete de aserrar",
+    "image": "station_sawhorse",
+    "wikiName": "Sawhorse"
   },
   {
-    "name": "Church workbench",
-    "image": "station_church_workbench"
+    "name": "Cervecería zombi",
+    "image": "station_zombie_brewery",
+    "wikiName": "Zombie-brewery"
   },
   {
-    "name": "Circular saw",
-    "image": "station_circular_saw"
+    "name": "Colmena",
+    "image": "station_bee_hive",
+    "wikiName": "Bee hive"
   },
   {
-    "name": "Construcción · Alchemy Lab"
+    "name": "Construcción · Cabaña del bosque",
+    "wikiName": "Construcción · Cabin in the woods"
   },
   {
-    "name": "Construcción · Beekeeping"
+    "name": "Construcción · Cementerio",
+    "wikiName": "Construcción · The Graveyard"
   },
   {
-    "name": "Construcción · Cabin in the woods"
+    "name": "Construcción · Colmenar",
+    "wikiName": "Construcción · Beekeeping"
   },
   {
-    "name": "Construcción · Church"
+    "name": "Construcción · Crematorio",
+    "wikiName": "Construcción · Crematorium"
   },
   {
-    "name": "Construcción · Crematorium"
+    "name": "Construcción · Huerto",
+    "wikiName": "Construcción · Farming"
   },
   {
-    "name": "Construcción · Farming"
+    "name": "Construcción · Iglesia",
+    "wikiName": "Construcción · Church"
+  },
+  {
+    "name": "Construcción · Laboratorio de alquimia",
+    "wikiName": "Construcción · Alchemy Lab"
   },
   {
     "name": "Construcción · Morgue"
   },
   {
-    "name": "Construcción · The Graveyard"
+    "name": "Construcción · Taller",
+    "wikiName": "Construcción · Workyard"
   },
   {
-    "name": "Construcción · Workyard"
+    "name": "Cortapiedras",
+    "image": "station_stone_cutter",
+    "wikiName": "Stone cutter"
   },
   {
-    "name": "Cooking table",
-    "image": "station_cooking_table"
+    "name": "Cortapiedras II",
+    "image": "station_stone_cutter_ii",
+    "wikiName": "Stone cutter II"
   },
   {
-    "name": "Cooking table (Game of Crone)"
+    "name": "Crematorio de pared",
+    "image": "station_wall_crematorium",
+    "wikiName": "Wall Crematorium"
   },
   {
-    "name": "Crate factory",
-    "image": "station_crate_factory"
+    "name": "Cubo de destilación",
+    "image": "station_distillation_cube",
+    "wikiName": "Distillation cube"
   },
   {
-    "name": "Dark design desk",
-    "image": "station_dark_design_desk"
+    "name": "Cubo de destilación II",
+    "image": "station_distillation_cube_ii",
+    "wikiName": "Distillation cube II"
   },
   {
-    "name": "Desk",
-    "image": "station_desk"
+    "name": "Destilador de alcohol",
+    "image": "station_alcohol_distiller",
+    "wikiName": "Alcohol distiller"
   },
   {
-    "name": "Desk II",
-    "image": "station_desk_ii"
+    "name": "Escritorio",
+    "image": "station_desk",
+    "wikiName": "Desk"
   },
   {
-    "name": "Distillation cube",
-    "image": "station_distillation_cube"
+    "name": "Escritorio de diseño oscuro",
+    "image": "station_dark_design_desk",
+    "wikiName": "Dark design desk"
   },
   {
-    "name": "Distillation cube II",
-    "image": "station_distillation_cube_ii"
+    "name": "Escritorio II",
+    "image": "station_desk_ii",
+    "wikiName": "Desk II"
   },
   {
-    "name": "Embalming table",
-    "image": "station_embalming_table"
+    "name": "Extractor de almas",
+    "image": "station_soul_extractor",
+    "wikiName": "Soul extractor"
   },
   {
-    "name": "Fermentation barrel",
-    "image": "station_fermentation_barrel"
+    "name": "Extractor de almas II",
+    "image": "station_soul_extractor_ii",
+    "wikiName": "Soul extractor II"
   },
   {
-    "name": "Furnace",
-    "image": "station_furnace"
+    "name": "Extractor de almas III",
+    "image": "station_soul_extractor_iii",
+    "wikiName": "Soul extractor III"
   },
   {
-    "name": "Furnace II",
-    "image": "station_furnace_ii"
+    "name": "Fábrica de cajas",
+    "image": "station_crate_factory",
+    "wikiName": "Crate factory"
   },
   {
-    "name": "Furnace III",
-    "image": "station_furnace_iii"
+    "name": "Generador de texto aleatorio",
+    "image": "station_random_text_generator",
+    "wikiName": "Random text generator"
   },
   {
-    "name": "Hand mixer",
-    "image": "station_hand_mixer"
+    "name": "Horno",
+    "image": "station_furnace",
+    "wikiName": "Furnace"
   },
   {
-    "name": "Jewelry table",
-    "image": "station_jewelry_table"
+    "name": "Horno II",
+    "image": "station_furnace_ii",
+    "wikiName": "Furnace II"
   },
   {
-    "name": "Mill",
-    "image": "station_mill"
+    "name": "Horno III",
+    "image": "station_furnace_iii",
+    "wikiName": "Furnace III"
   },
   {
-    "name": "Organ Workbench",
-    "image": "station_organ_workbench"
+    "name": "Imprenta",
+    "image": "station_printing_press",
+    "wikiName": "Printing press"
   },
   {
-    "name": "Paper press",
-    "image": "station_paper_press"
+    "name": "Imprenta II",
+    "image": "station_printing_press_ii",
+    "wikiName": "Printing press II"
   },
   {
-    "name": "Place for the apple tree",
-    "image": "station_place_for_the_apple_tree"
+    "name": "Lugar para el manzano",
+    "image": "station_place_for_the_apple_tree",
+    "wikiName": "Place for the apple tree"
   },
   {
-    "name": "Potter's wheel",
-    "image": "station_potter_s_wheel"
+    "name": "Mesa de cocina",
+    "image": "station_cooking_table",
+    "wikiName": "Cooking table"
   },
   {
-    "name": "Preparation place",
-    "image": "station_preparation_place"
+    "name": "Mesa de cocina (Game of Crone)",
+    "wikiName": "Cooking table (Game of Crone)"
   },
   {
-    "name": "Printing press",
-    "image": "station_printing_press"
+    "name": "Mesa de embalsamamiento",
+    "image": "station_embalming_table",
+    "wikiName": "Embalming table"
   },
   {
-    "name": "Printing press II",
-    "image": "station_printing_press_ii"
+    "name": "Mesa de estudio",
+    "image": "station_study_table",
+    "wikiName": "Study table"
   },
   {
-    "name": "Random text generator",
-    "image": "station_random_text_generator"
+    "name": "Mesa de joyería",
+    "image": "station_jewelry_table",
+    "wikiName": "Jewelry table"
   },
   {
-    "name": "Resurrection table",
-    "image": "station_resurrection_table"
+    "name": "Mesa de resurrección",
+    "image": "station_resurrection_table",
+    "wikiName": "Resurrection table"
   },
   {
-    "name": "Sawhorse",
-    "image": "station_sawhorse"
+    "name": "Molino",
+    "image": "station_mill",
+    "wikiName": "Mill"
   },
   {
-    "name": "Soul extractor",
-    "image": "station_soul_extractor"
+    "name": "Molino de alquimia",
+    "image": "station_alchemy_mill",
+    "wikiName": "Alchemy mill"
   },
   {
-    "name": "Soul extractor II",
-    "image": "station_soul_extractor_ii"
+    "name": "Prensa de papel",
+    "image": "station_paper_press",
+    "wikiName": "Paper press"
   },
   {
-    "name": "Soul extractor III",
-    "image": "station_soul_extractor_iii"
+    "name": "Prensa de uvas",
+    "image": "station_vine_press",
+    "wikiName": "Vine press"
   },
   {
-    "name": "Stone cutter",
-    "image": "station_stone_cutter"
+    "name": "Sierra circular",
+    "image": "station_circular_saw",
+    "wikiName": "Circular saw"
   },
   {
-    "name": "Stone cutter II",
-    "image": "station_stone_cutter_ii"
+    "name": "Soporte de elaboración",
+    "image": "station_brewing_stand",
+    "wikiName": "Brewing stand"
   },
   {
-    "name": "Study table",
-    "image": "station_study_table"
+    "name": "Torno de alfarero",
+    "image": "station_potter_s_wheel",
+    "wikiName": "Potter's wheel"
   },
   {
-    "name": "Vine press",
-    "image": "station_vine_press"
+    "name": "Yunque",
+    "image": "station_anvil",
+    "wikiName": "Anvil"
   },
   {
-    "name": "Wall Crematorium",
-    "image": "station_wall_crematorium"
+    "name": "Yunque de madera",
+    "image": "station_wooden_anvil",
+    "wikiName": "Wooden anvil"
   },
   {
-    "name": "Wine making barrel",
-    "image": "station_wine_making_barrel"
+    "name": "Yunque II",
+    "image": "station_anvil_ii",
+    "wikiName": "Anvil II"
   },
   {
-    "name": "Wooden anvil",
-    "image": "station_wooden_anvil"
+    "name": "Zona de corte",
+    "image": "station_chopping_spot",
+    "wikiName": "Chopping spot"
   },
   {
-    "name": "Zombie-brewery",
-    "image": "station_zombie_brewery"
-  },
-  {
-    "name": "Zombie-winery",
-    "image": "station_zombie_winery"
+    "name": "Zona de preparación",
+    "image": "station_preparation_place",
+    "wikiName": "Preparation place"
   }
 ]

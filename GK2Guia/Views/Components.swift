@@ -3,16 +3,21 @@ import SwiftUI
 
 struct Panel<Content: View>: View {
     var title: String?
+    /// icono tras el título, p. ej. el del día
+    var titleIcon: PixelIcon?
     var style: BoxStyle = .wood
     @ViewBuilder let content: () -> Content
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             if let title {
-                Text(title)
-                    .font(.pixelTitle(11))
-                    .foregroundStyle(style == .parchment ? Theme.parchmentInk : Theme.candle)
-                    .shadow(color: style == .parchment ? .clear : Theme.outline, radius: 0, x: 2, y: 2)
+                HStack(spacing: 8) {
+                    Text(title)
+                        .font(.pixelTitle(11))
+                        .foregroundStyle(style == .parchment ? Theme.parchmentInk : Theme.candle)
+                        .shadow(color: style == .parchment ? .clear : Theme.outline, radius: 0, x: 2, y: 2)
+                    titleIcon
+                }
             }
             content()
         }
@@ -50,6 +55,18 @@ struct Tag: View {
             .foregroundStyle(highlighted ? AnyShapeStyle(Theme.parchmentInk) : AnyShapeStyle(.primary))
             .background(highlighted ? AnyShapeStyle(Theme.moss) : AnyShapeStyle(.quinary))
             .overlay(Rectangle().strokeBorder(highlighted ? AnyShapeStyle(Theme.outline) : AnyShapeStyle(.tertiary), lineWidth: 2))
+    }
+}
+
+/// Nombre en la wiki (inglés), para buscarlo allí.
+struct WikiName: View {
+    let name: String
+    init(_ name: String) { self.name = name }
+
+    var body: some View {
+        Text("En la wiki: \(name)")
+            .font(.pixelBody(19))
+            .foregroundStyle(Theme.parchmentMuted)
     }
 }
 
@@ -153,19 +170,26 @@ struct ListRow: View {
     }
 }
 
-struct TodayBadge: View {
+/// Cambia entre Graveyard Keeper 1 y 2. Cada juego tiene su propia partida guardada.
+struct GameSwitch: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
 
     var body: some View {
-        Button { router.tab = .calendar } label: {
-            HStack(spacing: 6) {
-                PixelIcon(name: state.todayDay.icon, image: state.todayDay.image, size: 24)
-                Text("Hoy: \(state.todayDay.short)")
+        HStack(spacing: 4) {
+            ForEach(Game.allCases) { game in
+                let active = game == state.game
+                Button(game.shortTitle) {
+                    guard !active else { return }
+                    state.game = game
+                    router.reset()
+                }
+                .buttonStyle(.pixel(active ? .candle : .woodDark, compact: true))
+                .help(game.title)
+                .accessibilityLabel(game.title)
+                .accessibilityAddTraits(active ? .isSelected : [])
             }
         }
-        .buttonStyle(.pixel(.wood, compact: true))
-        .help("Cambiar día")
     }
 }
 
@@ -178,16 +202,12 @@ struct DayBadges: View {
         FlowLayout(spacing: 6) {
             ForEach(state.data.days) { day in
                 let on = active.isEmpty || active.contains(day.id)
-                HStack(spacing: 6) {
-                    PixelIcon(name: day.icon, image: day.image, size: 16)
-                    Text(day.short).font(.pixelBody(20))
-                }
-                .padding(.horizontal, 8)
-                .padding(.vertical, 2)
-                .background(day.id == state.today ? Theme.candle.opacity(0.3) : .clear)
-                .overlay(Rectangle().strokeBorder(on ? Color(hexString: day.color) : Theme.parchmentInk.opacity(0.2), lineWidth: 3))
-                .opacity(on ? 1 : 0.35)
-                .accessibilityLabel("\(day.name): \(on ? "sí" : "no")")
+                PixelIcon(name: day.icon, image: day.image, size: 24)
+                    .padding(6)
+                    .overlay(Rectangle().strokeBorder(on ? Color(hexString: day.color) : Theme.parchmentInk.opacity(0.2), lineWidth: 3))
+                    .opacity(on ? 1 : 0.35)
+                    .accessibilityElement()
+                    .accessibilityLabel("\(day.name): \(on ? "sí" : "no")")
             }
         }
     }
@@ -269,5 +289,19 @@ struct DataSourceNotice: View {
             .font(.pixelBody(18))
             .foregroundStyle(Theme.muted)
             .fixedSize(horizontal: false, vertical: true)
+    }
+}
+
+struct ProgressBar: View {
+    let fraction: Double
+
+    var body: some View {
+        GeometryReader { geo in
+            Theme.woodLight
+                .overlay(alignment: .leading) {
+                    Theme.candle.frame(width: geo.size.width * min(max(fraction, 0), 1))
+                }
+        }
+        .overlay(Rectangle().strokeBorder(Theme.outline, lineWidth: 2))
     }
 }

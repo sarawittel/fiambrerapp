@@ -1,7 +1,7 @@
 import Observation
 
 enum AppTab: String, CaseIterable, Identifiable {
-    case recipes, items, planner, calendar, characters
+    case recipes, items, planner, chests, technologies, guide, characters
 
     var id: String { rawValue }
 
@@ -9,9 +9,11 @@ enum AppTab: String, CaseIterable, Identifiable {
         switch self {
         case .recipes: "Recetas"
         case .items: "Objetos"
+        case .technologies: "Tecnologías"
         case .planner: "Qué necesito"
-        case .calendar: "Calendario"
         case .characters: "Personajes"
+        case .guide: "Guía"
+        case .chests: "Baúles"
         }
     }
 
@@ -19,9 +21,11 @@ enum AppTab: String, CaseIterable, Identifiable {
         switch self {
         case .recipes: "Recetas"
         case .items: "Objetos"
+        case .technologies: "Tecno"
         case .planner: "Necesito"
-        case .calendar: "Semana"
         case .characters: "Gente"
+        case .guide: "Guía"
+        case .chests: "Baúles"
         }
     }
 
@@ -29,9 +33,11 @@ enum AppTab: String, CaseIterable, Identifiable {
         switch self {
         case .recipes: "cauldron"
         case .items: "scroll"
+        case .technologies: "candle"
         case .planner: "sack"
-        case .calendar: "moon"
         case .characters: "person"
+        case .guide: "crown"
+        case .chests: "chest"
         }
     }
 }
@@ -47,6 +53,31 @@ final class Router {
     var itemPath: [String] = []
     var characterId: String?
     var characterPath: [String] = []
+    var techTreeId: String?
+    var techTreePath: [String] = []
+    /// tecnología a la que desplazarse dentro del árbol abierto
+    var techId: String?
+    var guideSectionId: String?
+    var guidePath: [String] = []
+    var chestId: String?
+    var chestPath: [String] = []
+
+    /// Vuelve a las listas, p. ej. al cambiar de juego (las selecciones podrían no existir en el otro).
+    func reset() {
+        recipeId = nil
+        recipePath = []
+        itemId = nil
+        itemPath = []
+        characterId = nil
+        characterPath = []
+        techTreeId = nil
+        techTreePath = []
+        techId = nil
+        guideSectionId = nil
+        guidePath = []
+        chestId = nil
+        chestPath = []
+    }
 
     func openRecipe(_ id: String) {
         if tab != .recipes { recipePath = [] }
@@ -60,6 +91,28 @@ final class Router {
         tab = .items
         itemId = id
         if itemPath.last != id { itemPath.append(id) }
+    }
+
+    func openTechTree(_ id: String, tech: String? = nil) {
+        if tab != .technologies { techTreePath = [] }
+        tab = .technologies
+        techTreeId = id
+        techId = tech
+        if techTreePath.last != id { techTreePath.append(id) }
+    }
+
+    func openGuideSection(_ id: String) {
+        if tab != .guide { guidePath = [] }
+        tab = .guide
+        guideSectionId = id
+        if guidePath.last != id { guidePath.append(id) }
+    }
+
+    func openChest(_ id: String) {
+        if tab != .chests { chestPath = [] }
+        tab = .chests
+        chestId = id
+        if chestPath.last != id { chestPath.append(id) }
     }
 
     func openCharacter(_ id: String) {

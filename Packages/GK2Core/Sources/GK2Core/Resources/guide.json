@@ -1,0 +1,933 @@
+[
+  {
+    "id": "starting_out",
+    "name": "Starting Out",
+    "achievements": [
+      {
+        "id": "first_slice",
+        "name": "Primer corte",
+        "text": [
+          "Mientras realizas una autopsia a un cadáver por primera vez durante el tutorial, se te pide que extraigas quirúrgicamente [**Carne**](gk2://item/flesh)."
+        ],
+        "items": [
+          "flesh"
+        ],
+        "image": "ach_first_slice",
+        "wikiName": "First slice"
+      },
+      {
+        "id": "novice_gravedigger",
+        "name": "Sepulturero novato",
+        "text": [
+          "Entierra tu primer cadáver. Se consigue durante la parte del tutorial del juego."
+        ],
+        "image": "ach_novice_gravedigger",
+        "wikiName": "Novice gravedigger"
+      },
+      {
+        "id": "sweetheart_bishop",
+        "name": "Obispo encantador",
+        "text": [
+          "Conoce al [**Obispo**](gk2://character/bishop), a quien encontrarás durante la parte del tutorial al principio del juego."
+        ],
+        "characters": [
+          "bishop"
+        ],
+        "image": "ach_sweetheart_bishop",
+        "wikiName": "Sweetheart Bishop"
+      },
+      {
+        "id": "shady_snake",
+        "name": "Serpiente turbia",
+        "text": [
+          "Conoce a [**Snake**](gk2://character/snake). Cuando entres por primera vez en tu bodega, se reproducirá una escena en la que Snake aparece de pie junto a la puerta de la zona de la mazmorra. Para llegar hasta él, tendrás que despejar el bloqueo, lo que cuesta 10 × [**Cuña de madera**](gk2://item/wood_wedge), 2 × [**Tablón de madera**](gk2://item/wooden_plank) y 4 × [**Piezas de hierro simples**](gk2://item/simple_iron_parts)."
+        ],
+        "items": [
+          "wood_wedge",
+          "wooden_plank",
+          "simple_iron_parts"
+        ],
+        "characters": [
+          "snake"
+        ],
+        "image": "ach_shady_snake",
+        "wikiName": "Shady Snake"
+      },
+      {
+        "id": "holy_inquisition",
+        "name": "Santa Inquisición",
+        "text": [
+          "Conoce al [**Inquisidor**](gk2://character/inquisitor). Lo encontrarás en Witch Hill durante el día de ![Ira](gk2://day/ira)."
+        ],
+        "characters": [
+          "inquisitor"
+        ],
+        "image": "ach_holy_inquisition",
+        "wikiName": "Holy Inquisition"
+      },
+      {
+        "id": "charm_itself",
+        "name": "El encanto en persona",
+        "text": [
+          "Conoce a Ms. Charm. Actúa en The Dead Horse durante el día de ![Lujuria](gk2://day/lujuria)."
+        ],
+        "image": "ach_charm_itself",
+        "wikiName": "Charm itself"
+      },
+      {
+        "id": "wealthy_merchant",
+        "name": "Mercader adinerado",
+        "text": [
+          "Conoce al [**Comerciante**](gk2://character/merchant). Se encuentra frente al granero, justo al suroeste de The Dead Horse, durante el día de ![Gula](gk2://day/gula)."
+        ],
+        "characters": [
+          "merchant"
+        ],
+        "image": "ach_wealthy_merchant",
+        "wikiName": "Wealthy merchant"
+      },
+      {
+        "id": "old_astrologer",
+        "name": "Viejo astrólogo",
+        "text": [
+          "Conoce al [**Astrólogo**](gk2://character/astrologer). Se le puede encontrar muy al este del Village, frente al Lighthouse, en ![Pereza](gk2://day/pereza)."
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_old_astrologer",
+        "wikiName": "Old Astrologer"
+      },
+      {
+        "id": "bridge_builder",
+        "name": "Constructor de puentes",
+        "text": [
+          "Repara el puente del camino al oeste del cementerio. Costará [**Tablón de madera**](gk2://item/wooden_plank), 4 × [**Tabla**](gk2://item/flitch) y 8 × [**Clavos**](gk2://item/nails)."
+        ],
+        "items": [
+          "wooden_plank",
+          "flitch",
+          "nails"
+        ],
+        "image": "ach_bridge_builder",
+        "wikiName": "Bridge builder"
+      }
+    ]
+  },
+  {
+    "id": "graveyard",
+    "name": "Graveyard",
+    "achievements": [
+      {
+        "id": "advanced_gravedigger",
+        "name": "Sepulturero avanzado",
+        "text": [
+          "Entierra 10 cadáveres. Las incineraciones no cuentan."
+        ],
+        "image": "ach_advanced_gravedigger",
+        "wikiName": "Advanced gravedigger"
+      },
+      {
+        "id": "shovel_master",
+        "name": "Maestro de la pala",
+        "text": [
+          "Entierra 50 cadáveres. Las incineraciones no cuentan. Exhumar cadáveres y reutilizar tumbas sí cuenta."
+        ],
+        "image": "ach_shovel_master",
+        "wikiName": "Shovel master"
+      },
+      {
+        "id": "stone_fence",
+        "name": "Valla de piedra",
+        "text": [
+          "Construye la valla de piedra alrededor del cementerio. En algún punto de la historia del [**Obispo**](gk2://character/bishop), desbloquearás la receta para mejorar la valla en la mesa de planos del cementerio. Cuesta 24 × [**Ladrillo de piedra pulido**](gk2://item/a_polished_brick_of_stone), 2 × [**Pieza de piedra tallada**](gk2://item/a_carved_piece_of_stone) y 12 × [**Piezas de hierro complejas**](gk2://item/complex_iron_parts)."
+        ],
+        "items": [
+          "a_polished_brick_of_stone",
+          "a_carved_piece_of_stone",
+          "complex_iron_parts"
+        ],
+        "characters": [
+          "bishop"
+        ],
+        "image": "ach_stone_fence",
+        "wikiName": "Stone fence"
+      }
+    ]
+  },
+  {
+    "id": "questlines",
+    "name": "Questlines",
+    "achievements": [
+      {
+        "id": "a_perfect_gift",
+        "name": "Un regalo perfecto",
+        "text": [
+          "Durante la historia del [**Astrólogo**](gk2://character/astrologer), te pedirá que consigas un [**Calavera**](gk2://item/skull). Puedes obtenerlo extrayéndolo de un cadáver."
+        ],
+        "items": [
+          "skull"
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_a_perfect_gift",
+        "wikiName": "A perfect gift"
+      },
+      {
+        "id": "summon_a_chicken",
+        "name": "Invoca una gallina",
+        "text": [
+          "Después de darle a [**Snake**](gk2://character/snake) 5 × [**Clavos ensangrentados**](gk2://item/bloody_nails) de las Doncellas de hierro y [**Cubo de sangre**](gk2://item/bucket_of_blood) del cofre al final del nivel 5 de la mazmorra, realizará el ritual sin éxito, invocando en su lugar a una gallina."
+        ],
+        "items": [
+          "bloody_nails",
+          "bucket_of_blood"
+        ],
+        "characters": [
+          "snake"
+        ],
+        "image": "ach_summon_a_chicken",
+        "wikiName": "Summon a chicken"
+      },
+      {
+        "id": "a_book_with_funny_pictures",
+        "name": "Un libro con dibujos graciosos",
+        "text": [
+          "Después de que [**Snake**](gk2://character/snake) falle el ritual de invocación, te pedirá que consigas el [**Necronomicón**](gk2://item/necronomicon). Habla con el [**Astrólogo**](gk2://character/astrologer), que te enviará al [**Farero**](gk2://character/lighthouse_keeper), que está a su lado. Intercambia 5 [**Gusanos**](gk2://item/maggot) por el [**Necronomicón**](gk2://item/necronomicon) y vuelve con [**Snake**](gk2://character/snake)."
+        ],
+        "items": [
+          "necronomicon",
+          "maggot"
+        ],
+        "characters": [
+          "snake",
+          "astrologer",
+          "lighthouse_keeper"
+        ],
+        "image": "ach_a_book_with_funny_pictures",
+        "wikiName": "A book with funny pictures"
+      },
+      {
+        "id": "his_house",
+        "name": "Su casa",
+        "text": [
+          "Durante la historia de [**obispo**](gk2://character/bishop), después de darle los 20 × [**Cuencos de cerámica**](gk2://item/ceramic_bowls), te pedirá que mejores el cementerio a 30 de valoración del cementerio y la iglesia a 20 de valoración de la iglesia. También tendrás que llevarle 4 × [**Filete de pescado de calidad**](gk2://item/quality_fish_fillet) (con calidad básica es suficiente) y comprar un [**Permiso de construcción**](gk2://item/building_permission) en los servicios reales por 20 plata. Ten en cuenta que, tras mejorar la iglesia, también necesitarás el título de ciudadano de pleno derecho para seguir dando sermones. Habla con el [**obispo**](gk2://character/bishop) en cuanto tengas el [**Permiso de construcción**](gk2://item/building_permission) para conseguir este logro."
+        ],
+        "items": [
+          "ceramic_bowls",
+          "quality_fish_fillet",
+          "building_permission"
+        ],
+        "characters": [
+          "bishop"
+        ],
+        "image": "ach_his_house",
+        "wikiName": "His house"
+      },
+      {
+        "id": "even_here",
+        "name": "Incluso aquí",
+        "text": [
+          "Repara el Garden. Interactúa con la mesa de planos rota para iniciar un encargo con el que obtener los derechos sobre la propiedad. Habla con [**Horadric**](gk2://character/horadric) y te concederá el [**Certificado de huerto**](gk2://item/garden_certificate), que después podrás entregar de nuevo en la mesa de planos."
+        ],
+        "items": [
+          "garden_certificate"
+        ],
+        "characters": [
+          "horadric"
+        ],
+        "image": "ach_even_here",
+        "wikiName": "Even here"
+      },
+      {
+        "id": "graveyard_veggies",
+        "name": "Verduras del cementerio",
+        "text": [
+          "Después de conseguir el [**Certificado de huerto**](gk2://item/garden_certificate), de llevarle al [**comerciante**](gk2://character/merchant) 12 × [**Zanahoria**](gk2://item/carrot), 12 × [**Col**](gk2://item/cabbage) y 12 × [**Remolacha**](gk2://item/beet), de devolver el préstamo de 10 plata (si lo aceptaste), de conseguirle [**Hierba del hipo**](gk2://item/hiccup_grass) y darle [**Especias**](gk2://item/spices) (hechas con [**Sal**](gk2://item/salt) y [**Solución de salud**](gk2://item/health_solution)), tendrás que preparar 5 × [**Cena**](gk2://item/dinner) (oro).",
+          "La combinación más sencilla para las cenas es [**Tarta**](gk2://item/cake), [**Aros de cebolla**](gk2://item/onion_rings) (oro) y el plato principal de mayor calidad que puedas conseguir con facilidad. Dormir antes de elaborar cada [**Cena**](gk2://item/dinner) te permitirá reiniciar la partida si la cena sale de calidad (plata). Continúa hasta tener las cinco y llévalas, junto con una [**Licencia comercial**](gk2://item/trade_license) (comprada en los servicios reales por 50 plata), al [**comerciante**](gk2://character/merchant) para desbloquear este logro."
+        ],
+        "items": [
+          "garden_certificate",
+          "carrot",
+          "cabbage",
+          "beet",
+          "hiccup_grass",
+          "spices",
+          "salt",
+          "health_solution",
+          "dinner",
+          "cake",
+          "onion_rings",
+          "trade_license"
+        ],
+        "characters": [
+          "merchant"
+        ],
+        "image": "ach_graveyard_veggies",
+        "wikiName": "Graveyard Veggies"
+      },
+      {
+        "id": "perfume",
+        "name": "Perfume",
+        "text": [
+          "Dale [**Perfume**](gk2://item/perfume) a [**Ms. Charm**](gk2://character/ms_charm). Durante la historia de [**Ms. Charm**](gk2://character/ms_charm), te pedirá que consigas [**Perfume**](gk2://item/perfume) de [**Miss Chain**](gk2://character/miss_chain), quien te pedirá que le lleves una [**Cesta de comida**](gk2://item/basket_of_food) a [**Clotho**](gk2://character/clotho), la bruja del Swamp. También te pedirá que le traigas 12 × [**Rana**](gk2://item/frog), que puedes pescar en el Swamp o comprar a [**Clotho**](gk2://character/clotho). Después de darle las ranas a [**Miss Chain**](gk2://character/miss_chain), ella te dará el [**Perfume**](gk2://item/perfume). Entregarlo a [**Ms. Charm**](gk2://character/ms_charm) te dará este logro."
+        ],
+        "items": [
+          "perfume",
+          "basket_of_food",
+          "frog"
+        ],
+        "characters": [
+          "ms_charm",
+          "miss_chain",
+          "clotho"
+        ],
+        "image": "ach_perfume"
+      },
+      {
+        "id": "night_watch",
+        "name": "Guardia nocturna",
+        "text": [
+          "Sube la amistad del [**Inquisidor**](gk2://character/inquisitor) a 60 ."
+        ],
+        "characters": [
+          "inquisitor"
+        ],
+        "image": "ach_night_watch",
+        "wikiName": "Night watch"
+      },
+      {
+        "id": "simple_but_stylish",
+        "name": "Sencillo pero con estilo",
+        "text": [
+          "Decora el Dark Shrine hasta 20 usando la mesa de diseño oscuro. Esto requerirá una cantidad considerable de recursos, ya que todas las decoraciones son obligatorias. Recursos totales necesarios: 24 × [**Calavera**](gk2://item/skull) 8 × [**Viga de madera**](gk2://item/wooden_beam), 4 × [**Calabaza**](gk2://item/pumpkin) (plata) 10 × [**Ladrillo de piedra pulido**](gk2://item/a_polished_brick_of_stone) 10 × [**Pasta de pulir**](gk2://item/polishing_paste) 2 × [**Kit de reparación de piedra**](gk2://item/stone_repair_kit) 20 × [**Sangre**](gk2://item/blood) (para llenar las fuentes de sangre)."
+        ],
+        "items": [
+          "skull",
+          "wooden_beam",
+          "pumpkin",
+          "a_polished_brick_of_stone",
+          "polishing_paste",
+          "stone_repair_kit",
+          "blood"
+        ],
+        "image": "ach_simple_but_stylish",
+        "wikiName": "Simple but stylish"
+      },
+      {
+        "id": "dream_dinner",
+        "name": "Cena de ensueño",
+        "text": [
+          "Se consigue como parte del logro «Verduras del cementerio» durante la historia del [**Comerciante**](gk2://character/merchant)."
+        ],
+        "characters": [
+          "merchant"
+        ],
+        "image": "ach_dream_dinner",
+        "wikiName": "Dream dinner"
+      },
+      {
+        "id": "on_every_shelf",
+        "name": "En todas las estanterías",
+        "text": [
+          "Sube la Fama de la compañía comercial a 5. Puedes conseguirlo entregando 10 × [**Folleto**](gk2://item/flyer) por 1 punto de Fama, algo que puedes repetir indefinidamente, y consiguiendo que [**Ms. Charm**](gk2://character/ms_charm) anuncie tu negocio."
+        ],
+        "items": [
+          "flyer"
+        ],
+        "characters": [
+          "ms_charm"
+        ],
+        "image": "ach_on_every_shelf",
+        "wikiName": "On every shelf"
+      },
+      {
+        "id": "not_a_hot_dog",
+        "name": "No es un perrito caliente",
+        "text": [
+          "Sirve 5 × [**Hamburguesa**](gk2://item/burger) (oro) y 10 × [**Jarra de cerveza**](gk2://item/a_mug_of_beer) (oro) en una quema de brujas. La [**Hamburguesa**](gk2://item/burger) (oro) requerirá [**Cebolla**](gk2://item/onion) (oro), y la [**Jarra de cerveza**](gk2://item/a_mug_of_beer) (oro) requerirá [**Lúpulo**](gk2://item/hops) (oro), entre el resto de ingredientes. Puedes cultivarlos usando sus respectivas semillas (plata) y aplicando [**Fertilizante de calidad II**](gk2://item/quality_fertilizer_ii). Entrégalos en la tienda reparada de Witch Hill y asegúrate de servirlos en ![Ira](gk2://day/ira) durante el día."
+        ],
+        "items": [
+          "burger",
+          "a_mug_of_beer",
+          "onion",
+          "hops",
+          "quality_fertilizer_ii"
+        ],
+        "image": "ach_not_a_hot_dog",
+        "wikiName": "Not a hot dog"
+      },
+      {
+        "id": "the_mill",
+        "name": "El molino",
+        "text": [
+          "Durante la historia de [**Ms. Charm**](gk2://character/ms_charm), te pedirá que consigas permiso para llevar a Alisa al palacio del rey. Habla con el [**Granjero**](gk2://character/farmer), que se negará. Su hijo te dirá entonces que, si reparas el molino de viento, podrás convencer al [**Granjero**](gk2://character/farmer) para que dé su permiso. Habla con el [**Molinero**](gk2://character/miller), que te dará las instrucciones para reparar el molino, pero los cálculos hay que traducirlos. Lleva las instrucciones al [**Astrólogo**](gk2://character/astrologer) (necesario para este tema) y te dará [**Papel con cálculos**](gk2://item/paper_with_calculations). Vuelve al molino con 5 × [**Piezas de hierro complejas**](gk2://item/complex_iron_parts), 6 × [**Tablón de madera**](gk2://item/wooden_plank) y el [**Papel con cálculos**](gk2://item/paper_with_calculations) para conseguir este logro."
+        ],
+        "items": [
+          "paper_with_calculations",
+          "complex_iron_parts",
+          "wooden_plank"
+        ],
+        "characters": [
+          "ms_charm",
+          "farmer",
+          "miller",
+          "astrologer"
+        ],
+        "image": "ach_the_mill",
+        "wikiName": "The Mill"
+      },
+      {
+        "id": "side_quest",
+        "name": "Misión secundaria",
+        "text": [
+          "Durante la historia de [**Snake**](gk2://character/snake), te informará de que un cazador de vampiros lo está buscando. Reúnete con [**Snake**](gk2://character/snake) justo al sur del Vineyard en Witch Hill llevando [**Tablón de madera**](gk2://item/wooden_plank). El tiempo avanzará rápido durante un rato y tendrás que empujar la roca para aplastar al cazador. Después de que [**Snake**](gk2://character/snake) se marche, extrae la roca para obtener un cadáver y el medallón que más adelante desbloqueará los niveles 11-15 de la mazmorra."
+        ],
+        "items": [
+          "wooden_plank"
+        ],
+        "characters": [
+          "snake"
+        ],
+        "image": "ach_side_quest",
+        "wikiName": "Side quest"
+      },
+      {
+        "id": "match_3",
+        "name": "Tres en línea",
+        "text": [
+          "Consigue tres órganos oscuros. La extracción de órganos oscuros se desbloquea cuando el [**Inquisidor**](gk2://character/inquisitor) te pide que consigas algunos para demostrarle al rey que la quema de brujas debe continuar. A partir de entonces, todos los cadáveres futuros tendrán una probabilidad moderada de tener un [**Corazón oscuro**](gk2://item/dark_heart), un [**Intestino oscuro**](gk2://item/dark_intestine) o un [**Cerebro oscuro**](gk2://item/dark_brain). Necesitarás uno de cada para dárselo al [**Inquisidor**](gk2://character/inquisitor). Curiosamente, la imagen del logro sugiere que los pulmones iban a ser originalmente una parte importante, pero se eliminaron en favor de los intestinos."
+        ],
+        "items": [
+          "dark_heart",
+          "dark_intestine",
+          "dark_brain"
+        ],
+        "characters": [
+          "inquisitor"
+        ],
+        "image": "ach_match_3",
+        "wikiName": "Match 3"
+      },
+      {
+        "id": "he_trusted_you",
+        "name": "Confiaba en ti...",
+        "text": [
+          "**¡ALTAMENTE PERDIBLE!** Cuando el [**Inquisidor**](gk2://character/inquisitor) te pregunte por alguna otra prueba de brujería, tendrás la opción de mencionar el ritual de [**Snake**](gk2://character/snake) o a [**Gerry**](gk2://character/gerry), la calavera parlante. Para conseguir este logro, tienes que elegir primero la opción que delata a [**Gerry**](gk2://character/gerry), aunque el [**Inquisidor**](gk2://character/inquisitor) la descartará. **¡Elegir primero la opción del ritual te impedirá escoger la segunda opción, obligándote a cargar la última partida guardada o a rejugar el juego!**"
+        ],
+        "missable": true,
+        "characters": [
+          "inquisitor",
+          "snake",
+          "gerry"
+        ],
+        "image": "ach_he_trusted_you",
+        "wikiName": "He trusted you..."
+      },
+      {
+        "id": "a_father_and_a_son",
+        "name": "Un padre y un hijo",
+        "text": [
+          "Completa la última tarea del ritual de [**Snake**](gk2://character/snake) dándole un [**Corazón oscuro**](gk2://item/dark_heart). Entonces realizará el ritual por última vez, poniendo fin a su historia y a la del [**Inquisidor**](gk2://character/inquisitor)."
+        ],
+        "items": [
+          "dark_heart"
+        ],
+        "characters": [
+          "snake",
+          "inquisitor"
+        ],
+        "image": "ach_a_father_and_a_son",
+        "wikiName": "A father and a son"
+      },
+      {
+        "id": "ideal_song",
+        "name": "La canción ideal",
+        "text": [
+          "Durante la historia de [**Ms. Charm**](gk2://character/ms_charm), le pedirás a [**Vagner**](gk2://character/vagner) una canción para dársela a [**Ms. Charm**](gk2://character/ms_charm). Él te pedirá [**Infusión**](gk2://item/infusion), que puedes hacer destilando [**Licor**](gk2://item/booze) y 3 × [**Seta roja**](gk2://item/red_mushroom). Después de darle a [**Vagner**](gk2://character/vagner) la [**Infusión**](gk2://item/infusion), vuelve al día siguiente para encontrar una nota de [**Vagner**](gk2://character/vagner). Por la noche, dirígete a los acantilados justo al norte de la playa, donde se reproducirá una escena en la que recibirás la canción Ideal y conseguirás el logro."
+        ],
+        "items": [
+          "infusion",
+          "booze",
+          "red_mushroom"
+        ],
+        "characters": [
+          "ms_charm",
+          "vagner"
+        ],
+        "image": "ach_ideal_song",
+        "wikiName": "Ideal song"
+      },
+      {
+        "id": "his_mansion",
+        "name": "Su mansión",
+        "text": [
+          "Para mejorar la iglesia a Catedral, necesitarás 200 de valoración del cementerio y 50 de valoración de la iglesia. También se te pedirá tallar 3 × [**Pieza de mármol tallada**](gk2://item/a_carved_piece_of_marble) (oro), para lo cual necesitarás un [**Cincel de hierro**](gk2://item/iron_chisel) (oro), o un [**Cincel de hierro**](gk2://item/iron_chisel) (plata) con mejoras de tecnología."
+        ],
+        "items": [
+          "a_carved_piece_of_marble",
+          "iron_chisel"
+        ],
+        "image": "ach_his_mansion",
+        "wikiName": "His mansion"
+      },
+      {
+        "id": "two_brothers",
+        "name": "Dos hermanos",
+        "text": [
+          "Después de mejorar la iglesia y de terminar la historia del [**Comerciante**](gk2://character/merchant) hasta el punto en que el [**Comerciante**](gk2://character/merchant) necesita asistir a una ceremonia por su nuevo cargo, intenta conseguir la [**Invitación aceptada**](gk2://item/accepted_invitation) del [**Inquisidor**](gk2://character/inquisitor), que se negará. Luego habla con el [**Comerciante**](gk2://character/merchant), que aceptará ir. En ![Orgullo](gk2://day/orgullo), entrega al [**Obispo**](gk2://character/bishop) los papeles de aristócrata (12 de oro en los servicios reales) y la [**Invitación aceptada**](gk2://item/accepted_invitation). Después habla con él de nuevo para iniciar una escena, tras la cual conseguirás este logro."
+        ],
+        "items": [
+          "accepted_invitation"
+        ],
+        "characters": [
+          "merchant",
+          "inquisitor",
+          "bishop"
+        ],
+        "image": "ach_two_brothers",
+        "wikiName": "Two brothers"
+      },
+      {
+        "id": "best_seller",
+        "name": "Superventas",
+        "text": [
+          "Durante la historia combinada de [**Ms. Charm**](gk2://character/ms_charm) y el [**Astrólogo**](gk2://character/astrologer), tendrás que darle al [**Astrólogo**](gk2://character/astrologer) un [**Libro**](gk2://item/book). Estos se pueden hacer combinando una [**Tapa dura**](gk2://item/hard_cover) y un [**Capítulo**](gk2://item/chapter), y la calidad dependerá de las mejoras de tecnología que tengas disponibles. Probablemente necesitarás al menos [**Tapa dura**](gk2://item/hard_cover) (plata) y [**Capítulo**](gk2://item/chapter) (plata). Después de darle al [**Astrólogo**](gk2://character/astrologer) el [**Libro**](gk2://item/book), tendrás que hablar con él de nuevo la semana siguiente, donde ahora te pedirá otro [**Libro**](gk2://item/book). Este probablemente necesitará [**Tapa dura**](gk2://item/hard_cover) (oro) y [**Capítulo**](gk2://item/chapter) (oro), además de algo de suerte para asegurarte de que el libro salga (oro) (usa el truco de dormir/guardar y recarga la partida si te queda uno de calidad (plata)). Entregar el [**Libro**](gk2://item/book) completado te dará este logro. (Cabe señalar que, en la última versión del juego, si le das al Astrólogo el Research Obsidian paper en lugar de un [**Libro**](gk2://item/book), no te pedirá un [**Libro**](gk2://item/book) la próxima vez que te reúnas con él. En su lugar, te pedirá los [**Documentos de aristócrata**](gk2://item/aristocrat_papers), saltándose esencialmente este paso. Esto hará que este logro sea imposible de conseguir a menos que cargues una partida guardada.)"
+        ],
+        "items": [
+          "book",
+          "hard_cover",
+          "chapter",
+          "aristocrat_papers"
+        ],
+        "characters": [
+          "ms_charm",
+          "astrologer"
+        ],
+        "image": "ach_best_seller",
+        "wikiName": "Best seller"
+      },
+      {
+        "id": "prodigal_father",
+        "name": "El padre pródigo",
+        "text": [
+          "Tras entregarle al [**Astrólogo**](gk2://character/astrologer) el [**Libro**](gk2://item/book) y esperar una semana, podrás empezar la excavación desde su diálogo. Se reproducirá una escena y, al final, obtendrás este logro."
+        ],
+        "items": [
+          "book"
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_prodigal_father",
+        "wikiName": "Prodigal father"
+      },
+      {
+        "id": "back_home",
+        "name": "De vuelta a casa",
+        "text": [
+          "Al completar las historias necesarias para «Un padre y un hijo», «Dos hermanos» y «El padre pródigo», tendrás los 6 objetos necesarios para abrir el portal en Witch Hill (el Salty Fork, el Mirror of Pride, el Endless Notebook, el Eternal Burning Coal, el Golden Angle y el Necklace). Fabrica las piezas frente al portal y se reproducirá una escena, tras la cual obtendrás este logro."
+        ],
+        "image": "ach_back_home",
+        "wikiName": "Back home"
+      },
+      {
+        "id": "exterminate",
+        "name": "Exterminio",
+        "text": [
+          "ATENCIÓN: ¡Es muy fácil que se te pase! También requiere el DLC Game of Crone. Se han eliminado todas las emboscadas. Terminator y Rambo estarían orgullosos.",
+          "Tras la escena del pantano, un gólem te ataca. Ve a buscar a los otros 3 en las siguientes ubicaciones:",
+          "• Al sur de la casa cerca de la cantera",
+          "• Cerca de la casa quemada del Inquisidor",
+          "• Cerca de los árboles al sur del barón gitano (al norte de la calavera parlante)",
+          "Si construyes la atalaya, estás perdido. Dicho de otro modo, si terminas la atalaya antes de matarlos a todos, tendrás que recargar o volver a jugar para conseguir a los demás."
+        ],
+        "missable": true,
+        "dlc": "Game of Crone",
+        "image": "ach_exterminate",
+        "wikiName": "Exterminate"
+      }
+    ],
+    "spoiler": true
+  },
+  {
+    "id": "crafting_cooking_farming",
+    "name": "Crafting, Cooking, Farming",
+    "achievements": [
+      {
+        "id": "marble",
+        "name": "Mármol",
+        "text": [
+          "La cantera de mármol se encuentra tras reparar el puente sobre el río y retirar el bloqueo al final del camino hacia el norte. Repararlo requiere 16 × [**Tabla**](gk2://item/flitch), 4 × [**Piezas de hierro simples**](gk2://item/simple_iron_parts) y 7 × [**Clavos**](gk2://item/nails). Si te quedas sin energía mientras construyes, puedes entrar en la cabaña y dormir para recuperarla."
+        ],
+        "items": [
+          "flitch",
+          "simple_iron_parts",
+          "nails"
+        ],
+        "image": "ach_marble",
+        "wikiName": "Marble"
+      },
+      {
+        "id": "sashimi_master",
+        "name": "Maestro del sashimi",
+        "text": [
+          "Extrae 30 × [**Carne**](gk2://item/flesh) de cadáveres. No hace falta trocear la carne para este logro, solo extraerla."
+        ],
+        "items": [
+          "flesh"
+        ],
+        "image": "ach_sashimi_master",
+        "wikiName": "Sashimi master"
+      },
+      {
+        "id": "winemaker",
+        "name": "Vinicultor",
+        "text": [
+          "Se puede conseguir convirtiendo 30 × [**Uvas**](gk2://item/grapes) (oro) (cultivadas en el Vineyard con [**Semillas de uva**](gk2://item/grape_seed) (plata) y [**Fertilizante de calidad II**](gk2://item/quality_fertilizer_ii), o simplemente usando [**Semillas de uva**](gk2://item/grape_seed) (oro)) en 2 × [**Balde de zumo de uva**](gk2://item/pail_of_grape_juice) (oro), y fermentándolo después en el Wine barrel. Si no tienes el perk para mejorar la calidad de tus vinos, tendrás un 50% de probabilidades de acabar con [**Vino tinto**](gk2://item/red_wine) (plata) en su lugar, así que guarda partida antes o haz de más."
+        ],
+        "items": [
+          "grapes",
+          "grape_seed",
+          "quality_fertilizer_ii",
+          "pail_of_grape_juice",
+          "red_wine"
+        ],
+        "image": "ach_winemaker",
+        "wikiName": "Winemaker"
+      },
+      {
+        "id": "golden_pumpkin",
+        "name": "Calabaza dorada",
+        "text": [
+          "[**Calabaza**](gk2://item/pumpkin) (oro) se puede cultivar combinando [**Semillas de calabaza**](gk2://item/pumpkin_seed) (plata) con [**Fertilizante de calidad II**](gk2://item/quality_fertilizer_ii), o plantando [**Semillas de calabaza**](gk2://item/pumpkin_seed) (oro). Al cosechar el [**Calabaza**](gk2://item/pumpkin) (oro) resultante desbloquearás este logro."
+        ],
+        "items": [
+          "pumpkin",
+          "pumpkin_seed",
+          "quality_fertilizer_ii"
+        ],
+        "image": "ach_golden_pumpkin",
+        "wikiName": "Golden pumpkin"
+      },
+      {
+        "id": "kitchen_boy",
+        "name": "Pinche de cocina",
+        "text": [
+          "Cocina 10 objetos distintos de la lista de cocina. Si te faltan cosas que cocinar, no olvides comprar las recetas a [**Miss Chain**](gk2://character/miss_chain)."
+        ],
+        "characters": [
+          "miss_chain"
+        ],
+        "image": "ach_kitchen_boy",
+        "wikiName": "Kitchen boy"
+      },
+      {
+        "id": "cook",
+        "name": "Cocinero",
+        "text": [
+          "Cocina 20 objetos distintos de la lista de cocina. Si te faltan cosas que cocinar, no olvides comprar las recetas a [**Miss Chain**](gk2://character/miss_chain)."
+        ],
+        "characters": [
+          "miss_chain"
+        ],
+        "image": "ach_cook",
+        "wikiName": "Cook"
+      },
+      {
+        "id": "chef",
+        "name": "Chef",
+        "text": [
+          "Cocina 30 objetos distintos de la lista de cocina. Si te faltan cosas que cocinar, no olvides comprar las recetas a [**Miss Chain**](gk2://character/miss_chain)."
+        ],
+        "characters": [
+          "miss_chain"
+        ],
+        "image": "ach_chef"
+      },
+      {
+        "id": "apprentice",
+        "name": "Aprendiz",
+        "text": [
+          "Descubre 5 recetas de alquimia combinando ingredientes de alquimia de la lista de [**Banco de alquimia (nivel I)**](gk2://item/alchemy_workbench_tier_i) o de [**Banco de alquimia (nivel II)**](gk2://item/alchemy_workbench_tier_ii). Las recetas alternativas para el mismo componente no cuentan."
+        ],
+        "items": [
+          "alchemy_workbench_tier_i",
+          "alchemy_workbench_tier_ii"
+        ],
+        "image": "ach_apprentice",
+        "wikiName": "Apprentice"
+      },
+      {
+        "id": "alchemist",
+        "name": "Alquimista",
+        "text": [
+          "Descubre 10 recetas de alquimia combinando ingredientes de alquimia de la lista de [**Banco de alquimia (nivel I)**](gk2://item/alchemy_workbench_tier_i) o de [**Banco de alquimia (nivel II)**](gk2://item/alchemy_workbench_tier_ii). Las recetas alternativas para el mismo componente no cuentan."
+        ],
+        "items": [
+          "alchemy_workbench_tier_i",
+          "alchemy_workbench_tier_ii"
+        ],
+        "image": "ach_alchemist",
+        "wikiName": "Alchemist"
+      },
+      {
+        "id": "master_alchemist",
+        "name": "Maestro alquimista",
+        "text": [
+          "Descubre 20 recetas de alquimia combinando ingredientes de alquimia de la lista de [**Banco de alquimia (nivel I)**](gk2://item/alchemy_workbench_tier_i) o de [**Banco de alquimia (nivel II)**](gk2://item/alchemy_workbench_tier_ii). Las recetas alternativas para el mismo componente no cuentan."
+        ],
+        "items": [
+          "alchemy_workbench_tier_i",
+          "alchemy_workbench_tier_ii"
+        ],
+        "image": "ach_master_alchemist",
+        "wikiName": "Master alchemist"
+      }
+    ]
+  },
+  {
+    "id": "fishing",
+    "name": "Fishing",
+    "achievements": [
+      {
+        "id": "a_fish_a_day",
+        "name": "¡Un pez al día!",
+        "text": [
+          "Se consigue simplemente descubriendo todos los peces de cada punto de pesca. Los peces descubiertos en varias ubicaciones solo cuentan una vez, y no olvides mejorar tu caña de pescar."
+        ],
+        "image": "ach_a_fish_a_day",
+        "wikiName": "A fish a day!"
+      },
+      {
+        "id": "fish_collector",
+        "name": "Coleccionista de peces",
+        "text": [
+          "Se consigue simplemente descubriendo todos los peces de cada punto de pesca. Los peces descubiertos en varias ubicaciones solo cuentan una vez, y no olvides mejorar tu caña de pescar."
+        ],
+        "image": "ach_fish_collector",
+        "wikiName": "Fish collector"
+      },
+      {
+        "id": "ichthyologist",
+        "name": "Ictiólogo",
+        "text": [
+          "Se consigue simplemente descubriendo todos los peces de cada punto de pesca. Los peces descubiertos en varias ubicaciones solo cuentan una vez, y no olvides mejorar tu caña de pescar."
+        ],
+        "image": "ach_ichthyologist",
+        "wikiName": "Ichthyologist"
+      },
+      {
+        "id": "gold_fish",
+        "name": "Pez dorado",
+        "text": [
+          "Pesca un [**Pez dorado**](gk2://item/goldfish). Se pueden pescar en el punto de pesca del mar. Tendrás que lanzar a la distancia máxima con una [**Caña de pescar excelente**](gk2://item/excellent_fishing_rod) y un [**Señuelo con gema**](gk2://item/lure_with_a_gem). El goldfish tiene un 5% de probabilidades de picar de noche y un 2% de día, así que lleva señuelos de sobra y céntrate en pescar de noche."
+        ],
+        "items": [
+          "goldfish",
+          "excellent_fishing_rod",
+          "lure_with_a_gem"
+        ],
+        "image": "ach_gold_fish",
+        "wikiName": "Gold fish"
+      },
+      {
+        "id": "brutal_fisherman",
+        "name": "Pescador brutal",
+        "text": [
+          "Pesca 200 peces. Avanzarás mucho hacia este logro tras conseguir «¡Un pez al día!», «Coleccionista de peces», «Ictiólogo» y «Pez dorado». Para el resto, elige un punto de pesca cómodo y lanza a la distancia más cercana sin cebo. Llevará un rato, pero no requiere mucha atención."
+        ],
+        "image": "ach_brutal_fisherman",
+        "wikiName": "Brutal fisherman"
+      }
+    ]
+  },
+  {
+    "id": "points",
+    "name": "Points",
+    "achievements": [
+      {
+        "id": "just_red_points",
+        "name": "Solo puntos rojos",
+        "text": [
+          "Reúne 1000 puntos rojos. Se obtienen con actividades como la herrería, la carpintería y el estudio de materiales y herramientas relacionados. También puedes comprar el [**Libro (r)**](gk2://item/techbook) por 2 plata y el [**Gran libro (r)**](gk2://item/techbook) por 4 plata al [**Astrólogo**](gk2://character/astrologer)."
+        ],
+        "items": [
+          "techbook"
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_just_red_points",
+        "wikiName": "Just red points"
+      },
+      {
+        "id": "just_green_points",
+        "name": "Solo puntos verdes",
+        "text": [
+          "Reúne 1000 puntos verdes. Se obtienen con actividades como la agricultura, la recolección y el estudio de materiales relacionados. También puedes comprar el [**Libro (g)**](gk2://item/techbook) por 3 plata y el [**Gran libro (g)**](gk2://item/techbook) por 6 plata al [**Astrólogo**](gk2://character/astrologer)."
+        ],
+        "items": [
+          "techbook"
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_just_green_points",
+        "wikiName": "Just green points"
+      },
+      {
+        "id": "just_blue_points",
+        "name": "Solo puntos azules",
+        "text": [
+          "Reúne 1000 puntos azules. Se obtienen con actividades como escribir historias, notas, capítulos o libros, fabricar decoraciones de tumbas, fabricar componentes de alquimia y estudiar materiales relacionados. También puedes comprar el [**Libro (b)**](gk2://item/techbook) por 5 plata y el [**Gran libro (b)**](gk2://item/techbook) por 10 plata al [**Astrólogo**](gk2://character/astrologer)."
+        ],
+        "items": [
+          "techbook"
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_just_blue_points",
+        "wikiName": "Just blue points"
+      },
+      {
+        "id": "more_red_points",
+        "name": "¡Más puntos rojos!",
+        "text": [
+          "Reúne 3000 puntos rojos. Se obtienen con actividades como la herrería, la carpintería y el estudio de materiales y herramientas relacionados. También puedes comprar el [**Libro (r)**](gk2://item/techbook) por 2 plata y el [**Gran libro (r)**](gk2://item/techbook) por 4 plata al [**Astrólogo**](gk2://character/astrologer)."
+        ],
+        "items": [
+          "techbook"
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_more_red_points",
+        "wikiName": "More red points!"
+      },
+      {
+        "id": "more_green_points",
+        "name": "¡Más puntos verdes!",
+        "text": [
+          "Reúne 3000 puntos verdes. Se obtienen con actividades como la agricultura, la recolección y el estudio de materiales relacionados. También puedes comprar el [**Libro (g)**](gk2://item/techbook) por 3 plata y el [**Gran libro (g)**](gk2://item/techbook) por 6 plata al [**Astrólogo**](gk2://character/astrologer)."
+        ],
+        "items": [
+          "techbook"
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_more_green_points",
+        "wikiName": "More green points!"
+      },
+      {
+        "id": "more_blue_points",
+        "name": "¡Más puntos azules!",
+        "text": [
+          "Reúne 3000 puntos azules. Se obtienen con actividades como escribir historias, notas, capítulos o libros, fabricar decoraciones de tumbas, fabricar componentes de alquimia y estudiar materiales relacionados. También puedes comprar el [**Libro (b)**](gk2://item/techbook) por 5 plata y el [**Gran libro (b)**](gk2://item/techbook) por 10 plata al [**Astrólogo**](gk2://character/astrologer)."
+        ],
+        "items": [
+          "techbook"
+        ],
+        "characters": [
+          "astrologer"
+        ],
+        "image": "ach_more_blue_points",
+        "wikiName": "More blue points!"
+      }
+    ]
+  },
+  {
+    "id": "dungeon",
+    "name": "Dungeon",
+    "achievements": [
+      {
+        "id": "not_far_from_the_ground",
+        "name": "No muy lejos de la superficie",
+        "text": [
+          "Supera la planta 5 de la mazmorra. Este logro se puede conseguir siguiendo la historia de [**Snake**](gk2://character/snake). Puedes ahorrar recursos al explorar la mazmorra si entras sin consumibles de curación ni energía y simplemente vuelves al morir (los monstruos que mates no reaparecerán, así que puedes avanzar poco a poco)."
+        ],
+        "characters": [
+          "snake"
+        ],
+        "image": "ach_not_far_from_the_ground",
+        "wikiName": "Not far from the ground"
+      },
+      {
+        "id": "scary_dungeon_depths",
+        "name": "Profundidades aterradoras",
+        "text": [
+          "Supera la planta 10 de la mazmorra. Este logro se puede conseguir siguiendo la historia de [**Snake**](gk2://character/snake). Puedes ahorrar recursos al explorar la mazmorra si entras sin consumibles de curación ni energía y simplemente vuelves al morir (los monstruos que mates no reaparecerán, así que puedes avanzar poco a poco)."
+        ],
+        "characters": [
+          "snake"
+        ],
+        "image": "ach_scary_dungeon_depths",
+        "wikiName": "Scary dungeon depths"
+      },
+      {
+        "id": "nothing_underneath",
+        "name": "Nada más abajo",
+        "text": [
+          "Supera la planta 15 de la mazmorra. Este logro se puede conseguir siguiendo la historia de [**Snake**](gk2://character/snake) (a menos que hayas comprado el [**Manzana dorada**](gk2://item/golden_apple) a [**Clotho**](gk2://character/clotho)), y las plantas 11-15 solo se desbloquean con un medallón que deja caer el Vampire hunter durante la historia de [**Snake**](gk2://character/snake). Puedes ahorrar recursos al explorar la mazmorra si entras sin consumibles de curación ni energía y simplemente vuelves al morir (los monstruos que mates no reaparecerán, así que puedes avanzar poco a poco)."
+        ],
+        "items": [
+          "golden_apple"
+        ],
+        "characters": [
+          "snake",
+          "clotho"
+        ],
+        "image": "ach_nothing_underneath",
+        "wikiName": "Nothing underneath"
+      }
+    ],
+    "spoiler": true
+  },
+  {
+    "id": "miscellaneous",
+    "name": "Miscellaneous",
+    "achievements": [
+      {
+        "id": "macplayer",
+        "name": "MacPlayer",
+        "text": [
+          "Muere 10 veces. La forma más fácil de morir repetidamente es dejar que te maten los enemigos de la mazmorra. Otra opción es quitarte la armadura y seguir el camino pasado el Apiary, donde te atacarán murciélagos desde el anochecer hasta la medianoche."
+        ],
+        "image": "ach_macplayer"
+      },
+      {
+        "id": "tastes_like_home",
+        "name": "Sabe a hogar",
+        "text": [
+          "Compra [**Nuggets de pescado**](gk2://item/fish_nuggets) a [**Horadric**](gk2://character/horadric) por 25 cobre, o cocínalos en el Oven con [**Filete de pescado blanco**](gk2://item/white_fish_fillet), 2 × [**Aceite**](gk2://item/oil) y 5 × [**Combustible**](gk2://item/fuel). Cómetelos para desbloquear este logro."
+        ],
+        "items": [
+          "fish_nuggets",
+          "white_fish_fillet",
+          "oil",
+          "fuel"
+        ],
+        "characters": [
+          "horadric"
+        ],
+        "image": "ach_tastes_like_home",
+        "wikiName": "Tastes like home"
+      },
+      {
+        "id": "health_care",
+        "name": "Cuidar la salud",
+        "text": [
+          "Bebe 50 × [**Poción de curación**](gk2://item/heal_potion). No importa si las fabricas o las compras."
+        ],
+        "items": [
+          "heal_potion"
+        ],
+        "image": "ach_health_care",
+        "wikiName": "Health care"
+      }
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Descarga de la wiki las imágenes de objetos, estaciones, personajes y días a GK2Core/Resources/Images.
+"""Descarga de la wiki las imágenes de objetos, estaciones, personajes, días, tecnologías y logros a GK2Core/Resources/Images.
 
 Uso (después de convert.py): python3 images.py   — al terminar vuelve a ejecutar convert.py,
 que añade el campo "image" a cada entrada con imagen descargada.
@@ -102,6 +102,23 @@ def main():
         wanted["npc_" + n["id"]] = candidates_for(title, prefer_item=False)
     for d in days:
         wanted["day_" + d["id"]] = [f"{day_en[d['id']]}.png"]
+    # árboles de tecnología: la imagen de su apartado en la página «Technologies»
+    tech_page = PAGES["Technologies"]["text"]
+    for tree in json.load(open(os.path.join(RES, "technologies.json"))):
+        m = re.search(r"^===\s*" + re.escape(tree["name"]) + r"\s*===\s*$.*?\[\[File:([^|\]]+)", tech_page, re.M | re.S)
+        if m:
+            wanted["tech_" + tree["id"]] = [m.group(1).strip()]
+    for color, file in (("red", "Red Tech Symbol.png"), ("green", "Green Tech Symbol.png"),
+                        ("blue", "Blue Tech Symbol.png"), ("soul", "Soul Point Symbol.png"),
+                        ("violet", "Techpoint Purple.png")):
+        wanted["techpoint_" + color] = [file]
+    # estrellas de calidad (Item.quality)
+    for level, file in (("copper", "Bronze Star.png"), ("silver", "Silver Star.png"), ("gold", "Gold Star.png")):
+        wanted["star_" + level] = [file]
+    # logros: la imagen de la primera columna de cada fila de la guía
+    guide_page = PAGES.get("100% Achievement Guide", {}).get("text", "")
+    for file, name in re.findall(r"^\|\s*\[\[File:([^|\]]+)[^\n]*\n\|\s*([^\n]+)", guide_page, re.M):
+        wanted.setdefault("ach_" + slug(name.strip()), [file.strip()])
 
     urls = resolve([c for cs in wanted.values() for c in cs])
     os.makedirs(IMAGES, exist_ok=True)

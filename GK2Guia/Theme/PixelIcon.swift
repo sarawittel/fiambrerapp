@@ -39,6 +39,18 @@ struct PixelIcon: View {
     }
 }
 
+extension Text {
+    /// El icono de un día dentro de un texto: en el juego los días no tienen nombre.
+    @MainActor init(dayIcon day: Day, height: CGFloat = 18) {
+        if let image = day.image, let cgImage = WikiImages.load(image) {
+            let icon = Image(cgImage, scale: CGFloat(cgImage.height) / height, label: Text(day.name))
+            self = Text(icon).baselineOffset(-height / 4)
+        } else {
+            self = Text(day.short)
+        }
+    }
+}
+
 /// Carga y guarda en memoria las imágenes de `GK2Core/Resources/Images`.
 @MainActor
 enum WikiImages {

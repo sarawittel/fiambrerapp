@@ -223,15 +223,40 @@ def add_item(title, category="material", sources=None, description=None):
     return items[title]
 
 
+# plantillas en línea con valor: se quedan como texto antes de quitar el resto
+INLINE_TEMPLATES = [
+    # «{{Energy||20 -}} {{Energy||36}}» -> «20–36 energy»
+    (r"\{\{\s*(?:Energy|Health)\s*\|\s*[+-]?\s*\|?\s*(\d+)\s*-\s*\}\}\s*", lambda m: f"{m.group(1)}–"),
+    (r"\{\{\s*(Energy|Health)\s*\|\s*[+-]?\s*\|?\s*(\d+)\s*\}\}", lambda m: f"{m.group(2)} {m.group(1).lower()}"),
+    (r"\{\{\s*Money\s*\|\s*(\d+)\s*\}\}", lambda m: " ".join(
+        f"{n} {u}" for n, u in ((int(m.group(1)) // 10000, "gold"), (int(m.group(1)) // 100 % 100, "silver"),
+                                (int(m.group(1)) % 100, "copper")) if n)),
+    (r"\{\{\s*(Energy|Health|Fuel)\s*\}\}", lambda m: m.group(1).lower()),
+    # icono de decoración de las tumbas: «provides +3 {{Grave Decor}}» (salvo si ya lo dice: «to Grave Decor {{Grave Decor}}»)
+    (r"(?<!Grave Decor )\{\{\s*Grave Decor\s*\}\}", lambda m: "grave decor"),
+    (r"\{\{\s*Techpoint\s*\|\s*(\w+)\s*\|\s*(\d+)\s*\}\}", lambda m: f"{m.group(2)} {m.group(1).lower()} tech points"),
+    (r"\{\{\s*(?:Item|NPC)\s*\|([^|}]*)[^{}]*\}\}", lambda m: f"[[{m.group(1).strip()}]]"),
+]
+# «Ms. Charm»: el punto no acaba la frase
+ABBREVIATIONS = r"(?<!\bMs\.)(?<!\bMr\.)(?<!\bSt\.)(?<!\bDr\.)"
+
+
 def intro(text):
     """Primera frase del artículo."""
+    for pattern, repl in INLINE_TEMPLATES:
+        text = re.sub(pattern, repl, text, flags=re.I)
     body = re.sub(r"\{\{[^{}]*\}\}", "", re.sub(r"\{\{[^{}]*\}\}", "", text))
     for para in body.split("\n"):
         para = para.strip()
-        if para and not para.startswith(("{", "|", "!", "=", "[[Category", "[[File", "<", "*", "__")):
+        # «[[pt-br:Óleo de semente]]»: enlaces a la wiki en otros idiomas
+        if re.match(r"\[\[[a-z]{2}(?:-[a-z]+)?\s*:", para):
+            continue
+        # «<b>Hops</b> are…»: la negrita no es una etiqueta de bloque
+        lead = re.sub(r"^<(?:b|i|strong)>", "", para)
+        if para and not lead.startswith(("{", "|", "!", "=", "[[Category", "[[File", "<", "*", "__")):
             s = plain(para)
-            if len(s) > 20:
-                first = re.split(r"(?<=[.!?])\s", s, maxsplit=1)[0]
+            if len(s) > 20 and not re.search(r"unimplemented", s, re.I):
+                first = re.split(ABBREVIATIONS + r"(?<=[.!?])\s", s, maxsplit=1)[0]
                 return first[:240]
     return None
 
@@ -735,6 +760,394 @@ npcs = [n for n in npcs if n.get("sells") or n.get("buys") or n.get("quests") or
 npcs.sort(key=lambda n: n["name"])
 
 
+# MARK: - Tecnologías
+
+POINTS = ("red", "green", "blue", "soul", "violet")
+TECHPOINT_RE = re.compile(r"\{\{\s*[Tt]echpoint\s*\|\s*(\w+)\s*\|\s*(\d+)\s*\}\}")
+UNLOCK_RE = re.compile(r"^\s*(Blueprint|Create|Extract|Gathering|Perk|Recipe)\s*:\s*(.*)$", re.S)
+
+
+def split_cells(line, sep):
+    """Parte una línea de tabla por `||`/`!!` fuera de plantillas y enlaces."""
+    out, buf, depth, i = [], "", 0, 0
+    while i < len(line):
+        if line.startswith(("{{", "[["), i):
+            depth, buf, i = depth + 1, buf + line[i:i + 2], i + 2
+        elif line.startswith(("}}", "]]"), i) and depth:
+            depth, buf, i = depth - 1, buf + line[i:i + 2], i + 2
+        elif not depth and line.startswith(sep, i):
+            out, buf, i = out + [buf], "", i + len(sep)
+        else:
+            buf, i = buf + line[i], i + 1
+    return out + [buf]
+
+
+def grid(text):
+    """Filas de una tabla con los `rowspan` repetidos; cada fila es [(es_cabecera, texto_celda)]."""
+    rows, pending = [], {}  # columna -> [filas que faltan, celda]
+    raw = []
+    for line in text.split("\n"):
+        s = line.strip()
+        if s.startswith("{|") or s.startswith("|}") or s.startswith("|+"):
+            continue
+        if s.startswith("|-"):
+            raw.append([])
+        elif s.startswith(("|", "!")):
+            if not raw:
+                raw.append([])
+            header = s.startswith("!")
+            for cell in split_cells(s[1:], "!!" if header else "||"):
+                m = re.match(r'^\s*((?:[a-z-]+\s*=\s*"[^"]*"\s*)+)\|(?!\|)(.*)$', cell, re.S)
+                attrs, body = (m.group(1), m.group(2)) if m else ("", cell)
+                span = re.search(r'rowspan\s*=\s*"(\d+)"', attrs)
+                raw[-1].append([header, body.strip(), int(span.group(1)) if span else 1])
+        elif raw and raw[-1]:
+            raw[-1][-1][1] += "\n" + s
+    for cells in (r for r in raw if r):
+        row, col = [], 0
+        cells = list(cells)
+        while cells or any(c >= col for c in pending):
+            if col in pending:
+                left, cell = pending[col]
+                row.append(cell)
+                pending[col][0] -= 1
+                if pending[col][0] == 0:
+                    del pending[col]
+            elif cells:
+                header, body, span = cells.pop(0)
+                row.append((header, body))
+                if span > 1:
+                    pending[col] = [span - 1, (header, body)]
+            else:
+                break
+            col += 1
+        rows.append(row)
+    return rows
+
+
+def table_blocks(text):
+    """(posición, texto) de cada tabla de primer nivel."""
+    out, depth, start = [], 0, 0
+    for m in re.finditer(r"^\s*(\{\||\|\})", text, re.M):
+        if m.group(1) == "{|":
+            if depth == 0:
+                start = m.start()
+            depth += 1
+        elif depth:
+            depth -= 1
+            if depth == 0:
+                out.append((start, text[start:m.end()]))
+    return out
+
+
+def tech_cost(cell):
+    cost = {}
+    for color, n in TECHPOINT_RE.findall(cell):
+        color = color.lower()
+        if color in POINTS:
+            cost[color] = cost.get(color, 0) + int(n)
+    return cost
+
+
+def tech_condition(cell):
+    rest = TECHPOINT_RE.sub("", re.sub(r"<hr\s*/?>", " ", cell))
+    text = rich(rest)
+    return None if not text or re.fullmatch(r"none|-", text, re.I) else text
+
+
+def unlock_from(cell):
+    """[{kind, name, item?}] de una celda de «Unlocks»."""
+    m = UNLOCK_RE.match(cell.strip())
+    if m:
+        kind, rest = m.group(1).lower(), m.group(2)
+        rest = re.split(r"\s+See\s+\[\[", rest)[0]
+        link = re.search(r"\[\[([^|\]]+)(?:\|([^\]]*))?\]\]", rest)
+        name = plain(rest)
+        entry = {"kind": kind, "name": name}
+        if link and kind != "perk":
+            title = canonical(link.group(1))
+            if title in items and title not in TECH_POINTS:
+                entry["item"] = items[title]["id"]
+        return [entry] if name else []
+    # Cookery: lista de {{Item|...}}
+    out = []
+    if not ITEM_RE.search(cell):
+        link = re.search(r"\[\[(?![Ff]ile:|[Ii]mage:)([^|\]]+)(?:\|([^\]]*))?\]\]", cell)
+        if not link:
+            return []
+        title = canonical(link.group(1))
+        entry = {"kind": "create", "name": plain(link.group(0))}
+        if title in items:
+            entry["item"] = items[title]["id"]
+        return [entry]
+    for name, _, _ in items_in(cell):
+        title = canonical(name)
+        entry = {"kind": "recipe", "name": title}
+        if title in items:
+            entry["item"] = items[title]["id"]
+        if entry not in out:
+            out.append(entry)
+    return out
+
+
+def tech_tree(title):
+    text = expand_pagename(PAGES[title]["text"], title)
+    # el texto de la wiki está en inglés: «reaching {{Graveyard Rating}} 5»
+    text = re.sub(r"\{\{\s*[Gg]raveyard [Rr]ating\s*\}\}", "graveyard rating", text)
+    text = re.sub(r"\{\{\s*[Cc]hurch [Rr]ating\s*\}\}", "church rating", text)
+    heads = [(m.start(), plain(m.group(2))) for m in HEAD_RE.finditer(text) if len(m.group(1)) == 2]
+    first = min([p for p, _ in heads] + [p for p, _ in table_blocks(text)] + [len(text)])
+    branches, techs_by_name = [], {}
+    for pos, block in table_blocks(text):
+        rows = grid(block)
+        if not rows or not all(h for h, _ in rows[0]):
+            continue
+        labels = [plain(c).lower() for _, c in rows[0]]
+        if "technology" not in labels:
+            continue
+        col = lambda *keys: next((i for i, l in enumerate(labels) if any(k in l for k in keys)), None)
+        c_name, c_req, c_cost, c_unl = col("technology"), col("prerequisite"), col("cost", "requirement"), col("unlock")
+        heading = next((h for p, h in reversed(heads) if p < pos), None)
+        branch_text = ""
+        if heading:
+            start = next(p for p, h in heads if h == heading)
+            branch_text = text[start:pos].split("\n", 1)[1] if "\n" in text[start:pos] else ""
+        branch = {"name": heading, "text": paragraphs(branch_text), "techs": []}
+        for row in rows[1:]:
+            if len(row) <= c_name or all(h for h, _ in row):
+                continue
+            cell = lambda i: row[i][1] if i is not None and i < len(row) else ""
+            name_cell = cell(c_name)
+            dlc = next((v for k, v in DLCS.items() if k in name_cell.lower()), None)
+            name = plain(re.sub(r"''?\(.*?\)''?|\(\[\[.*?\]\]\)", "", name_cell)).strip()
+            if not name:
+                continue
+            tech = techs_by_name.get((heading, name.lower()))
+            if tech is None:
+                tech = {"id": slug(name), "name": name, "_requires": cell(c_req)}
+                cost = tech_cost(cell(c_cost))
+                if cost:
+                    tech["cost"] = cost
+                condition = tech_condition(cell(c_cost))
+                if condition:
+                    tech["condition"] = condition
+                if dlc:
+                    tech["dlc"] = dlc
+                tech["unlocks"] = []
+                techs_by_name[(heading, name.lower())] = tech
+                branch["techs"].append(tech)
+            # en las tablas de 5 columnas la imagen va en `c_unl` y el texto en la siguiente
+            for i in range(c_unl, len(row)):
+                for u in unlock_from(cell(i)):
+                    if u not in tech["unlocks"]:
+                        tech["unlocks"].append(u)
+        if branch["techs"]:
+            branches.append(branch)
+
+    used = set()
+    for b in branches:
+        for t in b["techs"]:
+            base, n = t["id"], 2
+            while t["id"] in used:
+                t["id"], n = f"{base}_{n}", n + 1
+            used.add(t["id"])
+    # prerrequisitos por nombre, dentro del mismo árbol
+    by_name = {t["name"].lower(): t["id"] for b in branches for t in b["techs"]}
+    for b in branches:
+        for t in b["techs"]:
+            req_cell = t.pop("_requires")
+            names = [plain(p).strip().lower() for p in re.split(r"\+|<br\s*/?>|,", req_cell)]
+            requires = [by_name[n] for n in names if n in by_name and by_name[n] != t["id"]]
+            if any(n and n not in by_name and n != "none" for n in names):
+                # «[[Undertaker]] from Refugee camp ([[Game of Crone]] DLC)»: es una condición, no otra tecnología
+                t["condition"] = " · ".join(x for x in (rich(req_cell), t.get("condition")) if x)
+                t.setdefault("dlc", next((v for k, v in DLCS.items() if k in req_cell.lower()), None))
+                if not t["dlc"]:
+                    del t["dlc"]
+            if requires:
+                t["requires"] = requires
+            if not t["unlocks"]:
+                del t["unlocks"]
+        if not b["name"]:
+            del b["name"]
+        if not b["text"]:
+            del b["text"]
+    name = title.removesuffix(" (Tech Tree)")
+    tree = {"id": slug(name), "name": name, "text": paragraphs(text[:first]), "branches": branches}
+    if not tree["text"]:
+        del tree["text"]
+    # «it is part of the [[Better Save Soul]] DLC»
+    dlc = re.search(r"\bis part of the \[*([^\]]+?)\]* DLC", text[:first])
+    if dlc and dlc_of(dlc.group(1)):
+        tree["dlc"] = dlc_of(dlc.group(1))
+    return tree
+
+
+# en el orden de la página «Technologies»
+tech_titles = [canonical(m) for m in re.findall(r"\[\[([^|\]]+\(Tech Tree\))", PAGES["Technologies"]["text"])]
+technologies = [tech_tree(t) for t in dict.fromkeys(tech_titles) if t in PAGES]
+
+
+# MARK: - Guía de logros
+
+GUIDE_PAGE = "100% Achievement Guide"
+
+
+def achievement_guide():
+    """Secciones de la guía de logros, cada una con sus logros en el orden de la wiki."""
+    text = PAGES[GUIDE_PAGE]["text"]
+    # notas de editores entre «###»: «### Someone please edit this… ###»
+    text = re.sub(r"###.*?###", "", text, flags=re.S)
+    sections, used = [], set()
+    for level, heading, body in outline(text):
+        if level != 2:
+            continue
+        blocks = table_blocks(body)
+        if not blocks:
+            continue
+        pos, block = blocks[0]
+        section = {"id": slug(heading), "name": plain(heading), "achievements": []}
+        if "mw-collapsed" in block.split("\n", 1)[0] or re.search(r"spoiler", body[:pos], re.I):
+            section["spoiler"] = True
+        for row in grid(block):
+            if len(row) < 3 or any(h for h, _ in row):
+                continue
+            icon, name, desc = (c for _, c in row[:3])
+            name = plain(name)
+            if not name:
+                continue
+            ach = {"id": slug(name), "name": name, "text": paragraphs(desc)}
+            base, n = ach["id"], 2
+            while ach["id"] in used:
+                ach["id"], n = f"{base}_{n}", n + 1
+            used.add(ach["id"])
+            if re.search(r"missable", desc, re.I):
+                ach["missable"] = True
+            if dlc_of(desc):
+                ach["dlc"] = dlc_of(desc)
+            found_items, found_npcs = mentions(desc, None)
+            if found_items:
+                ach["items"] = found_items
+            if found_npcs:
+                ach["characters"] = found_npcs
+            section["achievements"].append(ach)
+        if section["achievements"]:
+            sections.append(section)
+    return sections
+
+
+guide = achievement_guide() if GUIDE_PAGE in PAGES else []
+
+
+# MARK: - Calidad y estudio de los objetos
+
+QUALITIES = ("copper", "silver", "gold")
+STAR_RE = re.compile(r"(Bronze|Silver|Gold) Star", re.I)
+MONEY_RE = re.compile(r"\{\{\s*Money\s*\|\s*(\d+)\s*\}\}", re.I)
+ENERGY_RE = re.compile(r"\{\{\s*Energy\s*\|\s*([+-])\s*\|\s*(\d+)\s*\}\}", re.I)
+
+
+def expand_colspans(table):
+    """`colspan="2"|N/A` -> `N/A||N/A` en las filas de datos, para que cada celda caiga en su columna."""
+    def repl(m):
+        return "||".join([m.group(2).strip()] * int(m.group(1)))
+    return re.sub(r'colspan\s*=\s*"(\d+)"\s*\|(?!\|)\s*([^|\n]*)', repl, table)
+
+
+def quality_levels(text):
+    """{calidad: {energy, value}} de la tabla «Quality Levels»/«Quality»: una columna por calidad."""
+    sec = section(text, r"Quality(?: Levels)?")
+    out = {}
+    for _, table in table_blocks(sec):
+        for row in grid(table):
+            cells = [c for h, c in row if not h]
+            if len(cells) != len(QUALITIES):
+                continue
+            for q, cell in zip(QUALITIES, cells):
+                e, m = ENERGY_RE.search(cell), MONEY_RE.search(cell)
+                if e:
+                    out.setdefault(q, {})["energy"] = int(e.group(2)) * (-1 if e.group(1) == "-" else 1)
+                if m:
+                    out.setdefault(q, {})["value"] = int(m.group(1))
+    return out
+
+
+def trading_prices(text):
+    """{calidad: {buy, sell}} de la tabla «Trading»: la primera columna de precio es lo que cuesta
+    comprarlo y la segunda lo que pagan al venderlo. Si lo comercian varios personajes, manda el primero."""
+    out = {}
+    for _, table in table_blocks(section(text, "Trading")):
+        rows = grid(expand_colspans(table))
+        head = next((r for r in rows if all(h for h, _ in r)), None)
+        if not head:
+            continue
+        # «! NPC !! Quality || Buy Tier»: algunas cabeceras mezclan separadores
+        columns = [c.strip().lower() for _, cell in head for c in re.split(r"\|\||!!", plain(cell))]
+        prices = [i for i, c in enumerate(columns) if "cost" in c or "price" in c]
+        if "quality" not in columns or not prices:
+            continue
+        qcol = columns.index("quality")
+        for row in rows:
+            if row is head or len(row) <= qcol:
+                continue
+            star = STAR_RE.search(row[qcol][1])
+            if not star:
+                continue
+            q = QUALITIES[("bronze", "silver", "gold").index(star.group(1).lower())]
+            if q in out:
+                continue
+            entry = {}
+            for key, col in zip(("buy", "sell"), prices):
+                m = MONEY_RE.search(row[col][1]) if col < len(row) else None
+                if m:
+                    entry[key] = int(m.group(1))
+            if entry:
+                out[q] = entry
+    return out
+
+
+def study_of(text):
+    """Lo que da y cuesta estudiarlo en la mesa de estudio."""
+    for _, table in table_blocks(section(text, "Study")):
+        for row in grid(table):
+            cells = [c for h, c in row if not h]
+            if len(cells) < 2 or not TECHPOINT_RE.search(cells[0]):
+                continue
+            study = {"points": tech_cost(cells[0])}
+            for name, qty, _ in items_in(cells[1]):
+                if canonical(name) in ("Faith", "Science"):
+                    study[canonical(name).lower()] = qty
+            e = ENERGY_RE.search(" ".join(cells[2:3]))
+            if e:
+                study["energy"] = int(e.group(2))
+            notes = " ".join(cells[3:4])
+            if re.search(r"decompos", notes, re.I) and not re.search(r"not decompos", notes, re.I):
+                parts = []
+                for link in re.findall(r"\[\[([^|\]]+)", notes) + [n for n, _, _ in items_in(notes)]:
+                    title = canonical(link)
+                    if title in items and items[title]["id"] not in parts:
+                        parts.append(items[title]["id"])
+                if parts:
+                    study["decomposes"] = parts
+            if study["points"]:
+                return study
+    return None
+
+
+for title in item_meta:
+    text = expand_pagename(PAGES[title]["text"], title)
+    levels, prices = quality_levels(text), trading_prices(text)
+    if levels or prices or re.search(r"\{\{\s*Quality Sprite", section(text, r"Quality(?: Levels)?"), re.I):
+        quality = [{"level": q, **levels.get(q, {}), **prices.get(q, {})} for q in QUALITIES]
+        for entry in quality:  # el precio de la tabla de calidad suele ser el de compra
+            if entry.get("value") == entry.get("buy"):
+                entry.pop("value", None)
+        items[title]["quality"] = quality
+    study = study_of(text)
+    if study:
+        items[title]["study"] = study
+
+
 # MARK: - Escritura
 
 item_list = sorted({i["id"]: i for i in items.values()}.values(), key=lambda i: i["name"].lower())
@@ -760,8 +1173,308 @@ for n in npcs:
     with_image(n, "npc_" + n["id"])
 for d in days_json:
     with_image(d, "day_" + d["id"])
+for tree in technologies:
+    with_image(tree, "tech_" + tree["id"])
+for section in guide:
+    for ach in section["achievements"]:
+        with_image(ach, "ach_" + ach["id"])
 stations = [with_image({"name": name}, "station_" + slug(name))
             for name in sorted({r["station"] for r in recipes})]
+
+
+# MARK: - Traducción
+
+# es.json: texto en inglés tal como sale de la conversión -> traducción al español.
+# Los nombres de personajes y lugares se quedan en inglés, como en la wiki; los de objetos van en es_items.json
+# y los de estaciones y tecnologías, en es_names.json.
+# Si la wiki cambia un texto, su traducción deja de coincidir y sale en inglés hasta que se traduzca.
+ES_PATH = os.path.join(HERE, "es.json")
+ES = json.load(open(ES_PATH)) if os.path.exists(ES_PATH) else {}
+LINK_RE = re.compile(r"\]\((gk2://[^)]+)\)")
+untranslated = set()
+DAY_SHORT_ID = {short: id for _, id, _, short, *_ in DAYS}
+DAY_RE = re.compile(r"\b(" + "|".join(DAY_SHORT_ID) + r")\b")
+
+
+def day_icons(source, text):
+    """En el juego los días no tienen nombre: se escriben como icono, `![Orgullo](gk2://day/orgullo)`.
+    Solo los que ya salían en el texto original (de {{Day|…}}): en español, «Ira» u «orgullo» también es el pecado."""
+    days = set(DAY_RE.findall(source))
+    return DAY_RE.sub(lambda m: f"![{m.group(1)}](gk2://day/{DAY_SHORT_ID[m.group(1)]})"
+                      if m.group(1) in days else m.group(0), text)
+
+
+def es(text):
+    if not text:
+        return text
+    t = ES.get(text)
+    # la traducción tiene que llevar los mismos enlaces, en el mismo orden
+    if t and LINK_RE.findall(t) == LINK_RE.findall(text):
+        return day_icons(text, t)
+    untranslated.add(text)
+    return day_icons(text, text)
+
+
+def translate(entry, *keys):
+    for key in keys:
+        value = entry.get(key)
+        if isinstance(value, list):
+            entry[key] = [es(v) for v in value]
+        elif isinstance(value, str):
+            entry[key] = es(value)
+
+
+# orígenes genéricos (actividades y recursos); los que son estaciones, personajes o lugares se quedan igual
+SOURCE_ES = {
+    "Alchemy": "Alquimia", "Apple trees": "Manzanos", "Autopsy": "Autopsia", "Bat": "Murciélagos",
+    "Beekeeping": "Apicultura", "Berry bushes": "Arbustos de bayas", "Bushes": "Arbustos", "Cooking": "Cocina",
+    "Corpse": "Cadáveres", "Daytime flowers": "Flores de día", "Dig": "Excavar", "Dig Spot": "Punto de excavación",
+    "Dungeon pots": "Vasijas de la mazmorra", "Eel": "Anguilas", "Farming": "Cultivo", "Foraging": "Recolección",
+    "Graves": "Tumbas", "Green slimes": "Limos verdes", "Hives": "Colmenas", "Iron Ore Deposit": "Veta de hierro",
+    "Mining": "Minería", "NPCs": "Personajes", "Nighttime flowers": "Flores de noche", "Quest": "Encargos",
+    "River": "Río", "Ruined Bookcases": "Estanterías en ruinas", "Sea": "Mar", "Sermon": "Sermones",
+    "Sermons": "Sermones", "Stone Deposit": "Veta de piedra", "Tree": "Árboles", "Trees": "Árboles", "Well": "Pozo",
+    "Wild hives": "Colmenas silvestres", "Workstations": "Estaciones de trabajo", "Writing": "Escritura",
+}
+
+for it in item_list:
+    translate(it, "description")
+    if "sources" in it:
+        it["sources"] = list(dict.fromkeys(SOURCE_ES.get(s, s) for s in it["sources"]))
+for n in npcs:
+    translate(n, "title", "notes")
+    for q in n.get("quests", []):
+        translate(q, "text")
+    for f in n.get("friendship", []):
+        translate(f, "text")
+for tree in technologies:
+    translate(tree, "text")
+    for b in tree["branches"]:
+        translate(b, "text")
+        for t in b["techs"]:
+            translate(t, "condition")
+for section in guide:
+    for ach in section["achievements"]:
+        translate(ach, "text")
+
+# es_items.json: nombre del objeto en la wiki -> nombre en español; el de la wiki queda en `wikiName`
+ES_ITEMS_PATH = os.path.join(HERE, "es_items.json")
+ES_ITEMS = json.load(open(ES_ITEMS_PATH)) if os.path.exists(ES_ITEMS_PATH) else {}
+wiki_name = {it["id"]: it["name"] for it in item_list}
+untranslated_items = []
+for it in item_list:
+    name = ES_ITEMS.get(it["name"])
+    if not name:
+        untranslated_items.append(it["name"])
+    elif name != it["name"]:
+        it["wikiName"], it["name"] = it["name"], name
+es_name = {it["id"]: it["name"] for it in item_list}
+
+
+# es_labels.json: textos de enlace que no son el nombre del objeto o personaje («autopsies», «Clotho's»)
+ES_LABELS_PATH = os.path.join(HERE, "es_labels.json")
+ES_LABELS = json.load(open(ES_LABELS_PATH)) if os.path.exists(ES_LABELS_PATH) else {}
+
+
+def relabel(text):
+    """Textos de enlace en inglés: el nombre de la wiki pasa a ser el nombre en español;
+    los demás se buscan en es_labels.json."""
+    def repl(m):
+        label, kind, iid = m.group(1), m.group(2), m.group(3)
+        if kind == "item" and iid in es_name and label.strip().lower() == wiki_name[iid].lower():
+            label = es_name[iid]
+        else:
+            label = ES_LABELS.get(label, label)
+        return f"[**{label}**](gk2://{kind}/{iid})"
+    return re.sub(r"\[\*\*([^*]+)\*\*\]\(gk2://(item|character)/(\w+)\)", repl, text) if text else text
+
+
+def relabel_all(entry, *keys):
+    for key in keys:
+        value = entry.get(key)
+        if isinstance(value, list):
+            entry[key] = [relabel(v) for v in value]
+        elif isinstance(value, str):
+            entry[key] = relabel(value)
+
+
+for n in npcs:
+    for q in n.get("quests", []):
+        relabel_all(q, "text")
+    for f in n.get("friendship", []):
+        relabel_all(f, "text")
+for tree in technologies:
+    relabel_all(tree, "text")
+    for b in tree["branches"]:
+        relabel_all(b, "text")
+        for t in b["techs"]:
+            relabel_all(t, "condition")
+for section in guide:
+    for ach in section["achievements"]:
+        relabel_all(ach, "text")
+
+# listas en orden alfabético del nombre en español; `sort` es estable, así que se mantiene
+# el orden de las recetas de un mismo objeto (la primera es la que usa el planificador)
+item_list.sort(key=lambda i: i["name"].lower())
+recipes.sort(key=lambda r: es_name.get(r["output"], r["output"]).lower())
+
+# es_names.json: estaciones y nombres de tecnologías (árboles, ramas, tecnologías y lo que desbloquean)
+ES_NAMES_PATH = os.path.join(HERE, "es_names.json")
+ES_NAMES = json.load(open(ES_NAMES_PATH)) if os.path.exists(ES_NAMES_PATH) else {}
+untranslated_names = set()
+
+
+def es_label(name):
+    if name in ES_NAMES:
+        return ES_NAMES[name]
+    untranslated_names.add(name)
+    return name
+
+
+for r in recipes:
+    r["station"] = es_label(r["station"])
+for st in stations:
+    name = es_label(st["name"])
+    if name != st["name"]:
+        st["wikiName"], st["name"] = st["name"], name
+stations.sort(key=lambda s: s["name"].lower())
+for it in item_list:
+    if "sources" in it:
+        # los orígenes pueden ser estaciones u objetos (p. ej. «Pail of apple juice»)
+        it["sources"] = list(dict.fromkeys(ES_NAMES.get(s) or ES_ITEMS.get(s) or s for s in it["sources"]))
+for tree in technologies:
+    tree["name"] = es_label(tree["name"])
+    for b in tree["branches"]:
+        if b.get("name"):
+            b["name"] = es_label(b["name"])
+        for t in b["techs"]:
+            t["name"] = es_label(t["name"])
+            for u in t.get("unlocks", []):
+                u["name"] = es_name[u["item"]] if u.get("item") else es_label(u["name"])
+
+# es_quests.json: títulos de los encargos; si el título es el nombre de un objeto se usa su nombre en español.
+# El id del encargo sigue saliendo del título en inglés (AppState.doneQuests depende de él).
+ES_QUESTS_PATH = os.path.join(HERE, "es_quests.json")
+ES_QUESTS = json.load(open(ES_QUESTS_PATH)) if os.path.exists(ES_QUESTS_PATH) else {}
+item_by_wiki_name = {name.lower(): iid for iid, name in wiki_name.items()}
+untranslated_quests = set()
+for n in npcs:
+    for q in n.get("quests", []):
+        if q["name"] == "Encargos":
+            continue
+        iid = item_by_wiki_name.get(q["name"].lower())
+        name = ES_QUESTS.get(q["name"]) or (es_name[iid] if iid else None)
+        if name:
+            q["name"] = name
+        else:
+            untranslated_quests.add(q["name"])
+
+# es_achievements.json: nombres de los logros; el de la wiki queda en `wikiName` (el id sale del nombre en inglés)
+ES_ACHS_PATH = os.path.join(HERE, "es_achievements.json")
+ES_ACHS = json.load(open(ES_ACHS_PATH)) if os.path.exists(ES_ACHS_PATH) else {}
+untranslated_achs = set()
+for section in guide:
+    for ach in section["achievements"]:
+        name = ES_ACHS.get(ach["name"])
+        if not name:
+            untranslated_achs.add(ach["name"])
+        elif name != ach["name"]:
+            ach["wikiName"], ach["name"] = ach["name"], name
+
+# en los textos, los logros citados en inglés («el logro "Night watch"») pasan a «Guardia nocturna»
+ACH_EN = sorted(ES_ACHS, key=len, reverse=True)
+ACH_RE = re.compile(r"[\"«“](" + "|".join(re.escape(n.rstrip("!.")) for n in ACH_EN) + r")[!.]*[\"»”]") if ACH_EN else None
+ach_es = {n.rstrip("!.").lower(): es for n, es in ES_ACHS.items()}
+
+
+def ach_names(text):
+    if not text or not ACH_RE:
+        return text
+    return ACH_RE.sub(lambda m: f"«{ach_es[m.group(1).lower()]}»", text)
+
+# es_characters.json: personajes sin nombre propio («Beekeeper» -> «Apicultor»); el de la wiki queda en `wikiName`.
+# Los nombres propios (Clotho, Snake…) se quedan en inglés.
+ES_CHARS_PATH = os.path.join(HERE, "es_characters.json")
+ES_CHARS = json.load(open(ES_CHARS_PATH)) if os.path.exists(ES_CHARS_PATH) else {}
+for n in npcs:
+    name = ES_CHARS.get(n["name"])
+    if name:
+        n["wikiName"], n["name"] = n["name"], name
+npcs.sort(key=lambda n: n["name"].lower())
+for it in item_list:
+    if "sources" in it:
+        it["sources"] = list(dict.fromkeys(ES_CHARS.get(s, s) for s in it["sources"]))
+
+# en los textos, «a Bishop» -> «al Obispo», «con [**Bishop**](…)» -> «con el [**Obispo**](…)».
+# No se tocan los nombres compuestos («Barman Doll», «Farmer's light»).
+# «Fresh Eggs» es una cesta y ya tiene su etiqueta en es_labels.json.
+CHAR_EN = sorted((n for n in ES_CHARS if n != "Fresh Eggs"), key=len, reverse=True)
+CHAR_FEM = {"Tanner"}
+CHAR_RE = re.compile(r"(\(gk2://[^)]*\))|(?:\b(\w+) )?(\[\*\*)?\b(" + "|".join(map(re.escape, CHAR_EN)) + r")\b(?!'s| [A-Z])") if CHAR_EN else None
+KEEP = {"el", "al", "del", "la", "su", "tu"}
+
+
+def char_names(text):
+    if not text or not CHAR_RE:
+        return text
+
+    def repl(m):
+        if m.group(1):
+            return m.group(1)  # destino de un enlace
+        prev, link, en = m.group(2), m.group(3) or "", m.group(4)
+        name, fem = ES_CHARS[en], en in CHAR_FEM
+        if prev and prev.lower() in KEEP:
+            return f"{prev} {link}{name}"
+        if prev and prev.lower() in ("a", "de"):
+            art = f"{prev} la" if fem else {"a": "al", "de": "del"}[prev.lower()]
+            return f"{prev[0]}{art[1:]} {link}{name}"
+        start = m.start(3) if link else m.start(4)
+        before = text[:start].rstrip()
+        art = "la" if fem else "el"
+        if prev is None and (not before or before[-1] in ".:!?•◦"):
+            art = art.capitalize()
+        return (f"{prev} " if prev else "") + f"{art} {link}{name}"
+    return CHAR_RE.sub(repl, text)
+
+# en los textos traducidos, los nombres de estación que quedaron en inglés («en la Study table»)
+STATION_EN = sorted({st["wikiName"] for st in stations if "wikiName" in st}, key=len, reverse=True)
+STATION_RE = re.compile(r"(\[[^\]]*\]\([^)]*\))|\b(" + "|".join(map(re.escape, STATION_EN)) + r")\b") if STATION_EN else None
+station_es = {st["wikiName"]: st["name"] for st in stations if "wikiName" in st}
+
+
+def station_names(text):
+    if not text or not STATION_RE:
+        return char_names(ach_names(text))
+    # los enlaces se dejan tal cual; solo se cambian los nombres sueltos
+    return char_names(ach_names(STATION_RE.sub(lambda m: m.group(1) or station_es[m.group(2)], text)))
+
+
+def station_names_all(entry, *keys):
+    for key in keys:
+        value = entry.get(key)
+        if isinstance(value, list):
+            entry[key] = [station_names(v) for v in value]
+        elif isinstance(value, str):
+            entry[key] = station_names(value)
+
+
+for it in item_list:
+    station_names_all(it, "description")
+for n in npcs:
+    station_names_all(n, "notes")
+    for q in n.get("quests", []):
+        station_names_all(q, "text")
+    for f in n.get("friendship", []):
+        station_names_all(f, "text")
+for tree in technologies:
+    station_names_all(tree, "text")
+    for b in tree["branches"]:
+        station_names_all(b, "text")
+        for t in b["techs"]:
+            station_names_all(t, "condition")
+for section in guide:
+    for ach in section["achievements"]:
+        station_names_all(ach, "text")
 
 
 def write(name, data):
@@ -775,4 +1488,19 @@ write("recipes", recipes)
 write("days", days_json)
 write("characters", npcs)
 write("stations", stations)
-print(f"{len(item_list)} objetos · {len(recipes)} recetas · {len(npcs)} personajes · {len(days_json)} días")
+write("technologies", technologies)
+write("guide", guide)
+n_techs = sum(len(b["techs"]) for t in technologies for b in t["branches"])
+n_achs = sum(len(s["achievements"]) for s in guide)
+print(f"{len(item_list)} objetos · {len(recipes)} recetas · {len(npcs)} personajes · {len(days_json)} días"
+      f" · {n_techs} tecnologías en {len(technologies)} árboles · {n_achs} logros")
+if untranslated:
+    print(f"{len(untranslated)} textos sin traducir (añádelos a es.json)")
+if untranslated_items:
+    print(f"{len(untranslated_items)} nombres de objetos sin traducir (añádelos a es_items.json)")
+if untranslated_names:
+    print(f"{len(untranslated_names)} nombres de estaciones o tecnologías sin traducir (añádelos a es_names.json)")
+if untranslated_quests:
+    print(f"{len(untranslated_quests)} títulos de encargos sin traducir (añádelos a es_quests.json): {sorted(untranslated_quests)}")
+if untranslated_achs:
+    print(f"{len(untranslated_achs)} nombres de logros sin traducir (añádelos a es_achievements.json): {sorted(untranslated_achs)}")

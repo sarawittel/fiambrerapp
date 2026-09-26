@@ -5,6 +5,8 @@ struct PlannerView: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
     @Environment(\.isWideLayout) private var wide
+    @State private var query = ""
+    @State private var expanded: Set<String> = []
 
     var body: some View {
         SingleScreen(title: "Qué necesito") {
@@ -12,8 +14,8 @@ struct PlannerView: View {
                 emptyState
             } else {
                 AdaptiveStack {
-                    planPanel.frame(width: wide ? 340 : nil)
-                    MaterialsPanel()
+                    controls.frame(width: wide ? 340 : nil)
+                    cards
                 }
             }
         }
@@ -33,78 +35,116 @@ struct PlannerView: View {
         }
     }
 
-    private var planPanel: some View {
+    private var controls: some View {
         @Bindable var state = state
-        let entries = state.plan.keys.sorted {
-            state.data.itemName(state.data.recipe($0)?.output ?? $0) < state.data.itemName(state.data.recipe($1)?.output ?? $1)
-        }
         return Panel(title: "Plan de trabajo") {
-            ForEach(entries, id: \.self) { id in
-                let recipe = state.data.recipe(id)
-                let item = recipe.flatMap { state.data.item($0.output) }
-                HStack(spacing: 8) {
-                    Button { router.openRecipe(id) } label: {
-                        HStack(spacing: 10) {
-                            PixelIcon(name: item?.icon ?? "skull", image: item?.image, size: 32)
-                            VStack(alignment: .leading, spacing: 0) {
-                                Text(item?.name ?? id)
-                                Text(recipe?.station ?? "").font(.pixelBody(18)).foregroundStyle(.secondary)
-                            }
-                        }
-                        .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    Spacer(minLength: 4)
-                    HStack(spacing: 4) {
-                        Button("−") { state.setCount(state.count(of: id) - 1, for: id) }
-                            .buttonStyle(.pixel(.button, compact: true))
-                            .accessibilityLabel("Menos")
-                        Text("\(state.count(of: id))").frame(minWidth: 26)
-                        Button("+") { state.setCount(state.count(of: id) + 1, for: id) }
-                            .buttonStyle(.pixel(.button, compact: true))
-                            .accessibilityLabel("Más")
-                    }
-                }
-            }
+            PixelTextField(placeholder: "Buscar receta o material…", text: $query)
             Toggle("Desglosar hasta materias primas", isOn: $state.deepBreakdown)
                 .toggleStyle(PixelCheckboxStyle())
-                .padding(.top, 6)
             Button("× Vaciar plan") { state.clearPlan() }
                 .buttonStyle(.pixel(.blood))
         }
     }
+
+    /// Recetas del plan que casan con la búsqueda, de más a menos avanzadas.
+    private var cards: some View {
+        let data = state.data
+        let matching = Set(data.searchRecipes(query).map(\.id))
+        let entries = state.plan.keys
+            .filter { matching.contains($0) }
+            .map { id in
+                let requirements = Planner.requirements(for: [id: state.count(of: id)], recipes: data.recipes, deep: state.deepBreakdown)
+                return (id: id, requirements: requirements, progress: requirements.progress(owned: state.owned))
+            }
+            .sorted {
+                $0.progress != $1.progress
+                    ? $0.progress > $1.progress
+                    : data.itemName(data.recipe($0.id)?.output ?? $0.id) < data.itemName(data.recipe($1.id)?.output ?? $1.id)
+            }
+
+        return VStack(spacing: 12) {
+            if entries.isEmpty {
+                Panel { Text("Ninguna receta del plan coincide con «\(query)».") }
+            }
+            ForEach(entries, id: \.id) { entry in
+                PlanCard(
+                    recipeId: entry.id,
+                    requirements: entry.requirements,
+                    progress: entry.progress,
+                    expanded: Binding(
+                        get: { expanded.contains(entry.id) },
+                        set: { if $0 { expanded.insert(entry.id) } else { expanded.remove(entry.id) } }
+                    )
+                )
+            }
+        }
+    }
 }
 
-private struct MaterialsPanel: View {
+/// Una receta del plan: cabecera con su progreso y, al desplegarla, sus materiales y pasos.
+private struct PlanCard: View {
+    let recipeId: String
+    let requirements: Requirements
+    let progress: Double
+    @Binding var expanded: Bool
     @Environment(AppState.self) private var state
+    @Environment(Router.self) private var router
 
     var body: some View {
         let data = state.data
-        let requirements = state.requirements
+        let recipe = data.recipe(recipeId)
+        let item = recipe.flatMap { data.item($0.output) }
+        let percent = Int((progress * 100).rounded(.down))
         let rows = requirements.materials.sorted { data.itemName($0.key) < data.itemName($1.key) }
-        let missing = rows.filter { state.owned[$0.key, default: 0] < $0.value }.count
 
         Panel(style: .parchment) {
-            Text("Materiales").font(.pixelTitle(16))
-            Text(missing == 0 ? "✓ Tienes todo lo necesario." : "Te faltan \(missing) de \(rows.count) materiales.")
-                .foregroundStyle(Theme.parchmentMuted)
-
-            VStack(spacing: 0) {
-                ForEach(rows, id: \.key) { itemId, qty in
-                    MaterialRow(itemId: itemId, needed: qty)
-                    Rectangle().fill(.tertiary).frame(height: 2)
+            Button { expanded.toggle() } label: {
+                HStack(spacing: 10) {
+                    Text(expanded ? "▼" : "▶").font(.pixelBody(18)).foregroundStyle(Theme.parchmentMuted)
+                    PixelIcon(name: item?.icon ?? "skull", image: item?.image, size: 32)
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text(item?.name ?? recipeId)
+                        Text(recipe?.station ?? "").font(.pixelBody(18)).foregroundStyle(Theme.parchmentMuted)
+                    }
+                    Spacer(minLength: 4)
+                    Text(percent == 100 ? "✓" : "\(percent)%")
+                        .font(.pixelTitle(11))
+                        .foregroundStyle(percent == 100 ? Theme.moss : Theme.parchmentInk)
                 }
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("\(item?.name ?? recipeId), \(percent) por ciento")
+            .accessibilityHint(expanded ? "Pliega los materiales" : "Despliega los materiales")
+
+            HStack(spacing: 12) {
+                ProgressBar(fraction: progress).frame(height: 10)
+                CountField(value: state.count(of: recipeId)) { state.setCount($0, for: recipeId) }
+                Button("×") { state.setCount(0, for: recipeId) }
+                    .buttonStyle(.pixel(.blood, compact: true))
+                    .help("Quitar del plan")
+                    .accessibilityLabel("Quitar \(item?.name ?? recipeId) del plan")
             }
 
-            if state.deepBreakdown, !requirements.steps.isEmpty {
-                SectionTitle("Orden de fabricación")
-                ForEach(Array(requirements.steps.enumerated()), id: \.element.recipeId) { index, step in
-                    if let recipe = data.recipe(step.recipeId) {
-                        Text("\(index + 1). Fabrica \(step.crafts)× \(data.itemName(recipe.output)) en \(recipe.station)")
-                            + Text("  (→ \(step.crafts * recipe.outputQty) uds.)").foregroundColor(Theme.parchmentMuted)
+            if expanded {
+                VStack(spacing: 0) {
+                    ForEach(rows, id: \.key) { itemId, qty in
+                        Rectangle().fill(.tertiary).frame(height: 2)
+                        MaterialRow(itemId: itemId, needed: qty)
                     }
                 }
-                Text("\(requirements.steps.count + 1). Por último, las recetas de tu plan.")
+                if let recipe {
+                    SectionTitle("Instrucciones")
+                    ForEach(Array(requirements.steps.enumerated()), id: \.element.recipeId) { index, step in
+                        if let intermediate = data.recipe(step.recipeId) {
+                            Text("\(index + 1). Fabrica \(step.crafts)× \(data.itemName(intermediate.output)) en \(intermediate.station)")
+                                + Text("  (→ \(step.crafts * intermediate.outputQty) uds.)").foregroundColor(Theme.parchmentMuted)
+                        }
+                    }
+                    Text("\(requirements.steps.count + 1). Fabrica \(state.count(of: recipeId))× \(data.itemName(recipe.output)) en \(recipe.station).")
+                    Button("Ver receta →") { router.openRecipe(recipeId) }
+                        .buttonStyle(.pixel(.button, compact: true))
+                }
             }
         }
     }
@@ -164,21 +204,21 @@ private struct MaterialRow: View {
             FlowLayout(spacing: 10) {
                 ForEach(sources, id: \.self) { Text($0).font(.pixelBody(19)) }
                 ForEach(sellers) { npc in
-                    let here = npc.isAvailable(on: state.today)
                     Button { router.openCharacter(npc.id) } label: {
-                        Text("\(here ? "● " : "")\(npc.name) (\(daysText(npc)))")
+                        Text("\(npc.name) (\(daysText(npc)))")
                             .font(.pixelBody(19))
                             .underline(pattern: .dot)
-                            .foregroundStyle(here ? Color(hex: 0x3a5a1a) : Theme.parchmentMuted)
+                            .foregroundStyle(Theme.parchmentMuted)
                     }
                     .buttonStyle(.plain)
-                    .help(here ? "Está disponible hoy" : "")
                 }
             }
         }
     }
 
-    private func daysText(_ npc: NPC) -> String {
-        npc.days.isEmpty ? "todos los días" : npc.days.compactMap { state.data.day($0)?.short }.joined(separator: ", ")
+    private func daysText(_ npc: NPC) -> Text {
+        guard !npc.days.isEmpty else { return Text("todos los días") }
+        return npc.days.compactMap { state.data.day($0) }
+            .reduce(Text(verbatim: "")) { Text("\($0)\(Text(dayIcon: $1, height: 16))") }
     }
 }

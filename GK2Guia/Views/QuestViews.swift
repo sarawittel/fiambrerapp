@@ -2,7 +2,8 @@ import GK2Core
 import SwiftUI
 
 /// Markdown en línea de la wiki. Los enlaces `gk2://item/<id>` y `gk2://character/<id>`
-/// llevan a la receta (o ficha) del objeto y a la ficha del personaje.
+/// llevan a la receta (o ficha) del objeto y a la ficha del personaje; las imágenes
+/// `![Orgullo](gk2://day/orgullo)` se ven como el icono del día.
 struct RichText: View {
     let markdown: String
     @Environment(AppState.self) private var state
@@ -10,11 +11,29 @@ struct RichText: View {
     init(_ markdown: String) { self.markdown = markdown }
 
     var body: some View {
-        Text(attributed)
+        text
             .fixedSize(horizontal: false, vertical: true)
             .environment(\.openURL, OpenURLAction { url in
                 open(url) ? .handled : .systemAction
             })
+    }
+
+    /// El texto por tramos, con los días como icono.
+    private var text: Text {
+        let attributed = attributed
+        guard attributed.runs.contains(where: { $0.imageURL != nil }) else { return Text(attributed) }
+        var result = Text(verbatim: "")
+        var pending = AttributedString()
+        for run in attributed.runs {
+            if let url = run.imageURL, url.scheme == "gk2", url.host == "day",
+               let day = state.data.day(url.lastPathComponent) {
+                result = Text("\(result)\(Text(pending))\(Text(dayIcon: day))")
+                pending = AttributedString()
+            } else {
+                pending.append(attributed[run.range])
+            }
+        }
+        return Text("\(result)\(Text(pending))")
     }
 
     private func open(_ url: URL) -> Bool {

@@ -79,19 +79,31 @@ struct AdaptiveStack<Content: View>: View {
 }
 
 extension View {
-    /// Fondo, título y botón de día para las pantallas dentro de un NavigationStack.
+    /// Fondo, título y selector de juego para las pantallas dentro de un NavigationStack.
     func pixelScreen(_ title: String) -> some View {
         self
             .background(PixelBackground().ignoresSafeArea())
             .navigationTitle(title)
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) { TodayBadge() }
-            }
+            .toolbar { GameToolbarItem() }
             #endif
     }
 }
+
+#if os(iOS)
+/// Selector de juego sin la cápsula de cristal que iOS 26 pone a los botones de la barra.
+private struct GameToolbarItem: ToolbarContent {
+    var body: some ToolbarContent {
+        if #available(iOS 26, *) {
+            ToolbarItem(placement: .topBarTrailing) { GameSwitch() }
+                .sharedBackgroundVisibility(.hidden)
+        } else {
+            ToolbarItem(placement: .topBarTrailing) { GameSwitch() }
+        }
+    }
+}
+#endif
 
 /// Coloca las vistas en filas y salta de línea cuando no caben.
 struct FlowLayout: Layout {

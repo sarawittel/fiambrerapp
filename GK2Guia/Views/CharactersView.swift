@@ -6,26 +6,27 @@ struct CharactersView: View {
     @Environment(Router.self) private var router
     @Environment(\.isWideLayout) private var wide
     @State private var dayFilter: String?
+    @State private var query = ""
 
     var body: some View {
         @Bindable var router = router
         let data = state.data
-        let list = dayFilter.map { day in data.characters.filter { $0.isAvailable(on: day) } } ?? data.characters
+        let found = data.searchCharacters(query)
+        let list = dayFilter.map { day in found.filter { $0.isAvailable(on: day) } } ?? found
         let selection = router.characterId ?? list.first?.id
 
         MasterDetail(title: "Personajes", path: $router.characterPath, selection: selection) {
             Panel(title: "Personajes") {
+                PixelTextField(placeholder: "Buscar personaje o lugar…", text: $query)
                 FlowLayout(spacing: 6) {
                     Button("Todos") { dayFilter = nil }
                         .buttonStyle(.pixel(dayFilter == nil ? .candle : .woodDark, compact: true))
                     ForEach(data.days) { day in
                         Button { dayFilter = day.id } label: {
-                            HStack(spacing: 4) {
-                                PixelIcon(name: day.icon, image: day.image, size: 16)
-                                Text(day.short)
-                            }
+                            PixelIcon(name: day.icon, image: day.image, size: 16)
                         }
                         .buttonStyle(.pixel(dayFilter == day.id ? .candle : .woodDark, compact: true))
+                        .accessibilityLabel(day.name)
                     }
                 }
                 VStack(spacing: 4) {
@@ -34,14 +35,13 @@ struct CharactersView: View {
                             icon: npc.icon,
                             image: npc.image,
                             title: npc.name,
-                            subtitle: "\(npc.title) · \(npc.location)",
-                            badge: npc.isAvailable(on: state.today) ? "Hoy" : nil,
+                            subtitle: [npc.role, npc.location].compactMap { $0 }.joined(separator: " · "),
                             selected: wide && npc.id == selection
                         ) { router.openCharacter(npc.id) }
                     }
                 }
                 if list.isEmpty {
-                    Text("Nadie aparece ese día.").foregroundStyle(Theme.muted)
+                    Text(query.isEmpty ? "Nadie aparece ese día." : "Ningún personaje coincide con «\(query)».").foregroundStyle(Theme.muted)
                 }
             }
         } detail: { id in
@@ -65,8 +65,9 @@ struct CharacterDetailView: View {
                 IconFrame(name: npc.icon, image: npc.image, size: 64)
                 VStack(alignment: .leading, spacing: 8) {
                     Text(npc.name).font(.pixelTitle(16))
+                    if let wikiName = npc.wikiName { WikiName(wikiName) }
                     FlowLayout(spacing: 6) {
-                        Tag(npc.title)
+                        if let role = npc.role { Tag(role) }
                         Tag(npc.location)
                     }
                 }

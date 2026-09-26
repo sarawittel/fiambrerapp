@@ -13,6 +13,15 @@ public struct Requirements: Equatable, Sendable {
     public var materials: [String: Int]
     /// fabricaciones intermedias, en orden de ejecución (dependencias primero)
     public var steps: [CraftStep]
+
+    /// Parte de los materiales que ya se tienen (0…1). Cada material cuenta según su cantidad,
+    /// y lo que sobra de uno no compensa lo que falta de otro. Sin materiales, está completo.
+    public func progress(owned: [String: Int]) -> Double {
+        let needed = materials.values.reduce(0, +)
+        guard needed > 0 else { return 1 }
+        let have = materials.reduce(0) { $0 + min(max(owned[$1.key, default: 0], 0), $1.value) }
+        return Double(have) / Double(needed)
+    }
 }
 
 public enum Planner {
