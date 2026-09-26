@@ -7,3 +7,4 @@ xcuserdata
 *.xcodeproj
 scripts/wiki/cache/
 __pycache__/
+build/

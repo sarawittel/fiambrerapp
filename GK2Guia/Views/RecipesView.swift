@@ -4,16 +4,14 @@ import SwiftUI
 struct RecipesView: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
-    @Environment(\.isWideLayout) private var wide
     @State private var query = ""
     @State private var station: String?
 
     var body: some View {
         @Bindable var router = router
         let results = state.data.searchRecipes(query, station: station)
-        let selection = router.recipeId ?? results.first?.id
 
-        MasterDetail(title: "Recetas", path: $router.recipePath, selection: selection) {
+        MasterDetail(title: "Recetas", path: $router.recipePath) {
             VStack(alignment: .leading, spacing: 12) {
                 Panel(title: "Recetario") {
                     PixelTextField(placeholder: "Buscar objeto o ingrediente…", text: $query)
@@ -25,8 +23,7 @@ struct RecipesView: View {
                                 icon: item?.icon ?? "skull",
                                 image: item?.image,
                                 title: item?.name ?? recipe.output,
-                                subtitle: [recipe.station, state.chestSummary(of: recipe.output)].compactMap { $0 }.joined(separator: " · "),
-                                selected: wide && recipe.id == selection
+                                subtitle: [recipe.station, state.chestSummary(of: recipe.output)].compactMap { $0 }.joined(separator: " · ")
                             ) { router.openRecipe(recipe.id) }
                         }
                     }

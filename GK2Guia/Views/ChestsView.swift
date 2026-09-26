@@ -4,16 +4,13 @@ import SwiftUI
 struct ChestsView: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
-    @Environment(\.isWideLayout) private var wide
     @State private var newName = ""
     @State private var query = ""
 
     var body: some View {
         @Bindable var router = router
-        // la selección puede apuntar a un baúl ya borrado
-        let selection = router.chestId.flatMap { state.chest($0) }?.id ?? state.chests.first?.id
 
-        MasterDetail(title: "Baúles", path: $router.chestPath, selection: selection) {
+        MasterDetail(title: "Baúles", path: $router.chestPath) {
             Panel(title: "Mis baúles") {
                 Text("Apunta qué guardas en cada baúl: objetos y cosas fabricables, pero no estaciones ni construcciones.")
                     .font(.pixelBody(19))
@@ -33,8 +30,7 @@ struct ChestsView: View {
                         ListRow(
                             icon: "chest",
                             title: chest.name.isEmpty ? "Sin nombre" : chest.name,
-                            subtitle: items.isEmpty ? summary(chest) : found(items, in: chest),
-                            selected: wide && chest.id == selection
+                            subtitle: items.isEmpty ? summary(chest) : found(items, in: chest)
                         ) { router.openChest(chest.id) }
                     }
                 }
@@ -149,7 +145,6 @@ struct ChestDetailView: View {
         .confirmationDialog("¿Borrar «\(chest.name)»?", isPresented: $confirmDelete, titleVisibility: .visible) {
             Button("Borrar baúl", role: .destructive) {
                 router.chestPath.removeAll { $0 == chest.id }
-                if router.chestId == chest.id { router.chestId = nil }
                 state.deleteChest(chest.id)
             }
             Button("Cancelar", role: .cancel) {}

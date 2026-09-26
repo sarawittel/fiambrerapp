@@ -140,7 +140,6 @@ struct ListRow: View {
     let title: String
     var subtitle: String?
     var badge: String?
-    var selected = false
     let action: () -> Void
 
     var body: some View {
@@ -160,11 +159,6 @@ struct ListRow: View {
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
             .contentShape(Rectangle())
-            .background {
-                if selected {
-                    Color.clear.pixelBox(.woodSelected, edge: Theme.candle)
-                }
-            }
         }
         .buttonStyle(.plain)
     }
@@ -231,10 +225,8 @@ struct PixelTextField: View {
         .padding(.horizontal, 10 + Theme.px)
         .padding(.vertical, 6 + Theme.px)
         .pixelBox(.field)
-        #if os(iOS)
         .textInputAutocapitalization(.never)
         .autocorrectionDisabled()
-        #endif
     }
 }
 
@@ -256,9 +248,7 @@ struct CountField: View {
                 .frame(width: 40)
                 .padding(.vertical, 2 + Theme.px)
                 .pixelBox(.field)
-                #if os(iOS)
                 .keyboardType(.numberPad)
-                #endif
             Button("+") { onChange(value + 1) }
                 .buttonStyle(.pixel(.button, compact: true))
                 .accessibilityLabel("Más")

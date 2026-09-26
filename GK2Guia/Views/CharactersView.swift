@@ -4,7 +4,6 @@ import SwiftUI
 struct CharactersView: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
-    @Environment(\.isWideLayout) private var wide
     @State private var dayFilter: String?
     @State private var query = ""
 
@@ -13,9 +12,8 @@ struct CharactersView: View {
         let data = state.data
         let found = data.searchCharacters(query)
         let list = dayFilter.map { day in found.filter { $0.isAvailable(on: day) } } ?? found
-        let selection = router.characterId ?? list.first?.id
 
-        MasterDetail(title: "Personajes", path: $router.characterPath, selection: selection) {
+        MasterDetail(title: "Personajes", path: $router.characterPath) {
             Panel(title: "Personajes") {
                 PixelTextField(placeholder: "Buscar personaje o lugar…", text: $query)
                 FlowLayout(spacing: 6) {
@@ -35,8 +33,7 @@ struct CharactersView: View {
                             icon: npc.icon,
                             image: npc.image,
                             title: npc.name,
-                            subtitle: [npc.role, npc.location].compactMap { $0 }.joined(separator: " · "),
-                            selected: wide && npc.id == selection
+                            subtitle: [npc.role, npc.location].compactMap { $0 }.joined(separator: " · ")
                         ) { router.openCharacter(npc.id) }
                     }
                 }

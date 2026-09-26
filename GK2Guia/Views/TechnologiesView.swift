@@ -4,17 +4,15 @@ import SwiftUI
 struct TechnologiesView: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
-    @Environment(\.isWideLayout) private var wide
     @State private var query = ""
 
     var body: some View {
         @Bindable var router = router
         let data = state.data
-        let selection = router.techTreeId ?? data.technologies.first?.id
         let searching = !query.trimmingCharacters(in: .whitespaces).isEmpty
         let results = data.searchTechnologies(query)
 
-        MasterDetail(title: "Tecnologías", path: $router.techTreePath, selection: selection) {
+        MasterDetail(title: "Tecnologías", path: $router.techTreePath) {
             VStack(alignment: .leading, spacing: 12) {
                 Panel(title: "Tecnologías") {
                     Text("Se pagan con puntos de tres colores. Los consigues trabajando y estudiando objetos en la mesa de estudio.")
@@ -34,8 +32,7 @@ struct TechnologiesView: View {
                                     icon: "candle",
                                     image: tree.image,
                                     title: tech.name,
-                                    subtitle: tree.name + (state.isResearched(tech, in: tree) ? " · investigada" : ""),
-                                    selected: wide && tree.id == selection && router.techId == tech.id
+                                    subtitle: tree.name + (state.isResearched(tech, in: tree) ? " · investigada" : "")
                                 ) { router.openTechTree(tree.id, tech: tech.id) }
                             }
                         }
@@ -51,8 +48,7 @@ struct TechnologiesView: View {
                                     icon: "candle",
                                     image: tree.image,
                                     title: tree.name,
-                                    subtitle: "\(done)/\(techs.count) investigadas" + (tree.dlc.map { " · DLC \($0)" } ?? ""),
-                                    selected: wide && tree.id == selection
+                                    subtitle: "\(done)/\(techs.count) investigadas" + (tree.dlc.map { " · DLC \($0)" } ?? "")
                                 ) { router.openTechTree(tree.id) }
                             }
                         }

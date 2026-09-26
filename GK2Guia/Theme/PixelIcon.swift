@@ -51,7 +51,7 @@ extension Text {
     }
 }
 
-/// Carga y guarda en memoria las imágenes de `GK2Core/Resources/Images`.
+/// Carga y guarda en memoria las imágenes de `GK2Core/Data/Images`.
 @MainActor
 enum WikiImages {
     private static var cache: [String: CGImage] = [:]

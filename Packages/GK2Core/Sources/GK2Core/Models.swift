@@ -15,7 +15,7 @@ public struct Item: Codable, Identifiable, Hashable, Sendable {
     /// Dónde se obtiene si no se fabrica (texto libre).
     public var sources: [String]?
     public var description: String?
-    /// imagen de la wiki en `Resources/Images` (sin extensión); si falta se usa `icon`
+    /// imagen de la wiki en `Data/Images` (sin extensión); si falta se usa `icon`
     public var image: String?
     /// niveles de calidad (bronce, plata, oro), si el objeto los tiene
     public var quality: [ItemQuality]?

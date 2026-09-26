@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Descarga de la wiki las imágenes de objetos, estaciones, personajes, días, tecnologías y logros a GK2Core/Resources/Images.
+"""Descarga de la wiki las imágenes de objetos, estaciones, personajes, días, tecnologías y logros a GK2Core/Data/Images.
 
 Uso (después de convert.py): python3 images.py   — al terminar vuelve a ejecutar convert.py,
 que añade el campo "image" a cada entrada con imagen descargada.
@@ -7,7 +7,7 @@ que añade el campo "image" a cada entrada con imagen descargada.
 import json, os, re, subprocess, sys, tempfile, time, unicodedata, urllib.parse, urllib.request
 
 HERE = os.path.dirname(__file__)
-RES = os.path.join(HERE, "..", "..", "Packages", "GK2Core", "Sources", "GK2Core", "Resources")
+RES = os.path.join(HERE, "..", "..", "Packages", "GK2Core", "Sources", "GK2Core", "Data")
 IMAGES = os.path.join(RES, "Images")
 API = "https://graveyardkeeper.fandom.com/api.php"
 UA = {"User-Agent": "gk-guia/1.0 (personal guide)"}

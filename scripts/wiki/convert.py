@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convierte cache/pages.json (wiki de Graveyard Keeper) en los JSON de GK2Core/Resources.
+"""Convierte cache/pages.json (wiki de Graveyard Keeper) en los JSON de GK2Core/Data.
 
 Uso: python3 fetch.py && python3 convert.py
 """
@@ -7,7 +7,7 @@ import json, os, re, unicodedata
 from collections import defaultdict
 
 HERE = os.path.dirname(__file__)
-OUT = os.path.join(HERE, "..", "..", "Packages", "GK2Core", "Sources", "GK2Core", "Resources")
+OUT = os.path.join(HERE, "..", "..", "Packages", "GK2Core", "Sources", "GK2Core", "Data")
 
 cache = json.load(open(os.path.join(HERE, "cache", "pages.json")))
 PAGES, REDIRECTS = cache["pages"], cache["redirects"]

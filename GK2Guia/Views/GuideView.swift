@@ -5,25 +5,26 @@ import SwiftUI
 struct GuideView: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
-    @Environment(\.isWideLayout) private var wide
 
     var body: some View {
         @Bindable var router = router
         let data = state.data
-        let selection = router.guideSectionId ?? data.guide.first?.id
         let all = data.guide.flatMap(\.achievements)
         let done = all.filter(state.isAchieved).count
 
-        MasterDetail(title: "Guía", path: $router.guidePath, selection: selection) {
+        MasterDetail(title: "Guía", path: $router.guidePath) {
             VStack(alignment: .leading, spacing: 12) {
-                // en pantallas anchas el resumen ya está en la cabecera
-                if !wide { GameProgressPanel() }
+                GameProgressPanel()
                 Panel(title: "Logros al 100 %") {
-                    Text("Cómo conseguir cada logro del juego, por apartados. Márcalos según los consigas.")
+                    Text(all.isEmpty
+                         ? "Todavía no hay logros de \(state.game.title) en la guía."
+                         : "Cómo conseguir cada logro del juego, por apartados. Márcalos según los consigas.")
                         .font(.pixelBody(19))
                         .foregroundStyle(Theme.muted)
-                    FlowLayout(spacing: 6) {
-                        Tag("\(done)/\(all.count) conseguidos", highlighted: done == all.count && !all.isEmpty)
+                    if !all.isEmpty {
+                        FlowLayout(spacing: 6) {
+                            Tag("\(done)/\(all.count) conseguidos", highlighted: done == all.count)
+                        }
                     }
                     VStack(spacing: 4) {
                         ForEach(data.guide) { section in
@@ -33,8 +34,7 @@ struct GuideView: View {
                                 icon: "crown",
                                 image: achievements.first?.image,
                                 title: section.title,
-                                subtitle: "\(got)/\(achievements.count) conseguidos" + (section.spoiler == true ? " · spoilers" : ""),
-                                selected: wide && section.id == selection
+                                subtitle: "\(got)/\(achievements.count) conseguidos" + (section.spoiler == true ? " · spoilers" : "")
                             ) { router.openGuideSection(section.id) }
                         }
                     }
@@ -50,7 +50,7 @@ struct GuideView: View {
     }
 }
 
-/// Juego completado y el progreso de misiones, tecnologías y logros (lo que en Mac va en la cabecera).
+/// Juego completado y el progreso de misiones, tecnologías y logros.
 private struct GameProgressPanel: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
@@ -71,9 +71,10 @@ private struct GameProgressPanel: View {
                 .font(.pixelBody(19))
                 .foregroundStyle(Theme.muted)
             HStack(spacing: 8) {
-                stat("person", state.questProgress, label: "Misiones", tab: .characters)
-                stat("candle", state.techProgress, label: "Tecnologías", tab: .technologies)
-                stat("crown", state.achievementProgress, label: "Logros", tab: nil)
+                // un juego sin misiones o sin logros (GK2) no muestra ese contador
+                if state.questProgress.total > 0 { stat("person", state.questProgress, label: "Misiones", tab: .characters) }
+                if state.techProgress.total > 0 { stat("candle", state.techProgress, label: "Tecnologías", tab: .technologies) }
+                if state.achievementProgress.total > 0 { stat("crown", state.achievementProgress, label: "Logros", tab: nil) }
             }
         }
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-/// Todos los datos del juego, cargados desde los JSON de `Resources/`.
+/// Todos los datos del juego, cargados desde los JSON de `Data/`.
 public struct GameData: Sendable {
     public let items: [Item]
     public let recipes: [Recipe]
@@ -53,23 +53,39 @@ public struct GameData: Sendable {
     }()
 
     /// Datos incluidos en el paquete para un juego.
-    /// De momento GK2 reutiliza los de GK1 hasta que tenga los suyos.
     public static func bundled(for game: Game) -> GameData {
         switch game {
-        case .gk1, .gk2: bundled
+        case .gk1: bundled
+        case .gk2: bundledGK2
         }
     }
 
+    /// GK2 comparte con GK1 los objetos, las recetas, las estaciones, las tecnologías,
+    /// los personajes y los días, pero no las misiones, la amistad ni los logros.
+    static let bundledGK2: GameData = {
+        let gk1 = bundled
+        return GameData(
+            items: gk1.items, recipes: gk1.recipes, days: gk1.days,
+            characters: gk1.characters.map { npc in
+                var npc = npc
+                npc.quests = nil
+                npc.friendship = nil
+                return npc
+            },
+            stations: gk1.stationList, technologies: gk1.technologies
+        )
+    }()
+
     static func load<T: Decodable>(_ name: String) throws -> T {
-        guard let url = Bundle.module.url(forResource: name, withExtension: "json", subdirectory: "Resources") else {
+        guard let url = Bundle.module.url(forResource: name, withExtension: "json", subdirectory: "Data") else {
             throw CocoaError(.fileNoSuchFile, userInfo: [NSFilePathErrorKey: "\(name).json"])
         }
         return try JSONDecoder().decode(T.self, from: Data(contentsOf: url))
     }
 
-    /// URL de una imagen de `Resources/Images`.
+    /// URL de una imagen de `Data/Images`.
     public static func imageURL(_ name: String) -> URL? {
-        Bundle.module.url(forResource: name, withExtension: "png", subdirectory: "Resources/Images")
+        Bundle.module.url(forResource: name, withExtension: "png", subdirectory: "Data/Images")
     }
 
     // MARK: - Consultas

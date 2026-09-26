@@ -7,12 +7,9 @@ struct GK2GuiaApp: App {
 
     init() {
         FontLoader.registerBundledFonts()
-        #if os(iOS)
         Self.styleNavigationBar()
-        #endif
     }
 
-    #if os(iOS)
     /// Barra de navegación de madera con título pixelado.
     private static func styleNavigationBar() {
         let appearance = UINavigationBarAppearance()
@@ -30,7 +27,6 @@ struct GK2GuiaApp: App {
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
     }
-    #endif
 
     var body: some Scene {
         WindowGroup("Guía del Guardián") {
@@ -40,9 +36,5 @@ struct GK2GuiaApp: App {
                 .preferredColorScheme(.dark)
                 .tint(Theme.candle)
         }
-        #if os(macOS)
-        .defaultSize(width: 1180, height: 820)
-        .windowToolbarStyle(.unifiedCompact)
-        #endif
     }
 }

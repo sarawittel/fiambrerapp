@@ -4,7 +4,6 @@ import SwiftUI
 struct ItemsView: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
-    @Environment(\.isWideLayout) private var wide
     @State private var query = ""
     @State private var category: ItemCategory?
 
@@ -12,9 +11,8 @@ struct ItemsView: View {
         @Bindable var router = router
         let data = state.data
         let results = data.searchItems(query, category: category, craftable: false)
-        let selection = router.itemId ?? results.first?.id
 
-        MasterDetail(title: "Objetos", path: $router.itemPath, selection: selection) {
+        MasterDetail(title: "Objetos", path: $router.itemPath) {
             VStack(alignment: .leading, spacing: 12) {
                 Panel(title: "Objetos") {
                     Text("Lo que no se fabrica: se compra, se recoge o te lo dan. Lo fabricable está en Recetas.")
@@ -35,8 +33,7 @@ struct ItemsView: View {
                                 icon: item.icon,
                                 image: item.image,
                                 title: item.name,
-                                subtitle: [item.category.title, state.chestSummary(of: item.id)].compactMap { $0 }.joined(separator: " · "),
-                                selected: wide && item.id == selection
+                                subtitle: [item.category.title, state.chestSummary(of: item.id)].compactMap { $0 }.joined(separator: " · ")
                             ) { router.openItem(item.id) }
                         }
                     }

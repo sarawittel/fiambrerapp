@@ -22,13 +22,12 @@ struct NotchedRect: Shape {
 
 /// Materiales de las cajas: relleno, luz arriba, sombra abajo y color de texto.
 enum BoxStyle {
-    case wood, woodDark, woodSelected, parchment, button, candle, blood, field
+    case wood, woodDark, parchment, button, candle, blood, field
 
     var fill: Color {
         switch self {
         case .wood: Theme.wood
         case .woodDark: Theme.woodDark
-        case .woodSelected: Theme.woodLight
         case .parchment: Theme.parchment
         case .button: Color(hex: 0x6a4a2a)
         case .candle: Theme.candle
@@ -41,7 +40,6 @@ enum BoxStyle {
         switch self {
         case .wood: Theme.woodLight
         case .woodDark: Theme.wood
-        case .woodSelected: Color(hex: 0x7a5a40)
         case .parchment: Theme.parchmentLight
         case .button: Color(hex: 0x8a6a44)
         case .candle: Color(hex: 0xf4cc6a)
@@ -53,7 +51,7 @@ enum BoxStyle {
     var shadow: Color {
         switch self {
         case .wood: Theme.woodDark
-        case .woodDark, .woodSelected: Theme.woodDeep
+        case .woodDark: Theme.woodDeep
         case .parchment: Theme.parchmentDark
         case .button: Color(hex: 0x4a321c)
         case .candle: Theme.candleDark

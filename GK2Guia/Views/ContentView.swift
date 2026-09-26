@@ -2,19 +2,9 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(Router.self) private var router
-    #if os(iOS)
-    @Environment(\.horizontalSizeClass) private var sizeClass
-    private var wide: Bool { sizeClass == .regular }
-    #else
-    private let wide = true
-    #endif
 
     var body: some View {
         VStack(spacing: 0) {
-            if wide {
-                HeaderBar()
-                TopTabs()
-            }
             Group {
                 switch router.tab {
                 case .recipes: RecipesView()
@@ -27,105 +17,11 @@ struct ContentView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            if !wide { BottomTabs() }
+            BottomTabs()
         }
         .font(.pixelBody())
         .foregroundStyle(Theme.ink)
         .background(PixelBackground().ignoresSafeArea())
-        .environment(\.isWideLayout, wide)
-    }
-}
-
-private struct HeaderBar: View {
-    @Environment(AppState.self) private var state
-
-    var body: some View {
-        HStack(spacing: 14) {
-            PixelIcon(name: "skull", size: 40)
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Guía del Guardián")
-                    .font(.pixelTitle(16))
-                    .foregroundStyle(Theme.candle)
-                    .shadow(color: Theme.outline, radius: 0, x: 3, y: 3)
-                Text(state.game.title.uppercased())
-                    .font(.pixelBody(20))
-                    .tracking(2)
-                    .foregroundStyle(Theme.muted)
-            }
-            Spacer()
-            GameSummary()
-            GameSwitch()
-        }
-        .padding(.horizontal, 24)
-        .padding(.top, 16)
-    }
-}
-
-/// Resumen de la partida: misiones, tecnologías y logros, y el porcentaje completado.
-private struct GameSummary: View {
-    @Environment(AppState.self) private var state
-    @Environment(Router.self) private var router
-
-    var body: some View {
-        let percent = Int((state.completion * 100).rounded(.down))
-        HStack(spacing: 16) {
-            stat("person", state.questProgress, label: "Misiones", tab: .characters)
-            stat("candle", state.techProgress, label: "Tecnologías", tab: .technologies)
-            stat("crown", state.achievementProgress, label: "Logros", tab: .guide)
-            VStack(alignment: .trailing, spacing: 4) {
-                Text("\(percent)%")
-                    .font(.pixelTitle(14))
-                    .foregroundStyle(Theme.candle)
-                ProgressBar(fraction: state.completion)
-                    .frame(width: 90, height: 10)
-            }
-            .help("Juego completado (media de misiones, tecnologías y logros)")
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Juego completado: \(percent) por ciento")
-        }
-    }
-
-    private func stat(_ icon: String, _ progress: AppState.Progress, label: String, tab: AppTab) -> some View {
-        Button { router.tab = tab } label: {
-            HStack(spacing: 6) {
-                PixelIcon(name: icon, size: 20)
-                Text("\(progress.done)/\(progress.total)")
-                    .font(.pixelBody(20))
-                    .foregroundStyle(Theme.ink)
-                    .monospacedDigit()
-            }
-        }
-        .buttonStyle(.plain)
-        .help(label)
-        .accessibilityLabel("\(label): \(progress.done) de \(progress.total)")
-    }
-}
-
-private struct TopTabs: View {
-    @Environment(Router.self) private var router
-    @Environment(AppState.self) private var state
-
-    var body: some View {
-        HStack(spacing: 12) {
-            ForEach(AppTab.allCases) { tab in
-                let active = router.tab == tab
-                Button { router.tab = tab } label: {
-                    HStack(spacing: 8) {
-                        PixelIcon(name: tab.icon, size: 24)
-                        Text(tab.title).font(.pixelTitle(10))
-                        if tab == .planner, state.planSize > 0 {
-                            PlanCount(count: state.planSize)
-                        }
-                    }
-                    .foregroundStyle(active ? Theme.parchmentInk : Theme.muted)
-                }
-                .buttonStyle(.pixel(active ? .parchment : .woodDark))
-                .offset(y: active ? -2 : 0)
-            }
-            Spacer()
-        }
-        .padding(.horizontal, 24)
-        .padding(.top, 14)
     }
 }
 

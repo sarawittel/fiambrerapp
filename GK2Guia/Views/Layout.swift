@@ -1,46 +1,20 @@
 import SwiftUI
 
-private struct WideLayoutKey: EnvironmentKey {
-    static let defaultValue = true
-}
-
-extension EnvironmentValues {
-    /// true en Mac y iPad; false en iPhone (tamaño compacto).
-    var isWideLayout: Bool {
-        get { self[WideLayoutKey.self] }
-        set { self[WideLayoutKey.self] = newValue }
-    }
-}
-
-/// Sección con lista y detalle: en columnas si hay sitio; si no, con navegación apilada.
+/// Sección con lista y detalle, con navegación apilada.
 struct MasterDetail<Master: View, Detail: View>: View {
     let title: String
     @Binding var path: [String]
-    let selection: String?
     @ViewBuilder let master: () -> Master
     @ViewBuilder let detail: (String) -> Detail
-    @Environment(\.isWideLayout) private var wide
 
     var body: some View {
-        if wide {
-            HStack(alignment: .top, spacing: 20) {
-                ScrollView { master().padding(Theme.px) }
-                    .frame(width: 340)
-                ScrollView {
-                    if let selection { detail(selection).padding(Theme.px) }
+        NavigationStack(path: $path) {
+            ScrollView { master().padding(12) }
+                .pixelScreen(title)
+                .navigationDestination(for: String.self) { id in
+                    ScrollView { detail(id).padding(12) }
+                        .pixelScreen(title)
                 }
-                .frame(maxWidth: .infinity)
-            }
-            .padding(20)
-        } else {
-            NavigationStack(path: $path) {
-                ScrollView { master().padding(12) }
-                    .pixelScreen(title)
-                    .navigationDestination(for: String.self) { id in
-                        ScrollView { detail(id).padding(12) }
-                            .pixelScreen(title)
-                    }
-            }
         }
     }
 }
@@ -49,31 +23,11 @@ struct MasterDetail<Master: View, Detail: View>: View {
 struct SingleScreen<Content: View>: View {
     let title: String
     @ViewBuilder let content: () -> Content
-    @Environment(\.isWideLayout) private var wide
 
     var body: some View {
-        if wide {
-            ScrollView { content().padding(20) }
-        } else {
-            NavigationStack {
-                ScrollView { content().padding(12) }
-                    .pixelScreen(title)
-            }
-        }
-    }
-}
-
-/// Horizontal en pantallas anchas, vertical en iPhone.
-struct AdaptiveStack<Content: View>: View {
-    var spacing: CGFloat = 20
-    @ViewBuilder let content: () -> Content
-    @Environment(\.isWideLayout) private var wide
-
-    var body: some View {
-        if wide {
-            HStack(alignment: .top, spacing: spacing, content: content)
-        } else {
-            VStack(spacing: spacing, content: content)
+        NavigationStack {
+            ScrollView { content().padding(12) }
+                .pixelScreen(title)
         }
     }
 }
@@ -84,14 +38,11 @@ extension View {
         self
             .background(PixelBackground().ignoresSafeArea())
             .navigationTitle(title)
-            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { GameToolbarItem() }
-            #endif
     }
 }
 
-#if os(iOS)
 /// Selector de juego sin la cápsula de cristal que iOS 26 pone a los botones de la barra.
 private struct GameToolbarItem: ToolbarContent {
     var body: some ToolbarContent {
@@ -103,7 +54,6 @@ private struct GameToolbarItem: ToolbarContent {
         }
     }
 }
-#endif
 
 /// Coloca las vistas en filas y salta de línea cuando no caben.
 struct FlowLayout: Layout {

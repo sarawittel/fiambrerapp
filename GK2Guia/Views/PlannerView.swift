@@ -4,7 +4,6 @@ import SwiftUI
 struct PlannerView: View {
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
-    @Environment(\.isWideLayout) private var wide
     @State private var query = ""
     @State private var expanded: Set<String> = []
 
@@ -13,8 +12,8 @@ struct PlannerView: View {
             if state.plan.isEmpty {
                 emptyState
             } else {
-                AdaptiveStack {
-                    controls.frame(width: wide ? 340 : nil)
+                VStack(spacing: 20) {
+                    controls
                     cards
                 }
             }
