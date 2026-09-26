@@ -1,0 +1,56 @@
+{
+  "_comment": "Recetas y orígenes de las páginas de GK2 que son guías en prosa, sin tabla de recetas. Nombres en inglés, como en la wiki (convert.py los traduce). `sources` va ya en español. Van por delante de las recetas de las tablas: el orden decide la receta principal de cada objeto. Las que llevan \"construction\" son costes de construcción; `stations` son zonas (Yard, Writing Room…). `characters`: título y lugar (en español; nombres propios y lugares en inglés) de los personajes de «Characters» y de los comerciantes de «Where to Buy Materials»; `name` solo si se traduce.",
+  "pages": {
+    "Gold": "Golden ingot",
+    "Hypno_Device": "Hypno-device"
+  },
+  "recipes": [
+    {"page": "Gold", "output": "Golden ingot", "qty": 2, "stations": ["Furnace II"], "ingredients": [[3, "Golden nugget"], [30, "Fuel"]], "tech": "Reanimation II", "extension": "Bellows", "mastery": 4, "bonus": ["Fireman", 3]},
+    {"page": "Gold", "output": "Golden ingot", "qty": 1, "stations": ["Formulation Bench"], "ingredients": [[1, "Philosopher Stone"], [1, "Iron Ingot"]], "mastery": 8},
+    {"page": "Gold", "output": "Golden nugget", "qty": 1, "stations": ["Formulation Bench"], "ingredients": [[1, "Philosopher Stone"], [1, "Iron Ore"]], "mastery": 6},
+    {"page": "Tin", "output": "Tin", "qty": 2, "stations": ["Sluice Box"], "ingredients": [[3, "Sand"]], "tech": "Bronze Forge", "mastery": 2, "note": "Da de 2 a 3."},
+    {"page": "Alcohol", "output": "Alcohol", "qty": 4, "stations": ["Distillation Cube"], "ingredients": [[1, "Wine"], [2, "Clay Urn"], [20, "Fuel"]], "tech": "Reanimation Liquid", "mastery": 3, "bonus": ["Cube distillations", 7]},
+    {"page": "Dream_Dust", "output": "Dream Dust", "qty": 1, "stations": ["Laboratory I", "Laboratory II"], "ingredients": [[1, "Leaf"], [1, "Blood"]]},
+    {"page": "Hypno_Device", "output": "Charged hypno-device", "qty": 1, "stations": ["Formulation Bench"], "ingredients": [[1, "Hypno-device"], [1, "Faith"]], "mastery": 2, "bonus": ["Alchemist", 2]},
+    {"page": "Paint", "output": "Paint", "qty": 1, "stations": ["Laboratory I", "Laboratory II"], "ingredients": [[2, "Leaf"]], "tech": "Paint"},
+    {"page": "Reanimation_Liquid", "output": "Reanimation Liquid", "qty": 1, "stations": ["Laboratory I", "Laboratory II"], "ingredients": [[1, "Clay"], [1, "Alcohol"], [1, "Salt"]], "tech": "Reanimation Liquid"},
+    {"page": "Melted_Fat", "output": "Melted Fat", "qty": 4, "stations": ["Distillation Cube"], "ingredients": [[1, "Fat"], [2, "Clay Urn"], [20, "Fuel"]], "tech": "Alchemy, Distillation", "mastery": 1, "bonus": ["Cube distillations", 7]},
+    {"page": "Melted_Fat", "output": "Melted Fat", "qty": 3, "stations": ["Distillation Cube"], "ingredients": [[3, "Seed oil"], [2, "Clay Urn"], [20, "Fuel"]], "tech": "Alchemy, Distillation", "mastery": 1, "bonus": ["Cube distillations", 5]},
+    {"page": "Melted_Fat", "output": "Seed oil", "qty": 2, "stations": ["Millstone"], "ingredients": [[4, "Flax Seeds"]], "mastery": 2},
+    {"page": "Tooth", "output": "Tooth", "qty": 1, "stations": ["Formulation Bench"], "ingredients": [[1, "Skull"]], "tech": "Skull and Teeth", "mastery": 1},
+    {"page": "Flax", "output": "Flax Thread", "qty": 4, "stations": ["Spinning Wheel"], "ingredients": [[4, "Flax"]], "tech": "Flax Thread", "mastery": 3, "bonus": ["Tailor", 6]},
+    {"page": "Firewood_Shed", "output": "Fuel", "qty": 20, "stations": ["Firewood shed I", "Firewood shed II"], "ingredients": [[2, "Firewood"]], "tech": "Bronze Melting", "note": "El combustible se carga en la leñera y lo usan las estaciones de su zona"},
+    {"page": "Furnace", "construction": true, "output": "Furnace I", "qty": 1, "stations": ["Yard"], "ingredients": [[6, "Piece of stone"], [12, "Brick"]], "tech": "Bronze Melting"},
+    {"page": "Writing_Desk", "construction": true, "output": "Writing Desk", "qty": 1, "stations": ["Writing Room"], "ingredients": [[4, "Wooden Plank"], [6, "Bronze Nails"], [1, "Polished Bronze"]], "tech": "Writing Basic"},
+    {"page": "Formulation_Bench", "construction": true, "output": "Formulation Bench", "qty": 1, "stations": ["Alchemy Lab", "Writing Room"], "ingredients": [[4, "Wooden Plank"], [4, "Bronze Detail"], [1, "Polished Bronze"]], "tech": "Church Lighting I"},
+    {"page": "Jewelry_Table", "construction": true, "output": "Jewelry Table", "qty": 1, "stations": ["Writing Room"], "ingredients": [[4, "Wooden Plank"], [12, "Bronze Nails"], [3, "Glass"]], "tech": "Delicate Work"}
+  ],
+  "sources": {
+    "Coal": ["Minero zombi en la mina del bosque (tecnología Minería zombi)"],
+    "Special Wood": ["Se compra a Harold en las Stilt Houses, después de llevarle 2 Kit de construcción I y 1 Kit de hierro II"],
+    "Steel Ingot": ["Se compra al Obispo en la Royal Foundry, después de Man of Steel"],
+    "Blue Crystal": ["Se compra a Gunter en los niveles de comercio 2 y 3"],
+    "Faith": ["Ceremonias en la iglesia el día del símbolo de la Ira"],
+    "Green Scroll": ["Casas restauradas del pueblo"],
+    "Hypno-device": ["Se compra a Gunter en su torre"],
+    "Golden nugget": ["Se compra al Maestro comerciante (nivel de comercio 1)", "A veces al lavar arena con la ventaja Buscador de oro"],
+    "Golden ingot": ["Se compra al Joyero (nivel de comercio 2)"],
+    "Flax": ["Se cultiva con 4 semillas de lino en un bancal (maestría 5)"],
+    "Sand": ["Con una pala en el arenal al suroeste de la Inquisition Base"]
+  },
+  "characters": {
+    "Herm": {"title": "Comerciante", "location": "Herm's Store"},
+    "Jack": {"title": "Capataz", "location": "Twins' Land · Jack's Workshop"},
+    "Herbert": {"title": "Jefe de la guardia", "location": "Crossroads · Barracks"},
+    "Nun": {"name": "Monja", "title": "Monja", "location": "Village Tavern · Church"},
+    "Gunter": {"title": "Astrólogo", "location": "Astrologer's Tower (Town)"},
+    "Albert": {"title": "Médico de la peste", "location": "Abandoned Tower"},
+    "Jeffry": {"title": "Uno de los gemelos", "location": "Hangman's House"},
+    "Januarius": {"title": "Jefe del pueblo", "location": "Village Tavern"},
+    "Builder": {"name": "Constructor", "title": "Tienda", "location": "Sin indicar"},
+    "Furniture Maker": {"name": "Mueblero", "title": "Tienda", "location": "Sin indicar"},
+    "Alchemist": {"name": "Alquimista", "title": "Tienda", "location": "Sin indicar"},
+    "Tailor": {"name": "Sastre", "title": "Tienda", "location": "Sin indicar"},
+    "Apothecary": {"name": "Boticario", "title": "Tienda", "location": "Sin indicar"}
+  }
+}

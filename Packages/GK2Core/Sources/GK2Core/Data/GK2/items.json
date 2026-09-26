@@ -1,0 +1,3096 @@
+[
+  {
+    "id": "board",
+    "name": "Tabla",
+    "wikiName": "Board",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/board"
+  },
+  {
+    "id": "short_log",
+    "name": "Tronco corto",
+    "wikiName": "Short Log",
+    "category": "material",
+    "icon": "log",
+    "image": "GK2/short_log"
+  },
+  {
+    "id": "wooden_plank",
+    "name": "Tablón de madera",
+    "wikiName": "Wooden Plank",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/wooden_plank"
+  },
+  {
+    "id": "firewood",
+    "name": "Leña",
+    "wikiName": "Firewood",
+    "category": "material",
+    "icon": "log",
+    "image": "GK2/firewood"
+  },
+  {
+    "id": "wooden_kit_i",
+    "name": "Kit de madera I",
+    "wikiName": "Wooden Kit I",
+    "category": "material",
+    "icon": "log",
+    "image": "GK2/wooden_kit_i"
+  },
+  {
+    "id": "stone_kit",
+    "name": "Kit de piedra",
+    "wikiName": "Stone Kit",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/stone_kit"
+  },
+  {
+    "id": "iron_kit_i",
+    "name": "Kit de hierro I",
+    "wikiName": "Iron Kit I",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/iron_kit_i"
+  },
+  {
+    "id": "building_kit_i",
+    "name": "Kit de construcción I",
+    "wikiName": "Building Kit I",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/building_kit_i"
+  },
+  {
+    "id": "special_wood",
+    "name": "Madera especial",
+    "wikiName": "Special Wood",
+    "category": "material",
+    "icon": "log",
+    "sources": [
+      "Se compra a Harold en las Stilt Houses, después de llevarle 2 Kit de construcción I y 1 Kit de hierro II"
+    ],
+    "description": "Se compra a Harold en las Stilt Houses después de completar su encargo de materiales de Organic Music. Llévale 2 Kit de construcción I y 1 Kit de hierro II para abrir la conversación de suministro. Después, el órgano de la iglesia necesita 4 de Madera especial y 6 Piezas de acero.",
+    "image": "GK2/special_wood"
+  },
+  {
+    "id": "bronze_nails",
+    "name": "Clavos de bronce",
+    "wikiName": "Bronze Nails",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/bronze_nails"
+  },
+  {
+    "id": "bronze_detail",
+    "name": "Pieza de bronce",
+    "wikiName": "Bronze Detail",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/bronze_detail"
+  },
+  {
+    "id": "bronze_ingot",
+    "name": "Lingote de bronce",
+    "wikiName": "Bronze Ingot",
+    "category": "material",
+    "icon": "ingot",
+    "image": "GK2/bronze_ingot"
+  },
+  {
+    "id": "polished_bronze",
+    "name": "Bronce pulido",
+    "wikiName": "Polished Bronze",
+    "category": "material",
+    "icon": "ingot",
+    "image": "GK2/polished_bronze"
+  },
+  {
+    "id": "iron_ingot",
+    "name": "Lingote de hierro",
+    "wikiName": "Iron Ingot",
+    "category": "material",
+    "icon": "ingot",
+    "image": "GK2/iron_ingot"
+  },
+  {
+    "id": "iron_detail",
+    "name": "Pieza de hierro",
+    "wikiName": "Iron Detail",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/iron_detail"
+  },
+  {
+    "id": "brick",
+    "name": "Ladrillo",
+    "wikiName": "Brick",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/brick"
+  },
+  {
+    "id": "clay_plate",
+    "name": "Plato de arcilla",
+    "wikiName": "Clay Plate",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/clay_plate"
+  },
+  {
+    "id": "glass",
+    "name": "Vidrio",
+    "wikiName": "Glass",
+    "category": "material",
+    "icon": "water",
+    "image": "GK2/glass"
+  },
+  {
+    "id": "coal",
+    "name": "Carbón",
+    "wikiName": "Coal",
+    "category": "material",
+    "icon": "ore",
+    "sources": [
+      "Minero zombi en la mina del bosque (tecnología Minería zombi)"
+    ],
+    "description": "Lo saca un Minero zombi en la mina del bosque, después de desbloquear Minería zombi. El Carbón es un ingrediente de las recetas de fundición de la fábrica, como el Lingote de hierro. Abrir la mina, construir el minero y asignarle un trabajador son pasos distintos.",
+    "image": "GK2/coal"
+  },
+  {
+    "id": "steel_ingot",
+    "name": "Lingote de acero",
+    "wikiName": "Steel Ingot",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Se compra al Obispo en la Royal Foundry, después de Man of Steel"
+    ],
+    "description": "Se compran en la conversación de suministro de acero del Obispo en la Royal Foundry, después de Man of Steel. Lleva 3 Lingotes de acero a Jack para su encargo. La tecnología Herrería del acero desbloquea formas de trabajar el acero, pero no da los lingotes.",
+    "image": "GK2/steel_ingot"
+  },
+  {
+    "id": "golden_ingot",
+    "name": "Lingote de oro",
+    "wikiName": "Golden ingot",
+    "category": "material",
+    "icon": "ingot",
+    "sources": [
+      "Se compra al Joyero (nivel de comercio 2)"
+    ],
+    "description": "Las Pepitas de oro y los Lingotes de oro tienen usos distintos. Las pepitas se compran al Maestro comerciante, salen a veces al lavar Arena con la ventaja Buscador de oro o se obtienen con la Piedra filosofal. Funde 3 pepitas con 30 de Combustible en el Horno II con su Fuelle para hacer 2 Lingotes de oro, sin contar bonificaciones.",
+    "image": "GK2/golden_ingot"
+  },
+  {
+    "id": "tin",
+    "name": "Estaño",
+    "wikiName": "Tin",
+    "category": "material",
+    "icon": "ore",
+    "description": "Se obtienen de 2 a 3 de Estaño lavando 3 de Arena en el Canal de lavado. La receta necesita maestría 2 y se desbloquea con Forja de bronce. El Estaño se combina con cobre y Combustible para hacer Lingotes de bronce; no es lo mismo que el Mineral de hierro.",
+    "image": "GK2/tin"
+  },
+  {
+    "id": "faith",
+    "name": "Fe",
+    "wikiName": "Faith",
+    "category": "funerario",
+    "icon": "candle",
+    "sources": [
+      "Ceremonias en la iglesia el día del símbolo de la Ira"
+    ],
+    "description": "Se gana con las ceremonias de la iglesia el día del símbolo de la Ira. Sube tanto la calidad de la iglesia como tus «Me gusta» disponibles: el valor más bajo decide la asistencia. Más feligreses, una oración adecuada y la ventaja Sacerdote aumentan la Fe que ganas, y la penalización por el límite de zombis puede reducirla. Guarda Fe para entregas de misiones, hipnodispositivos y la creación de zombis. También se paga Fe para reclamar muchas recompensas de inspiraciones completadas, así que forma parte de la progresión de maestría.",
+    "image": "GK2/faith"
+  },
+  {
+    "id": "alcohol",
+    "name": "Alcohol",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/alcohol"
+  },
+  {
+    "id": "dream_dust",
+    "name": "Polvo de sueños",
+    "wikiName": "Dream Dust",
+    "category": "alquimia",
+    "icon": "sack",
+    "description": "Se hace con 1 Hoja y 1 Sangre en el Laboratorio I o II. La fórmula pide 0 propiedades alquímicas rojas, 1 verde y 1 azul. Lleva un Polvo de sueños al Médico de la peste en la Abandoned Tower para Sweet Dreams.",
+    "image": "GK2/dream_dust"
+  },
+  {
+    "id": "hypno_device",
+    "name": "Hipnodispositivo",
+    "wikiName": "Hypno-device",
+    "category": "alquimia",
+    "icon": "eye",
+    "sources": [
+      "Se compra a Gunter en su torre"
+    ],
+    "description": "Se compra a Gunter en la torre del Astrólogo y se carga en el Banco de formulación con 1 de Fe. La receta de carga se desbloquea durante Congregation Trouble y da 1 Hipnodispositivo cargado. Devuélvele uno a Gunter y da el sermón de prueba que pide para avanzar hacia la máquina de relaciones públicas."
+  },
+  {
+    "id": "green_scroll",
+    "name": "Pergamino verde",
+    "wikiName": "Green Scroll",
+    "category": "alquimia",
+    "icon": "scroll",
+    "sources": [
+      "Casas restauradas del pueblo"
+    ],
+    "description": "Los Pergaminos verdes salen de las casas restauradas del pueblo. Entrégaselos a Linda el día del símbolo de la Lujuria para subir la reputación ciudadana y tu límite máximo de «Me gusta». Linda es la anfitriona del Dockside Club, en el Port."
+  },
+  {
+    "id": "paint",
+    "name": "Pintura",
+    "wikiName": "Paint",
+    "category": "alquimia",
+    "icon": "potion",
+    "description": "Se hace en el Laboratorio I o II con dos Hojas, una en cada hueco de ingrediente. La fórmula es exactamente 0 runas rojas, 2 verdes y 0 azules. El encargo de pintura de Linda para el Dockside Club abre la tecnología Pintura.",
+    "image": "GK2/paint"
+  },
+  {
+    "id": "reanimation_liquid",
+    "name": "Líquido de reanimación",
+    "wikiName": "Reanimation Liquid",
+    "category": "alquimia",
+    "icon": "potion",
+    "description": "Se hace en el Laboratorio I o II con 1 Arcilla, 1 Alcohol y 1 Sal, que cumplen su fórmula de 2 runas rojas, 1 verde y 4 azules. La tecnología Líquido de reanimación se desbloquea con la misión del Necronomicón de Gunter, antes de preparar lo necesario para resucitar.",
+    "image": "GK2/reanimation_liquid"
+  },
+  {
+    "id": "melted_fat",
+    "name": "Grasa fundida",
+    "wikiName": "Melted Fat",
+    "category": "alquimia",
+    "icon": "fat",
+    "description": "Se hace en el Cubo de destilación después de desbloquear Alquimia: destilación. Una receta usa 1 Grasa, 2 Urnas de arcilla y 20 de Combustible y da 4 de Grasa fundida; la otra usa 3 Aceite de semillas, 2 Urnas de arcilla y 20 de Combustible y da 3. Las dos necesitan maestría 1.",
+    "image": "GK2/melted_fat"
+  },
+  {
+    "id": "tooth",
+    "name": "Diente",
+    "wikiName": "Tooth",
+    "category": "funerario",
+    "icon": "bone",
+    "description": "Se hace 1 Diente con 1 Calavera en el Banco de formulación, con maestría 1. La tecnología Calavera y dientes cuesta 5 puntos rojos y 5 azules y va después de Piel y huesos.",
+    "image": "GK2/tooth"
+  },
+  {
+    "id": "blue_crystal",
+    "name": "Cristal azul",
+    "wikiName": "Blue Crystal",
+    "category": "alquimia",
+    "icon": "eye",
+    "sources": [
+      "Se compra a Gunter en los niveles de comercio 2 y 3"
+    ],
+    "description": "Se compra a Gunter en los niveles de comercio 2 o 3. En el nivel 1 te compra el Cristal azul, pero no lo vende. Cada Collar zombi de bronce, de oro o de acero usa 1 Cristal azul en la Mesa de joyería, además de su metal y su coste de Fe.",
+    "image": "GK2/blue_crystal"
+  },
+  {
+    "id": "clean_paper",
+    "name": "Papel limpio",
+    "wikiName": "Clean Paper",
+    "category": "material",
+    "icon": "scroll",
+    "image": "GK2/clean_paper"
+  },
+  {
+    "id": "ink",
+    "name": "Tinta",
+    "wikiName": "Ink",
+    "category": "material",
+    "icon": "potion_dark",
+    "image": "GK2/ink"
+  },
+  {
+    "id": "basic_rod",
+    "name": "Caña básica",
+    "wikiName": "Basic Rod",
+    "category": "herramienta",
+    "icon": "log",
+    "image": "GK2/basic_rod"
+  },
+  {
+    "id": "magic_bell",
+    "name": "Campana mágica",
+    "wikiName": "Magic bell",
+    "category": "material",
+    "icon": "crown",
+    "image": "GK2/magic_bell"
+  },
+  {
+    "id": "flax",
+    "name": "Lino",
+    "wikiName": "Flax",
+    "category": "material",
+    "icon": "herb",
+    "sources": [
+      "Se cultiva con 4 semillas de lino en un bancal (maestría 5)"
+    ],
+    "description": "Se compra al Sastre desde su primer nivel de comercio o se cultiva con 4 Semillas de lino en un bancal, con maestría 5. Las Semillas de lino las venden Herm desde el segundo nivel de comercio y el Sastre desde el primero. En la Rueca, el Lino se convierte en Hilo de lino.",
+    "image": "GK2/flax"
+  },
+  {
+    "id": "golden_nugget",
+    "name": "Pepita de oro",
+    "wikiName": "Golden nugget",
+    "category": "material",
+    "icon": "ore",
+    "sources": [
+      "Se compra al Maestro comerciante (nivel de comercio 1)",
+      "A veces al lavar arena con la ventaja Buscador de oro"
+    ],
+    "image": "GK2/golden_nugget"
+  },
+  {
+    "id": "fuel",
+    "name": "Combustible",
+    "wikiName": "Fuel",
+    "category": "material",
+    "icon": "log",
+    "image": "GK2/fuel"
+  },
+  {
+    "id": "philosopher_stone",
+    "name": "Piedra filosofal",
+    "wikiName": "Philosopher Stone",
+    "category": "alquimia",
+    "icon": "stone",
+    "image": "GK2/philosopher_stone"
+  },
+  {
+    "id": "iron_ore",
+    "name": "Mineral de hierro",
+    "wikiName": "Iron Ore",
+    "category": "material",
+    "icon": "ore",
+    "image": "GK2/iron_ore"
+  },
+  {
+    "id": "sand",
+    "name": "Arena",
+    "wikiName": "Sand",
+    "category": "material",
+    "icon": "stone",
+    "sources": [
+      "Con una pala en el arenal al suroeste de la Inquisition Base"
+    ],
+    "image": "GK2/sand"
+  },
+  {
+    "id": "wine",
+    "name": "Vino",
+    "wikiName": "Wine",
+    "category": "alquimia",
+    "icon": "potion_dark",
+    "image": "GK2/wine"
+  },
+  {
+    "id": "clay_urn",
+    "name": "Urna de arcilla",
+    "wikiName": "Clay Urn",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/clay_urn"
+  },
+  {
+    "id": "leaf",
+    "name": "Hoja",
+    "wikiName": "Leaf",
+    "category": "alquimia",
+    "icon": "herb",
+    "image": "GK2/leaf"
+  },
+  {
+    "id": "blood",
+    "name": "Sangre",
+    "wikiName": "Blood",
+    "category": "funerario",
+    "icon": "heart",
+    "image": "GK2/blood"
+  },
+  {
+    "id": "charged_hypno_device",
+    "name": "Hipnodispositivo cargado",
+    "wikiName": "Charged hypno-device",
+    "category": "alquimia",
+    "icon": "eye"
+  },
+  {
+    "id": "clay",
+    "name": "Arcilla",
+    "wikiName": "Clay",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/clay"
+  },
+  {
+    "id": "salt",
+    "name": "Sal",
+    "wikiName": "Salt",
+    "category": "alquimia",
+    "icon": "sack",
+    "image": "GK2/salt"
+  },
+  {
+    "id": "fat",
+    "name": "Grasa",
+    "wikiName": "Fat",
+    "category": "funerario",
+    "icon": "fat",
+    "image": "GK2/fat"
+  },
+  {
+    "id": "seed_oil",
+    "name": "Aceite de semillas",
+    "wikiName": "Seed oil",
+    "category": "comida",
+    "icon": "potion",
+    "image": "GK2/seed_oil"
+  },
+  {
+    "id": "flax_seeds",
+    "name": "Semillas de lino",
+    "wikiName": "Flax Seeds",
+    "category": "material",
+    "icon": "herb"
+  },
+  {
+    "id": "skull",
+    "name": "Calavera",
+    "wikiName": "Skull",
+    "category": "funerario",
+    "icon": "skull",
+    "image": "GK2/skull"
+  },
+  {
+    "id": "flax_thread",
+    "name": "Hilo de lino",
+    "wikiName": "Flax Thread",
+    "category": "material",
+    "icon": "herb",
+    "image": "GK2/flax_thread"
+  },
+  {
+    "id": "log",
+    "name": "Tronco",
+    "wikiName": "Log",
+    "category": "material",
+    "icon": "log",
+    "image": "GK2/log"
+  },
+  {
+    "id": "stick",
+    "name": "Palo",
+    "wikiName": "Stick",
+    "category": "material",
+    "icon": "log",
+    "image": "GK2/stick"
+  },
+  {
+    "id": "oiled_plank",
+    "name": "Tablón aceitado",
+    "wikiName": "Oiled Plank",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/oiled_plank"
+  },
+  {
+    "id": "stone",
+    "name": "Piedra",
+    "wikiName": "Stone",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/stone"
+  },
+  {
+    "id": "polished_stone",
+    "name": "Piedra pulida",
+    "wikiName": "Polished Stone",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/polished_stone"
+  },
+  {
+    "id": "bronze_scrap",
+    "name": "Chatarra de bronce",
+    "wikiName": "Bronze Scrap",
+    "category": "material",
+    "icon": "ore",
+    "image": "GK2/bronze_scrap"
+  },
+  {
+    "id": "copper_nugget",
+    "name": "Pepita de cobre",
+    "wikiName": "Copper Nugget",
+    "category": "material",
+    "icon": "ore",
+    "image": "GK2/copper_nugget"
+  },
+  {
+    "id": "third_eye_salt",
+    "name": "Sal del tercer ojo",
+    "wikiName": "Third Eye Salt",
+    "category": "alquimia",
+    "icon": "sack",
+    "image": "GK2/third_eye_salt"
+  },
+  {
+    "id": "firefly",
+    "name": "Luciérnaga",
+    "wikiName": "Firefly",
+    "category": "alquimia",
+    "icon": "candle",
+    "image": "GK2/firefly"
+  },
+  {
+    "id": "umami",
+    "name": "Umami",
+    "category": "alquimia",
+    "icon": "sack",
+    "image": "GK2/umami"
+  },
+  {
+    "id": "flour",
+    "name": "Harina",
+    "wikiName": "Flour",
+    "category": "comida",
+    "icon": "sack",
+    "image": "GK2/flour"
+  },
+  {
+    "id": "hops",
+    "name": "Lúpulo",
+    "wikiName": "Hops",
+    "category": "alquimia",
+    "icon": "herb",
+    "image": "GK2/hops"
+  },
+  {
+    "id": "leather_scroll",
+    "name": "Pergamino de cuero",
+    "wikiName": "Leather Scroll",
+    "category": "material",
+    "icon": "scroll",
+    "image": "GK2/leather_scroll"
+  },
+  {
+    "id": "paper_glop",
+    "name": "Pasta de papel",
+    "wikiName": "Paper glop",
+    "category": "material",
+    "icon": "scroll",
+    "image": "GK2/paper_glop"
+  },
+  {
+    "id": "ash",
+    "name": "Ceniza",
+    "wikiName": "Ash",
+    "category": "material",
+    "icon": "sack",
+    "image": "GK2/ash"
+  },
+  {
+    "id": "water",
+    "name": "Agua",
+    "wikiName": "Water",
+    "category": "material",
+    "icon": "water",
+    "image": "GK2/water"
+  },
+  {
+    "id": "wood_wedge",
+    "name": "Cuña de madera",
+    "wikiName": "Wood wedge",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/wood_wedge"
+  },
+  {
+    "id": "wooden_trinkets",
+    "name": "Baratijas de madera",
+    "wikiName": "Wooden Trinkets",
+    "category": "material",
+    "icon": "coin",
+    "image": "GK2/wooden_trinkets"
+  },
+  {
+    "id": "wooden_beam",
+    "name": "Viga de madera",
+    "wikiName": "Wooden beam",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/wooden_beam"
+  },
+  {
+    "id": "oiled_beam",
+    "name": "Viga aceitada",
+    "wikiName": "Oiled Beam",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/oiled_beam"
+  },
+  {
+    "id": "wooden_joint",
+    "name": "Ensamble de madera",
+    "wikiName": "Wooden Joint",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/wooden_joint"
+  },
+  {
+    "id": "advanced_detail",
+    "name": "Pieza avanzada",
+    "wikiName": "Advanced Detail",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/advanced_detail"
+  },
+  {
+    "id": "carved_wood",
+    "name": "Madera tallada",
+    "wikiName": "Carved Wood",
+    "category": "material",
+    "icon": "log",
+    "image": "GK2/carved_wood"
+  },
+  {
+    "id": "iron_chisel",
+    "name": "Cincel de hierro",
+    "wikiName": "Iron Chisel",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/iron_chisel"
+  },
+  {
+    "id": "bronze_chisel",
+    "name": "Cincel de bronce",
+    "wikiName": "Bronze Chisel",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/bronze_chisel"
+  },
+  {
+    "id": "supply_iron",
+    "name": "Suministro: hierro",
+    "wikiName": "Supply: Iron",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_iron"
+  },
+  {
+    "id": "furniture_kit_i",
+    "name": "Kit de muebles I",
+    "wikiName": "Furniture Kit I",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/furniture_kit_i"
+  },
+  {
+    "id": "supply_fabric",
+    "name": "Suministro: tela",
+    "wikiName": "Supply: Fabric",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_fabric"
+  },
+  {
+    "id": "fabric",
+    "name": "Tela",
+    "wikiName": "Fabric",
+    "category": "material",
+    "icon": "sack",
+    "image": "GK2/fabric"
+  },
+  {
+    "id": "amateur_rod",
+    "name": "Caña de aficionado",
+    "wikiName": "Amateur Rod",
+    "category": "herramienta",
+    "icon": "log",
+    "image": "GK2/amateur_rod"
+  },
+  {
+    "id": "advanced_rod",
+    "name": "Caña avanzada",
+    "wikiName": "Advanced Rod",
+    "category": "herramienta",
+    "icon": "log",
+    "image": "GK2/advanced_rod"
+  },
+  {
+    "id": "pro_rod",
+    "name": "Caña profesional",
+    "wikiName": "Pro Rod",
+    "category": "herramienta",
+    "icon": "log",
+    "image": "GK2/pro_rod"
+  },
+  {
+    "id": "engineering_details",
+    "name": "Piezas de ingeniería",
+    "wikiName": "Engineering Details",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/engineering_details"
+  },
+  {
+    "id": "comfortable_chair",
+    "name": "Silla cómoda",
+    "wikiName": "Comfortable Chair",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/comfortable_chair"
+  },
+  {
+    "id": "steel_screws",
+    "name": "Tornillos de acero",
+    "wikiName": "Steel Screws",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/steel_screws"
+  },
+  {
+    "id": "empty_bottle",
+    "name": "Botella vacía",
+    "wikiName": "Empty Bottle",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/empty_bottle"
+  },
+  {
+    "id": "lens",
+    "name": "Lente",
+    "wikiName": "Lens",
+    "category": "material",
+    "icon": "eye",
+    "image": "GK2/lens"
+  },
+  {
+    "id": "reinforced_plank",
+    "name": "Tablón reforzado",
+    "wikiName": "Reinforced Plank",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/reinforced_plank"
+  },
+  {
+    "id": "copper_trinkets",
+    "name": "Baratijas de cobre",
+    "wikiName": "Copper Trinkets",
+    "category": "material",
+    "icon": "coin",
+    "image": "GK2/copper_trinkets"
+  },
+  {
+    "id": "bronze_gear",
+    "name": "Engranaje de bronce",
+    "wikiName": "Bronze Gear",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/bronze_gear"
+  },
+  {
+    "id": "iron_nails",
+    "name": "Clavos de hierro",
+    "wikiName": "Iron Nails",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/iron_nails"
+  },
+  {
+    "id": "reinforced_beam",
+    "name": "Viga reforzada",
+    "wikiName": "Reinforced Beam",
+    "category": "material",
+    "icon": "plank",
+    "image": "GK2/reinforced_beam"
+  },
+  {
+    "id": "steel_detail",
+    "name": "Pieza de acero",
+    "wikiName": "Steel Detail",
+    "category": "material",
+    "icon": "nails",
+    "image": "GK2/steel_detail"
+  },
+  {
+    "id": "bronze_tools",
+    "name": "Herramientas de bronce",
+    "wikiName": "Bronze tools",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/bronze_tools"
+  },
+  {
+    "id": "iron_tools",
+    "name": "Herramientas de hierro",
+    "wikiName": "Iron tools",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/iron_tools"
+  },
+  {
+    "id": "steel_tools",
+    "name": "Herramientas de acero",
+    "wikiName": "Steel tools",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/steel_tools"
+  },
+  {
+    "id": "bronze_axe",
+    "name": "Hacha de bronce",
+    "wikiName": "Bronze Axe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/bronze_axe"
+  },
+  {
+    "id": "iron_axe",
+    "name": "Hacha de hierro",
+    "wikiName": "Iron Axe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/iron_axe"
+  },
+  {
+    "id": "steel_axe",
+    "name": "Hacha de acero",
+    "wikiName": "Steel Axe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/steel_axe"
+  },
+  {
+    "id": "bronze_pickaxe",
+    "name": "Pico de bronce",
+    "wikiName": "Bronze Pickaxe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/bronze_pickaxe"
+  },
+  {
+    "id": "iron_pickaxe",
+    "name": "Pico de hierro",
+    "wikiName": "Iron Pickaxe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/iron_pickaxe"
+  },
+  {
+    "id": "steel_pickaxe",
+    "name": "Pico de acero",
+    "wikiName": "Steel Pickaxe",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/steel_pickaxe"
+  },
+  {
+    "id": "bronze_hammer",
+    "name": "Martillo de bronce",
+    "wikiName": "Bronze Hammer",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/bronze_hammer"
+  },
+  {
+    "id": "iron_hammer",
+    "name": "Martillo de hierro",
+    "wikiName": "Iron Hammer",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/iron_hammer"
+  },
+  {
+    "id": "steel_hammer",
+    "name": "Martillo de acero",
+    "wikiName": "Steel Hammer",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/steel_hammer"
+  },
+  {
+    "id": "bronze_shovel",
+    "name": "Pala de bronce",
+    "wikiName": "Bronze Shovel",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/bronze_shovel"
+  },
+  {
+    "id": "iron_shovel",
+    "name": "Pala de hierro",
+    "wikiName": "Iron Shovel",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/iron_shovel"
+  },
+  {
+    "id": "steel_shovel",
+    "name": "Pala de acero",
+    "wikiName": "Steel Shovel",
+    "category": "herramienta",
+    "icon": "anvil",
+    "image": "GK2/steel_shovel"
+  },
+  {
+    "id": "alchemy_flasks_i",
+    "name": "Matraces de alquimia I",
+    "wikiName": "Alchemy Flasks I",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/alchemy_flasks_i"
+  },
+  {
+    "id": "prosthetic_hand",
+    "name": "Mano protésica",
+    "wikiName": "Prosthetic Hand",
+    "category": "funerario",
+    "icon": "person",
+    "image": "GK2/prosthetic_hand"
+  },
+  {
+    "id": "small_printing_press",
+    "name": "Imprenta pequeña",
+    "wikiName": "Small Printing Press",
+    "category": "material",
+    "icon": "anvil",
+    "image": "GK2/small_printing_press"
+  },
+  {
+    "id": "elegant_prosthetic_hand",
+    "name": "Mano protésica elegante",
+    "wikiName": "Elegant Prosthetic Hand",
+    "category": "funerario",
+    "icon": "person",
+    "image": "GK2/elegant_prosthetic_hand"
+  },
+  {
+    "id": "speech_writing_device",
+    "name": "Dispositivo para escribir discursos",
+    "wikiName": "Speech Writing Device",
+    "category": "material",
+    "icon": "ore",
+    "image": "GK2/speech_writing_device"
+  },
+  {
+    "id": "stone_marbles",
+    "name": "Canicas de piedra",
+    "wikiName": "Stone Marbles",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/stone_marbles"
+  },
+  {
+    "id": "polished_marble",
+    "name": "Mármol pulido",
+    "wikiName": "Polished Marble",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/polished_marble"
+  },
+  {
+    "id": "ceramic_plate",
+    "name": "Plato de cerámica",
+    "wikiName": "Ceramic Plate",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/ceramic_plate"
+  },
+  {
+    "id": "ceramic_urn",
+    "name": "Urna de cerámica",
+    "wikiName": "Ceramic Urn",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "music_notes",
+    "name": "Partituras",
+    "wikiName": "Music Notes",
+    "category": "material",
+    "icon": "scroll",
+    "image": "GK2/music_notes"
+  },
+  {
+    "id": "blank_softcover_notebook",
+    "name": "Cuaderno de tapa blanda en blanco",
+    "wikiName": "Blank Softcover Notebook",
+    "category": "material",
+    "icon": "scroll",
+    "image": "GK2/blank_softcover_notebook"
+  },
+  {
+    "id": "blank_hardcover_notebook",
+    "name": "Cuaderno de tapa dura en blanco",
+    "wikiName": "Blank Hardcover Notebook",
+    "category": "material",
+    "icon": "scroll",
+    "image": "GK2/blank_hardcover_notebook"
+  },
+  {
+    "id": "science_kit_i",
+    "name": "Kit científico I",
+    "wikiName": "Science Kit I",
+    "category": "material",
+    "icon": "scroll",
+    "image": "GK2/science_kit_i"
+  },
+  {
+    "id": "science_kit_ii",
+    "name": "Kit científico II",
+    "wikiName": "Science Kit II",
+    "category": "material",
+    "icon": "scroll",
+    "image": "GK2/science_kit_ii"
+  },
+  {
+    "id": "alchemy_flasks_ii",
+    "name": "Matraces de alquimia II",
+    "wikiName": "Alchemy Flasks II",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/alchemy_flasks_ii"
+  },
+  {
+    "id": "printed_money",
+    "name": "Dinero impreso",
+    "wikiName": "Printed Money",
+    "category": "material",
+    "icon": "coin",
+    "image": "GK2/printed_money"
+  },
+  {
+    "id": "crate",
+    "name": "Caja",
+    "wikiName": "Crate",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/crate"
+  },
+  {
+    "id": "supply_building_materials_i",
+    "name": "Suministro: materiales de construcción I",
+    "wikiName": "Supply: Building materials I",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_building_materials_i"
+  },
+  {
+    "id": "supply_iron_tools",
+    "name": "Suministro: herramientas de hierro",
+    "wikiName": "Supply: Iron Tools",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_iron_tools"
+  },
+  {
+    "id": "supply_cutlery_i",
+    "name": "Suministro: cubertería I",
+    "wikiName": "Supply: Cutlery I",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_cutlery_i"
+  },
+  {
+    "id": "supply_kitchen_utensils",
+    "name": "Suministro: utensilios de cocina",
+    "wikiName": "Supply: Kitchen Utensils",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_kitchen_utensils"
+  },
+  {
+    "id": "tableware",
+    "name": "Vajilla",
+    "wikiName": "Tableware",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/tableware"
+  },
+  {
+    "id": "glass_containers",
+    "name": "Recipientes de vidrio",
+    "wikiName": "Glass Containers",
+    "category": "material",
+    "icon": "water",
+    "image": "GK2/glass_containers"
+  },
+  {
+    "id": "supply_furniture_i",
+    "name": "Suministro: muebles I",
+    "wikiName": "Supply: Furniture I",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_furniture_i"
+  },
+  {
+    "id": "supply_appliances_i",
+    "name": "Suministro: electrodomésticos I",
+    "wikiName": "Supply: Appliances I",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_appliances_i"
+  },
+  {
+    "id": "zombie_power",
+    "name": "Energía zombi",
+    "wikiName": "Zombie Power",
+    "category": "material",
+    "icon": "heart",
+    "image": "GK2/zombie_power"
+  },
+  {
+    "id": "marble_kit",
+    "name": "Kit de mármol",
+    "wikiName": "Marble Kit",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/marble_kit"
+  },
+  {
+    "id": "marble",
+    "name": "Mármol",
+    "wikiName": "Marble",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/marble"
+  },
+  {
+    "id": "sculpture_kit_i",
+    "name": "Kit de escultura I",
+    "wikiName": "Sculpture Kit I",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/sculpture_kit_i"
+  },
+  {
+    "id": "wooden_kit_ii",
+    "name": "Kit de madera II",
+    "wikiName": "Wooden Kit II",
+    "category": "material",
+    "icon": "log",
+    "image": "GK2/wooden_kit_ii"
+  },
+  {
+    "id": "zombie_mechanism",
+    "name": "Mecanismo zombi",
+    "wikiName": "Zombie Mechanism",
+    "category": "material",
+    "icon": "anvil",
+    "image": "GK2/zombie_mechanism"
+  },
+  {
+    "id": "engineering_kit",
+    "name": "Kit de ingeniería",
+    "wikiName": "Engineering Kit",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/engineering_kit"
+  },
+  {
+    "id": "supply_engineering_mechanism",
+    "name": "Suministro: mecanismo de ingeniería",
+    "wikiName": "Supply: Engineering Mechanism",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_engineering_mechanism"
+  },
+  {
+    "id": "furniture_kit_ii",
+    "name": "Kit de muebles II",
+    "wikiName": "Furniture Kit II",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/furniture_kit_ii"
+  },
+  {
+    "id": "iron_kit_ii",
+    "name": "Kit de hierro II",
+    "wikiName": "Iron Kit II",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/iron_kit_ii"
+  },
+  {
+    "id": "supply_furniture_ii",
+    "name": "Suministro: muebles II",
+    "wikiName": "Supply: Furniture II",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_furniture_ii"
+  },
+  {
+    "id": "building_kit_ii",
+    "name": "Kit de construcción II",
+    "wikiName": "Building Kit II",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/building_kit_ii"
+  },
+  {
+    "id": "supply_building_materials_ii",
+    "name": "Suministro: materiales de construcción II",
+    "wikiName": "Supply: Building materials II",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_building_materials_ii"
+  },
+  {
+    "id": "supply_appliances_ii",
+    "name": "Suministro: electrodomésticos II",
+    "wikiName": "Supply: Appliances II",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_appliances_ii"
+  },
+  {
+    "id": "sculpture_kit_ii",
+    "name": "Kit de escultura II",
+    "wikiName": "Sculpture Kit II",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/sculpture_kit_ii"
+  },
+  {
+    "id": "supply_cutlery_ii",
+    "name": "Suministro: cubertería II",
+    "wikiName": "Supply: Cutlery II",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_cutlery_ii"
+  },
+  {
+    "id": "clay_molds",
+    "name": "Moldes de arcilla",
+    "wikiName": "Clay Molds",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/clay_molds"
+  },
+  {
+    "id": "supply_steel_tools",
+    "name": "Suministro: herramientas de acero",
+    "wikiName": "Supply: Steel Tools",
+    "category": "material",
+    "icon": "chest",
+    "image": "GK2/supply_steel_tools"
+  },
+  {
+    "id": "bronze_zombie_collar",
+    "name": "Collar zombi de bronce",
+    "wikiName": "Bronze Zombie Collar",
+    "category": "material",
+    "icon": "crown"
+  },
+  {
+    "id": "golden_zombie_collar",
+    "name": "Collar zombi de oro",
+    "wikiName": "Golden Zombie Collar",
+    "category": "material",
+    "icon": "crown"
+  },
+  {
+    "id": "steel_zombie_collar",
+    "name": "Collar zombi de acero",
+    "wikiName": "Steel Zombie Collar",
+    "category": "material",
+    "icon": "crown"
+  },
+  {
+    "id": "dough",
+    "name": "Masa",
+    "wikiName": "Dough",
+    "category": "comida",
+    "icon": "bread",
+    "image": "GK2/dough"
+  },
+  {
+    "id": "berry_smoothie",
+    "name": "Batido de bayas",
+    "wikiName": "Berry smoothie",
+    "category": "comida",
+    "icon": "potion",
+    "image": "GK2/berry_smoothie"
+  },
+  {
+    "id": "berry",
+    "name": "Baya",
+    "wikiName": "Berry",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/berry"
+  },
+  {
+    "id": "apple",
+    "name": "Manzana",
+    "wikiName": "Apple",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/apple"
+  },
+  {
+    "id": "yogurt",
+    "name": "Yogur",
+    "wikiName": "Yogurt",
+    "category": "comida",
+    "icon": "water",
+    "image": "GK2/yogurt"
+  },
+  {
+    "id": "jug_of_milk",
+    "name": "Jarra de leche",
+    "wikiName": "Jug of Milk",
+    "category": "comida",
+    "icon": "water",
+    "image": "GK2/jug_of_milk"
+  },
+  {
+    "id": "honey",
+    "name": "Miel",
+    "wikiName": "Honey",
+    "category": "comida",
+    "icon": "wax",
+    "image": "GK2/honey"
+  },
+  {
+    "id": "grated_beets",
+    "name": "Remolacha rallada",
+    "wikiName": "Grated beets",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/grated_beets"
+  },
+  {
+    "id": "beet",
+    "name": "Remolacha",
+    "wikiName": "Beet",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/beet"
+  },
+  {
+    "id": "beet_slices",
+    "name": "Rodajas de remolacha",
+    "wikiName": "Beet slices",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/beet_slices"
+  },
+  {
+    "id": "mysterious_fish_fillet",
+    "name": "Filete de pez misterioso",
+    "wikiName": "Mysterious fish fillet",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/mysterious_fish_fillet"
+  },
+  {
+    "id": "goldfish",
+    "name": "Pez dorado",
+    "wikiName": "Goldfish",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/goldfish"
+  },
+  {
+    "id": "silverfin",
+    "name": "Aleta plateada",
+    "wikiName": "Silverfin",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/silverfin"
+  },
+  {
+    "id": "swamp_ghost",
+    "name": "Fantasma del pantano",
+    "wikiName": "Swamp Ghost",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/swamp_ghost"
+  },
+  {
+    "id": "bowl_of_sauerkraut_silver",
+    "name": "Cuenco de chucrut (plata)",
+    "wikiName": "Bowl of sauerkraut (silver)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/bowl_of_sauerkraut_silver"
+  },
+  {
+    "id": "bowl_of_sauerkraut_bronze",
+    "name": "Cuenco de chucrut (bronce)",
+    "wikiName": "Bowl of sauerkraut (bronze)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/bowl_of_sauerkraut_bronze"
+  },
+  {
+    "id": "spices",
+    "name": "Especias",
+    "wikiName": "Spices",
+    "category": "alquimia",
+    "icon": "sack",
+    "image": "GK2/spices"
+  },
+  {
+    "id": "bowl_of_sauerkraut_gold",
+    "name": "Cuenco de chucrut (oro)",
+    "wikiName": "Bowl of sauerkraut (gold)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/bowl_of_sauerkraut_gold"
+  },
+  {
+    "id": "vegetable_salad_silver",
+    "name": "Ensalada de verduras (plata)",
+    "wikiName": "Vegetable salad (silver)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/vegetable_salad_silver"
+  },
+  {
+    "id": "vegetable_salad_bronze",
+    "name": "Ensalada de verduras (bronce)",
+    "wikiName": "Vegetable salad (bronze)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/vegetable_salad_bronze"
+  },
+  {
+    "id": "vegetable_salad_gold",
+    "name": "Ensalada de verduras (oro)",
+    "wikiName": "Vegetable salad (gold)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/vegetable_salad_gold"
+  },
+  {
+    "id": "wine_silver",
+    "name": "Vino (plata)",
+    "wikiName": "Wine (silver)",
+    "category": "comida",
+    "icon": "potion_dark",
+    "image": "GK2/wine_silver"
+  },
+  {
+    "id": "wine_bronze",
+    "name": "Vino (bronce)",
+    "wikiName": "Wine (bronze)",
+    "category": "comida",
+    "icon": "potion_dark",
+    "image": "GK2/wine_bronze"
+  },
+  {
+    "id": "wine_gold",
+    "name": "Vino (oro)",
+    "wikiName": "Wine (gold)",
+    "category": "comida",
+    "icon": "potion_dark",
+    "image": "GK2/wine_gold"
+  },
+  {
+    "id": "grape_juice_silver",
+    "name": "Zumo de uva (plata)",
+    "wikiName": "Grape Juice (silver)",
+    "category": "comida",
+    "icon": "potion",
+    "image": "GK2/grape_juice_silver"
+  },
+  {
+    "id": "grape_juice_bronze",
+    "name": "Zumo de uva (bronce)",
+    "wikiName": "Grape Juice (bronze)",
+    "category": "comida",
+    "icon": "potion",
+    "image": "GK2/grape_juice_bronze"
+  },
+  {
+    "id": "grape_juice_gold",
+    "name": "Zumo de uva (oro)",
+    "wikiName": "Grape Juice (gold)",
+    "category": "comida",
+    "icon": "potion",
+    "image": "GK2/grape_juice_gold"
+  },
+  {
+    "id": "breadcrumb_bait",
+    "name": "Cebo de migas",
+    "wikiName": "Breadcrumb Bait",
+    "category": "comida",
+    "icon": "sack",
+    "image": "GK2/breadcrumb_bait"
+  },
+  {
+    "id": "bread",
+    "name": "Pan",
+    "wikiName": "Bread",
+    "category": "comida",
+    "icon": "bread",
+    "image": "GK2/bread"
+  },
+  {
+    "id": "insect_bait",
+    "name": "Cebo de insectos",
+    "wikiName": "Insect Bait",
+    "category": "comida",
+    "icon": "sack",
+    "image": "GK2/insect_bait"
+  },
+  {
+    "id": "live_bait",
+    "name": "Cebo vivo",
+    "wikiName": "Live Bait",
+    "category": "comida",
+    "icon": "sack",
+    "image": "GK2/live_bait"
+  },
+  {
+    "id": "lacquer",
+    "name": "Laca",
+    "wikiName": "Lacquer",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/lacquer"
+  },
+  {
+    "id": "flesh",
+    "name": "Carne",
+    "wikiName": "Flesh",
+    "category": "funerario",
+    "icon": "meat",
+    "image": "GK2/flesh"
+  },
+  {
+    "id": "chocolate",
+    "name": "Chocolate",
+    "category": "comida",
+    "icon": "bread",
+    "image": "GK2/chocolate"
+  },
+  {
+    "id": "cacao",
+    "name": "Cacao",
+    "category": "comida",
+    "icon": "wheat",
+    "image": "GK2/cacao"
+  },
+  {
+    "id": "baked_apple",
+    "name": "Manzana asada",
+    "wikiName": "Baked apple",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/baked_apple"
+  },
+  {
+    "id": "baked_mushrooms",
+    "name": "Setas asadas",
+    "wikiName": "Baked mushrooms",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/baked_mushrooms"
+  },
+  {
+    "id": "brown_mushroom",
+    "name": "Seta marrón",
+    "wikiName": "Brown Mushroom",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/brown_mushroom"
+  },
+  {
+    "id": "berry_pie",
+    "name": "Tarta de bayas",
+    "wikiName": "Berry Pie",
+    "category": "comida",
+    "icon": "bread",
+    "image": "GK2/berry_pie"
+  },
+  {
+    "id": "muffin",
+    "name": "Magdalena",
+    "wikiName": "Muffin",
+    "category": "comida",
+    "icon": "bread",
+    "image": "GK2/muffin"
+  },
+  {
+    "id": "croissant",
+    "name": "Cruasán",
+    "wikiName": "Croissant",
+    "category": "comida",
+    "icon": "bread",
+    "image": "GK2/croissant"
+  },
+  {
+    "id": "chicken_egg",
+    "name": "Huevo de gallina",
+    "wikiName": "Chicken Egg",
+    "category": "comida",
+    "icon": "bone",
+    "image": "GK2/chicken_egg"
+  },
+  {
+    "id": "carrot_cutlet",
+    "name": "Chuleta de zanahoria",
+    "wikiName": "Carrot cutlet",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/carrot_cutlet"
+  },
+  {
+    "id": "carrot",
+    "name": "Zanahoria",
+    "wikiName": "Carrot",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/carrot"
+  },
+  {
+    "id": "carrot_soup",
+    "name": "Sopa de zanahoria",
+    "wikiName": "Carrot soup",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/carrot_soup"
+  },
+  {
+    "id": "cabbage_soup",
+    "name": "Sopa de col",
+    "wikiName": "Cabbage soup",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/cabbage_soup"
+  },
+  {
+    "id": "cabbage_bronze",
+    "name": "Col (bronce)",
+    "wikiName": "Cabbage (bronze)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/cabbage_bronze"
+  },
+  {
+    "id": "cabbage_silver",
+    "name": "Col (plata)",
+    "wikiName": "Cabbage (silver)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/cabbage_silver"
+  },
+  {
+    "id": "cabbage_gold",
+    "name": "Col (oro)",
+    "wikiName": "Cabbage (gold)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/cabbage_gold"
+  },
+  {
+    "id": "onion_rings",
+    "name": "Aros de cebolla",
+    "wikiName": "Onion rings",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/onion_rings"
+  },
+  {
+    "id": "onion_bronze",
+    "name": "Cebolla (bronce)",
+    "wikiName": "Onion (bronze)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/onion_bronze"
+  },
+  {
+    "id": "onion_silver",
+    "name": "Cebolla (plata)",
+    "wikiName": "Onion (silver)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/onion_silver"
+  },
+  {
+    "id": "onion_gold",
+    "name": "Cebolla (oro)",
+    "wikiName": "Onion (gold)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/onion_gold"
+  },
+  {
+    "id": "toast_with_onions",
+    "name": "Tostada con cebolla",
+    "wikiName": "Toast with onions",
+    "category": "comida",
+    "icon": "bread",
+    "image": "GK2/toast_with_onions"
+  },
+  {
+    "id": "pumpkin_soup",
+    "name": "Sopa de calabaza",
+    "wikiName": "Pumpkin soup",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/pumpkin_soup"
+  },
+  {
+    "id": "pumpkin_bronze",
+    "name": "Calabaza (bronce)",
+    "wikiName": "Pumpkin (bronze)",
+    "category": "material",
+    "icon": "herb",
+    "image": "GK2/pumpkin_bronze"
+  },
+  {
+    "id": "pumpkin_silver",
+    "name": "Calabaza (plata)",
+    "wikiName": "Pumpkin (silver)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/pumpkin_silver"
+  },
+  {
+    "id": "pumpkin_gold",
+    "name": "Calabaza (oro)",
+    "wikiName": "Pumpkin (gold)",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/pumpkin_gold"
+  },
+  {
+    "id": "baked_pumpkin",
+    "name": "Calabaza asada",
+    "wikiName": "Baked pumpkin",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/baked_pumpkin"
+  },
+  {
+    "id": "vegetable_soup",
+    "name": "Sopa de verduras",
+    "wikiName": "Vegetable soup",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/vegetable_soup"
+  },
+  {
+    "id": "baked_meat",
+    "name": "Carne asada",
+    "wikiName": "Baked meat",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/baked_meat"
+  },
+  {
+    "id": "lasagna",
+    "name": "Lasaña",
+    "wikiName": "Lasagna",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/lasagna"
+  },
+  {
+    "id": "minced_meat",
+    "name": "Carne picada",
+    "wikiName": "Minced Meat",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/minced_meat"
+  },
+  {
+    "id": "soldier_s_stew",
+    "name": "Guiso del soldado",
+    "wikiName": "Soldier's stew",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/soldier_s_stew"
+  },
+  {
+    "id": "fish_nuggets",
+    "name": "Nuggets de pescado",
+    "wikiName": "Fish nuggets",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/fish_nuggets"
+  },
+  {
+    "id": "river_fish_fillet",
+    "name": "Filete de pez de río",
+    "wikiName": "River fish fillet",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/river_fish_fillet"
+  },
+  {
+    "id": "baked_fish",
+    "name": "Pescado al horno",
+    "wikiName": "Baked fish",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/baked_fish"
+  },
+  {
+    "id": "fish_soup",
+    "name": "Sopa de pescado",
+    "wikiName": "Fish soup",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/fish_soup"
+  },
+  {
+    "id": "sea_fish_fillet",
+    "name": "Filete de pez de mar",
+    "wikiName": "Sea fish fillet",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/sea_fish_fillet"
+  },
+  {
+    "id": "baked_salmon",
+    "name": "Salmón al horno",
+    "wikiName": "Baked salmon",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/baked_salmon"
+  },
+  {
+    "id": "fisherman_s_pie",
+    "name": "Pastel del pescador",
+    "wikiName": "Fisherman's pie",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/fisherman_s_pie"
+  },
+  {
+    "id": "frog",
+    "name": "Rana",
+    "wikiName": "Frog",
+    "category": "comida",
+    "icon": "herb",
+    "image": "GK2/frog"
+  },
+  {
+    "id": "kraken_steak",
+    "name": "Filete de kraken",
+    "wikiName": "Kraken steak",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/kraken_steak"
+  },
+  {
+    "id": "kraken_jr",
+    "name": "Kraken Jr",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/kraken_jr"
+  },
+  {
+    "id": "fried_golden_carp",
+    "name": "Carpa dorada frita",
+    "wikiName": "Fried golden carp",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/fried_golden_carp"
+  },
+  {
+    "id": "mythic_carp",
+    "name": "Carpa mítica",
+    "wikiName": "Mythic Carp",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/mythic_carp"
+  },
+  {
+    "id": "heavenly_salmon",
+    "name": "Salmón celestial al horno",
+    "wikiName": "Heavenly salmon",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/heavenly_salmon"
+  },
+  {
+    "id": "celestial_salmon",
+    "name": "Salmón celestial",
+    "wikiName": "Celestial Salmon",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/celestial_salmon"
+  },
+  {
+    "id": "elder_s_meal",
+    "name": "Comida del anciano",
+    "wikiName": "Elder's meal",
+    "category": "comida",
+    "icon": "burger",
+    "image": "GK2/elder_s_meal"
+  },
+  {
+    "id": "elder_catfish",
+    "name": "Siluro anciano",
+    "wikiName": "Elder Catfish",
+    "category": "comida",
+    "icon": "meat",
+    "image": "GK2/elder_catfish"
+  },
+  {
+    "id": "healing_potion",
+    "name": "Poción curativa",
+    "wikiName": "Healing Potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/healing_potion"
+  },
+  {
+    "id": "healing_potion_ii",
+    "name": "Poción curativa II",
+    "wikiName": "Healing Potion II",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/healing_potion_ii"
+  },
+  {
+    "id": "healing_potion_iii",
+    "name": "Poción curativa III",
+    "wikiName": "Healing Potion III",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/healing_potion_iii"
+  },
+  {
+    "id": "damage_potion",
+    "name": "Poción de daño",
+    "wikiName": "Damage Potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/damage_potion"
+  },
+  {
+    "id": "damage_potion_ii",
+    "name": "Poción de daño II",
+    "wikiName": "Damage Potion II",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/damage_potion_ii"
+  },
+  {
+    "id": "damage_potion_iii",
+    "name": "Poción de daño III",
+    "wikiName": "Damage Potion III",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/damage_potion_iii"
+  },
+  {
+    "id": "berserker_potion",
+    "name": "Poción berserker",
+    "wikiName": "Berserker Potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/berserker_potion"
+  },
+  {
+    "id": "berserker_potion_ii",
+    "name": "Poción berserker II",
+    "wikiName": "Berserker Potion II",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/berserker_potion_ii"
+  },
+  {
+    "id": "berserker_potion_iii",
+    "name": "Poción berserker III",
+    "wikiName": "Berserker Potion III",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/berserker_potion_iii"
+  },
+  {
+    "id": "zombie_motivator_potion",
+    "name": "Poción motivadora zombi",
+    "wikiName": "Zombie Motivator Potion",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/zombie_motivator_potion"
+  },
+  {
+    "id": "zombie_motivator_potion_ii",
+    "name": "Poción motivadora zombi II",
+    "wikiName": "Zombie Motivator Potion II",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/zombie_motivator_potion_ii"
+  },
+  {
+    "id": "zombie_goo",
+    "name": "Baba zombi",
+    "wikiName": "Zombie goo",
+    "category": "alquimia",
+    "icon": "potion_dark",
+    "image": "GK2/zombie_goo"
+  },
+  {
+    "id": "zombie_motivator_potion_iii",
+    "name": "Poción motivadora zombi III",
+    "wikiName": "Zombie Motivator Potion III",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/zombie_motivator_potion_iii"
+  },
+  {
+    "id": "preservative",
+    "name": "Conservante",
+    "wikiName": "Preservative",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/preservative"
+  },
+  {
+    "id": "organ_improver_red_skull",
+    "name": "Mejorador de órganos (calavera roja)",
+    "wikiName": "Organ Improver Red Skull",
+    "category": "alquimia",
+    "icon": "heart",
+    "image": "GK2/organ_improver_red_skull"
+  },
+  {
+    "id": "organ_improver_white_skull",
+    "name": "Mejorador de órganos (calavera blanca)",
+    "wikiName": "Organ Improver White Skull",
+    "category": "alquimia",
+    "icon": "heart",
+    "image": "GK2/organ_improver_white_skull"
+  },
+  {
+    "id": "weak_growth_elixir",
+    "name": "Elixir de crecimiento débil",
+    "wikiName": "Weak growth elixir",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/weak_growth_elixir"
+  },
+  {
+    "id": "rich_growth_elixir",
+    "name": "Elixir de crecimiento rico",
+    "wikiName": "Rich growth elixir",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/rich_growth_elixir"
+  },
+  {
+    "id": "miracle_growth_elixir",
+    "name": "Elixir de crecimiento milagroso",
+    "wikiName": "Miracle growth elixir",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/miracle_growth_elixir"
+  },
+  {
+    "id": "tannin_liquid",
+    "name": "Líquido de tanino",
+    "wikiName": "Tannin Liquid",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/tannin_liquid"
+  },
+  {
+    "id": "alkali",
+    "name": "Álcali",
+    "wikiName": "Alkali",
+    "category": "alquimia",
+    "icon": "potion",
+    "image": "GK2/alkali"
+  },
+  {
+    "id": "explosive_dust",
+    "name": "Polvo explosivo",
+    "wikiName": "Explosive Dust",
+    "category": "alquimia",
+    "icon": "sack",
+    "image": "GK2/explosive_dust"
+  },
+  {
+    "id": "simple_chest",
+    "name": "Baúl sencillo",
+    "wikiName": "Simple Chest",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "chest",
+    "name": "Baúl",
+    "wikiName": "Chest",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "large_chest",
+    "name": "Baúl grande",
+    "wikiName": "Large Chest",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "interior_bench_i",
+    "name": "Banco interior I",
+    "wikiName": "Interior Bench I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "interior_bench_ii",
+    "name": "Banco interior II",
+    "wikiName": "Interior Bench II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "interior_bench_iii",
+    "name": "Banco interior III",
+    "wikiName": "Interior Bench III",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "candelabra_i",
+    "name": "Candelabro I",
+    "wikiName": "Candelabra I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "simple_candle",
+    "name": "Vela sencilla",
+    "wikiName": "Simple Candle",
+    "category": "material",
+    "icon": "sack",
+    "image": "GK2/simple_candle"
+  },
+  {
+    "id": "candelabra_ii",
+    "name": "Candelabro II",
+    "wikiName": "Candelabra II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "pretty_candle",
+    "name": "Vela bonita",
+    "wikiName": "Pretty Candle",
+    "category": "material",
+    "icon": "sack"
+  },
+  {
+    "id": "candelabra_iii",
+    "name": "Candelabro III",
+    "wikiName": "Candelabra III",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/candelabra_iii"
+  },
+  {
+    "id": "magnificent_candle",
+    "name": "Vela magnífica",
+    "wikiName": "Magnificent Candle",
+    "category": "material",
+    "icon": "sack"
+  },
+  {
+    "id": "confession_booth_i",
+    "name": "Confesionario I",
+    "wikiName": "Confession Booth I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "confession_booth_ii",
+    "name": "Confesionario II",
+    "wikiName": "Confession Booth II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "confession_booth_iii",
+    "name": "Confesionario III",
+    "wikiName": "Confession Booth III",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "church_smells_i",
+    "name": "Aromas de la iglesia I",
+    "wikiName": "Church Smells I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "piece_of_stone",
+    "name": "Trozo de piedra",
+    "wikiName": "Piece of stone",
+    "category": "material",
+    "icon": "bread"
+  },
+  {
+    "id": "simple_incense",
+    "name": "Incienso sencillo",
+    "wikiName": "Simple Incense",
+    "category": "material",
+    "icon": "sack",
+    "image": "GK2/simple_incense"
+  },
+  {
+    "id": "church_smells_ii",
+    "name": "Aromas de la iglesia II",
+    "wikiName": "Church Smells II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "fancy_incense",
+    "name": "Incienso refinado",
+    "wikiName": "Fancy Incense",
+    "category": "material",
+    "icon": "sack"
+  },
+  {
+    "id": "church_smells_iii",
+    "name": "Aromas de la iglesia III",
+    "wikiName": "Church Smells III",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "church_shrine_i",
+    "name": "Altar de la iglesia I",
+    "wikiName": "Church Shrine I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "church_shrine_ii",
+    "name": "Altar de la iglesia II",
+    "wikiName": "Church Shrine II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "church_shrine_iii",
+    "name": "Altar de la iglesia III",
+    "wikiName": "Church Shrine III",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "votive_candle_stand_i",
+    "name": "Portavelas votivas I",
+    "wikiName": "Votive Candle Stand I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "votive_candle_stand_ii",
+    "name": "Portavelas votivas II",
+    "wikiName": "Votive Candle Stand II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "exterior_bench_i",
+    "name": "Banco exterior I",
+    "wikiName": "Exterior Bench I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "exterior_bench_ii",
+    "name": "Banco exterior II",
+    "wikiName": "Exterior Bench II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "exterior_bench_iii",
+    "name": "Banco exterior III",
+    "wikiName": "Exterior Bench III",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "marble_plate",
+    "name": "Placa de mármol",
+    "wikiName": "Marble Plate",
+    "category": "material",
+    "icon": "stone",
+    "image": "GK2/marble_plate"
+  },
+  {
+    "id": "monument_i",
+    "name": "Monumento I",
+    "wikiName": "Monument I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "monument_ii",
+    "name": "Monumento II",
+    "wikiName": "Monument II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "monument_iii",
+    "name": "Monumento III",
+    "wikiName": "Monument III",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "flower_bed_i",
+    "name": "Parterre I",
+    "wikiName": "Flower Bed I",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/flower_bed_i"
+  },
+  {
+    "id": "peat",
+    "name": "Turba",
+    "wikiName": "Peat",
+    "category": "material",
+    "icon": "sack",
+    "image": "GK2/peat"
+  },
+  {
+    "id": "rhododendron",
+    "name": "Rododendro",
+    "wikiName": "Rhododendron",
+    "category": "material",
+    "icon": "sack"
+  },
+  {
+    "id": "flower_bed_ii",
+    "name": "Parterre II",
+    "wikiName": "Flower Bed II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "flower_bed_iii",
+    "name": "Parterre III",
+    "wikiName": "Flower Bed III",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "night_flower",
+    "name": "Flor nocturna",
+    "wikiName": "Night flower",
+    "category": "material",
+    "icon": "sack"
+  },
+  {
+    "id": "lantern_i",
+    "name": "Farol I",
+    "wikiName": "Lantern I",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/lantern_i"
+  },
+  {
+    "id": "lantern_ii",
+    "name": "Farol II",
+    "wikiName": "Lantern II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "columbarium_i",
+    "name": "Columbario I",
+    "wikiName": "Columbarium I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "urn_with_ashes_i",
+    "name": "Urna con cenizas I",
+    "wikiName": "Urn with Ashes I",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "columbarium_ii",
+    "name": "Columbario II",
+    "wikiName": "Columbarium II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "urn_with_ashes_ii",
+    "name": "Urna con cenizas II",
+    "wikiName": "Urn with Ashes II",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "crypt",
+    "name": "Cripta",
+    "wikiName": "Crypt",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "autopsy_table_i",
+    "name": "Mesa de autopsias I",
+    "wikiName": "Autopsy Table I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "autopsy_table_ii",
+    "name": "Mesa de autopsias II",
+    "wikiName": "Autopsy Table II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "autopsy_tools_i",
+    "name": "Herramientas de autopsia I",
+    "wikiName": "Autopsy Tools I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "autopsy_tools_ii",
+    "name": "Herramientas de autopsia II",
+    "wikiName": "Autopsy Tools II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "corpse_pallet_i",
+    "name": "Palé de cadáveres I",
+    "wikiName": "Corpse Pallet I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "corpse_pallet_ii",
+    "name": "Palé de cadáveres II",
+    "wikiName": "Corpse Pallet II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "resurrection_table_i",
+    "name": "Mesa de resurrección I",
+    "wikiName": "Resurrection Table I",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/resurrection_table_i"
+  },
+  {
+    "id": "embalming_table_i",
+    "name": "Mesa de embalsamar I",
+    "wikiName": "Embalming Table I",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/embalming_table_i"
+  },
+  {
+    "id": "embalming_table_ii",
+    "name": "Mesa de embalsamar II",
+    "wikiName": "Embalming Table II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "carved_marble",
+    "name": "Mármol tallado",
+    "wikiName": "Carved Marble",
+    "category": "material",
+    "icon": "stone"
+  },
+  {
+    "id": "embalming_tools",
+    "name": "Herramientas de embalsamar",
+    "wikiName": "Embalming Tools",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "zombie_supplier_station",
+    "name": "Estación de suministro zombi",
+    "wikiName": "Zombie Supplier Station",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "study_table",
+    "name": "Mesa de estudio",
+    "wikiName": "Study Table",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/study_table"
+  },
+  {
+    "id": "folio",
+    "name": "Folio",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "laboratory_i",
+    "name": "Laboratorio I",
+    "wikiName": "Laboratory I",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/laboratory_i"
+  },
+  {
+    "id": "laboratory_ii",
+    "name": "Laboratorio II",
+    "wikiName": "Laboratory II",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/laboratory_ii"
+  },
+  {
+    "id": "alchemy_tools_i",
+    "name": "Herramientas de alquimia I",
+    "wikiName": "Alchemy Tools I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "alchemy_tools_ii",
+    "name": "Herramientas de alquimia II",
+    "wikiName": "Alchemy Tools II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "alchemy_workbench",
+    "name": "Banco de alquimia",
+    "wikiName": "Alchemy Workbench",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "scroll_cabinet",
+    "name": "Armario de pergaminos",
+    "wikiName": "Scroll Cabinet",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "flask_shelf",
+    "name": "Estante de matraces",
+    "wikiName": "Flask shelf",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "distillation_cube",
+    "name": "Cubo de destilación",
+    "wikiName": "Distillation Cube",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/distillation_cube"
+  },
+  {
+    "id": "formulation_bench",
+    "name": "Banco de formulación",
+    "wikiName": "Formulation Bench",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "firewood_shed_i",
+    "name": "Leñera I",
+    "wikiName": "Firewood shed I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "firewood_shed_ii",
+    "name": "Leñera II",
+    "wikiName": "Firewood shed II",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "furnace_i",
+    "name": "Horno I",
+    "wikiName": "Furnace I",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/furnace_i"
+  },
+  {
+    "id": "writing_desk",
+    "name": "Escritorio",
+    "wikiName": "Writing Desk",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/writing_desk"
+  },
+  {
+    "id": "jewelry_table",
+    "name": "Mesa de joyería",
+    "wikiName": "Jewelry Table",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/jewelry_table"
+  },
+  {
+    "id": "sawhorse",
+    "name": "Caballete de aserrar",
+    "wikiName": "Sawhorse",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/sawhorse"
+  },
+  {
+    "id": "woodworking_workbench_i",
+    "name": "Banco de carpintería I",
+    "wikiName": "Woodworking Workbench I",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/woodworking_workbench_i"
+  },
+  {
+    "id": "sluice_box",
+    "name": "Canal de lavado",
+    "wikiName": "Sluice Box",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "furnace_ii",
+    "name": "Horno II",
+    "wikiName": "Furnace II",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/furnace_ii"
+  },
+  {
+    "id": "lumberjack_stand",
+    "name": "Puesto de leñador",
+    "wikiName": "Lumberjack stand",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "zombie_miner",
+    "name": "Minero zombi",
+    "wikiName": "Zombie Miner",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "brewing_stand",
+    "name": "Puesto de elaboración de cerveza",
+    "wikiName": "Brewing Stand",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/brewing_stand"
+  },
+  {
+    "id": "tool_rack",
+    "name": "Estante de herramientas",
+    "wikiName": "Tool Rack",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "conveyor_chest_i",
+    "name": "Baúl de cinta transportadora I",
+    "wikiName": "Conveyor Chest I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "assembly_bench_i",
+    "name": "Banco de montaje I",
+    "wikiName": "Assembly bench I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "smithy_i",
+    "name": "Herrería I",
+    "wikiName": "Smithy I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "kitchen_i",
+    "name": "Cocina I",
+    "wikiName": "Kitchen I",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "gardener_stand",
+    "name": "Puesto de jardinero",
+    "wikiName": "Gardener Stand",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "beehive",
+    "name": "Colmena",
+    "wikiName": "Beehive",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/beehive"
+  },
+  {
+    "id": "bellows",
+    "name": "Fuelle",
+    "wikiName": "Bellows",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "stonemason_s_workbench",
+    "name": "Banco de cantero",
+    "wikiName": "Stonemason's Workbench",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "hardening_bucket",
+    "name": "Cubo de temple",
+    "wikiName": "Hardening Bucket",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "spinning_wheel",
+    "name": "Rueca",
+    "wikiName": "Spinning Wheel",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "weaving_loom",
+    "name": "Telar",
+    "wikiName": "Weaving Loom",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "supply_pallet",
+    "name": "Palé de suministros",
+    "wikiName": "Supply Pallet",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "bookshelf",
+    "name": "Estantería",
+    "wikiName": "Bookshelf",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "timber_stockpile",
+    "name": "Acopio de madera",
+    "wikiName": "Timber stockpile",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/timber_stockpile"
+  },
+  {
+    "id": "bioreactor",
+    "name": "Biorreactor",
+    "wikiName": "Bioreactor",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "factory_lantern",
+    "name": "Farol de fábrica",
+    "wikiName": "Factory Lantern",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "fine_tool_rack",
+    "name": "Estante de herramientas finas",
+    "wikiName": "Fine Tool Rack",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "zombie_carousel",
+    "name": "Carrusel zombi",
+    "wikiName": "Zombie Carousel",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "assembly_bench_auto_hammer",
+    "name": "Banco de montaje: martillo automático",
+    "wikiName": "Assembly bench: Auto-hammer",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "assembly_bench_drill_press",
+    "name": "Banco de montaje: taladro de columna",
+    "wikiName": "Assembly bench: Drill press",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "smithy_hammer",
+    "name": "Herrería: martillo",
+    "wikiName": "Smithy: Hammer",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "smithy_bellows",
+    "name": "Herrería: fuelle",
+    "wikiName": "Smithy: Bellows",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "kitchen_millstone",
+    "name": "Cocina: muela de molino",
+    "wikiName": "Kitchen: Millstone",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "zombie_supply_porter",
+    "name": "Porteador zombi de suministros",
+    "wikiName": "Zombie Supply Porter",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "paper_press",
+    "name": "Prensa de papel",
+    "wikiName": "Paper Press",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/paper_press"
+  },
+  {
+    "id": "printing_press",
+    "name": "Imprenta",
+    "wikiName": "Printing Press",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/printing_press"
+  },
+  {
+    "id": "vine_press",
+    "name": "Prensa de uvas",
+    "wikiName": "Vine Press",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/vine_press"
+  },
+  {
+    "id": "wine_barrel",
+    "name": "Barril de vino",
+    "wikiName": "Wine Barrel",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/wine_barrel"
+  },
+  {
+    "id": "iron_anvil",
+    "name": "Yunque de hierro",
+    "wikiName": "Iron Anvil",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/iron_anvil"
+  },
+  {
+    "id": "kitchen_sealing_machine",
+    "name": "Cocina: selladora",
+    "wikiName": "Kitchen: Sealing Machine",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "woodworking_workbench_ii",
+    "name": "Banco de carpintería II",
+    "wikiName": "Woodworking Workbench II",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/woodworking_workbench_ii"
+  },
+  {
+    "id": "sewing_table",
+    "name": "Mesa de costura",
+    "wikiName": "Sewing Table",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "chopping_spot",
+    "name": "Zona de corte",
+    "wikiName": "Chopping Spot",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/chopping_spot"
+  },
+  {
+    "id": "wooden_anvil",
+    "name": "Yunque de madera",
+    "wikiName": "Wooden Anvil",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/wooden_anvil"
+  },
+  {
+    "id": "circular_saw",
+    "name": "Sierra circular",
+    "wikiName": "Circular Saw",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/circular_saw"
+  },
+  {
+    "id": "potter_s_wheel",
+    "name": "Torno de alfarero",
+    "wikiName": "Potter's Wheel",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/potter_s_wheel"
+  },
+  {
+    "id": "assembly_bench_spinning_wheel",
+    "name": "Banco de montaje: rueca",
+    "wikiName": "Assembly bench: Spinning wheel",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "fermentation_barrel",
+    "name": "Barril de fermentación",
+    "wikiName": "Fermentation Barrel",
+    "category": "material",
+    "icon": "blueprint",
+    "image": "GK2/fermentation_barrel"
+  },
+  {
+    "id": "lifting_crane",
+    "name": "Grúa",
+    "wikiName": "Lifting Crane",
+    "category": "material",
+    "icon": "blueprint"
+  },
+  {
+    "id": "wheat_seed",
+    "name": "Semilla de trigo",
+    "wikiName": "Wheat seed",
+    "category": "material",
+    "icon": "wheat",
+    "image": "GK2/wheat_seed"
+  },
+  {
+    "id": "carrot_seed",
+    "name": "Semilla de zanahoria",
+    "wikiName": "Carrot seed",
+    "category": "material",
+    "icon": "herb",
+    "image": "GK2/carrot_seed"
+  },
+  {
+    "id": "beet_seed",
+    "name": "Semilla de remolacha",
+    "wikiName": "Beet Seed",
+    "category": "material",
+    "icon": "herb",
+    "image": "GK2/beet_seed"
+  },
+  {
+    "id": "hop_seeds",
+    "name": "Semillas de lúpulo",
+    "wikiName": "Hop Seeds",
+    "category": "material",
+    "icon": "wheat",
+    "image": "GK2/hop_seeds"
+  },
+  {
+    "id": "wheat",
+    "name": "Trigo",
+    "wikiName": "Wheat",
+    "category": "comida",
+    "icon": "sack",
+    "image": "GK2/wheat"
+  },
+  {
+    "id": "apple_tree_seedling",
+    "name": "Plantón de manzano",
+    "wikiName": "Apple Tree Seedling",
+    "category": "material",
+    "icon": "herb",
+    "image": "GK2/apple_tree_seedling"
+  },
+  {
+    "id": "bush_seedling",
+    "name": "Plantón de arbusto",
+    "wikiName": "Bush Seedling",
+    "category": "material",
+    "icon": "wheat",
+    "image": "GK2/bush_seedling"
+  },
+  {
+    "id": "rhododendron_seedling",
+    "name": "Plantón de rododendro",
+    "wikiName": "Rhododendron Seedling",
+    "category": "material",
+    "icon": "wheat"
+  },
+  {
+    "id": "blueberry_seedling",
+    "name": "Plantón de arándano",
+    "wikiName": "Blueberry Seedling",
+    "category": "material",
+    "icon": "herb"
+  },
+  {
+    "id": "comet_s_tail",
+    "name": "Cola de cometa",
+    "wikiName": "Comet's Tail",
+    "category": "alquimia",
+    "icon": "sack"
+  },
+  {
+    "id": "beer",
+    "name": "Cerveza",
+    "wikiName": "Beer",
+    "category": "comida",
+    "icon": "sack",
+    "image": "GK2/beer"
+  },
+  {
+    "id": "town_gratitude",
+    "name": "Gratitud del pueblo",
+    "wikiName": "Town Gratitude",
+    "category": "material",
+    "icon": "sack"
+  },
+  {
+    "id": "exhumation_certificate",
+    "name": "Certificado de exhumación",
+    "wikiName": "Exhumation Certificate",
+    "category": "material",
+    "icon": "sack"
+  }
+]

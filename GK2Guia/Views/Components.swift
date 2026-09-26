@@ -86,11 +86,19 @@ struct NoteView: View {
 struct ItemChip: View {
     let itemId: String
     var qty: Int?
+    /// receta concreta que abre (si no, la primera que produce el objeto)
+    var recipeId: String?
+    /// texto secundario tras el nombre, p. ej. la estación
+    var detail: String?
     @Environment(AppState.self) private var state
     @Environment(Router.self) private var router
 
     var body: some View {
-        if let recipe = state.data.recipe(producing: itemId) {
+        if let recipeId {
+            Button { router.openRecipe(recipeId) } label: { label(link: true) }
+                .buttonStyle(.plain)
+                .help("Ver receta")
+        } else if let recipe = state.data.recipe(producing: itemId) {
             Button { router.openRecipe(recipe.id) } label: { label(link: true) }
                 .buttonStyle(.plain)
                 .help("Ver receta")
@@ -108,6 +116,9 @@ struct ItemChip: View {
         return HStack(spacing: 6) {
             PixelIcon(name: item?.icon ?? "skull", image: item?.image, size: 24)
             Text(item?.name ?? itemId)
+            if let detail {
+                Text(detail).foregroundStyle(.secondary)
+            }
             if let qty {
                 Text("×\(qty)").foregroundStyle(Theme.blood)
             }
@@ -129,6 +140,22 @@ struct ChipFlow: View {
     var body: some View {
         FlowLayout {
             ForEach(itemIds, id: \.self) { ItemChip(itemId: $0) }
+        }
+    }
+}
+
+/// Recetas como chips del objeto que producen. Cada chip abre su propia receta y, si el objeto sale
+/// en varias, lleva lo que la distingue (`GameData.distinguishing`).
+struct RecipeChipFlow: View {
+    let recipes: [Recipe]
+    @Environment(AppState.self) private var state
+
+    var body: some View {
+        FlowLayout {
+            ForEach(recipes) { recipe in
+                ItemChip(itemId: recipe.output, recipeId: recipe.id,
+                         detail: state.data.distinguishing(recipe, among: recipes))
+            }
         }
     }
 }

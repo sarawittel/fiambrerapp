@@ -1,0 +1,5914 @@
+[
+  {
+    "id": "r_golden_ingot",
+    "output": "golden_ingot",
+    "outputQty": 2,
+    "station": "Horno II",
+    "ingredients": [
+      {
+        "item": "golden_nugget",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 30
+      }
+    ],
+    "notes": "Tecnología: Reanimación II. Extensión: Fuelle. Maestría 4. 3 con la ventaja Fogonero."
+  },
+  {
+    "id": "r_golden_ingot_2",
+    "output": "golden_ingot",
+    "outputQty": 1,
+    "station": "Banco de formulación",
+    "ingredients": [
+      {
+        "item": "philosopher_stone",
+        "qty": 1
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Maestría 8."
+  },
+  {
+    "id": "r_golden_nugget",
+    "output": "golden_nugget",
+    "outputQty": 1,
+    "station": "Banco de formulación",
+    "ingredients": [
+      {
+        "item": "philosopher_stone",
+        "qty": 1
+      },
+      {
+        "item": "iron_ore",
+        "qty": 1
+      }
+    ],
+    "notes": "Maestría 6."
+  },
+  {
+    "id": "r_tin",
+    "output": "tin",
+    "outputQty": 2,
+    "station": "Canal de lavado",
+    "ingredients": [
+      {
+        "item": "sand",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Forja de bronce. Maestría 2. Da de 2 a 3."
+  },
+  {
+    "id": "r_alcohol",
+    "output": "alcohol",
+    "outputQty": 4,
+    "station": "Cubo de destilación",
+    "ingredients": [
+      {
+        "item": "wine",
+        "qty": 1
+      },
+      {
+        "item": "clay_urn",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "Tecnología: Líquido de reanimación. Maestría 3. 7 con la ventaja Destilaciones en cubo."
+  },
+  {
+    "id": "r_dream_dust",
+    "output": "dream_dust",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "leaf",
+        "qty": 1
+      },
+      {
+        "item": "blood",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 0 rojas, 1 verdes y 1 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_charged_hypno_device",
+    "output": "charged_hypno_device",
+    "outputQty": 1,
+    "station": "Banco de formulación",
+    "ingredients": [
+      {
+        "item": "hypno_device",
+        "qty": 1
+      },
+      {
+        "item": "faith",
+        "qty": 1
+      }
+    ],
+    "notes": "Maestría 2. 2 con la ventaja Alquimista."
+  },
+  {
+    "id": "r_paint",
+    "output": "paint",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "leaf",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Laboratorio II. Tecnología: Pintura. Runas: 0 rojas, 2 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_reanimation_liquid",
+    "output": "reanimation_liquid",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "alcohol",
+        "qty": 1
+      },
+      {
+        "item": "salt",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Tecnología: Líquido de reanimación. Runas: 2 rojas, 1 verdes y 4 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_melted_fat",
+    "output": "melted_fat",
+    "outputQty": 4,
+    "station": "Cubo de destilación",
+    "ingredients": [
+      {
+        "item": "fat",
+        "qty": 1
+      },
+      {
+        "item": "clay_urn",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "Tecnología: Alquimia: destilación. Maestría 1. 7 con la ventaja Destilaciones en cubo."
+  },
+  {
+    "id": "r_melted_fat_2",
+    "output": "melted_fat",
+    "outputQty": 3,
+    "station": "Cubo de destilación",
+    "ingredients": [
+      {
+        "item": "seed_oil",
+        "qty": 3
+      },
+      {
+        "item": "clay_urn",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "Tecnología: Alquimia: destilación. Maestría 1. 5 con la ventaja Destilaciones en cubo."
+  },
+  {
+    "id": "r_seed_oil",
+    "output": "seed_oil",
+    "outputQty": 2,
+    "station": "Muela de molino",
+    "ingredients": [
+      {
+        "item": "flax_seeds",
+        "qty": 4
+      }
+    ],
+    "notes": "Maestría 2."
+  },
+  {
+    "id": "r_tooth",
+    "output": "tooth",
+    "outputQty": 1,
+    "station": "Banco de formulación",
+    "ingredients": [
+      {
+        "item": "skull",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Calavera y dientes. Maestría 1."
+  },
+  {
+    "id": "r_flax_thread",
+    "output": "flax_thread",
+    "outputQty": 4,
+    "station": "Rueca",
+    "ingredients": [
+      {
+        "item": "flax",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Hilo de lino. Maestría 3. 6 con la ventaja Sastre."
+  },
+  {
+    "id": "r_fuel",
+    "output": "fuel",
+    "outputQty": 20,
+    "station": "Leñera I",
+    "ingredients": [
+      {
+        "item": "firewood",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Leñera II. Tecnología: Fundición de bronce. El combustible se carga en la leñera y lo usan las estaciones de su zona."
+  },
+  {
+    "id": "r_board",
+    "output": "board",
+    "outputQty": 4,
+    "station": "Caballete de aserrar",
+    "ingredients": [
+      {
+        "item": "log",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: El concepto de la madera."
+  },
+  {
+    "id": "r_board_2",
+    "output": "board",
+    "outputQty": 4,
+    "station": "Sierra circular",
+    "ingredients": [
+      {
+        "item": "log",
+        "qty": 1
+      }
+    ],
+    "notes": "6 con la ventaja Carpintero."
+  },
+  {
+    "id": "r_short_log",
+    "output": "short_log",
+    "outputQty": 2,
+    "station": "Caballete de aserrar",
+    "ingredients": [
+      {
+        "item": "log",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: El concepto de la madera."
+  },
+  {
+    "id": "r_short_log_2",
+    "output": "short_log",
+    "outputQty": 3,
+    "station": "Sierra circular",
+    "ingredients": [
+      {
+        "item": "log",
+        "qty": 1
+      }
+    ],
+    "notes": "5 con la ventaja Carpintero."
+  },
+  {
+    "id": "r_wooden_plank",
+    "output": "wooden_plank",
+    "outputQty": 1,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "board",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Carpintería I."
+  },
+  {
+    "id": "r_wooden_plank_2",
+    "output": "wooden_plank",
+    "outputQty": 4,
+    "station": "Sierra circular",
+    "ingredients": [
+      {
+        "item": "log",
+        "qty": 1
+      }
+    ],
+    "notes": "6 con la ventaja Carpintero."
+  },
+  {
+    "id": "r_firewood",
+    "output": "firewood",
+    "outputQty": 10,
+    "station": "Zona de corte",
+    "ingredients": [
+      {
+        "item": "short_log",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Corte de leña. 15 con la ventaja Leñador."
+  },
+  {
+    "id": "r_firewood_2",
+    "output": "firewood",
+    "outputQty": 10,
+    "station": "Zona de corte",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 20
+      }
+    ],
+    "notes": "La receta se desbloquea aparte. 15 con la ventaja Leñador."
+  },
+  {
+    "id": "r_wooden_kit_i",
+    "output": "wooden_kit_i",
+    "outputQty": 4,
+    "station": "Banco de montaje I",
+    "ingredients": [
+      {
+        "item": "log",
+        "qty": 1
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Banco de montaje II, Banco de montaje III. Tecnología: Banco de montaje."
+  },
+  {
+    "id": "r_wooden_kit_i_2",
+    "output": "wooden_kit_i",
+    "outputQty": 4,
+    "station": "Banco de montaje I",
+    "ingredients": [
+      {
+        "item": "log",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de montaje II, Banco de montaje III. Tecnología: Kit de madera I. Extensión: Banco de montaje: martillo automático."
+  },
+  {
+    "id": "r_wooden_kit_i_3",
+    "output": "wooden_kit_i",
+    "outputQty": 2,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 3
+      },
+      {
+        "item": "oiled_plank",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Madera aceitada. Extensión: Estante de herramientas."
+  },
+  {
+    "id": "r_stone_kit",
+    "output": "stone_kit",
+    "outputQty": 1,
+    "station": "Banco de montaje I",
+    "ingredients": [
+      {
+        "item": "stone",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Banco de montaje II, Banco de montaje III. Tecnología: Banco de montaje."
+  },
+  {
+    "id": "r_stone_kit_2",
+    "output": "stone_kit",
+    "outputQty": 1,
+    "station": "Banco de cantero",
+    "ingredients": [
+      {
+        "item": "stone",
+        "qty": 2
+      },
+      {
+        "item": "polished_stone",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Pulido de piedra. Extensión: Estante de herramientas."
+  },
+  {
+    "id": "r_iron_kit_i",
+    "output": "iron_kit_i",
+    "outputQty": 4,
+    "station": "Herrería I",
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Herrería II. Tecnología: Herrería: martillo. Extensión: Herrería: martillo."
+  },
+  {
+    "id": "r_iron_kit_i_2",
+    "output": "iron_kit_i",
+    "outputQty": 1,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Trabajos en hierro. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_building_kit_i",
+    "output": "building_kit_i",
+    "outputQty": 1,
+    "station": "Banco de montaje I",
+    "ingredients": [
+      {
+        "item": "stone_kit",
+        "qty": 1
+      },
+      {
+        "item": "brick",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de montaje II, Banco de montaje III. Tecnología: Kit de construcción I. Extensión: Banco de montaje: martillo automático."
+  },
+  {
+    "id": "r_building_kit_i_2",
+    "output": "building_kit_i",
+    "outputQty": 1,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "stone_kit",
+        "qty": 1
+      },
+      {
+        "item": "brick",
+        "qty": 6
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Reparación de casas. Extensión: Estante de herramientas."
+  },
+  {
+    "id": "r_bronze_nails",
+    "output": "bronze_nails",
+    "outputQty": 6,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "bronze_scrap",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Trabajos en bronce. 8 con la ventaja Herrero."
+  },
+  {
+    "id": "r_bronze_nails_2",
+    "output": "bronze_nails",
+    "outputQty": 12,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. La receta se desbloquea aparte. 16 con la ventaja Herrero."
+  },
+  {
+    "id": "r_bronze_detail",
+    "output": "bronze_detail",
+    "outputQty": 6,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Artesanía del bronce. Extensión: Cubo de temple. 9 con la ventaja Ingeniero."
+  },
+  {
+    "id": "r_bronze_ingot",
+    "output": "bronze_ingot",
+    "outputQty": 2,
+    "station": "Horno I",
+    "ingredients": [
+      {
+        "item": "bronze_scrap",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno II. Tecnología: Fundición de bronce. 3 con la ventaja Fogonero."
+  },
+  {
+    "id": "r_bronze_ingot_2",
+    "output": "bronze_ingot",
+    "outputQty": 4,
+    "station": "Horno I",
+    "ingredients": [
+      {
+        "item": "copper_nugget",
+        "qty": 3
+      },
+      {
+        "item": "tin",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno II. Tecnología: Forja de bronce. 5 con la ventaja Fogonero."
+  },
+  {
+    "id": "r_polished_bronze",
+    "output": "polished_bronze",
+    "outputQty": 2,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "sand",
+        "qty": 2
+      },
+      {
+        "item": "melted_fat",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Pulido del bronce. Extensión: Estante de herramientas."
+  },
+  {
+    "id": "r_iron_ingot",
+    "output": "iron_ingot",
+    "outputQty": 1,
+    "station": "Herrería I",
+    "ingredients": [
+      {
+        "item": "iron_ore",
+        "qty": 1
+      },
+      {
+        "item": "coal",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Herrería II. Tecnología: Herrería: martillo."
+  },
+  {
+    "id": "r_iron_ingot_2",
+    "output": "iron_ingot",
+    "outputQty": 3,
+    "station": "Horno II",
+    "ingredients": [
+      {
+        "item": "iron_ore",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 30
+      }
+    ],
+    "notes": "Tecnología: Forja de hierro. 4 con la ventaja Fogonero."
+  },
+  {
+    "id": "r_iron_detail",
+    "output": "iron_detail",
+    "outputQty": 6,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Trabajos en hierro. 9 con la ventaja Ingeniero."
+  },
+  {
+    "id": "r_brick",
+    "output": "brick",
+    "outputQty": 2,
+    "station": "Herrería I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 2
+      },
+      {
+        "item": "coal",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Herrería II. Tecnología: Herrería I."
+  },
+  {
+    "id": "r_brick_2",
+    "output": "brick",
+    "outputQty": 6,
+    "station": "Horno de ladrillos",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 4
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "Tecnología: Fabricación de ladrillos."
+  },
+  {
+    "id": "r_clay_plate",
+    "output": "clay_plate",
+    "outputQty": 3,
+    "station": "Torno de alfarero",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Alfarería I."
+  },
+  {
+    "id": "r_glass",
+    "output": "glass",
+    "outputQty": 1,
+    "station": "Herrería I",
+    "ingredients": [
+      {
+        "item": "sand",
+        "qty": 3
+      },
+      {
+        "item": "coal",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Herrería II. Tecnología: Herrería I."
+  },
+  {
+    "id": "r_glass_2",
+    "output": "glass",
+    "outputQty": 3,
+    "station": "Horno I",
+    "ingredients": [
+      {
+        "item": "sand",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno II. Tecnología: Vidrio. 4 con la ventaja Vidriero."
+  },
+  {
+    "id": "r_third_eye_salt",
+    "output": "third_eye_salt",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "alcohol",
+        "qty": 1
+      },
+      {
+        "item": "firefly",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 0 verdes y 5 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_umami",
+    "output": "umami",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "flour",
+        "qty": 1
+      },
+      {
+        "item": "hops",
+        "qty": 1
+      },
+      {
+        "item": "alcohol",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 0 rojas, 4 verdes y 4 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_clean_paper",
+    "output": "clean_paper",
+    "outputQty": 6,
+    "station": "Escritorio",
+    "ingredients": [
+      {
+        "item": "leather_scroll",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Material de escritura. 10 con la ventaja Papelero."
+  },
+  {
+    "id": "r_clean_paper_2",
+    "output": "clean_paper",
+    "outputQty": 20,
+    "station": "Prensa de papel",
+    "ingredients": [
+      {
+        "item": "paper_glop",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Prensa de papel. 30 con la ventaja Papelero."
+  },
+  {
+    "id": "r_ink",
+    "output": "ink",
+    "outputQty": 4,
+    "station": "Escritorio",
+    "ingredients": [
+      {
+        "item": "ash",
+        "qty": 1
+      },
+      {
+        "item": "water",
+        "qty": 1
+      },
+      {
+        "item": "melted_fat",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Material de escritura."
+  },
+  {
+    "id": "r_basic_rod",
+    "output": "basic_rod",
+    "outputQty": 1,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 3
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "flax_thread",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Pesca I."
+  },
+  {
+    "id": "r_magic_bell",
+    "output": "magic_bell",
+    "outputQty": 1,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "blood",
+        "qty": 1
+      },
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_wood_wedge",
+    "output": "wood_wedge",
+    "outputQty": 10,
+    "station": "Zona de corte",
+    "ingredients": [
+      {
+        "item": "short_log",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Corte de leña. 15 con la ventaja Leñador."
+  },
+  {
+    "id": "r_oiled_plank",
+    "output": "oiled_plank",
+    "outputQty": 4,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "melted_fat",
+        "qty": 1
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Madera aceitada."
+  },
+  {
+    "id": "r_wooden_trinkets",
+    "output": "wooden_trinkets",
+    "outputQty": 1,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 4
+      },
+      {
+        "item": "wood_wedge",
+        "qty": 8
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Madera aceitada."
+  },
+  {
+    "id": "r_wooden_beam",
+    "output": "wooden_beam",
+    "outputQty": 2,
+    "station": "Sierra circular",
+    "ingredients": [
+      {
+        "item": "log",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Sierra circular. 3 con la ventaja Carpintero."
+  },
+  {
+    "id": "r_oiled_beam",
+    "output": "oiled_beam",
+    "outputQty": 2,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "melted_fat",
+        "qty": 1
+      },
+      {
+        "item": "wooden_beam",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Sierra circular."
+  },
+  {
+    "id": "r_wooden_joint",
+    "output": "wooden_joint",
+    "outputQty": 1,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "wooden_beam",
+        "qty": 2
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Ensamble de madera. Extensión: Estante de herramientas finas."
+  },
+  {
+    "id": "r_carved_wood",
+    "output": "carved_wood",
+    "outputQty": 4,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "special_wood",
+        "qty": 2
+      },
+      {
+        "item": "iron_chisel",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Tallado de madera. Extensión: Estante de herramientas finas."
+  },
+  {
+    "id": "r_bronze_chisel",
+    "output": "bronze_chisel",
+    "outputQty": 4,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "stick",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Carpintería II."
+  },
+  {
+    "id": "r_iron_chisel",
+    "output": "iron_chisel",
+    "outputQty": 4,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "stick",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Estante de herramientas II. Extensión: Estante de herramientas finas."
+  },
+  {
+    "id": "r_supply_iron",
+    "output": "supply_iron",
+    "outputQty": 1,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "qty": 6
+      },
+      {
+        "item": "board",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 8
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Forja de hierro."
+  },
+  {
+    "id": "r_furniture_kit_i",
+    "output": "furniture_kit_i",
+    "outputQty": 1,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "wooden_kit_i",
+        "qty": 1
+      },
+      {
+        "item": "iron_kit_i",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Carpintería II."
+  },
+  {
+    "id": "r_supply_fabric",
+    "output": "supply_fabric",
+    "outputQty": 1,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "fabric",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Tela."
+  },
+  {
+    "id": "r_amateur_rod",
+    "output": "amateur_rod",
+    "outputQty": 1,
+    "station": "Banco de carpintería I",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 2
+      },
+      {
+        "item": "flax_thread",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Banco de carpintería II. Tecnología: Pesca II. Extensión: Estante de herramientas."
+  },
+  {
+    "id": "r_advanced_rod",
+    "output": "advanced_rod",
+    "outputQty": 1,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 1
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 2
+      },
+      {
+        "item": "flax_thread",
+        "qty": 8
+      }
+    ],
+    "notes": "Tecnología: Pesca III. Extensión: Estante de herramientas."
+  },
+  {
+    "id": "r_pro_rod",
+    "output": "pro_rod",
+    "outputQty": 1,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "special_wood",
+        "qty": 2
+      },
+      {
+        "item": "engineering_details",
+        "qty": 2
+      },
+      {
+        "item": "flax_thread",
+        "qty": 16
+      }
+    ],
+    "notes": "Tecnología: Pesca IV. Extensión: Estante de herramientas finas."
+  },
+  {
+    "id": "r_comfortable_chair",
+    "output": "comfortable_chair",
+    "outputQty": 1,
+    "station": "Banco de carpintería II",
+    "ingredients": [
+      {
+        "item": "special_wood",
+        "qty": 3
+      },
+      {
+        "item": "steel_screws",
+        "qty": 3
+      }
+    ],
+    "notes": "La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_empty_bottle",
+    "output": "empty_bottle",
+    "outputQty": 2,
+    "station": "Horno I",
+    "ingredients": [
+      {
+        "item": "glass",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno II. Tecnología: Soplado de vidrio. 3 con la ventaja Vidriero."
+  },
+  {
+    "id": "r_lens",
+    "output": "lens",
+    "outputQty": 2,
+    "station": "Horno I",
+    "ingredients": [
+      {
+        "item": "sand",
+        "qty": 8
+      },
+      {
+        "item": "fuel",
+        "qty": 30
+      }
+    ],
+    "notes": "También en: Horno II. Tecnología: Fuelle. Extensión: Fuelle. 3 con la ventaja Vidriero."
+  },
+  {
+    "id": "r_reinforced_plank",
+    "output": "reinforced_plank",
+    "outputQty": 1,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 1
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Tablón reforzado."
+  },
+  {
+    "id": "r_copper_trinkets",
+    "output": "copper_trinkets",
+    "outputQty": 1,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "polished_bronze",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Pulido del bronce."
+  },
+  {
+    "id": "r_bronze_gear",
+    "output": "bronze_gear",
+    "outputQty": 3,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Herrería del hierro. 4 con la ventaja Maestro de engranajes."
+  },
+  {
+    "id": "r_iron_nails",
+    "output": "iron_nails",
+    "outputQty": 12,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Herrería del hierro. 16 con la ventaja Herrero."
+  },
+  {
+    "id": "r_reinforced_beam",
+    "output": "reinforced_beam",
+    "outputQty": 1,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 1
+      },
+      {
+        "item": "iron_detail",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Viga reforzada."
+  },
+  {
+    "id": "r_advanced_detail",
+    "output": "advanced_detail",
+    "outputQty": 3,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Productos de hierro. 4 con la ventaja Ingeniero."
+  },
+  {
+    "id": "r_steel_detail",
+    "output": "steel_detail",
+    "outputQty": 4,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Herrería del acero. 6 con la ventaja Ingeniero."
+  },
+  {
+    "id": "r_steel_screws",
+    "output": "steel_screws",
+    "outputQty": 8,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Herrería del acero. 10 con la ventaja Herrero."
+  },
+  {
+    "id": "r_engineering_details",
+    "output": "engineering_details",
+    "outputQty": 2,
+    "station": "Horno II",
+    "ingredients": [
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Fundición de acero. Extensión: Mesa de fundición. 3 con la ventaja Maestro de engranajes."
+  },
+  {
+    "id": "r_bronze_tools",
+    "output": "bronze_tools",
+    "outputQty": 1,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 1
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Pulido del bronce. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_iron_tools",
+    "output": "iron_tools",
+    "outputQty": 1,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Productos de hierro. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_steel_tools",
+    "output": "steel_tools",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "steel_detail",
+        "qty": 2
+      },
+      {
+        "item": "engineering_details",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Fundición de acero. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_bronze_axe",
+    "output": "bronze_axe",
+    "outputQty": 1,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Hojas de bronce. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_iron_axe",
+    "output": "iron_axe",
+    "outputQty": 1,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Instrumentos de hierro I. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_steel_axe",
+    "output": "steel_axe",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "steel_detail",
+        "qty": 2
+      },
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Instrumentos de acero I. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_bronze_pickaxe",
+    "output": "bronze_pickaxe",
+    "outputQty": 1,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Hojas de bronce. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_iron_pickaxe",
+    "output": "iron_pickaxe",
+    "outputQty": 1,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Instrumentos de hierro II. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_steel_pickaxe",
+    "output": "steel_pickaxe",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "steel_detail",
+        "qty": 2
+      },
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Instrumentos de acero II. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_bronze_hammer",
+    "output": "bronze_hammer",
+    "outputQty": 1,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Instrumentos de bronce. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_iron_hammer",
+    "output": "iron_hammer",
+    "outputQty": 1,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Instrumentos de hierro II. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_steel_hammer",
+    "output": "steel_hammer",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "steel_detail",
+        "qty": 2
+      },
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Instrumentos de acero I. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_bronze_shovel",
+    "output": "bronze_shovel",
+    "outputQty": 1,
+    "station": "Yunque de madera",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de hierro, Yunque de acero. Tecnología: Instrumentos de bronce. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_iron_shovel",
+    "output": "iron_shovel",
+    "outputQty": 1,
+    "station": "Yunque de hierro",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Yunque de acero. Tecnología: Instrumentos de hierro I. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_steel_shovel",
+    "output": "steel_shovel",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 2
+      },
+      {
+        "item": "steel_detail",
+        "qty": 2
+      },
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Instrumentos de acero II. Extensión: Cubo de temple."
+  },
+  {
+    "id": "r_alchemy_flasks_i",
+    "output": "alchemy_flasks_i",
+    "outputQty": 2,
+    "station": "Horno I",
+    "ingredients": [
+      {
+        "item": "glass",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno II. Tecnología: Soplado de vidrio. 3 con la ventaja Vidriero."
+  },
+  {
+    "id": "r_prosthetic_hand",
+    "output": "prosthetic_hand",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "engineering_details",
+        "qty": 1
+      },
+      {
+        "item": "steel_screws",
+        "qty": 1
+      },
+      {
+        "item": "special_wood",
+        "qty": 1
+      }
+    ],
+    "notes": "La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_small_printing_press",
+    "output": "small_printing_press",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "engineering_details",
+        "qty": 2
+      },
+      {
+        "item": "steel_screws",
+        "qty": 1
+      }
+    ],
+    "notes": "La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_elegant_prosthetic_hand",
+    "output": "elegant_prosthetic_hand",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "engineering_details",
+        "qty": 2
+      },
+      {
+        "item": "steel_screws",
+        "qty": 2
+      },
+      {
+        "item": "special_wood",
+        "qty": 2
+      }
+    ],
+    "notes": "La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_speech_writing_device",
+    "output": "speech_writing_device",
+    "outputQty": 1,
+    "station": "Yunque de acero",
+    "ingredients": [
+      {
+        "item": "engineering_details",
+        "qty": 1
+      },
+      {
+        "item": "steel_screws",
+        "qty": 2
+      }
+    ],
+    "notes": "La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_stone_marbles",
+    "output": "stone_marbles",
+    "outputQty": 1,
+    "station": "Banco de cantero",
+    "ingredients": [
+      {
+        "item": "polished_marble",
+        "qty": 4
+      },
+      {
+        "item": "iron_chisel",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Pulido del mármol. Extensión: Estante de herramientas finas."
+  },
+  {
+    "id": "r_clay_urn",
+    "output": "clay_urn",
+    "outputQty": 2,
+    "station": "Torno de alfarero",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Cocción de cerámica."
+  },
+  {
+    "id": "r_ceramic_plate",
+    "output": "ceramic_plate",
+    "outputQty": 3,
+    "station": "Horno de ladrillos",
+    "ingredients": [
+      {
+        "item": "clay_plate",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_ceramic_urn",
+    "output": "ceramic_urn",
+    "outputQty": 3,
+    "station": "Horno de ladrillos",
+    "ingredients": [
+      {
+        "item": "clay_urn",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_music_notes",
+    "output": "music_notes",
+    "outputQty": 1,
+    "station": "Escritorio",
+    "ingredients": [
+      {
+        "item": "clean_paper",
+        "qty": 2
+      },
+      {
+        "item": "ink",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Música de iglesia I."
+  },
+  {
+    "id": "r_blank_softcover_notebook",
+    "output": "blank_softcover_notebook",
+    "outputQty": 2,
+    "station": "Escritorio",
+    "ingredients": [
+      {
+        "item": "leather_scroll",
+        "qty": 1
+      },
+      {
+        "item": "clean_paper",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Libros I."
+  },
+  {
+    "id": "r_blank_hardcover_notebook",
+    "output": "blank_hardcover_notebook",
+    "outputQty": 1,
+    "station": "Imprenta",
+    "ingredients": [
+      {
+        "item": "blank_softcover_notebook",
+        "qty": 2
+      },
+      {
+        "item": "golden_ingot",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Útiles de escritura II."
+  },
+  {
+    "id": "r_science_kit_i",
+    "output": "science_kit_i",
+    "outputQty": 3,
+    "station": "Escritorio",
+    "ingredients": [
+      {
+        "item": "alchemy_flasks_i",
+        "qty": 1
+      },
+      {
+        "item": "clean_paper",
+        "qty": 5
+      },
+      {
+        "item": "ink",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Material de escritura."
+  },
+  {
+    "id": "r_science_kit_ii",
+    "output": "science_kit_ii",
+    "outputQty": 3,
+    "station": "Escritorio",
+    "ingredients": [
+      {
+        "item": "alchemy_flasks_ii",
+        "qty": 1
+      },
+      {
+        "item": "blank_softcover_notebook",
+        "qty": 1
+      },
+      {
+        "item": "ink",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Útiles de escritura I."
+  },
+  {
+    "id": "r_printed_money",
+    "output": "printed_money",
+    "outputQty": 10,
+    "station": "Imprenta",
+    "ingredients": [
+      {
+        "item": "clean_paper",
+        "qty": 10
+      },
+      {
+        "item": "paint",
+        "qty": 1
+      }
+    ],
+    "notes": "La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_supply_iron_2",
+    "output": "supply_iron",
+    "outputQty": 1,
+    "station": "Banco de montaje I",
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "qty": 8
+      }
+    ],
+    "notes": "También en: Banco de montaje II, Banco de montaje III."
+  },
+  {
+    "id": "r_crate",
+    "output": "crate",
+    "outputQty": 2,
+    "station": "Banco de montaje I",
+    "ingredients": [
+      {
+        "item": "wooden_kit_i",
+        "qty": 1
+      },
+      {
+        "item": "iron_kit_i",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de montaje II, Banco de montaje III. Tecnología: Caja."
+  },
+  {
+    "id": "r_supply_building_materials_i",
+    "output": "supply_building_materials_i",
+    "outputQty": 1,
+    "station": "Banco de montaje I",
+    "ingredients": [
+      {
+        "item": "stone_kit",
+        "qty": 1
+      },
+      {
+        "item": "brick",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de montaje II, Banco de montaje III. Tecnología: Kit de construcción I. Extensión: Banco de montaje: martillo automático."
+  },
+  {
+    "id": "r_supply_iron_tools",
+    "output": "supply_iron_tools",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "crate",
+        "qty": 1
+      },
+      {
+        "item": "iron_kit_i",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Banco de montaje II."
+  },
+  {
+    "id": "r_supply_cutlery_i",
+    "output": "supply_cutlery_i",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "iron_kit_i",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Menaje de cocina."
+  },
+  {
+    "id": "r_supply_kitchen_utensils",
+    "output": "supply_kitchen_utensils",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "tableware",
+        "qty": 4
+      },
+      {
+        "item": "glass_containers",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Menaje de cocina."
+  },
+  {
+    "id": "r_furniture_kit_i_2",
+    "output": "furniture_kit_i",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "wooden_kit_i",
+        "qty": 1
+      },
+      {
+        "item": "iron_kit_i",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Kit de muebles I. Extensión: Banco de montaje: taladro de columna."
+  },
+  {
+    "id": "r_supply_furniture_i",
+    "output": "supply_furniture_i",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "wooden_kit_i",
+        "qty": 4
+      },
+      {
+        "item": "iron_kit_i",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Kit de muebles I. Extensión: Banco de montaje: taladro de columna."
+  },
+  {
+    "id": "r_supply_appliances_i",
+    "output": "supply_appliances_i",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "furniture_kit_i",
+        "qty": 4
+      },
+      {
+        "item": "zombie_power",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Electrodomésticos I."
+  },
+  {
+    "id": "r_marble_kit",
+    "output": "marble_kit",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "marble",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Los caminos de la piedra."
+  },
+  {
+    "id": "r_sculpture_kit_i",
+    "output": "sculpture_kit_i",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "stone",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Los caminos de la piedra."
+  },
+  {
+    "id": "r_wooden_kit_ii",
+    "output": "wooden_kit_ii",
+    "outputQty": 3,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "special_wood",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Kit de madera II. Extensión: Banco de montaje: taladro de columna."
+  },
+  {
+    "id": "r_zombie_mechanism",
+    "output": "zombie_mechanism",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "engineering_kit",
+        "qty": 1
+      },
+      {
+        "item": "zombie_power",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Mecanismos zombi. Extensión: Banco de montaje: torno."
+  },
+  {
+    "id": "r_supply_engineering_mechanism",
+    "output": "supply_engineering_mechanism",
+    "outputQty": 1,
+    "station": "Banco de montaje II",
+    "ingredients": [
+      {
+        "item": "engineering_kit",
+        "qty": 2
+      },
+      {
+        "item": "zombie_power",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Banco de montaje III. Tecnología: Mecanismos zombi. Extensión: Banco de montaje: torno."
+  },
+  {
+    "id": "r_furniture_kit_ii",
+    "output": "furniture_kit_ii",
+    "outputQty": 1,
+    "station": "Banco de montaje III",
+    "ingredients": [
+      {
+        "item": "wooden_kit_ii",
+        "qty": 1
+      },
+      {
+        "item": "iron_kit_ii",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Kit de muebles II."
+  },
+  {
+    "id": "r_supply_furniture_ii",
+    "output": "supply_furniture_ii",
+    "outputQty": 1,
+    "station": "Banco de montaje III",
+    "ingredients": [
+      {
+        "item": "wooden_kit_ii",
+        "qty": 3
+      },
+      {
+        "item": "iron_kit_ii",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Kit de muebles II."
+  },
+  {
+    "id": "r_building_kit_ii",
+    "output": "building_kit_ii",
+    "outputQty": 1,
+    "station": "Banco de montaje III",
+    "ingredients": [
+      {
+        "item": "wooden_kit_ii",
+        "qty": 1
+      },
+      {
+        "item": "marble_kit",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Kit de construcción II."
+  },
+  {
+    "id": "r_supply_building_materials_ii",
+    "output": "supply_building_materials_ii",
+    "outputQty": 1,
+    "station": "Banco de montaje III",
+    "ingredients": [
+      {
+        "item": "wooden_kit_ii",
+        "qty": 4
+      },
+      {
+        "item": "marble_kit",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Kit de construcción II."
+  },
+  {
+    "id": "r_supply_appliances_ii",
+    "output": "supply_appliances_ii",
+    "outputQty": 1,
+    "station": "Banco de montaje III",
+    "ingredients": [
+      {
+        "item": "furniture_kit_ii",
+        "qty": 4
+      },
+      {
+        "item": "zombie_mechanism",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Electrodomésticos II."
+  },
+  {
+    "id": "r_sculpture_kit_ii",
+    "output": "sculpture_kit_ii",
+    "outputQty": 1,
+    "station": "Banco de montaje III",
+    "ingredients": [
+      {
+        "item": "marble",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Banco de montaje III."
+  },
+  {
+    "id": "r_supply_cutlery_ii",
+    "output": "supply_cutlery_ii",
+    "outputQty": 1,
+    "station": "Banco de montaje III",
+    "ingredients": [
+      {
+        "item": "iron_kit_ii",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Banco de montaje III."
+  },
+  {
+    "id": "r_tableware",
+    "output": "tableware",
+    "outputQty": 1,
+    "station": "Herrería I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 2
+      },
+      {
+        "item": "coal",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Herrería II. Tecnología: Herrería: fuelle. Extensión: Herrería: fuelle."
+  },
+  {
+    "id": "r_glass_containers",
+    "output": "glass_containers",
+    "outputQty": 1,
+    "station": "Herrería I",
+    "ingredients": [
+      {
+        "item": "sand",
+        "qty": 2
+      },
+      {
+        "item": "coal",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Herrería II. Tecnología: Herrería: fuelle. Extensión: Herrería: fuelle."
+  },
+  {
+    "id": "r_clay_molds",
+    "output": "clay_molds",
+    "outputQty": 1,
+    "station": "Herrería II",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 2
+      },
+      {
+        "item": "coal",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Herrería II."
+  },
+  {
+    "id": "r_iron_kit_ii",
+    "output": "iron_kit_ii",
+    "outputQty": 4,
+    "station": "Herrería II",
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      },
+      {
+        "item": "clay_molds",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Herrería II. Extensión: Herrería: fuelle."
+  },
+  {
+    "id": "r_engineering_kit",
+    "output": "engineering_kit",
+    "outputQty": 1,
+    "station": "Herrería II",
+    "ingredients": [
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      },
+      {
+        "item": "clay_molds",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Trabajos en acero. Extensión: Herrería: fuelle."
+  },
+  {
+    "id": "r_supply_steel_tools",
+    "output": "supply_steel_tools",
+    "outputQty": 1,
+    "station": "Herrería II",
+    "ingredients": [
+      {
+        "item": "steel_ingot",
+        "qty": 4
+      },
+      {
+        "item": "crate",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Trabajos en acero. Extensión: Herrería: fuelle."
+  },
+  {
+    "id": "r_lens_2",
+    "output": "lens",
+    "outputQty": 1,
+    "station": "Herrería II",
+    "ingredients": [
+      {
+        "item": "sand",
+        "qty": 3
+      },
+      {
+        "item": "coal",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Lentes. Extensión: Herrería: prensa."
+  },
+  {
+    "id": "r_bronze_zombie_collar",
+    "output": "bronze_zombie_collar",
+    "outputQty": 1,
+    "station": "Mesa de joyería",
+    "ingredients": [
+      {
+        "item": "bronze_ingot",
+        "qty": 1
+      },
+      {
+        "item": "blue_crystal",
+        "qty": 1
+      },
+      {
+        "item": "faith",
+        "qty": 3
+      }
+    ],
+    "notes": "Maestría 4."
+  },
+  {
+    "id": "r_golden_zombie_collar",
+    "output": "golden_zombie_collar",
+    "outputQty": 1,
+    "station": "Mesa de joyería",
+    "ingredients": [
+      {
+        "item": "golden_ingot",
+        "qty": 1
+      },
+      {
+        "item": "blue_crystal",
+        "qty": 1
+      },
+      {
+        "item": "faith",
+        "qty": 5
+      }
+    ],
+    "notes": "Maestría 8."
+  },
+  {
+    "id": "r_steel_zombie_collar",
+    "output": "steel_zombie_collar",
+    "outputQty": 1,
+    "station": "Mesa de joyería",
+    "ingredients": [
+      {
+        "item": "steel_ingot",
+        "qty": 1
+      },
+      {
+        "item": "blue_crystal",
+        "qty": 1
+      },
+      {
+        "item": "faith",
+        "qty": 10
+      }
+    ],
+    "notes": "Maestría 12."
+  },
+  {
+    "id": "r_dough",
+    "output": "dough",
+    "outputQty": 6,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "flour",
+        "qty": 6
+      },
+      {
+        "item": "water",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Pan."
+  },
+  {
+    "id": "r_berry_smoothie",
+    "output": "berry_smoothie",
+    "outputQty": 3,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "berry",
+        "qty": 4
+      },
+      {
+        "item": "apple",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Primeros tentempiés. 5 con la ventaja Cocinero."
+  },
+  {
+    "id": "r_yogurt",
+    "output": "yogurt",
+    "outputQty": 3,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "jug_of_milk",
+        "qty": 1
+      },
+      {
+        "item": "honey",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Primeros tentempiés. 5 con la ventaja Cocinero."
+  },
+  {
+    "id": "r_grated_beets",
+    "output": "grated_beets",
+    "outputQty": 4,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "beet",
+        "qty": 4
+      },
+      {
+        "item": "seed_oil",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Platos de remolacha. 6 con la ventaja Cocinero."
+  },
+  {
+    "id": "r_beet_slices",
+    "output": "beet_slices",
+    "outputQty": 2,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "beet",
+        "qty": 3
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Platos de remolacha. 3 con la ventaja Cocinero."
+  },
+  {
+    "id": "r_mysterious_fish_fillet",
+    "output": "mysterious_fish_fillet",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "goldfish",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Platos de pez misterioso. 2 con la ventaja Fileteador."
+  },
+  {
+    "id": "r_mysterious_fish_fillet_2",
+    "output": "mysterious_fish_fillet",
+    "outputQty": 2,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "silverfin",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte. 4 con la ventaja Fileteador."
+  },
+  {
+    "id": "r_mysterious_fish_fillet_3",
+    "output": "mysterious_fish_fillet",
+    "outputQty": 3,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "swamp_ghost",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte. 6 con la ventaja Fileteador."
+  },
+  {
+    "id": "r_bowl_of_sauerkraut_silver",
+    "output": "bowl_of_sauerkraut_silver",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "bowl_of_sauerkraut_bronze",
+        "qty": 1
+      },
+      {
+        "item": "spices",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_bowl_of_sauerkraut_gold",
+    "output": "bowl_of_sauerkraut_gold",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "bowl_of_sauerkraut_silver",
+        "qty": 1
+      },
+      {
+        "item": "umami",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_vegetable_salad_silver",
+    "output": "vegetable_salad_silver",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "vegetable_salad_bronze",
+        "qty": 1
+      },
+      {
+        "item": "spices",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_vegetable_salad_gold",
+    "output": "vegetable_salad_gold",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "vegetable_salad_silver",
+        "qty": 1
+      },
+      {
+        "item": "umami",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_wine_silver",
+    "output": "wine_silver",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "wine_bronze",
+        "qty": 1
+      },
+      {
+        "item": "spices",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_wine_gold",
+    "output": "wine_gold",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "wine_silver",
+        "qty": 1
+      },
+      {
+        "item": "umami",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_grape_juice_silver",
+    "output": "grape_juice_silver",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "grape_juice_bronze",
+        "qty": 1
+      },
+      {
+        "item": "spices",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_grape_juice_gold",
+    "output": "grape_juice_gold",
+    "outputQty": 1,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "grape_juice_silver",
+        "qty": 1
+      },
+      {
+        "item": "umami",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. La receta se desbloquea aparte."
+  },
+  {
+    "id": "r_breadcrumb_bait",
+    "output": "breadcrumb_bait",
+    "outputQty": 4,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "bread",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Pesca II."
+  },
+  {
+    "id": "r_insect_bait",
+    "output": "insect_bait",
+    "outputQty": 4,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "firefly",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Pesca III."
+  },
+  {
+    "id": "r_live_bait",
+    "output": "live_bait",
+    "outputQty": 4,
+    "station": "Mesa de cocina",
+    "ingredients": [
+      {
+        "item": "lacquer",
+        "qty": 1
+      },
+      {
+        "item": "flesh",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Mesa de cocina II. Tecnología: Pesca IV."
+  },
+  {
+    "id": "r_chocolate",
+    "output": "chocolate",
+    "outputQty": 1,
+    "station": "Mesa de cocina II",
+    "ingredients": [
+      {
+        "item": "cacao",
+        "qty": 4
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "Tecnología: Chocolate."
+  },
+  {
+    "id": "r_bread",
+    "output": "bread",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "dough",
+        "qty": 4
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Pan. 6 con la ventaja Cocinero. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_baked_apple",
+    "output": "baked_apple",
+    "outputQty": 5,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "apple",
+        "qty": 5
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Primeros platos. 7 con la ventaja Cocinero. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_baked_mushrooms",
+    "output": "baked_mushrooms",
+    "outputQty": 3,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "brown_mushroom",
+        "qty": 5
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Primeros platos. 5 con la ventaja Cocinero. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_berry_pie",
+    "output": "berry_pie",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "dough",
+        "qty": 4
+      },
+      {
+        "item": "berry",
+        "qty": 6
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Primeros platos. 6 con la ventaja Cocinero. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_muffin",
+    "output": "muffin",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "dough",
+        "qty": 4
+      },
+      {
+        "item": "jug_of_milk",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Repostería. 6 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_croissant",
+    "output": "croissant",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "dough",
+        "qty": 4
+      },
+      {
+        "item": "chicken_egg",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Repostería. 6 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_carrot_cutlet",
+    "output": "carrot_cutlet",
+    "outputQty": 3,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "carrot",
+        "qty": 4
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de zanahoria. 5 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_carrot_soup",
+    "output": "carrot_soup",
+    "outputQty": 5,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "carrot",
+        "qty": 4
+      },
+      {
+        "item": "water",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de zanahoria. 7 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_cabbage_soup",
+    "output": "cabbage_soup",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "cabbage_bronze",
+        "qty": 2
+      },
+      {
+        "item": "water",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de col. 6 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_cabbage_soup_2",
+    "output": "cabbage_soup",
+    "outputQty": 7,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "cabbage_silver",
+        "qty": 2
+      },
+      {
+        "item": "water",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 10 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_cabbage_soup_3",
+    "output": "cabbage_soup",
+    "outputQty": 10,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "cabbage_gold",
+        "qty": 2
+      },
+      {
+        "item": "water",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 14 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_onion_rings",
+    "output": "onion_rings",
+    "outputQty": 2,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "onion_bronze",
+        "qty": 3
+      },
+      {
+        "item": "seed_oil",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de cebolla. 3 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_onion_rings_2",
+    "output": "onion_rings",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "onion_silver",
+        "qty": 3
+      },
+      {
+        "item": "seed_oil",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 6 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_onion_rings_3",
+    "output": "onion_rings",
+    "outputQty": 7,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "onion_gold",
+        "qty": 3
+      },
+      {
+        "item": "seed_oil",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 10 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_toast_with_onions",
+    "output": "toast_with_onions",
+    "outputQty": 2,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "onion_bronze",
+        "qty": 1
+      },
+      {
+        "item": "dough",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de cebolla. 3 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_toast_with_onions_2",
+    "output": "toast_with_onions",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "onion_silver",
+        "qty": 1
+      },
+      {
+        "item": "dough",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 6 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_toast_with_onions_3",
+    "output": "toast_with_onions",
+    "outputQty": 7,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "onion_gold",
+        "qty": 1
+      },
+      {
+        "item": "dough",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 10 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_pumpkin_soup",
+    "output": "pumpkin_soup",
+    "outputQty": 2,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "pumpkin_bronze",
+        "qty": 2
+      },
+      {
+        "item": "jug_of_milk",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de calabaza. 4 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_pumpkin_soup_2",
+    "output": "pumpkin_soup",
+    "outputQty": 3,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "pumpkin_silver",
+        "qty": 2
+      },
+      {
+        "item": "jug_of_milk",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 6 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_pumpkin_soup_3",
+    "output": "pumpkin_soup",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "pumpkin_gold",
+        "qty": 2
+      },
+      {
+        "item": "jug_of_milk",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 8 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_baked_pumpkin",
+    "output": "baked_pumpkin",
+    "outputQty": 2,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "pumpkin_bronze",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de calabaza. 3 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_baked_pumpkin_2",
+    "output": "baked_pumpkin",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "pumpkin_silver",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 6 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_baked_pumpkin_3",
+    "output": "baked_pumpkin",
+    "outputQty": 7,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "pumpkin_gold",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 10
+      }
+    ],
+    "notes": "También en: Horno de cocina II. La receta se desbloquea aparte. 10 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_vegetable_soup",
+    "output": "vegetable_soup",
+    "outputQty": 5,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "beet",
+        "qty": 2
+      },
+      {
+        "item": "carrot",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 25
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de verduras. 7 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_baked_meat",
+    "output": "baked_meat",
+    "outputQty": 2,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "flesh",
+        "qty": 1
+      },
+      {
+        "item": "salt",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: ¡Oh, no!. 3 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_lasagna",
+    "output": "lasagna",
+    "outputQty": 4,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "minced_meat",
+        "qty": 1
+      },
+      {
+        "item": "dough",
+        "qty": 3
+      },
+      {
+        "item": "fuel",
+        "qty": 25
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: De todos modos.... 6 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_soldier_s_stew",
+    "output": "soldier_s_stew",
+    "outputQty": 2,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "brown_mushroom",
+        "qty": 4
+      },
+      {
+        "item": "jug_of_milk",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Comida de soldado. 4 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_fish_nuggets",
+    "output": "fish_nuggets",
+    "outputQty": 3,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "river_fish_fillet",
+        "qty": 1
+      },
+      {
+        "item": "seed_oil",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de pez de río. 5 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_baked_fish",
+    "output": "baked_fish",
+    "outputQty": 3,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "river_fish_fillet",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de pez de río. 5 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_fish_soup",
+    "output": "fish_soup",
+    "outputQty": 5,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "sea_fish_fillet",
+        "qty": 2
+      },
+      {
+        "item": "carrot",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de pez de mar. 7 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_baked_salmon",
+    "output": "baked_salmon",
+    "outputQty": 3,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "sea_fish_fillet",
+        "qty": 1
+      },
+      {
+        "item": "salt",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 15
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de pez de mar. 5 con la ventaja Cocinero II. 5 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_fisherman_s_pie",
+    "output": "fisherman_s_pie",
+    "outputQty": 1,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "mysterious_fish_fillet",
+        "qty": 2
+      },
+      {
+        "item": "frog",
+        "qty": 2
+      },
+      {
+        "item": "fuel",
+        "qty": 20
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Platos de pez misterioso. 2 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_kraken_steak",
+    "output": "kraken_steak",
+    "outputQty": 1,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "kraken_jr",
+        "qty": 1
+      },
+      {
+        "item": "salt",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 25
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Filete de kraken. 2 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_fried_golden_carp",
+    "output": "fried_golden_carp",
+    "outputQty": 1,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "mythic_carp",
+        "qty": 1
+      },
+      {
+        "item": "flour",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 25
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Carpa dorada frita. 2 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_heavenly_salmon",
+    "output": "heavenly_salmon",
+    "outputQty": 1,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "celestial_salmon",
+        "qty": 1
+      },
+      {
+        "item": "seed_oil",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 25
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Salmón celestial al horno. 2 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_elder_s_meal",
+    "output": "elder_s_meal",
+    "outputQty": 1,
+    "station": "Horno de cocina",
+    "ingredients": [
+      {
+        "item": "elder_catfish",
+        "qty": 1
+      },
+      {
+        "item": "chicken_egg",
+        "qty": 1
+      },
+      {
+        "item": "fuel",
+        "qty": 25
+      }
+    ],
+    "notes": "También en: Horno de cocina II. Tecnología: Comida del anciano. 2 con la ventaja Cocinero II. 10 de combustible con la ventaja Ahorro de calor."
+  },
+  {
+    "id": "r_healing_potion",
+    "output": "healing_potion",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 2 rojas, 0 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_healing_potion_ii",
+    "output": "healing_potion_ii",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "iron_ore",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 4 rojas, 0 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_healing_potion_iii",
+    "output": "healing_potion_iii",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "stone",
+        "qty": 1
+      },
+      {
+        "item": "iron_ore",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 5 rojas, 0 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_damage_potion",
+    "output": "damage_potion",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "leaf",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 1 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_damage_potion_ii",
+    "output": "damage_potion_ii",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "coal",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 2 rojas, 2 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_damage_potion_iii",
+    "output": "damage_potion_iii",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "coal",
+        "qty": 1
+      },
+      {
+        "item": "golden_nugget",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 3 rojas, 3 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_berserker_potion",
+    "output": "berserker_potion",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "ash",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 1 verdes y 1 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_berserker_potion_ii",
+    "output": "berserker_potion_ii",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "salt",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 2 rojas, 1 verdes y 1 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_berserker_potion_iii",
+    "output": "berserker_potion_iii",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "tin",
+        "qty": 1
+      },
+      {
+        "item": "hops",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 3 rojas, 2 verdes y 2 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_zombie_motivator_potion",
+    "output": "zombie_motivator_potion",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "blood",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 0 verdes y 1 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_zombie_motivator_potion_ii",
+    "output": "zombie_motivator_potion_ii",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "zombie_goo",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 0 verdes y 2 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_zombie_motivator_potion_iii",
+    "output": "zombie_motivator_potion_iii",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "tin",
+        "qty": 1
+      },
+      {
+        "item": "firefly",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 3 rojas, 0 verdes y 3 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_preservative",
+    "output": "preservative",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "flour",
+        "qty": 1
+      },
+      {
+        "item": "leaf",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 0 rojas, 3 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_organ_improver_red_skull",
+    "output": "organ_improver_red_skull",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "iron_ore",
+        "qty": 1
+      },
+      {
+        "item": "flax",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 4 rojas, 1 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_organ_improver_white_skull",
+    "output": "organ_improver_white_skull",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "flour",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 0 rojas, 4 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_weak_growth_elixir",
+    "output": "weak_growth_elixir",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "leaf",
+        "qty": 1
+      },
+      {
+        "item": "flax",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 2 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_rich_growth_elixir",
+    "output": "rich_growth_elixir",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "coal",
+        "qty": 1
+      },
+      {
+        "item": "leaf",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 3 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_miracle_growth_elixir",
+    "output": "miracle_growth_elixir",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "coal",
+        "qty": 1
+      },
+      {
+        "item": "pumpkin_bronze",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 5 verdes y 0 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_lacquer",
+    "output": "lacquer",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "blood",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 0 rojas, 0 verdes y 2 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_tannin_liquid",
+    "output": "tannin_liquid",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "tin",
+        "qty": 1
+      },
+      {
+        "item": "coal",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 4 rojas, 2 verdes y 1 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_alkali",
+    "output": "alkali",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "clay",
+        "qty": 1
+      },
+      {
+        "item": "hops",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 1 rojas, 4 verdes y 2 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_explosive_dust",
+    "output": "explosive_dust",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "tin",
+        "qty": 1
+      },
+      {
+        "item": "blood",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 2 rojas, 0 verdes y 2 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_philosopher_stone",
+    "output": "philosopher_stone",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "tin",
+        "qty": 1
+      },
+      {
+        "item": "hops",
+        "qty": 1
+      },
+      {
+        "item": "salt",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 3 rojas, 3 verdes y 3 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_spices",
+    "output": "spices",
+    "outputQty": 1,
+    "station": "Laboratorio I",
+    "ingredients": [
+      {
+        "item": "ash",
+        "qty": 2
+      }
+    ],
+    "notes": "También en: Laboratorio II. Runas: 0 rojas, 2 verdes y 2 azules. Los ingredientes son un ejemplo: valen otros que sumen las mismas runas."
+  },
+  {
+    "id": "r_simple_chest",
+    "output": "simple_chest",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 4
+      }
+    ],
+    "notes": "También en: Cementerio, Morgue, Laboratorio de alquimia. Tecnología: Estante de herramientas."
+  },
+  {
+    "id": "r_chest",
+    "output": "chest",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 4
+      },
+      {
+        "item": "wooden_beam",
+        "qty": 2
+      },
+      {
+        "item": "iron_nails",
+        "qty": 6
+      }
+    ],
+    "notes": "También en: Cementerio, Morgue, Laboratorio de alquimia. Tecnología: Estante de herramientas II."
+  },
+  {
+    "id": "r_large_chest",
+    "output": "large_chest",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 2
+      },
+      {
+        "item": "carved_wood",
+        "qty": 6
+      },
+      {
+        "item": "steel_screws",
+        "qty": 8
+      }
+    ],
+    "notes": "También en: Cementerio, Morgue, Laboratorio de alquimia. Tecnología: Tallado de madera."
+  },
+  {
+    "id": "r_interior_bench_i",
+    "output": "interior_bench_i",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 6
+      }
+    ],
+    "notes": "Tecnología: Limpieza de la iglesia."
+  },
+  {
+    "id": "r_interior_bench_ii",
+    "output": "interior_bench_ii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 6
+      }
+    ],
+    "notes": "Tecnología: Alfombras de la iglesia."
+  },
+  {
+    "id": "r_interior_bench_iii",
+    "output": "interior_bench_iii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "wooden_beam",
+        "qty": 4
+      },
+      {
+        "item": "iron_nails",
+        "qty": 6
+      },
+      {
+        "item": "fabric",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Iluminación de la iglesia."
+  },
+  {
+    "id": "r_candelabra_i",
+    "output": "candelabra_i",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "bronze_detail",
+        "qty": 3
+      },
+      {
+        "item": "simple_candle",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Luces de la iglesia I."
+  },
+  {
+    "id": "r_candelabra_ii",
+    "output": "candelabra_ii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "iron_detail",
+        "qty": 3
+      },
+      {
+        "item": "pretty_candle",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Luces de la iglesia II."
+  },
+  {
+    "id": "r_candelabra_iii",
+    "output": "candelabra_iii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "advanced_detail",
+        "qty": 3
+      },
+      {
+        "item": "golden_ingot",
+        "qty": 1
+      },
+      {
+        "item": "magnificent_candle",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Luces de la iglesia III."
+  },
+  {
+    "id": "r_confession_booth_i",
+    "output": "confession_booth_i",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 8
+      }
+    ],
+    "notes": "Tecnología: Mobiliario de la iglesia I."
+  },
+  {
+    "id": "r_confession_booth_ii",
+    "output": "confession_booth_ii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 6
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 8
+      }
+    ],
+    "notes": "Tecnología: Mobiliario de la iglesia II."
+  },
+  {
+    "id": "r_confession_booth_iii",
+    "output": "confession_booth_iii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 6
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 8
+      },
+      {
+        "item": "lacquer",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Mobiliario de la iglesia III."
+  },
+  {
+    "id": "r_church_smells_i",
+    "output": "church_smells_i",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "piece_of_stone",
+        "qty": 3
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      },
+      {
+        "item": "simple_incense",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Aromas de la iglesia I."
+  },
+  {
+    "id": "r_church_smells_ii",
+    "output": "church_smells_ii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "polished_stone",
+        "qty": 3
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 4
+      },
+      {
+        "item": "fancy_incense",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Aromas de la iglesia II."
+  },
+  {
+    "id": "r_church_smells_iii",
+    "output": "church_smells_iii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "polished_marble",
+        "qty": 3
+      },
+      {
+        "item": "golden_ingot",
+        "qty": 1
+      },
+      {
+        "item": "fancy_incense",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Mobiliario de la iglesia III."
+  },
+  {
+    "id": "r_church_shrine_i",
+    "output": "church_shrine_i",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 6
+      },
+      {
+        "item": "piece_of_stone",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Mobiliario de la iglesia I."
+  },
+  {
+    "id": "r_church_shrine_ii",
+    "output": "church_shrine_ii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 6
+      },
+      {
+        "item": "polished_stone",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Mobiliario de la iglesia II."
+  },
+  {
+    "id": "r_church_shrine_iii",
+    "output": "church_shrine_iii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "paint",
+        "qty": 1
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 3
+      },
+      {
+        "item": "polished_marble",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Mobiliario de la iglesia III."
+  },
+  {
+    "id": "r_votive_candle_stand_i",
+    "output": "votive_candle_stand_i",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "bronze_detail",
+        "qty": 6
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_votive_candle_stand_ii",
+    "output": "votive_candle_stand_ii",
+    "outputQty": 1,
+    "station": "Construcción · Iglesia",
+    "ingredients": [
+      {
+        "item": "advanced_detail",
+        "qty": 6
+      },
+      {
+        "item": "oiled_plank",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_exterior_bench_i",
+    "output": "exterior_bench_i",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 3
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 5
+      }
+    ],
+    "notes": "Tecnología: Guardián del cementerio I."
+  },
+  {
+    "id": "r_exterior_bench_ii",
+    "output": "exterior_bench_ii",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "polished_marble",
+        "qty": 6
+      },
+      {
+        "item": "steel_detail",
+        "qty": 5
+      }
+    ],
+    "notes": "Tecnología: Decoración del cementerio II."
+  },
+  {
+    "id": "r_exterior_bench_iii",
+    "output": "exterior_bench_iii",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "marble_plate",
+        "qty": 6
+      },
+      {
+        "item": "iron_nails",
+        "qty": 5
+      }
+    ]
+  },
+  {
+    "id": "r_monument_i",
+    "output": "monument_i",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "piece_of_stone",
+        "qty": 5
+      }
+    ],
+    "notes": "Tecnología: Guardián del cementerio II."
+  },
+  {
+    "id": "r_monument_ii",
+    "output": "monument_ii",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "bronze_ingot",
+        "qty": 4
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 3
+      },
+      {
+        "item": "polished_stone",
+        "qty": 5
+      }
+    ],
+    "notes": "Tecnología: Guardián del cementerio IV."
+  },
+  {
+    "id": "r_monument_iii",
+    "output": "monument_iii",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "bronze_ingot",
+        "qty": 4
+      },
+      {
+        "item": "golden_ingot",
+        "qty": 2
+      },
+      {
+        "item": "marble_plate",
+        "qty": 6
+      }
+    ],
+    "notes": "Tecnología: Cementerio mixto III."
+  },
+  {
+    "id": "r_flower_bed_i",
+    "output": "flower_bed_i",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 4
+      },
+      {
+        "item": "peat",
+        "qty": 3
+      },
+      {
+        "item": "rhododendron",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Guardián del cementerio III."
+  },
+  {
+    "id": "r_flower_bed_ii",
+    "output": "flower_bed_ii",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "polished_stone",
+        "qty": 4
+      },
+      {
+        "item": "peat",
+        "qty": 6
+      },
+      {
+        "item": "rhododendron",
+        "qty": 6
+      }
+    ],
+    "notes": "Tecnología: Cementerio mixto II."
+  },
+  {
+    "id": "r_flower_bed_iii",
+    "output": "flower_bed_iii",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "polished_marble",
+        "qty": 4
+      },
+      {
+        "item": "peat",
+        "qty": 12
+      },
+      {
+        "item": "night_flower",
+        "qty": 6
+      }
+    ],
+    "notes": "Tecnología: Decoración del cementerio II."
+  },
+  {
+    "id": "r_lantern_i",
+    "output": "lantern_i",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "glass",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Decoración del cementerio I."
+  },
+  {
+    "id": "r_lantern_ii",
+    "output": "lantern_ii",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "steel_detail",
+        "qty": 4
+      },
+      {
+        "item": "polished_marble",
+        "qty": 2
+      },
+      {
+        "item": "glass",
+        "qty": 8
+      }
+    ],
+    "notes": "Tecnología: Decoración del cementerio II."
+  },
+  {
+    "id": "r_columbarium_i",
+    "output": "columbarium_i",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "piece_of_stone",
+        "qty": 6
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      },
+      {
+        "item": "urn_with_ashes_i",
+        "qty": 8
+      }
+    ],
+    "notes": "Tecnología: Columbarios I."
+  },
+  {
+    "id": "r_columbarium_ii",
+    "output": "columbarium_ii",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "polished_marble",
+        "qty": 6
+      },
+      {
+        "item": "golden_ingot",
+        "qty": 2
+      },
+      {
+        "item": "urn_with_ashes_ii",
+        "qty": 8
+      }
+    ],
+    "notes": "Tecnología: Columbarios II."
+  },
+  {
+    "id": "r_crypt",
+    "output": "crypt",
+    "outputQty": 1,
+    "station": "Construcción · Cementerio",
+    "ingredients": [
+      {
+        "item": "polished_stone",
+        "qty": 6
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Cementerio mixto I."
+  },
+  {
+    "id": "r_autopsy_table_i",
+    "output": "autopsy_table_i",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "board",
+        "qty": 4
+      },
+      {
+        "item": "piece_of_stone",
+        "qty": 2
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Autopsia: básica."
+  },
+  {
+    "id": "r_autopsy_table_ii",
+    "output": "autopsy_table_ii",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "polished_stone",
+        "qty": 8
+      },
+      {
+        "item": "iron_detail",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Autopsia: maestra."
+  },
+  {
+    "id": "r_autopsy_tools_i",
+    "output": "autopsy_tools_i",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "iron_detail",
+        "qty": 6
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_autopsy_tools_ii",
+    "output": "autopsy_tools_ii",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "iron_detail",
+        "qty": 6
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_corpse_pallet_i",
+    "output": "corpse_pallet_i",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "board",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Autopsia: básica."
+  },
+  {
+    "id": "r_corpse_pallet_ii",
+    "output": "corpse_pallet_ii",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 8
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Sitios para cuerpos II."
+  },
+  {
+    "id": "r_resurrection_table_i",
+    "output": "resurrection_table_i",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 2
+      },
+      {
+        "item": "polished_stone",
+        "qty": 4
+      },
+      {
+        "item": "glass",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Reanimación."
+  },
+  {
+    "id": "r_embalming_table_i",
+    "output": "embalming_table_i",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 4
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 1
+      },
+      {
+        "item": "glass",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Embalsamamiento I."
+  },
+  {
+    "id": "r_embalming_table_ii",
+    "output": "embalming_table_ii",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "wooden_joint",
+        "qty": 2
+      },
+      {
+        "item": "carved_marble",
+        "qty": 2
+      },
+      {
+        "item": "glass",
+        "qty": 6
+      }
+    ],
+    "notes": "Tecnología: Embalsamamiento III."
+  },
+  {
+    "id": "r_embalming_tools",
+    "output": "embalming_tools",
+    "outputQty": 1,
+    "station": "Construcción · Morgue",
+    "ingredients": [
+      {
+        "item": "piece_of_stone",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_zombie_supplier_station",
+    "output": "zombie_supplier_station",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 4
+      }
+    ],
+    "notes": "Tecnología: Asistente zombi."
+  },
+  {
+    "id": "r_study_table",
+    "output": "study_table",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 3
+      }
+    ]
+  },
+  {
+    "id": "r_folio",
+    "output": "folio",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "leather_scroll",
+        "qty": 4
+      },
+      {
+        "item": "board",
+        "qty": 3
+      }
+    ]
+  },
+  {
+    "id": "r_laboratory_i",
+    "output": "laboratory_i",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 3
+      },
+      {
+        "item": "glass",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Alquimia: básica."
+  },
+  {
+    "id": "r_laboratory_ii",
+    "output": "laboratory_ii",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 3
+      },
+      {
+        "item": "lens",
+        "qty": 2
+      }
+    ],
+    "notes": "Tecnología: Laboratorio II."
+  },
+  {
+    "id": "r_alchemy_tools_i",
+    "output": "alchemy_tools_i",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      },
+      {
+        "item": "iron_nails",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "r_alchemy_tools_ii",
+    "output": "alchemy_tools_ii",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      },
+      {
+        "item": "iron_nails",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "r_alchemy_workbench",
+    "output": "alchemy_workbench",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      },
+      {
+        "item": "iron_nails",
+        "qty": 8
+      },
+      {
+        "item": "brick",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "id": "r_scroll_cabinet",
+    "output": "scroll_cabinet",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "iron_nails",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_flask_shelf",
+    "output": "flask_shelf",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 8
+      }
+    ],
+    "notes": "Tecnología: Alquimia: básica."
+  },
+  {
+    "id": "r_distillation_cube",
+    "output": "distillation_cube",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "brick",
+        "qty": 12
+      }
+    ],
+    "notes": "Tecnología: Alquimia: destilación."
+  },
+  {
+    "id": "r_formulation_bench",
+    "output": "formulation_bench",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 1
+      }
+    ],
+    "notes": "También en: Sala de escritura. Tecnología: Luces de la iglesia I."
+  },
+  {
+    "id": "r_firewood_shed_i",
+    "output": "firewood_shed_i",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 10
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_firewood_shed_ii",
+    "output": "firewood_shed_ii",
+    "outputQty": 1,
+    "station": "Construcción · Laboratorio de alquimia",
+    "ingredients": [
+      {
+        "item": "stick",
+        "qty": 20
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 6
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_furnace_i",
+    "output": "furnace_i",
+    "outputQty": 1,
+    "station": "Construcción · Patio",
+    "ingredients": [
+      {
+        "item": "piece_of_stone",
+        "qty": 6
+      },
+      {
+        "item": "brick",
+        "qty": 12
+      }
+    ],
+    "notes": "Tecnología: Fundición de bronce."
+  },
+  {
+    "id": "r_writing_desk",
+    "output": "writing_desk",
+    "outputQty": 1,
+    "station": "Construcción · Sala de escritura",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 6
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 1
+      }
+    ],
+    "notes": "Tecnología: Escritura básica."
+  },
+  {
+    "id": "r_jewelry_table",
+    "output": "jewelry_table",
+    "outputQty": 1,
+    "station": "Construcción · Sala de escritura",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 12
+      },
+      {
+        "item": "glass",
+        "qty": 3
+      }
+    ],
+    "notes": "Tecnología: Trabajo delicado."
+  },
+  {
+    "id": "r_sawhorse",
+    "output": "sawhorse",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "board",
+        "qty": 2
+      },
+      {
+        "item": "stick",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_woodworking_workbench_i",
+    "output": "woodworking_workbench_i",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "board",
+        "qty": 8
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_sluice_box",
+    "output": "sluice_box",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "board",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_furnace_ii",
+    "output": "furnace_ii",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "polished_stone",
+        "qty": 6
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 2
+      },
+      {
+        "item": "brick",
+        "qty": 16
+      }
+    ],
+    "notes": "La wiki da costes distintos para esta construcción según la página."
+  },
+  {
+    "id": "r_furnace_ii_2",
+    "output": "furnace_ii",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "polished_stone",
+        "qty": 6
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 2
+      },
+      {
+        "item": "brick",
+        "qty": 12
+      }
+    ],
+    "notes": "La wiki da costes distintos para esta construcción según la página."
+  },
+  {
+    "id": "r_lumberjack_stand",
+    "output": "lumberjack_stand",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "brick",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_zombie_miner",
+    "output": "zombie_miner",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "brick",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_brewing_stand",
+    "output": "brewing_stand",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "brick",
+        "qty": 12
+      },
+      {
+        "item": "iron_detail",
+        "qty": 8
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_tool_rack",
+    "output": "tool_rack",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_conveyor_chest_i",
+    "output": "conveyor_chest_i",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_assembly_bench_i",
+    "output": "assembly_bench_i",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "reinforced_plank",
+        "qty": 6
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 4
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_smithy_i",
+    "output": "smithy_i",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "reinforced_plank",
+        "qty": 6
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_kitchen_i",
+    "output": "kitchen_i",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "reinforced_plank",
+        "qty": 6
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 4
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_gardener_stand",
+    "output": "gardener_stand",
+    "outputQty": 1,
+    "station": "Construcción · Huerto",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 2
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_beehive",
+    "output": "beehive",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "bronze_detail",
+        "qty": 1
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_bellows",
+    "output": "bellows",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 4
+      },
+      {
+        "item": "leather_scroll",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_stonemason_s_workbench",
+    "output": "stonemason_s_workbench",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_hardening_bucket",
+    "output": "hardening_bucket",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "r_spinning_wheel",
+    "output": "spinning_wheel",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 3
+      },
+      {
+        "item": "stick",
+        "qty": 8
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 12
+      }
+    ]
+  },
+  {
+    "id": "r_weaving_loom",
+    "output": "weaving_loom",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 2
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "r_supply_pallet",
+    "output": "supply_pallet",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      },
+      {
+        "item": "wooden_beam",
+        "qty": 2
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 12
+      }
+    ]
+  },
+  {
+    "id": "r_bookshelf",
+    "output": "bookshelf",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_timber_stockpile",
+    "output": "timber_stockpile",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_beam",
+        "qty": 4
+      },
+      {
+        "item": "bronze_nails",
+        "qty": 12
+      }
+    ]
+  },
+  {
+    "id": "r_bioreactor",
+    "output": "bioreactor",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "glass",
+        "qty": 10
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 8
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 6
+      }
+    ]
+  },
+  {
+    "id": "r_factory_lantern",
+    "output": "factory_lantern",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "glass",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_fine_tool_rack",
+    "output": "fine_tool_rack",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "iron_detail",
+        "qty": 6
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_zombie_carousel",
+    "output": "zombie_carousel",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "bronze_gear",
+        "qty": 6
+      },
+      {
+        "item": "iron_detail",
+        "qty": 6
+      },
+      {
+        "item": "wooden_beam",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_assembly_bench_auto_hammer",
+    "output": "assembly_bench_auto_hammer",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 6
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_assembly_bench_drill_press",
+    "output": "assembly_bench_drill_press",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 4
+      },
+      {
+        "item": "wooden_beam",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_smithy_hammer",
+    "output": "smithy_hammer",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_beam",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "r_smithy_bellows",
+    "output": "smithy_bellows",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "leather_scroll",
+        "qty": 4
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_kitchen_millstone",
+    "output": "kitchen_millstone",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "polished_stone",
+        "qty": 2
+      },
+      {
+        "item": "stick",
+        "qty": 4
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_zombie_supply_porter",
+    "output": "zombie_supply_porter",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "iron_nails",
+        "qty": 8
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_paper_press",
+    "output": "paper_press",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_beam",
+        "qty": 4
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 6
+      }
+    ],
+    "notes": "La wiki da costes distintos para esta construcción según la página."
+  },
+  {
+    "id": "r_paper_press_2",
+    "output": "paper_press",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_beam",
+        "qty": 3
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 6
+      }
+    ],
+    "notes": "La wiki da costes distintos para esta construcción según la página."
+  },
+  {
+    "id": "r_printing_press",
+    "output": "printing_press",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 6
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 6
+      }
+    ],
+    "notes": "La wiki da costes distintos para esta construcción según la página."
+  },
+  {
+    "id": "r_printing_press_2",
+    "output": "printing_press",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "oiled_beam",
+        "qty": 3
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "iron_detail",
+        "qty": 6
+      }
+    ],
+    "notes": "La wiki da costes distintos para esta construcción según la página."
+  },
+  {
+    "id": "r_vine_press",
+    "output": "vine_press",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      },
+      {
+        "item": "wooden_beam",
+        "qty": 4
+      },
+      {
+        "item": "iron_detail",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "r_wine_barrel",
+    "output": "wine_barrel",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 4
+      },
+      {
+        "item": "iron_nails",
+        "qty": 8
+      },
+      {
+        "item": "iron_detail",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_iron_anvil",
+    "output": "iron_anvil",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "piece_of_stone",
+        "qty": 4
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_kitchen_sealing_machine",
+    "output": "kitchen_sealing_machine",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "advanced_detail",
+        "qty": 4
+      },
+      {
+        "item": "iron_ingot",
+        "qty": 1
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_woodworking_workbench_ii",
+    "output": "woodworking_workbench_ii",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "oiled_plank",
+        "qty": 4
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "id": "r_sewing_table",
+    "output": "sewing_table",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 6
+      },
+      {
+        "item": "polished_bronze",
+        "qty": 2
+      },
+      {
+        "item": "advanced_detail",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_chopping_spot",
+    "output": "chopping_spot",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "short_log",
+        "qty": 1
+      }
+    ],
+    "notes": "La wiki da costes distintos para esta construcción según la página."
+  },
+  {
+    "id": "r_chopping_spot_2",
+    "output": "chopping_spot",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "short_log",
+        "qty": 2
+      }
+    ],
+    "notes": "La wiki da costes distintos para esta construcción según la página."
+  },
+  {
+    "id": "r_wooden_anvil",
+    "output": "wooden_anvil",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "short_log",
+        "qty": 1
+      },
+      {
+        "item": "stone",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "r_circular_saw",
+    "output": "circular_saw",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 10
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "iron_nails",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "id": "r_potter_s_wheel",
+    "output": "potter_s_wheel",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 2
+      },
+      {
+        "item": "piece_of_stone",
+        "qty": 1
+      }
+    ]
+  },
+  {
+    "id": "r_assembly_bench_spinning_wheel",
+    "output": "assembly_bench_spinning_wheel",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "bronze_gear",
+        "qty": 2
+      },
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "iron_nails",
+        "qty": 4
+      }
+    ]
+  },
+  {
+    "id": "r_fermentation_barrel",
+    "output": "fermentation_barrel",
+    "outputQty": 1,
+    "station": "Construcción · Zona sin indicar",
+    "ingredients": [
+      {
+        "item": "wooden_plank",
+        "qty": 4
+      },
+      {
+        "item": "iron_nails",
+        "qty": 8
+      }
+    ]
+  },
+  {
+    "id": "r_lifting_crane",
+    "output": "lifting_crane",
+    "outputQty": 1,
+    "station": "Construcción · Huerto",
+    "ingredients": [
+      {
+        "item": "wooden_beam",
+        "qty": 8
+      },
+      {
+        "item": "bronze_gear",
+        "qty": 3
+      },
+      {
+        "item": "iron_detail",
+        "qty": 4
+      }
+    ]
+  }
+]

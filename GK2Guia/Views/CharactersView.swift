@@ -16,7 +16,8 @@ struct CharactersView: View {
         MasterDetail(title: "Personajes", path: $router.characterPath) {
             Panel(title: "Personajes") {
                 PixelTextField(placeholder: "Buscar personaje o lugar…", text: $query)
-                FlowLayout(spacing: 6) {
+                // GK2 no tiene días
+                if !data.days.isEmpty { FlowLayout(spacing: 6) {
                     Button("Todos") { dayFilter = nil }
                         .buttonStyle(.pixel(dayFilter == nil ? .candle : .woodDark, compact: true))
                     ForEach(data.days) { day in
@@ -26,7 +27,7 @@ struct CharactersView: View {
                         .buttonStyle(.pixel(dayFilter == day.id ? .candle : .woodDark, compact: true))
                         .accessibilityLabel(day.name)
                     }
-                }
+                } }
                 VStack(spacing: 4) {
                     ForEach(list) { npc in
                         ListRow(
@@ -69,8 +70,10 @@ struct CharacterDetailView: View {
                     }
                 }
             }
-            SectionTitle("Días de visita")
-            DayBadges(active: npc.days)
+            if !state.data.days.isEmpty {
+                SectionTitle("Días de visita")
+                DayBadges(active: npc.days)
+            }
             if !quests.isEmpty {
                 SectionTitle("Encargos · \(done)/\(quests.count)")
                 VStack(spacing: 8) {

@@ -60,32 +60,35 @@ public struct GameData: Sendable {
         }
     }
 
-    /// GK2 comparte con GK1 los objetos, las recetas, las estaciones, las tecnologías,
-    /// los personajes y los días, pero no las misiones, la amistad ni los logros.
+    /// GK2 tiene sus propios datos en `Data/GK2` (scripts/wiki_gk2), sin nada de GK1.
+    /// De momento objetos, recetas y personajes (sin días: la wiki de GK2 no dice cuándo están).
     static let bundledGK2: GameData = {
-        let gk1 = bundled
-        return GameData(
-            items: gk1.items, recipes: gk1.recipes, days: gk1.days,
-            characters: gk1.characters.map { npc in
-                var npc = npc
-                npc.quests = nil
-                npc.friendship = nil
-                return npc
-            },
-            stations: gk1.stationList, technologies: gk1.technologies
-        )
+        do {
+            return try GameData(
+                items: load("items", in: "GK2"), recipes: load("recipes", in: "GK2"),
+                days: [], characters: load("characters", in: "GK2")
+            )
+        } catch {
+            fatalError("No se pudieron cargar los datos de GK2: \(error)")
+        }
     }()
 
-    static func load<T: Decodable>(_ name: String) throws -> T {
-        guard let url = Bundle.module.url(forResource: name, withExtension: "json", subdirectory: "Data") else {
+    /// `folder`: subcarpeta de `Data` con los JSON de otro juego (p. ej. "GK2")
+    static func load<T: Decodable>(_ name: String, in folder: String? = nil) throws -> T {
+        let subdirectory = folder.map { "Data/\($0)" } ?? "Data"
+        guard let url = Bundle.module.url(forResource: name, withExtension: "json", subdirectory: subdirectory) else {
             throw CocoaError(.fileNoSuchFile, userInfo: [NSFilePathErrorKey: "\(name).json"])
         }
         return try JSONDecoder().decode(T.self, from: Data(contentsOf: url))
     }
 
-    /// URL de una imagen de `Data/Images`.
+    /// URL de una imagen de `Data/Images`; `"GK2/<nombre>"` es una de `Data/GK2/Images`.
     public static func imageURL(_ name: String) -> URL? {
-        Bundle.module.url(forResource: name, withExtension: "png", subdirectory: "Data/Images")
+        let parts = name.split(separator: "/", maxSplits: 1)
+        if parts.count == 2 {
+            return Bundle.module.url(forResource: String(parts[1]), withExtension: "png", subdirectory: "Data/\(parts[0])/Images")
+        }
+        return Bundle.module.url(forResource: name, withExtension: "png", subdirectory: "Data/Images")
     }
 
     // MARK: - Consultas
@@ -147,14 +150,36 @@ public struct GameData: Sendable {
         recipes.filter { $0.ingredients.contains { $0.item == itemId } }
     }
 
+    /// Qué distingue a una receta de las otras del mismo producto en `among`, para mostrarlo junto al nombre:
+    /// `nil` si es la única; la estación si es la única en ella; si no, los ingredientes que solo lleva
+    /// ella («Cebolla (bronce)»), y si tampoco, lo que produce («×7»).
+    public func distinguishing(_ recipe: Recipe, among recipes: [Recipe]) -> String? {
+        let same = recipes.filter { $0.output == recipe.output && $0.id != recipe.id }
+        if same.isEmpty { return nil }
+        let sameStation = same.filter { $0.station == recipe.station }
+        if sameStation.isEmpty { return recipe.station }
+        let others = Set(sameStation.flatMap { $0.ingredients.map(\.item) })
+        let own = recipe.ingredients.map(\.item).filter { !others.contains($0) }
+        let detail = own.isEmpty ? "×\(recipe.outputQty)" : own.map(itemName).joined(separator: ", ")
+        return "\(recipe.station) · \(detail)"
+    }
+
     /// Búsqueda por nombre (en español o el de la wiki) del producto o de sus ingredientes, sin distinguir tildes.
+    /// En orden alfabético del producto; las del mismo producto, por estación y luego en el orden de los datos.
     public func searchRecipes(_ query: String, station: String? = nil) -> [Recipe] {
         let q = query.trimmingCharacters(in: .whitespaces).folded
-        return recipes.filter { r in
+        let found = recipes.enumerated().filter { _, r in
             if let station, r.station != station { return false }
             if q.isEmpty { return true }
             return ([r.output] + r.ingredients.map(\.item)).contains { itemsById[$0]?.matches(q) ?? $0.contains(q) }
         }
+        return found.sorted { a, b in
+            let byName = itemName(a.element.output).localizedCompare(itemName(b.element.output))
+            if byName != .orderedSame { return byName == .orderedAscending }
+            let byStation = a.element.station.localizedCompare(b.element.station)
+            if byStation != .orderedSame { return byStation == .orderedAscending }
+            return a.offset < b.offset
+        }.map(\.element)
     }
 
     /// Objetos por nombre (en español o el de la wiki), sin distinguir tildes, en orden alfabético.

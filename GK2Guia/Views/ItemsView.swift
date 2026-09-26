@@ -102,7 +102,7 @@ struct ItemDetailView: View {
 
             if !usedIn.isEmpty {
                 SectionTitle("Se usa en")
-                ChipFlow(itemIds: usedIn.map(\.output))
+                RecipeChipFlow(recipes: usedIn)
             }
 
             if !techs.isEmpty {

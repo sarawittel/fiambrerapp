@@ -1,0 +1,243 @@
+[
+  {
+    "id": "herm",
+    "name": "Herm",
+    "title": "Comerciante",
+    "location": "Herm's Store",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "wheat_seed",
+      "bronze_scrap",
+      "chicken_egg",
+      "river_fish_fillet",
+      "carrot_seed",
+      "beet_seed",
+      "flax_seeds",
+      "hop_seeds",
+      "wheat",
+      "carrot",
+      "beet",
+      "jug_of_milk",
+      "apple_tree_seedling",
+      "bush_seedling",
+      "rhododendron_seedling",
+      "blueberry_seedling",
+      "flax_thread"
+    ],
+    "buys": [
+      "wheat_seed",
+      "bronze_scrap",
+      "river_fish_fillet",
+      "firewood",
+      "stick",
+      "board",
+      "chicken_egg",
+      "carrot_seed",
+      "beet_seed",
+      "flax_seeds",
+      "hop_seeds",
+      "wheat",
+      "carrot",
+      "beet",
+      "wooden_plank",
+      "clay_plate",
+      "brick",
+      "jug_of_milk",
+      "apple_tree_seedling",
+      "bush_seedling",
+      "rhododendron_seedling",
+      "blueberry_seedling",
+      "flax_thread"
+    ],
+    "image": "GK2/npc_herm",
+    "notes": "Herm está en Herm's Store. Sus primeros encargos consisten en abastecer al pueblo y llevarle Trigo cosechado; al completar Planted and Delivered sube su nivel de comercio.\n\nVende desde el nivel 1: Chatarra de bronce, Semilla de trigo. Desde el nivel 2: Filete de pez de río, Huevo de gallina, Remolacha, Semilla de remolacha, Semilla de zanahoria, Semillas de lino, Semillas de lúpulo, Trigo, Zanahoria. Desde el nivel 3: Hilo de lino, Jarra de leche, Plantón de arbusto, Plantón de arándano, Plantón de manzano, Plantón de rododendro.\n\nCompra desde el nivel 1: Chatarra de bronce, Filete de pez de río, Leña, Palo, Semilla de trigo, Tabla. Desde el nivel 2: Huevo de gallina, Ladrillo, Plato de arcilla, Remolacha, Semilla de remolacha, Semilla de zanahoria, Semillas de lino, Semillas de lúpulo, Tablón de madera, Trigo, Zanahoria. Desde el nivel 3: Hilo de lino, Jarra de leche, Plantón de arbusto, Plantón de arándano, Plantón de manzano, Plantón de rododendro."
+  },
+  {
+    "id": "jack",
+    "name": "Jack",
+    "title": "Capataz",
+    "location": "Twins' Land · Jack's Workshop",
+    "icon": "person",
+    "days": [],
+    "image": "GK2/npc_jack",
+    "notes": "Jack es el capataz que necesita ayuda para construir un barco en Twins' Land. Para prepararlo hacen falta madera, herramientas de bronce y que los hermanos ayuden a remar."
+  },
+  {
+    "id": "herbert",
+    "name": "Herbert",
+    "title": "Jefe de la guardia",
+    "location": "Crossroads · Barracks",
+    "icon": "person",
+    "days": [],
+    "image": "GK2/npc_herbert",
+    "notes": "Herbert es el jefe de la guardia. Los primeros objetivos te mandan con él al Crossroads; más adelante, Swords and Bell te lleva a los Barracks."
+  },
+  {
+    "id": "nun",
+    "name": "Monja",
+    "wikiName": "Nun",
+    "title": "Monja",
+    "location": "Village Tavern · Church",
+    "icon": "person",
+    "days": [],
+    "image": "GK2/npc_nun",
+    "notes": "Conoce a la Monja en la Village Tavern para Holy Moly! Sus objetivos siguientes pasan a la iglesia, que necesita calidad 10 antes de poder dar el sermón."
+  },
+  {
+    "id": "gunter",
+    "name": "Gunter",
+    "title": "Astrólogo",
+    "location": "Astrologer's Tower (Town)",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "comet_s_tail",
+      "firefly",
+      "zombie_goo",
+      "reanimation_liquid",
+      "blue_crystal",
+      "hypno_device"
+    ],
+    "buys": [
+      "comet_s_tail",
+      "firefly",
+      "hypno_device",
+      "reanimation_liquid",
+      "blue_crystal",
+      "zombie_goo"
+    ],
+    "image": "GK2/npc_gunter",
+    "notes": "Gunter es el Astrólogo. El objetivo de invocar al hada te manda al Astrólogo, en el Town, a por Colas de cometa.\n\nVende desde el nivel 1: Baba zombi, Cola de cometa, Luciérnaga. Desde el nivel 2: Cristal azul, Líquido de reanimación. Desde el nivel 3: Hipnodispositivo.\n\nCompra desde el nivel 1: Baba zombi, Cola de cometa, Cristal azul, Hipnodispositivo, Luciérnaga, Líquido de reanimación."
+  },
+  {
+    "id": "albert",
+    "name": "Albert",
+    "title": "Médico de la peste",
+    "location": "Abandoned Tower",
+    "icon": "person",
+    "days": [],
+    "image": "GK2/npc_albert",
+    "notes": "Albert es el Médico de la peste. En Sweet Dreams tienes que llevarle Polvo de sueños a la Abandoned Tower y luego seguirle por la trampilla del laboratorio de alquimia."
+  },
+  {
+    "id": "jeffry",
+    "name": "Jeffry",
+    "title": "Uno de los gemelos",
+    "location": "Hangman's House",
+    "icon": "person",
+    "days": [],
+    "image": "GK2/npc_jeffry",
+    "notes": "Jeffry es uno de los gemelos de Two Peas in a Pod. Durante el objetivo de reconciliación, búscalo al sur del pueblo, cerca de la Hangman's House."
+  },
+  {
+    "id": "januarius",
+    "name": "Januarius",
+    "title": "Jefe del pueblo",
+    "location": "Village Tavern",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "beer",
+      "berry_pie",
+      "town_gratitude",
+      "exhumation_certificate"
+    ],
+    "buys": [
+      "beer",
+      "berry_pie",
+      "exhumation_certificate",
+      "printed_money"
+    ],
+    "image": "GK2/npc_januarius",
+    "notes": "Januarius es el jefe del pueblo. What the Fairy? te manda a la Village Tavern a cobrar un Certificado de entierro y a preguntar por las hadas.\n\nVende desde el nivel 1: Certificado de exhumación, Cerveza, Gratitud del pueblo, Tarta de bayas.\n\nCompra desde el nivel 1: Certificado de exhumación, Cerveza, Tarta de bayas. Desde el nivel 3: Dinero impreso."
+  },
+  {
+    "id": "builder",
+    "name": "Constructor",
+    "wikiName": "Builder",
+    "title": "Tienda",
+    "location": "Sin indicar",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "board",
+      "wooden_plank",
+      "bronze_nails",
+      "piece_of_stone",
+      "polished_stone",
+      "brick",
+      "building_kit_i"
+    ],
+    "notes": "Vende desde el nivel 1: Clavos de bronce, Kit de construcción I, Ladrillo, Piedra pulida, Tabla, Tablón de madera, Trozo de piedra."
+  },
+  {
+    "id": "furniture_maker",
+    "name": "Mueblero",
+    "wikiName": "Furniture Maker",
+    "title": "Tienda",
+    "location": "Sin indicar",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "wooden_plank",
+      "bronze_nails",
+      "bronze_detail",
+      "polished_bronze",
+      "wooden_kit_i",
+      "furniture_kit_i"
+    ],
+    "notes": "Vende desde el nivel 1: Bronce pulido, Clavos de bronce, Kit de madera I, Pieza de bronce, Tablón de madera. Desde el nivel 2: Kit de muebles I."
+  },
+  {
+    "id": "alchemist",
+    "name": "Alquimista",
+    "wikiName": "Alchemist",
+    "title": "Tienda",
+    "location": "Sin indicar",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "clean_paper",
+      "ink",
+      "reanimation_liquid",
+      "dream_dust",
+      "spices",
+      "umami"
+    ],
+    "notes": "Vende desde el nivel 1: Líquido de reanimación, Papel limpio, Polvo de sueños, Tinta. Desde el nivel 2: Especias. Desde el nivel 3: Umami."
+  },
+  {
+    "id": "tailor",
+    "name": "Sastre",
+    "wikiName": "Tailor",
+    "title": "Tienda",
+    "location": "Sin indicar",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "flax_seeds",
+      "flax",
+      "flax_thread",
+      "fabric"
+    ],
+    "notes": "Vende desde el nivel 1: Lino, Semillas de lino. Desde el nivel 2: Hilo de lino. Desde el nivel 3: Tela."
+  },
+  {
+    "id": "apothecary",
+    "name": "Boticario",
+    "wikiName": "Apothecary",
+    "title": "Tienda",
+    "location": "Sin indicar",
+    "icon": "person",
+    "days": [],
+    "sells": [
+      "melted_fat",
+      "salt",
+      "ash",
+      "alcohol",
+      "alchemy_flasks_i"
+    ],
+    "notes": "Vende desde el nivel 1: Ceniza, Grasa fundida, Matraces de alquimia I, Sal. Desde el nivel 2: Alcohol."
+  }
+]

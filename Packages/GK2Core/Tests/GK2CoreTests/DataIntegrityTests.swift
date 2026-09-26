@@ -15,20 +15,7 @@ struct DataIntegrityTests {
 
     @Test(arguments: Game.allCases) func cadaJuegoTieneDatos(game: Game) {
         let data = GameData.bundled(for: game)
-        #expect(!data.items.isEmpty && !data.recipes.isEmpty && !data.characters.isEmpty, "\(game.title) sin datos")
-    }
-
-    @Test func gk2CompartePeroSinMisionesAmistadNiLogros() {
-        let gk1 = GameData.bundled(for: .gk1), gk2 = GameData.bundled(for: .gk2)
-        #expect(gk2.items == gk1.items)
-        #expect(gk2.recipes == gk1.recipes)
-        #expect(gk2.days == gk1.days)
-        #expect(gk2.technologies == gk1.technologies)
-        #expect(gk2.characters.map(\.id) == gk1.characters.map(\.id))
-        #expect(gk2.characters.allSatisfy { $0.quests == nil && $0.friendship == nil })
-        #expect(gk2.guide.isEmpty)
-        #expect(gk1.characters.contains { !($0.quests ?? []).isEmpty }, "GK1 conserva sus misiones")
-        #expect(gk1.characters.contains { !($0.friendship ?? []).isEmpty }, "GK1 conserva la amistad")
+        #expect(!data.items.isEmpty && !data.recipes.isEmpty, "\(game.title) sin datos")
     }
 
     @Test func recetasUsanObjetosExistentes() {

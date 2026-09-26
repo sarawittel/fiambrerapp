@@ -204,7 +204,8 @@ private struct MaterialRow: View {
                 ForEach(sources, id: \.self) { Text($0).font(.pixelBody(19)) }
                 ForEach(sellers) { npc in
                     Button { router.openCharacter(npc.id) } label: {
-                        Text("\(npc.name) (\(daysText(npc)))")
+                        // sin días en el juego (GK2), solo el nombre
+                        (state.data.days.isEmpty ? Text(npc.name) : Text("\(npc.name) (\(daysText(npc)))"))
                             .font(.pixelBody(19))
                             .underline(pattern: .dot)
                             .foregroundStyle(Theme.parchmentMuted)

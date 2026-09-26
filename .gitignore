@@ -8,3 +8,4 @@ xcuserdata
 scripts/wiki/cache/
 __pycache__/
 build/
+scripts/wiki_gk2/cache/

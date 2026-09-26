@@ -23,7 +23,9 @@ struct RecipesView: View {
                                 icon: item?.icon ?? "skull",
                                 image: item?.image,
                                 title: item?.name ?? recipe.output,
-                                subtitle: [recipe.station, state.chestSummary(of: recipe.output)].compactMap { $0 }.joined(separator: " · ")
+                                // si hay varias del mismo producto, lo que distingue a esta (estación, ingrediente…)
+                                subtitle: [state.data.distinguishing(recipe, among: results) ?? recipe.station,
+                                           state.chestSummary(of: recipe.output)].compactMap { $0 }.joined(separator: " · ")
                             ) { router.openRecipe(recipe.id) }
                         }
                     }
@@ -123,7 +125,7 @@ struct RecipeDetailView: View {
 
             if !usedIn.isEmpty {
                 SectionTitle("Se usa en")
-                ChipFlow(itemIds: usedIn.map(\.output))
+                RecipeChipFlow(recipes: usedIn)
             }
 
             FlowLayout(spacing: 10) {
